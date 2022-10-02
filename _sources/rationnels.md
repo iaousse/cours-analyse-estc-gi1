@@ -14,7 +14,7 @@ Par exemple : $\frac{2}{5},\,\frac{-7}{71},\frac{3}{6}=\frac{1}{2},\,etc...$
 Les nombres décimaux, c'est-à-dire les nombres de la forme $\frac{a}{10^{n}},$  avec $a\in \mathbb{Z}$, $n\in \mathbb{N}$ fournissent d'autres exemples:
 
 $$
-1,234 = 1234\times 10^{-3} =\frac{1234}{1000}
+1,234 = 1234\times 10^{-3} =\frac{1234}{1000} \mbox{ et }
 0,00345 = 345\times 10^{-5}=\frac{345}{100000}
 $$
 
