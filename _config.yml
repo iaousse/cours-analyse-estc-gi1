@@ -1,0 +1,102 @@
+# Book settings
+# Learn more at https://jupyterbook.org/customize/config.html
+
+title: Cours Analyse
+author: Iaousse M'barek
+copyright: "2022"
+logo: logo.png
+
+# Force re-execution of notebooks on each build.
+# See https://jupyterbook.org/content/execute.html
+execute:
+  execute_notebooks: off
+
+# Define the name of the latex output file for PDF builds
+parse:
+  myst_enable_extensions:
+    # don't forget to list any other extensions you want enabled,
+    # including those that are enabled by default!
+    - amsmath
+    - dollarmath
+    - colon_fence
+    - html_image
+
+latex:
+  latex_documents:
+    targetname: skript.tex
+
+sphinx:
+  extra_extensions:
+    - sphinx_proof
+    #- sphinx_tojupyter
+    - sphinx_jupyterbook_latex
+  #local-extensions:
+   # -sphinx_proof: src/sphinx-proof/
+  config:
+    # html_js_files:
+    # - https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js
+    latex_engine: pdflatex
+    html_search_language: fr
+    language: fr
+    mathjax_config:
+      TeX:
+        Macros:
+          "Z"    : "\\mathbb{Z}"
+          "V"    : "V"
+          "N"    : "\\mathbb{N}"
+          "C"    : "\\mathbb{C}"
+          "Q"    : "\\mathbb{Q}"
+          "K"    : "\\mathbb{K}"
+          "floor": ["\\lfloor#1\\rfloor", 1]
+          "bmat" : ["\\left[\\begin{array}"]
+          "emat" : ["\\end{array}\\right]"]
+          "R"    : ["\\mathbb{R}"]
+          "B"    : ["\\mathcal{B}"]
+          "norm" : ["{\\Vert#1\\Vert}",1]
+          "abs" : ["{\\left|#1\\right|}",1]
+          "coloneqq": ["{:=}"]
+          "eqqcolon": ["{=:}"]
+          "emph" : ["\\pmb#1",1]
+          "tr"   : "\\operatorname{Spur}"
+          "lin"  : "\\operatorname{lin}"
+          "dv"   : "\\mathrm{div}~"
+          "rot"  : "\\mathrm{rot}~"
+          "Dim"  : "\\operatorname{dim}"
+          "diag" : "\\operatorname{diag}"
+          "Kern" : "\\operatorname{Kern}"
+          "Bild" : "\\operatorname{Bild}"
+          "Im"   : "\\operatorname{Im}"
+          "Rang" : "\\operatorname{Rang}"
+          "GL"   : "\\operatorname{GL}"
+          "Eig"  : "\\operatorname{Eig}"
+          "End"  : "\\operatorname{End}"
+          "Hau"  : "\\operatorname{Haupt}"
+          "mymathbb" : ["\\boldsymbol{#1}",1]
+          "idx"  : "\\mathrm{d}x"
+          "d"    : "\\mathrm{d}"
+          "i"    : "\\mathrm{i}"
+          "x"    : "\\mathbf{x}"
+          "sign" : "\\mathrm{sign}"
+          "vec"  : ["\\mathbf{#1}",1]
+          "veczwei": ["\\begin{pmatrix} #1 \\\\ #2 \\end{pmatrix}", 2]
+          "M"    : "\\mathcal{M}"
+          "S"    : "\\mathbb{S}"
+          "bone" : "\\unicode{x1D7D9}"
+          "Re"   : "\\mathrm{Re}"
+          "Um"   : "\\operatorname{Um}"
+          "Res"   : "\\operatorname{Res}"
+# Add a bibtex file so that we can create citations
+bibtex_bibfiles:
+  - references.bib
+
+
+repository:
+  url: https://github.com/executablebooks/jupyter-book  # Online location of your book
+  path_to_book: docs  # Optional path to your book, relative to the repository root
+  branch: master  # Which branch of the repository should be used when creating links (optional)
+
+# Add GitHub buttons to your book
+# See https://jupyterbook.org/customize/config.html#add-a-link-to-your-repository
+html:
+  use_issues_button: true
+  use_repository_button: true

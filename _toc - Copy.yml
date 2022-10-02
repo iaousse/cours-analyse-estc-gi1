@@ -1,0 +1,14 @@
+# Table of content
+# Learn more at https://jupyterbook.org/customize/toc.html
+#
+- file: intro
+- file: metric-norme
+  sections:
+    - file: mnspace
+    - file: exo_metric
+- file: convconttopo
+  sections:
+    - file: convergence
+    - file: complet
+    - file: continue
+    - file: exo_fctplsvar

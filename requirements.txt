@@ -1,0 +1,6 @@
+jupyter-book>=0.12.1
+sphinx_proof
+sphinx_tojupyter
+sphinx_jupyterbook_latex
+matplotlib
+numpy

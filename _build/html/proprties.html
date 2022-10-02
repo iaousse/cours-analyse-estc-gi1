@@ -1,0 +1,637 @@
+
+<!DOCTYPE html>
+
+<html lang="fr">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Propriétés de \(\mathbb{R}\) &#8212; Cours Analyse</title>
+    
+  <link href="_static/css/theme.css" rel="stylesheet" />
+  <link href="_static/css/index.c5995385ac14fb8791e8eb36b4908be2.css" rel="stylesheet" />
+
+    
+  <link rel="stylesheet"
+    href="_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    
+      
+
+    
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="_static/sphinx-book-theme.e8e5499552300ddf5d7adccae7cc3b70.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="_static/proof.css" />
+    <link rel="stylesheet" type="text/css" href="_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
+    <link rel="stylesheet" type="text/css" href="_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
+    
+  <link rel="preload" as="script" href="_static/js/index.1c5a1a01449ed65a7b51.js">
+
+    <script id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+    <script src="_static/jquery.js"></script>
+    <script src="_static/underscore.js"></script>
+    <script src="_static/doctools.js"></script>
+    <script src="_static/togglebutton.js"></script>
+    <script src="_static/clipboard.min.js"></script>
+    <script src="_static/copybutton.js"></script>
+    <script src="_static/translations.js"></script>
+    <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="_static/sphinx-book-theme.12a9622fbb08dcb3a2a40b2c02b83a57.js"></script>
+    <script async="async" src="https://unpkg.com/thebelab@latest/lib/index.js"></script>
+    <script >
+        const thebe_selector = ".thebe"
+        const thebe_selector_input = "pre"
+        const thebe_selector_output = ".output"
+    </script>
+    <script async="async" src="_static/sphinx-thebe.js"></script>
+    <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/x-mathjax-config">MathJax.Hub.Config({"TeX": {"Macros": {"Z": "\\mathbb{Z}", "V": "V", "N": "\\mathbb{N}", "C": "\\mathbb{C}", "Q": "\\mathbb{Q}", "K": "\\mathbb{K}", "floor": ["\\lfloor#1\\rfloor", 1], "bmat": ["\\left[\\begin{array}"], "emat": ["\\end{array}\\right]"], "R": ["\\mathbb{R}"], "B": ["\\mathcal{B}"], "norm": ["{\\Vert#1\\Vert}", 1], "abs": ["{\\left|#1\\right|}", 1], "coloneqq": ["{:=}"], "eqqcolon": ["{=:}"], "emph": ["\\pmb#1", 1], "tr": "\\operatorname{Spur}", "lin": "\\operatorname{lin}", "dv": "\\mathrm{div}~", "rot": "\\mathrm{rot}~", "Dim": "\\operatorname{dim}", "diag": "\\operatorname{diag}", "Kern": "\\operatorname{Kern}", "Bild": "\\operatorname{Bild}", "Im": "\\operatorname{Im}", "Rang": "\\operatorname{Rang}", "GL": "\\operatorname{GL}", "Eig": "\\operatorname{Eig}", "End": "\\operatorname{End}", "Hau": "\\operatorname{Haupt}", "mymathbb": ["\\boldsymbol{#1}", 1], "idx": "\\mathrm{d}x", "d": "\\mathrm{d}", "i": "\\mathrm{i}", "x": "\\mathbf{x}", "sign": "\\mathrm{sign}", "vec": ["\\mathbf{#1}", 1], "veczwei": ["\\begin{pmatrix} #1 \\\\ #2 \\end{pmatrix}", 2], "M": "\\mathcal{M}", "S": "\\mathbb{S}", "bone": "\\unicode{x1D7D9}", "Re": "\\mathrm{Re}", "Um": "\\operatorname{Um}", "Res": "\\operatorname{Res}"}}, "tex2jax": {"inlineMath": [["\\(", "\\)"]], "displayMath": [["\\[", "\\]"]], "processRefs": false, "processEnvironments": false}})</script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Recherche" href="search.html" />
+    <link rel="next" title="Exercices" href="exo1.html" />
+    <link rel="prev" title="Les nombres rationnels" href="rationnels.html" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="en" />
+    
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+    <div class="container-fluid" id="banner"></div>
+
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
+    
+        <div class="navbar-brand-box">
+    <a class="navbar-brand text-wrap" href="index.html">
+      
+      <img src="_static/logo.png" class="logo" alt="logo">
+      
+      
+      <h1 class="site-logo" id="site-title">Cours Analyse</h1>
+      
+    </a>
+</div><form class="bd-search d-flex align-items-center" action="search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Rechercher dans ce livre ..." aria-label="Rechercher dans ce livre ..." autocomplete="off" >
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
+    <div class="bd-toc-item active">
+        <ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="intro.html">
+   Introduction
+  </a>
+ </li>
+</ul>
+<ul class="current nav bd-sidenav">
+ <li class="toctree-l1 current active has-children">
+  <a class="reference internal" href="R.html">
+   Les nombres réels
+  </a>
+  <input checked="" class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/>
+  <label for="toctree-checkbox-1">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul class="current">
+   <li class="toctree-l2">
+    <a class="reference internal" href="rationnels.html">
+     Les nombres rationnels
+    </a>
+   </li>
+   <li class="toctree-l2 current active">
+    <a class="current reference internal" href="#">
+     Propriétés de
+     <span class="math notranslate nohighlight">
+      \(\mathbb{R}\)
+     </span>
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="exo1.html">
+     Exercices
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+
+    </div>
+</nav> <!-- To handle the deprecated key -->
+
+<div class="navbar_extra_footer">
+  Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
+</div>
+
+</div>
+
+
+          
+
+
+          
+<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
+    
+    <div class="topbar container-xl fixed-top">
+    <div class="topbar-contents row">
+        <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show"></div>
+        <div class="col pl-md-4 topbar-main">
+            
+            <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
+                data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
+                aria-expanded="true" aria-label="Basculer la navigation" aria-controls="site-navigation"
+                title="Basculer la navigation" data-toggle="tooltip" data-placement="left">
+                <i class="fas fa-bars"></i>
+                <i class="fas fa-arrow-left"></i>
+                <i class="fas fa-arrow-up"></i>
+            </button>
+            
+            
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Téléchargez cette page"><i
+            class="fas fa-download"></i></button>
+
+    <div class="dropdown-buttons">
+        <!-- ipynb file if we had a myst markdown file -->
+        
+        <!-- Download raw file -->
+        <a class="dropdown-buttons" href="_sources/proprties.md"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Télécharger le fichier source" data-toggle="tooltip"
+                data-placement="left">.md</button></a>
+        <!-- Download PDF via print -->
+        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Imprimer au format PDF"
+            onClick="window.print()" data-toggle="tooltip" data-placement="left">.pdf</button>
+    </div>
+</div>
+
+            <!-- Source interaction buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Connect with source repository"><i class="fab fa-github"></i></button>
+    <div class="dropdown-buttons sourcebuttons">
+        <a class="repository-button"
+            href="https://github.com/executablebooks/jupyter-book"><button type="button" class="btn btn-secondary topbarbtn"
+                data-toggle="tooltip" data-placement="left" title="Dépôt source"><i
+                    class="fab fa-github"></i>dépôt</button></a>
+        <a class="issues-button"
+            href="https://github.com/executablebooks/jupyter-book/issues/new?title=Issue%20on%20page%20%2Fproprties.html&body=Your%20issue%20content%20here."><button
+                type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
+                title="Ouvrez un problème"><i class="fas fa-lightbulb"></i>signaler un problème</button></a>
+        
+    </div>
+</div>
+
+            <!-- Full screen (wrap in <a> to have style consistency -->
+
+<a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
+        data-placement="bottom" onclick="toggleFullScreen()" aria-label="Mode plein écran"
+        title="Mode plein écran"><i
+            class="fas fa-expand"></i></button></a>
+
+            <!-- Launch buttons -->
+
+        </div>
+
+        <!-- Table of contents -->
+        <div class="d-none d-md-block col-md-2 bd-toc show">
+            
+            <div class="tocsection onthispage pt-5 pb-3">
+                <i class="fas fa-list"></i> Contenu
+            </div>
+            <nav id="bd-toc-nav">
+                <ul class="visible nav section-nav flex-column">
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#">
+   Propriétés de
+   <span class="math notranslate nohighlight">
+    \(\mathbb{R}\)
+   </span>
+  </a>
+  <ul class="visible nav section-nav flex-column">
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#addition-et-multiplication">
+     Addition et multiplication
+    </a>
+   </li>
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#ordre-sur-mathbb-r">
+     Ordre sur
+     <span class="math notranslate nohighlight">
+      \(\mathbb{R}\)
+     </span>
+    </a>
+   </li>
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#propriete-d-archimede">
+     Propriété d’Archimède
+    </a>
+   </li>
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#valeur-absolue">
+     Valeur absolue
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#densite-de-mathbb-q-dans-mathbb-r">
+   Densité de
+   <span class="math notranslate nohighlight">
+    \(\mathbb{Q}\)
+   </span>
+   dans
+   <span class="math notranslate nohighlight">
+    \(\mathbb{R}\)
+   </span>
+  </a>
+  <ul class="visible nav section-nav flex-column">
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#intervalle">
+     Intervalle
+    </a>
+   </li>
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#densite">
+     Densité
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#borne-superieure">
+   Borne supérieure
+  </a>
+  <ul class="visible nav section-nav flex-column">
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#maximum-minimum">
+     Maximum, minimum
+    </a>
+   </li>
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#borne-superieure-borne-inferieure">
+     Borne supérieure, borne inférieure
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+
+            </nav>
+        </div>
+    </div>
+</div>
+    <div id="main-content" class="row">
+        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
+        
+              <div>
+                
+  <div class="section" id="proprietes-de-mathbb-r">
+<h1>Propriétés de <span class="math notranslate nohighlight">\(\mathbb{R}\)</span><a class="headerlink" href="#proprietes-de-mathbb-r" title="Lien permanent vers ce titre">¶</a></h1>
+<div class="section" id="addition-et-multiplication">
+<h2>Addition et multiplication<a class="headerlink" href="#addition-et-multiplication" title="Lien permanent vers ce titre">¶</a></h2>
+<p>Ce sont les propriétés dont on a habitué. Pour <span class="math notranslate nohighlight">\(a,\,b,\,c\in\mathbb{R},\)</span> on a:</p>
+<ul class="simple">
+<li><p><span class="math notranslate nohighlight">\(a+b=b+a\)</span></p></li>
+<li><p><span class="math notranslate nohighlight">\(a\times b=b\times a\)</span></p></li>
+<li><p><span class="math notranslate nohighlight">\(a+0=a\)</span></p></li>
+<li><p><span class="math notranslate nohighlight">\( a\times 1=a \mbox{ si } a\neq0\)</span></p></li>
+<li><p><span class="math notranslate nohighlight">\(a+b=0\Leftrightarrow a=-b\)</span></p></li>
+<li><p><span class="math notranslate nohighlight">\(ab=1\Leftrightarrow a=\frac{1}{b}\)</span></p></li>
+<li><p><span class="math notranslate nohighlight">\((a+b)+c=a+(b+c)\)</span></p></li>
+<li><p><span class="math notranslate nohighlight">\((a\times b)\times c=a\times(b\times c)\)</span></p></li>
+<li><p><span class="math notranslate nohighlight">\(a\times(b+c)=a\times b+a\times c\)</span></p></li>
+<li><p><span class="math notranslate nohighlight">\(a\times b=0\Leftrightarrow(a=0 \mbox{ ou } b=0)\)</span></p></li>
+</ul>
+<p>On résume toutes ces propriétés en disant que :</p>
+<div class="admonition-proposition admonition">
+<p class="admonition-title">Proposition</p>
+<p><span class="math notranslate nohighlight">\((\mathbb{R},+,\times)\)</span> est un corps commutatif.</p>
+</div>
+</div>
+<div class="section" id="ordre-sur-mathbb-r">
+<h2>Ordre sur <span class="math notranslate nohighlight">\(\mathbb{R}\)</span><a class="headerlink" href="#ordre-sur-mathbb-r" title="Lien permanent vers ce titre">¶</a></h2>
+<p>Nous allons voir que les réels sont ordonnés. La notion d’ordre est générale et nous allons définir cette notion sur un
+ensemble quelconque. Cependant gardez à l’esprit que pour nous <span class="math notranslate nohighlight">\(E=\mathbb{R}\)</span> et <span class="math notranslate nohighlight">\(\mathcal{R}=\leq\)</span></p>
+<div class="admonition-definition admonition">
+<p class="admonition-title">Définition</p>
+<p>Soit <span class="math notranslate nohighlight">\(E\)</span> un ensemble.</p>
+<ol class="simple">
+<li><p>Une relation <span class="math notranslate nohighlight">\(\mathcal{R}\)</span> sur <span class="math notranslate nohighlight">\(E\)</span> est un sous-ensemble de l’ensemble produit <span class="math notranslate nohighlight">\(E\times E.\)</span> Pour <span class="math notranslate nohighlight">\((x,y)\in E\times E,\)</span> on dit que <span class="math notranslate nohighlight">\(x\)</span> est en relation avec <span class="math notranslate nohighlight">\(y\)</span> et on note <span class="math notranslate nohighlight">\(x\mathcal{R}y\)</span> pour dire que <span class="math notranslate nohighlight">\((x,y)\in R.\)</span></p></li>
+<li><p>Une relation <span class="math notranslate nohighlight">\(\mathcal{R}\)</span> est une relation d’ordre si</p>
+<ul class="simple">
+<li><p><span class="math notranslate nohighlight">\(\mathcal{R}\)</span> est \textit{réflexive}: Pour tout <span class="math notranslate nohighlight">\(x\in E,\)</span> <span class="math notranslate nohighlight">\(x\mathcal{R}x\)</span></p></li>
+<li><p><span class="math notranslate nohighlight">\(\mathcal{R}\)</span> est \textit{antisymétrique}: pour tout <span class="math notranslate nohighlight">\(x,y\in E,\)</span> <span class="math notranslate nohighlight">\((x\mathcal{R}y\:\mbox{et} y\mathcal{R}x) \Rightarrow x=y.\)</span></p></li>
+<li><p><span class="math notranslate nohighlight">\(\mathcal{R}\)</span> est \textit{transitive}: pour tout <span class="math notranslate nohighlight">\(x,y,z\in E,\)</span> <span class="math notranslate nohighlight">\((x\mathcal{R}y\:\mbox{et} y\mathcal{R}z)\Rightarrow x\mathcal{R}z\)</span></p></li>
+</ul>
+</li>
+</ol>
+</div>
+<div class="admonition-definition admonition">
+<p class="admonition-title">Définition</p>
+<p>Une relation d’ordre <span class="math notranslate nohighlight">\(\mathcal{R}\)</span> sur un ensemble <span class="math notranslate nohighlight">\(E\)</span> est totale si pour tout <span class="math notranslate nohighlight">\(x, y\in E\)</span> on a <span class="math notranslate nohighlight">\(x\mathcal{R}y\)</span> ou <span class="math notranslate nohighlight">\(y\mathcal{R}x.\)</span> On dit aussi que
+<span class="math notranslate nohighlight">\((E,\mathcal{R})\)</span> est un ensemble totalement ordonné.</p>
+</div>
+<div class="admonition-proposition admonition">
+<p class="admonition-title">Proposition</p>
+<p>La relation <span class="math notranslate nohighlight">\(\leq\)</span> sur <span class="math notranslate nohighlight">\(\mathbb{R}\)</span> est une relation d’ordre, et de plus, elle est totale.</p>
+</div>
+<p>Nous avons donc:</p>
+<ul class="simple">
+<li><p>pour tout <span class="math notranslate nohighlight">\(x\in \mathbb{R}, x\leq x,\)</span></p></li>
+<li><p>pour tout <span class="math notranslate nohighlight">\(x, y \in \mathbb{R},\)</span> si <span class="math notranslate nohighlight">\(x\leq y\)</span> et <span class="math notranslate nohighlight">\(y\leq x\)</span> alors <span class="math notranslate nohighlight">\(x=y,\)</span></p></li>
+<li><p>pour tout <span class="math notranslate nohighlight">\(x, y, z\in\mathbb{R}\)</span> si <span class="math notranslate nohighlight">\(x \leq y\)</span> et <span class="math notranslate nohighlight">\(y \leq z\)</span> alors <span class="math notranslate nohighlight">\(x \leq z.\)</span></p></li>
+</ul>
+<div class="tip admonition">
+<p class="admonition-title">Remarque</p>
+<p>Pour <span class="math notranslate nohighlight">\((x, y)\in \mathbb{R}^{2}\)</span> on a par définition:</p>
+<p><span class="math notranslate nohighlight">\(x\leq y \Leftrightarrow y-x\in \mathbb{R}_{+}\)</span></p>
+<p><span class="math notranslate nohighlight">\(x&lt;y\Leftrightarrow x\leq y\quad\mbox{et}\quad x\neq y\)</span></p>
+<p>Les opérations de <span class="math notranslate nohighlight">\(\mathbb{R}\)</span> sont compatibles avec la relation d’ordre <span class="math notranslate nohighlight">\(\leq\)</span> au sens suivant, pour des réels <span class="math notranslate nohighlight">\(a, b,c, d:\)</span></p>
+<p><span class="math notranslate nohighlight">\(a\leq b \quad\mbox{et}\quad c\leq d)\Rightarrow a+c\leq b+d\)</span></p>
+<p><span class="math notranslate nohighlight">\(a\leq b \quad\mbox{et}\quad c\geq0)\Rightarrow a\times c\leq b\times c\)</span></p>
+</div>
+<div class="admonition-definition admonition">
+<p class="admonition-title">Définition</p>
+<p>On définit le maximum de deux réels <span class="math notranslate nohighlight">\(a\)</span> et <span class="math notranslate nohighlight">\(b\)</span> par:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+\max(a,b)=\left\{
+\begin{array}{ll}
+a\mbox{ si } a\geq b\\
+b \mbox{ si } b&gt;a
+\end{array}
+\right.
+\end{split}\]</div>
+</div>
+</div>
+<div class="section" id="propriete-d-archimede">
+<h2>Propriété d’Archimède<a class="headerlink" href="#propriete-d-archimede" title="Lien permanent vers ce titre">¶</a></h2>
+<div class="admonition-proposition-propriete-d-archimede admonition">
+<p class="admonition-title">Proposition (Propriété d’Archimède)</p>
+<p><span class="math notranslate nohighlight">\(\R\)</span> est <em>archimédien</em>, c’est-à-dire:</p>
+<div class="math notranslate nohighlight">
+\[
+\forall x\in \mathbb{R},\exists n\in \mathbb{N};\,n&gt; x
+\]</div>
+<p>Autrementdit, Pour tout réel <span class="math notranslate nohighlight">\(x,\)</span> il existe un entier naturel <span class="math notranslate nohighlight">\(n\)</span> strictement plus grand que <span class="math notranslate nohighlight">\(x.\)</span></p>
+</div>
+<p>Cette propriété peut sembler évidente, elle est pourtant essentielle puisque elle permet de définir la partie entière
+d’un nombre réel:</p>
+<div class="admonition-proposition-partie-entiere admonition">
+<p class="admonition-title">Proposition (partie entière)</p>
+<p>label: partent
+Soit <span class="math notranslate nohighlight">\(x\in R,\)</span> il existe un unique entier relatif, la partie entière notée <span class="math notranslate nohighlight">\(E(x),\)</span> tel que:</p>
+<div class="math notranslate nohighlight">
+\[
+E(x)\leq x&lt; E(x)+1
+\]</div>
+</div>
+<div class="admonition-exemple admonition">
+<p class="admonition-title">Exemple</p>
+<ul class="simple">
+<li><p><span class="math notranslate nohighlight">\(E(2, 853) = 2, E(\pi) = 3, E(-3,5) =-4.\)</span></p></li>
+<li><p><span class="math notranslate nohighlight">\(E(x)=3\Leftrightarrow 3\leq x &lt;4\)</span></p></li>
+</ul>
+</div>
+<p>Pour la démonstration de la proposition de la <span class="xref myst">partie entière</span> il y a deux choses à établir: d’abord qu’un tel entier <span class="math notranslate nohighlight">\(E(x)\)</span> existe et ensuite
+qu’il est unique:</p>
+<div class="admonition-preuve admonition">
+<p class="admonition-title">Preuve</p>
+<ul class="simple">
+<li><p><strong>Existence</strong></p></li>
+</ul>
+<p>Supposons <span class="math notranslate nohighlight">\(x&gt;0\)</span>.</p>
+<p>Par la propriété d’Archimède il existe <span class="math notranslate nohighlight">\(n\in N\)</span> tel que <span class="math notranslate nohighlight">\(n&gt;x.\)</span></p>
+<p>L’ensemble <span class="math notranslate nohighlight">\(K:=\{k\in \mathbb{N}; k\leq x\}\)</span> est donc fini (car pour tout <span class="math notranslate nohighlight">\(k\)</span> dans <span class="math notranslate nohighlight">\(K,\)</span> on a <span class="math notranslate nohighlight">\(0\leq k \leq n\)</span>).</p>
+<p>Il admet donc un plus grand élément
+<span class="math notranslate nohighlight">\(k_{max} =\max K.\)</span></p>
+<p>On a alors <span class="math notranslate nohighlight">\(k_{max}\leq x\)</span> car <span class="math notranslate nohighlight">\(k_{max} \in K,\)</span> et <span class="math notranslate nohighlight">\(k_{max} + 1 &gt; x\)</span> car <span class="math notranslate nohighlight">\(k_{max} + 1 \notin K.\)</span> Donc <span class="math notranslate nohighlight">\(k_{max}\leq x &lt; k_{max} + 1\)</span> et on prend donc <span class="math notranslate nohighlight">\(E(x)= k_{max}.\)</span></p>
+<ul class="simple">
+<li><p><strong>Unicité:</strong></p></li>
+</ul>
+<p>Si <span class="math notranslate nohighlight">\(k\)</span> et <span class="math notranslate nohighlight">\(l\)</span> sont deux entiers relatifs vérifiant <span class="math notranslate nohighlight">\(k \leq x &lt; k + 1\)</span> et <span class="math notranslate nohighlight">\(l \leq x &lt; l + 1,\)</span> on a donc <span class="math notranslate nohighlight">\(k \leq x &lt; l + 1\)</span>.</p>
+<p>donc par transitivité <span class="math notranslate nohighlight">\(k &lt; l + 1.\)</span></p>
+<p>En échangeant les rôles de <span class="math notranslate nohighlight">\(l\)</span> et <span class="math notranslate nohighlight">\(k,\)</span> on a aussi <span class="math notranslate nohighlight">\(l&lt; k + 1.\)</span></p>
+<p>On en conclut que <span class="math notranslate nohighlight">\(l-1 &lt; k &lt; l + 1,\)</span> mais
+il n’y a qu’un seul entier compris strictement entre <span class="math notranslate nohighlight">\(l-1\)</span> et <span class="math notranslate nohighlight">\(l+1,\)</span> c’est <span class="math notranslate nohighlight">\(l.\)</span></p>
+<p>Ainsi <span class="math notranslate nohighlight">\(k = l.\)</span></p>
+<p>Le cas <span class="math notranslate nohighlight">\(x &lt; 0\)</span> est similaire.</p>
+</div>
+</div>
+<div class="section" id="valeur-absolue">
+<h2>Valeur absolue<a class="headerlink" href="#valeur-absolue" title="Lien permanent vers ce titre">¶</a></h2>
+<div class="admonition-definition admonition">
+<p class="admonition-title">Définition</p>
+<p>Pour un nombre réel <span class="math notranslate nohighlight">\(x,\)</span> on définit la valeur absolue de <span class="math notranslate nohighlight">\(x\)</span> par:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+|x|=\left\{
+\begin{array}{ll}
+x\quad\mbox{si}\quad x\geq0,\\
+-x \quad\mbox{si}\quad x&lt;0
+\end{array}
+\right.
+\end{split}\]</div>
+</div>
+<div class="admonition-proposition admonition">
+<p class="admonition-title">Proposition</p>
+<ol class="simple">
+<li><p><span class="math notranslate nohighlight">\(|x|\geq0,\quad |x|=|-x|;\quad |x|&gt;0\Leftrightarrow x\neq0\)</span></p></li>
+<li><p><span class="math notranslate nohighlight">\(\sqrt{x^2}=|x|\)</span></p></li>
+<li><p><span class="math notranslate nohighlight">\(|xy|=|x||y|\)</span></p></li>
+<li><p>Inégalité triangulaire: <span class="math notranslate nohighlight">\(|x+y|\leq |x|+|y|\)</span></p></li>
+<li><p><span class="math notranslate nohighlight">\(||x|-|y||\leq |x-y|\)</span></p></li>
+</ol>
+</div>
+<p>Sur la droite numérique, <span class="math notranslate nohighlight">\(|x-y|\)</span> représente la distance entre les réels <span class="math notranslate nohighlight">\(x\)</span> et <span class="math notranslate nohighlight">\(y\)</span> ; en particulier <span class="math notranslate nohighlight">\(|x|\)</span> représente la distance
+entre les réels <span class="math notranslate nohighlight">\(x\)</span> et 0. De plus on a <span class="math notranslate nohighlight">\(|x-a|&lt;r\Leftrightarrow a-r&lt;x&lt;a+r.\)</span></p>
+<div class="admonition-exercice admonition">
+<p class="admonition-title">Exercice</p>
+<ol class="simple">
+<li><p>Soient <span class="math notranslate nohighlight">\(x\)</span> et <span class="math notranslate nohighlight">\(y\)</span> deux réels. Montrer que <span class="math notranslate nohighlight">\(|x|\geq ||x+y|-|y||.\)</span></p></li>
+<li><p>Soient <span class="math notranslate nohighlight">\(x_1,\ldots,x_n\)</span> des réels. Montrer que <span class="math notranslate nohighlight">\(|x_1 +\ldots+ x_n
+|\leq|x1
+| + \ldots + |x_n
+|\)</span>. Dans quel cas a-t-on égalité?</p></li>
+<li><p>Soient <span class="math notranslate nohighlight">\(x, y &gt; 0\)</span> des réels. Comparer <span class="math notranslate nohighlight">\(E(x + y)\)</span> avec <span class="math notranslate nohighlight">\(E(x)+E( y).\)</span> Comparer <span class="math notranslate nohighlight">\(E(xy)\)</span> et <span class="math notranslate nohighlight">\(E(x)E(y).\)</span></p></li>
+</ol>
+</div>
+</div>
+</div>
+<div class="section" id="densite-de-mathbb-q-dans-mathbb-r">
+<h1>Densité de <span class="math notranslate nohighlight">\(\mathbb{Q}\)</span> dans <span class="math notranslate nohighlight">\(\mathbb{R}\)</span><a class="headerlink" href="#densite-de-mathbb-q-dans-mathbb-r" title="Lien permanent vers ce titre">¶</a></h1>
+<div class="section" id="intervalle">
+<h2>Intervalle<a class="headerlink" href="#intervalle" title="Lien permanent vers ce titre">¶</a></h2>
+<div class="admonition-definition admonition">
+<p class="admonition-title">Définition</p>
+<p>Un intervalle de <span class="math notranslate nohighlight">\(\mathbb{R}\)</span> est un sous-ensemble <span class="math notranslate nohighlight">\(I\)</span> de <span class="math notranslate nohighlight">\(\mathbb{R}\)</span> vérifiant la propriété:</p>
+<div class="math notranslate nohighlight">
+\[
+\forall a,\,b\in I,\;\forall x\in \mathbb{R},\;(a\leqslant x\leqslant b\Rightarrow x\in I)
+\]</div>
+</div>
+<div class="admonition-remarque admonition">
+<p class="admonition-title">Remarque</p>
+<p>Par définition;</p>
+<ul class="simple">
+<li><p><span class="math notranslate nohighlight">\(I=\varnothing\)</span> est un intervalle.</p></li>
+<li><p><span class="math notranslate nohighlight">\(I=\mathbb{R}\)</span> est aussi un intervalle.</p></li>
+</ul>
+</div>
+<div class="admonition-definition admonition">
+<p class="admonition-title">Définition</p>
+<p>Un intervalle ouvert est un sous-ensemble de <span class="math notranslate nohighlight">\(\mathbb{R}\)</span> de la forme <span class="math notranslate nohighlight">\(]a,b[= \{x\in \mathbb{R},\,a&lt;x&lt;b\}\)</span>, où <span class="math notranslate nohighlight">\(a\)</span> et <span class="math notranslate nohighlight">\(b\)</span> sont des éléments de <span class="math notranslate nohighlight">\(\mathbb{R}.\)</span></p>
+</div>
+<p>La notion de voisinage sera utile pour les limites.</p>
+<div class="admonition-definition admonition">
+<p class="admonition-title">Définition</p>
+<p>Soit <span class="math notranslate nohighlight">\(a\)</span> un réel, <span class="math notranslate nohighlight">\(V\subset R\)</span> un sous-ensemble. On dit que <span class="math notranslate nohighlight">\(V\)</span> est un voisinage de <span class="math notranslate nohighlight">\(a\)</span> s’il existe un intervalle ouvert <span class="math notranslate nohighlight">\(I\)</span> tel que <span class="math notranslate nohighlight">\(a \in I\)</span> et <span class="math notranslate nohighlight">\(I \subset V.\)</span></p>
+</div>
+</div>
+<div class="section" id="densite">
+<h2>Densité<a class="headerlink" href="#densite" title="Lien permanent vers ce titre">¶</a></h2>
+<div class="admonition-theoreme admonition">
+<p class="admonition-title">Théorème</p>
+<ol class="simple">
+<li><p><span class="math notranslate nohighlight">\(\mathbb{Q}\)</span> est dense dans <span class="math notranslate nohighlight">\(\mathbb{R}\)</span>: tout intervalle ouvert (non vide) de <span class="math notranslate nohighlight">\(\mathbb{R}\)</span> contient une infinité de rationnels.</p></li>
+<li><p><span class="math notranslate nohighlight">\(\mathbb{R}\setminus \mathbb{Q}\)</span> est dense dans <span class="math notranslate nohighlight">\(\mathbb{R}\)</span> : tout intervalle ouvert (non vide) de <span class="math notranslate nohighlight">\(\mathbb{R}\)</span> contient une infinité d’irrationnels.</p></li>
+</ol>
+</div>
+</div>
+</div>
+<div class="section" id="borne-superieure">
+<h1>Borne supérieure<a class="headerlink" href="#borne-superieure" title="Lien permanent vers ce titre">¶</a></h1>
+<div class="section" id="maximum-minimum">
+<h2>Maximum, minimum<a class="headerlink" href="#maximum-minimum" title="Lien permanent vers ce titre">¶</a></h2>
+<div class="admonition-definition admonition">
+<p class="admonition-title">Définition</p>
+<p>Soit <span class="math notranslate nohighlight">\(A\)</span> une partie non vide de <span class="math notranslate nohighlight">\(\mathbb{R}.\)</span> Un réel <span class="math notranslate nohighlight">\(\alpha\)</span> est un plus grand élément de <span class="math notranslate nohighlight">\(A\)</span> si :
+<span class="math notranslate nohighlight">\(\alpha\in A\)</span> et <span class="math notranslate nohighlight">\(\forall x\in A,\,x\leqslant \alpha.\)</span>
+S’il existe, le plus grand élément est unique, on le note alors <span class="math notranslate nohighlight">\(\max A.\)</span>
+Le plus petit élément de <span class="math notranslate nohighlight">\(A,\)</span> noté <span class="math notranslate nohighlight">\(\min A,\)</span> s’il existe est le réel <span class="math notranslate nohighlight">\(\alpha\)</span> tel que <span class="math notranslate nohighlight">\(\alpha\in A\)</span> et <span class="math notranslate nohighlight">\(\forall x\in A, \,x\geqslant \alpha.\)</span></p>
+<p>Le plus grand élément s’appelle aussi le maximum et le plus petit élément, le minimum. Il faut garder à l’esprit que
+le plus grand élément ou le plus petit élément n’existent pas toujours.</p>
+</div>
+<div class="admonition-exemple admonition">
+<p class="admonition-title">Exemple</p>
+<ul class="simple">
+<li><p>3 est un majorant de <span class="math notranslate nohighlight">\(]0, 2[ ;\)</span></p></li>
+<li><p>−7,<span class="math notranslate nohighlight">\(\pi,\)</span> 0 sont des minorants de <span class="math notranslate nohighlight">\(]0,+\infty[\)</span> mais il n’y a pas de majorant.</p></li>
+</ul>
+<p>Si un majorant (resp. un minorant) de <span class="math notranslate nohighlight">\(A\)</span> existe on dit que <span class="math notranslate nohighlight">\(A\)</span> est majorée (resp. minorée).
+Comme pour le minimum et le maximum il n’existe pas toujours de majorant ni de minorant, en plus on n’a pas
+l’unicité.</p>
+<p>Soit <span class="math notranslate nohighlight">\(A =[0,1[\)</span></p>
+<ol class="simple">
+<li><p>les majorants de <span class="math notranslate nohighlight">\(A\)</span> sont exactement les éléments de <span class="math notranslate nohighlight">\([1,+\infty[,\)</span></p></li>
+<li><p>les minorants de <span class="math notranslate nohighlight">\(A\)</span> sont exactement les éléments de <span class="math notranslate nohighlight">\(]−\infty,0].\)</span></p></li>
+</ol>
+</div>
+</div>
+<div class="section" id="borne-superieure-borne-inferieure">
+<h2>Borne supérieure, borne inférieure<a class="headerlink" href="#borne-superieure-borne-inferieure" title="Lien permanent vers ce titre">¶</a></h2>
+<div class="admonition-definition admonition">
+<p class="admonition-title">Définition</p>
+<p>Soit <span class="math notranslate nohighlight">\(A\)</span> une partie non vide de <span class="math notranslate nohighlight">\(\mathbb{R}\)</span> et <span class="math notranslate nohighlight">\(\alpha\)</span> un réel.</p>
+<ol class="simple">
+<li><p><span class="math notranslate nohighlight">\(\alpha\)</span> est la borne supérieure de <span class="math notranslate nohighlight">\(A\)</span> si <span class="math notranslate nohighlight">\(\alpha\)</span> est un majorant de <span class="math notranslate nohighlight">\(A\)</span> et si c’est le plus petit des majorants. S’il existe on le
+note <span class="math notranslate nohighlight">\(\sup A.\)</span></p></li>
+<li><p><span class="math notranslate nohighlight">\(\alpha\)</span> est la borne inférieure de <span class="math notranslate nohighlight">\(A\)</span> si <span class="math notranslate nohighlight">\(\alpha\)</span> est un minorant de <span class="math notranslate nohighlight">\(A\)</span> et si c’est le plus grand des minorants. S’il existe on le
+note <span class="math notranslate nohighlight">\(\inf A.\)</span></p></li>
+</ol>
+</div>
+<div class="admonition-exemple admonition">
+<p class="admonition-title">Exemple</p>
+<p>Soit <span class="math notranslate nohighlight">\(A =]0,1].\)</span></p>
+<ol class="simple">
+<li><p><span class="math notranslate nohighlight">\(\sup A = 1\)</span> : en effet les majorants de <span class="math notranslate nohighlight">\(A\)</span> sont les éléments de <span class="math notranslate nohighlight">\([1,+\infty[.\)</span> Donc le plus petit des majorants est 1.</p></li>
+<li><p><span class="math notranslate nohighlight">\(\inf A = 0:\)</span> les minorants sont les éléments de <span class="math notranslate nohighlight">\(] −\infty,0]\)</span> donc le plus grand des minorants est 0.</p></li>
+</ol>
+<ul class="simple">
+<li><p><span class="math notranslate nohighlight">\(\sup[a, b] = b,\)</span></p></li>
+<li><p><span class="math notranslate nohighlight">\(\inf[a, b]=a,\)</span></p></li>
+<li><p><span class="math notranslate nohighlight">\(\sup]a, b[= b,\)</span></p></li>
+<li><p><span class="math notranslate nohighlight">\(]0,+\infty[\)</span> n’admet pas de borne supérieure,</p></li>
+<li><p><span class="math notranslate nohighlight">\(\inf]0,+\infty[= 0.\)</span></p></li>
+</ul>
+</div>
+<div class="admonition-theoreme admonition">
+<p class="admonition-title">Théorème</p>
+<p>Toute partie de <span class="math notranslate nohighlight">\(\mathbb{R}\)</span> non vide et majorée admet une borne supérieure.</p>
+</div>
+<p>De la même façon : Toute partie de <span class="math notranslate nohighlight">\(\mathbb{R}\)</span> non vide et minorée admet une borne inférieure.</p>
+<div class="admonition-proposition-caracterisation-de-la-borne-superieure admonition">
+<p class="admonition-title">Proposition (Caractérisation de la borne supérieure)</p>
+<p>Soit <span class="math notranslate nohighlight">\(A\)</span> une partie non vide et majorée de <span class="math notranslate nohighlight">\(\mathbb{R}.\)</span> La borne supérieure de <span class="math notranslate nohighlight">\(A\)</span> est l’unique réel <span class="math notranslate nohighlight">\(\sup A\)</span> tel que</p>
+<ol class="simple">
+<li><p>si <span class="math notranslate nohighlight">\(x\in A,\)</span> alors <span class="math notranslate nohighlight">\(x \leqslant\sup A,\)</span></p></li>
+<li><p>pour tout <span class="math notranslate nohighlight">\(y &lt; \sup A,\)</span> il existe <span class="math notranslate nohighlight">\(x\in A\)</span> tel que <span class="math notranslate nohighlight">\(y &lt; x.\)</span></p></li>
+</ol>
+</div>
+</div>
+</div>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            kernelName: "python3",
+            path: "./."
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+              </div>
+              
+        
+        <div class='prev-next-bottom'>
+            
+    <a class='left-prev' id="prev-link" href="rationnels.html" title="previous page">Les nombres rationnels</a>
+    <a class='right-next' id="next-link" href="exo1.html" title="next page">Exercices</a>
+
+        </div>
+        
+        </div>
+    </div>
+    <footer class="footer mt-5 mt-md-0">
+    <div class="container">
+      <p>
+        
+          Par Iaousse M'barek<br/>
+        
+            &copy; droits d'auteur 2022.<br/>
+      </p>
+    </div>
+  </footer>
+</main>
+
+
+      </div>
+    </div>
+  
+  <script src="_static/js/index.1c5a1a01449ed65a7b51.js"></script>
+
+  
+  </body>
+</html>
