@@ -33,11 +33,11 @@ Soit $E$ un ensemble.
 1. Une relation $\mathcal{R}$ sur $E$ est un sous-ensemble de l'ensemble produit $E\times E.$ Pour $(x,y)\in E\times E,$ on dit que $x$ est en relation avec $y$ et on note $x\mathcal{R}y$ pour dire que $(x,y)\in R.$
 
 2. Une relation $\mathcal{R}$ est une relation d'ordre si 
-    - $\mathcal{R}$ est \textit{réflexive}: Pour tout $x\in E,$ $x\mathcal{R}x$
+    - $\mathcal{R}$ est _réflexive_: Pour tout $x\in E,$ $x\mathcal{R}x$
 
-    - $\mathcal{R}$ est \textit{antisymétrique}: pour tout $x,y\in E,$ $(x\mathcal{R}y\:\mbox{et} y\mathcal{R}x) \Rightarrow x=y.$
+    - $\mathcal{R}$ est _antisymétrique_: pour tout $x,y\in E,$ $(x\mathcal{R}y\:\mbox{et} y\mathcal{R}x) \Rightarrow x=y.$
 
-    - $\mathcal{R}$ est \textit{transitive}: pour tout $x,y,z\in E,$ $(x\mathcal{R}y\:\mbox{et} y\mathcal{R}z)\Rightarrow x\mathcal{R}z$
+    - $\mathcal{R}$ est _transitive_: pour tout $x,y,z\in E,$ $(x\mathcal{R}y\:\mbox{et} y\mathcal{R}z)\Rightarrow x\mathcal{R}z$
 
 ```
 
@@ -107,7 +107,6 @@ Cette propriété peut sembler évidente, elle est pourtant essentielle puisque 
 d'un nombre réel:
 
 ```{admonition} Proposition (partie entière)
-label: partent
 Soit $x\in R,$ il existe un unique entier relatif, la partie entière notée $E(x),$ tel que:
 
 $$
@@ -192,16 +191,7 @@ $$
 Sur la droite numérique, $|x-y|$ représente la distance entre les réels $x$ et $y$ ; en particulier $|x|$ représente la distance
 entre les réels $x$ et 0. De plus on a $|x-a|<r\Leftrightarrow a-r<x<a+r.$
 
-```{admonition} Exercice
-1. Soient $x$ et $y$ deux réels. Montrer que $|x|\geq ||x+y|-|y||.$
 
-2. Soient $x_1,\ldots,x_n$ des réels. Montrer que $|x_1 +\ldots+ x_n
-|\leq|x1
-| + \ldots + |x_n
-|$. Dans quel cas a-t-on égalité?
-
-3. Soient $x, y > 0$ des réels. Comparer $E(x + y)$ avec $E(x)+E( y).$ Comparer $E(xy)$ et $E(x)E(y).$
-```
 
 
 # Densité de $\mathbb{Q}$ dans $\mathbb{R}$
