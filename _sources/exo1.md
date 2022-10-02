@@ -64,4 +64,3 @@ Soit $A$ et $B$ deux parties bornées de $\R$. Vrai ou faux?
 2. Soient $x_1,\ldots,x_n$ des réels. Montrer que $|x_1 +\ldots+ x_n|\leq|x1| + \ldots + |x_n|$. Dans quel cas a-t-on égalité?
 
 3. Soient $x, y > 0$ des réels. Comparer $E(x + y)$ avec $E(x)+E( y).$ Comparer $E(xy)$ et $E(x)E(y).$
-```
