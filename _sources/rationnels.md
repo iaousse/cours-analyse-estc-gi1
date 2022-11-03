@@ -23,6 +23,7 @@ Un nombre est rationnel si et seulement s'il admet une écriture décimale péri
 ```
 
 ```{admonition} Exemple
+:class: warning
 le nombre $\frac{3}{5}$ est rationnel car:
 
 $$
@@ -62,6 +63,7 @@ Il existe des nombres qui ne sont pas rationnels, les irrationnels. Les nombres 
 Nous allons prouver que $\sqrt{2}$ n'est pas un nombre rationnel.
 
 ```{admonition} Proposition
+:class: important
 $\sqrt{2}$ est un nombre irrationnel.
 ```
 
@@ -73,6 +75,7 @@ Mais si 2 divise $p^2$
 Alors 2 divise $p$ (cela se prouve par facilement l'absurde). Donc il existe un entier $p'\in \mathbb{Z}$ tel que $p=2p'$
 
 ```{admonition} Démonstration
+:class: seealso, dropdown
 Repartons de l'égalité $2q^2=p^2$ et remplaçons $p$ par $2p'.$ Cela donne $2q^2=4p'^{2}$. Donc $q^2=2p'^{2}.$
 Maintenant cela entraîne que 2 divise $q^2$ et comme avant alors 2 divise $q.$
 Nous avons prouvé que 2 divise à la fois $p$ et $q.$ Cela rentre en contradiction avec le fait que $p$ et $q$ sont premiers entre eux. Notre hypothèse de départ est donc fausse : $\sqrt{2}$ n'est pas un nombre rationnel.

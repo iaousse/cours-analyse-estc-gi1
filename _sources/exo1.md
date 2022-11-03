@@ -5,15 +5,15 @@ Comment définir $\max(a,b,c),$ $\max(a_1,...,a_n)$? Et $\min(a,b)$?
 
 ## Exercice 2
 
-1.  Écrire les nombres suivants sous forme d'une fraction : $0,1212$ ;$0,12 12 ....$, $78,33456456...$
+1.  Écrire les nombres suivants sous forme d'une fraction : $0,1212$ ;$0,1212 ....$; $78,33454545...$
 1. Sachant $\sqrt{2}\notin\mathbb{Q},$ montrer que $2-3\sqrt{2}\notin\mathbb{Q},$ $1-\frac{1}{\sqrt{2}}\notin\mathbb{Q}.$
 1. Notons $D$ l'ensemble des nombres de la forme $\frac{a}{2^{n}}$ avec $a\in\mathbb{Z}$ et $n\in \mathbb{N}$. Montrer que $\frac{1}{3}\notin D$. Trouver $x\in D$ tel que $1234<x<1234,001$
 1. Montrer que $\frac{\sqrt{2}}{\sqrt{3}}\notin \mathbb{Q}.$
 
 
 ## Exercice 3
-1. Démontrer que si $ r\in \Q$ et $x \in \R\setminus\Q$ alors $r +x \in \R\setminus\Q$ et si $r \neq 0$ alors $rx \in \R\setminus\Q$.
-2. Montrer que $sqrt{2}\notin \Q$.
+1. Démontrer que si $ r\in \mathbb{Q}$ et $x \notin \mathbb{Q}$ alors $r +x \notin \mathbb{Q}$ et si $r \neq 0$ alors $rx \notin \mathbb{Q}$.
+2. Montrer que $\sqrt{2}\notin \mathbb{Q}$.
 3. En déduire que : entre deux nombres rationnels il y a toujours un nombre irrationnel.
 
 ## Exercice 4
@@ -38,7 +38,7 @@ Déterminer (s’ils existent) : les majorants, les minorants, la borne supérie
 élément, le plus petit élément des ensembles suivants :
 
 $$
-[0, 1]\cap \Q; ]0, 1[\cap \Q; \N; \left\{(-1)^n + \dfrac{1}{n^2} | n \in \N^\star \right\}
+[0, 1]\cap \mathbb{Q}; ]0, 1[\cap \mathbb{Q}; \N; \left\{(-1)^n + \dfrac{1}{n^2} | n \in \N^\star \right\}
 $$
 
 ## Exercice 8

@@ -1,0 +1,743 @@
+
+<!DOCTYPE html>
+
+<html lang="fr">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Fonctions numérique: Définitions générales &#8212; Cours Analyse</title>
+    
+  <link href="_static/css/theme.css" rel="stylesheet" />
+  <link href="_static/css/index.c5995385ac14fb8791e8eb36b4908be2.css" rel="stylesheet" />
+
+    
+  <link rel="stylesheet"
+    href="_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    
+      
+
+    
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="_static/sphinx-book-theme.e8e5499552300ddf5d7adccae7cc3b70.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="_static/proof.css" />
+    <link rel="stylesheet" type="text/css" href="_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
+    <link rel="stylesheet" type="text/css" href="_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
+    
+  <link rel="preload" as="script" href="_static/js/index.1c5a1a01449ed65a7b51.js">
+
+    <script id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+    <script src="_static/jquery.js"></script>
+    <script src="_static/underscore.js"></script>
+    <script src="_static/doctools.js"></script>
+    <script src="_static/togglebutton.js"></script>
+    <script src="_static/clipboard.min.js"></script>
+    <script src="_static/copybutton.js"></script>
+    <script src="_static/translations.js"></script>
+    <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="_static/sphinx-book-theme.12a9622fbb08dcb3a2a40b2c02b83a57.js"></script>
+    <script async="async" src="https://unpkg.com/thebelab@latest/lib/index.js"></script>
+    <script >
+        const thebe_selector = ".thebe"
+        const thebe_selector_input = "pre"
+        const thebe_selector_output = ".output"
+    </script>
+    <script async="async" src="_static/sphinx-thebe.js"></script>
+    <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/x-mathjax-config">MathJax.Hub.Config({"TeX": {"Macros": {"Z": "\\mathbb{Z}", "V": "V", "N": "\\mathbb{N}", "C": "\\mathbb{C}", "Q": "\\mathbb{Q}", "K": "\\mathbb{K}", "floor": ["\\lfloor#1\\rfloor", 1], "bmat": ["\\left[\\begin{array}"], "emat": ["\\end{array}\\right]"], "R": ["\\mathbb{R}"], "B": ["\\mathcal{B}"], "norm": ["{\\Vert#1\\Vert}", 1], "abs": ["{\\left|#1\\right|}", 1], "coloneqq": ["{:=}"], "eqqcolon": ["{=:}"], "emph": ["\\pmb#1", 1], "tr": "\\operatorname{Spur}", "lin": "\\operatorname{lin}", "dv": "\\mathrm{div}~", "rot": "\\mathrm{rot}~", "Dim": "\\operatorname{dim}", "diag": "\\operatorname{diag}", "Kern": "\\operatorname{Kern}", "Bild": "\\operatorname{Bild}", "Im": "\\operatorname{Im}", "Rang": "\\operatorname{Rang}", "GL": "\\operatorname{GL}", "Eig": "\\operatorname{Eig}", "End": "\\operatorname{End}", "Hau": "\\operatorname{Haupt}", "mymathbb": ["\\boldsymbol{#1}", 1], "idx": "\\mathrm{d}x", "d": "\\mathrm{d}", "i": "\\mathrm{i}", "x": "\\mathbf{x}", "sign": "\\mathrm{sign}", "vec": ["\\mathbf{#1}", 1], "veczwei": ["\\begin{pmatrix} #1 \\\\ #2 \\end{pmatrix}", 2], "M": "\\mathcal{M}", "S": "\\mathbb{S}", "bone": "\\unicode{x1D7D9}", "Re": "\\mathrm{Re}", "Um": "\\operatorname{Um}", "Res": "\\operatorname{Res}"}}, "tex2jax": {"inlineMath": [["\\(", "\\)"]], "displayMath": [["\\[", "\\]"]], "processRefs": false, "processEnvironments": false}})</script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Recherche" href="search.html" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="en" />
+    
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+    <div class="container-fluid" id="banner"></div>
+
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
+    
+        <div class="navbar-brand-box">
+    <a class="navbar-brand text-wrap" href="index.html">
+      
+      <img src="_static/logo.png" class="logo" alt="logo">
+      
+      
+      <h1 class="site-logo" id="site-title">Cours Analyse</h1>
+      
+    </a>
+</div><form class="bd-search d-flex align-items-center" action="search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Rechercher dans ce livre ..." aria-label="Rechercher dans ce livre ..." autocomplete="off" >
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
+    <div class="bd-toc-item active">
+        <ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="intro.html">
+   Introduction
+  </a>
+ </li>
+</ul>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="R.html">
+   Les nombres réels
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/>
+  <label for="toctree-checkbox-1">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="rationnels.html">
+     Les nombres rationnels
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="proprties.html">
+     Propriétés de
+     <span class="math notranslate nohighlight">
+      \(\mathbb{R}\)
+     </span>
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="exo1.html">
+     Exercices
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="suite.html">
+   Les suites des nombres réels
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/>
+  <label for="toctree-checkbox-2">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="suites.html">
+     Suites réelles: Définitions générales
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="exo2.html">
+     Exercices
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+
+    </div>
+</nav> <!-- To handle the deprecated key -->
+
+<div class="navbar_extra_footer">
+  Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
+</div>
+
+</div>
+
+
+          
+
+
+          
+<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
+    
+    <div class="topbar container-xl fixed-top">
+    <div class="topbar-contents row">
+        <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show"></div>
+        <div class="col pl-md-4 topbar-main">
+            
+            <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
+                data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
+                aria-expanded="true" aria-label="Basculer la navigation" aria-controls="site-navigation"
+                title="Basculer la navigation" data-toggle="tooltip" data-placement="left">
+                <i class="fas fa-bars"></i>
+                <i class="fas fa-arrow-left"></i>
+                <i class="fas fa-arrow-up"></i>
+            </button>
+            
+            
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Téléchargez cette page"><i
+            class="fas fa-download"></i></button>
+
+    <div class="dropdown-buttons">
+        <!-- ipynb file if we had a myst markdown file -->
+        
+        <!-- Download raw file -->
+        <a class="dropdown-buttons" href="_sources/limitefcts.md"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Télécharger le fichier source" data-toggle="tooltip"
+                data-placement="left">.md</button></a>
+        <!-- Download PDF via print -->
+        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Imprimer au format PDF"
+            onClick="window.print()" data-toggle="tooltip" data-placement="left">.pdf</button>
+    </div>
+</div>
+
+            <!-- Source interaction buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Connect with source repository"><i class="fab fa-github"></i></button>
+    <div class="dropdown-buttons sourcebuttons">
+        <a class="repository-button"
+            href="https://github.com/executablebooks/jupyter-book"><button type="button" class="btn btn-secondary topbarbtn"
+                data-toggle="tooltip" data-placement="left" title="Dépôt source"><i
+                    class="fab fa-github"></i>dépôt</button></a>
+        <a class="issues-button"
+            href="https://github.com/executablebooks/jupyter-book/issues/new?title=Issue%20on%20page%20%2Flimitefcts.html&body=Your%20issue%20content%20here."><button
+                type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
+                title="Ouvrez un problème"><i class="fas fa-lightbulb"></i>signaler un problème</button></a>
+        
+    </div>
+</div>
+
+            <!-- Full screen (wrap in <a> to have style consistency -->
+
+<a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
+        data-placement="bottom" onclick="toggleFullScreen()" aria-label="Mode plein écran"
+        title="Mode plein écran"><i
+            class="fas fa-expand"></i></button></a>
+
+            <!-- Launch buttons -->
+
+        </div>
+
+        <!-- Table of contents -->
+        <div class="d-none d-md-block col-md-2 bd-toc show">
+            
+            <div class="tocsection onthispage pt-5 pb-3">
+                <i class="fas fa-list"></i> Contenu
+            </div>
+            <nav id="bd-toc-nav">
+                <ul class="visible nav section-nav flex-column">
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#">
+   Fonctions numérique: Définitions générales
+  </a>
+ </li>
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#limite-d-une-fonction-numerique">
+   Limite d’une fonction numérique
+  </a>
+  <ul class="visible nav section-nav flex-column">
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#limite-en-un-point-en-l-infini">
+     Limite en un point en l’infini
+    </a>
+   </li>
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#limite-a-gauche-et-a-droite-en-un-point">
+     Limite à gauche et à droite en un point
+    </a>
+   </li>
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#proprietes">
+     Propriétés
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#continuite-d-une-fonction-numerique">
+   Continuité d’une fonction numérique
+  </a>
+ </li>
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#prolongement-par-continuite">
+   Prolongement par continuité
+  </a>
+ </li>
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#theoreme-des-valeurs-intermediaires">
+   Théorème des valeurs intermédiaires
+  </a>
+ </li>
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#theoreme-de-la-bijection">
+   Théorème de la bijection
+  </a>
+ </li>
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#application-fonctions-logarithme-et-exponentielle">
+   Application: Fonctions Logarithme et exponentielle
+  </a>
+ </li>
+</ul>
+
+            </nav>
+        </div>
+    </div>
+</div>
+    <div id="main-content" class="row">
+        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
+        
+              <div>
+                
+  <div class="section" id="fonctions-numerique-definitions-generales">
+<h1>Fonctions numérique: Définitions générales<a class="headerlink" href="#fonctions-numerique-definitions-generales" title="Lien permanent vers ce titre">¶</a></h1>
+<div class="admonition-definition admonition">
+<p class="admonition-title">Définition</p>
+<p>Une fonction d’une variable réelle à valeurs réelles est une application <span class="math notranslate nohighlight">\(f:D\rightarrow\mathbb{R},\)</span> où <span class="math notranslate nohighlight">\(D\)</span> est une partie de <span class="math notranslate nohighlight">\(\mathbb{R}.\)</span> En général, <span class="math notranslate nohighlight">\(D\)</span> est un intervalle ou une réunion d’intervalles. On appelle <span class="math notranslate nohighlight">\(D\)</span> le domaine de définition de la fonction <span class="math notranslate nohighlight">\(f\)</span> et on le note souvent par <span class="math notranslate nohighlight">\(D_f\)</span> et on a</p>
+<div class="math notranslate nohighlight">
+\[
+D_f:=\{x\in \mathbb{R};\;f(x)\in \mathbb{R}\}
+\]</div>
+</div>
+<div class="warning admonition">
+<p class="admonition-title">Exemple</p>
+<p>Le domaine de définition de la fonction <span class="math notranslate nohighlight">\(f(x)=\dfrac{\sqrt{x}}{x-2}\)</span> est <span class="math notranslate nohighlight">\(D_f=[0,2[\cup]2,+\infty[.\)</span></p>
+</div>
+<p>Soient <span class="math notranslate nohighlight">\(f:D\rightarrow \mathbb{R}\)</span> et <span class="math notranslate nohighlight">\(g:D\rightarrow\mathbb{R}\)</span> deux fonctions définies sur une même partie <span class="math notranslate nohighlight">\(D\)</span> de <span class="math notranslate nohighlight">\(\mathbb{R}.\)</span></p>
+<ul class="simple">
+<li><p>La somme de <span class="math notranslate nohighlight">\(f\)</span> et <span class="math notranslate nohighlight">\(g\)</span> est la fonction <span class="math notranslate nohighlight">\(f+g:D\rightarrow \mathbb{R}\)</span> définie par <span class="math notranslate nohighlight">\((f+g)(x)=f(x)+g(x)\)</span> pour tout <span class="math notranslate nohighlight">\(x\in D.\)</span></p></li>
+<li><p>Le produit de <span class="math notranslate nohighlight">\(f\)</span> et <span class="math notranslate nohighlight">\(g\)</span> est la fonction <span class="math notranslate nohighlight">\(f\times g:D\rightarrow \mathbb{R}\)</span> définie par <span class="math notranslate nohighlight">\((f\times g)(x)=f(x)\times g(x)\)</span> pour tout <span class="math notranslate nohighlight">\(x\in D.\)</span></p></li>
+<li><p>La multiplication par un scalaire <span class="math notranslate nohighlight">\(\lambda\in \mathbb{R}\)</span> de <span class="math notranslate nohighlight">\(f\)</span> est la fonction <span class="math notranslate nohighlight">\(\lambda.f:D\rightarrow \mathbb{R}\)</span> définie par <span class="math notranslate nohighlight">\((\lambda.f)(x)=\lambda.f(x)\)</span> pour tout <span class="math notranslate nohighlight">\(x\in D.\)</span></p></li>
+</ul>
+<div class="admonition-definition admonition">
+<p class="admonition-title">Définition</p>
+<p>Soit <span class="math notranslate nohighlight">\(f:D\rightarrow \mathbb{R}\)</span> une fonction. On dit que:</p>
+<ul class="simple">
+<li><p><span class="math notranslate nohighlight">\(f\)</span> est majorée sur <span class="math notranslate nohighlight">\(D\)</span> si <span class="math notranslate nohighlight">\(\exists M\in \mathbb{R},\;\forall x\in D;\; f(x)\leq M;\)</span></p></li>
+<li><p><span class="math notranslate nohighlight">\(f\)</span> est minorée sur <span class="math notranslate nohighlight">\(D\)</span> si <span class="math notranslate nohighlight">\(\exists m\in \mathbb{R},\,\forall x\in D,\, f(x)\geq m;\)</span></p></li>
+<li><p><span class="math notranslate nohighlight">\(f\)</span> est bornée sur <span class="math notranslate nohighlight">\(D\)</span> si <span class="math notranslate nohighlight">\(f\)</span> est à la fois majorée et minorée sur <span class="math notranslate nohighlight">\(D,\)</span> c’est-à-dire si <span class="math notranslate nohighlight">\(\exists M\in \mathbb{R}_{+},\forall x\in D,\,|f(x)|\leq M.\)</span></p></li>
+</ul>
+</div>
+<div class="admonition-definition admonition">
+<p class="admonition-title">Définition</p>
+<p>Soit <span class="math notranslate nohighlight">\(f:D\rightarrow \mathbb{R}\)</span> une fonction. On dit que:</p>
+<ul class="simple">
+<li><p><span class="math notranslate nohighlight">\(f\)</span> est croissante sur <span class="math notranslate nohighlight">\(D\)</span> si: pour tout <span class="math notranslate nohighlight">\(x\)</span> et <span class="math notranslate nohighlight">\(y\)</span> dans <span class="math notranslate nohighlight">\(D\)</span> on a <span class="math notranslate nohighlight">\(x\leq y\Rightarrow f(x)\leq f(y).\)</span></p></li>
+<li><p><span class="math notranslate nohighlight">\(f\)</span> est strictement croissante sur <span class="math notranslate nohighlight">\(D\)</span> si: pour tout <span class="math notranslate nohighlight">\(x\)</span> et <span class="math notranslate nohighlight">\(y\)</span> dans <span class="math notranslate nohighlight">\(D\)</span> on a <span class="math notranslate nohighlight">\(x\leq y\Rightarrow f(x)&lt; f(y)\)</span></p></li>
+<li><p><span class="math notranslate nohighlight">\(f\)</span> est décroissante sur <span class="math notranslate nohighlight">\(D\)</span> si: pour tout <span class="math notranslate nohighlight">\(x\)</span> et <span class="math notranslate nohighlight">\(y\)</span> dans <span class="math notranslate nohighlight">\(D\)</span> on a <span class="math notranslate nohighlight">\(x\leq y\Rightarrow f(x)\geq f(y).\)</span></p></li>
+<li><p><span class="math notranslate nohighlight">\(f\)</span> est strictement décroissante sur <span class="math notranslate nohighlight">\(D\)</span> si: pour tout <span class="math notranslate nohighlight">\(x\)</span> et <span class="math notranslate nohighlight">\(y\)</span> dans <span class="math notranslate nohighlight">\(D\)</span> on a <span class="math notranslate nohighlight">\(x\leq y\Rightarrow f(x)&gt; f(y).\)</span></p></li>
+<li><p><span class="math notranslate nohighlight">\(f\)</span> est monotone (resp. strictement monotone) sur <span class="math notranslate nohighlight">\(D\)</span> si <span class="math notranslate nohighlight">\(f\)</span> est croissante ou décroissante (resp. strictement croissante ou strictement décroissante) sur <span class="math notranslate nohighlight">\(D.\)</span></p></li>
+</ul>
+</div>
+<div class="admonition-definition admonition">
+<p class="admonition-title">Définition</p>
+<p>On dit que:</p>
+<ul class="simple">
+<li><p><span class="math notranslate nohighlight">\(f\)</span> est paire si <span class="math notranslate nohighlight">\(\forall x\in D_f:\)</span> <span class="math notranslate nohighlight">\(-x\in D_f\)</span> et <span class="math notranslate nohighlight">\(\forall x\in D_f\)</span> <span class="math notranslate nohighlight">\(f(-x)=f(x),\)</span></p></li>
+<li><p><span class="math notranslate nohighlight">\(f\)</span> est impaire si <span class="math notranslate nohighlight">\(\forall x\in D_f:\)</span> <span class="math notranslate nohighlight">\(-x\in D_f\)</span> et <span class="math notranslate nohighlight">\(\forall x\in D_f\)</span> <span class="math notranslate nohighlight">\(f(-x)=-f(x),\)</span></p></li>
+</ul>
+</div>
+<div class="admonition-definition admonition">
+<p class="admonition-title">Définition</p>
+<p>Soit <span class="math notranslate nohighlight">\(f:\mathbb{R}\rightarrow \mathbb{R}\)</span> une fonction et <span class="math notranslate nohighlight">\(T\)</span> un nombre réel, <span class="math notranslate nohighlight">\(T&gt;0.\)</span> La fonction <span class="math notranslate nohighlight">\(f\)</span> est dite périodique de période <span class="math notranslate nohighlight">\(T\)</span> si <span class="math notranslate nohighlight">\(\forall x\in \mathbb{R}\)</span> <span class="math notranslate nohighlight">\(f(x+T)=f(x).\)</span></p>
+</div>
+<div class="warning admonition">
+<p class="admonition-title">Exemple</p>
+<p>Les fonctions sinus et cosinus sont <span class="math notranslate nohighlight">\(2\pi\)</span>-périodique. La fonction tangente est <span class="math notranslate nohighlight">\(\pi\)</span>-périodique.</p>
+</div>
+</div>
+<div class="section" id="limite-d-une-fonction-numerique">
+<h1>Limite d’une fonction numérique<a class="headerlink" href="#limite-d-une-fonction-numerique" title="Lien permanent vers ce titre">¶</a></h1>
+<div class="section" id="limite-en-un-point-en-l-infini">
+<h2>Limite en un point en l’infini<a class="headerlink" href="#limite-en-un-point-en-l-infini" title="Lien permanent vers ce titre">¶</a></h2>
+<p>Soit <span class="math notranslate nohighlight">\(f\)</span> une fonction définie sur un ensemble de la forme <span class="math notranslate nohighlight">\(]a,x_0[\cup ]x_0,b[,\,x_0\in \mathbb{R}.\)</span></p>
+<div class="admonition-definition admonition">
+<p class="admonition-title">Définition</p>
+<p>Soit <span class="math notranslate nohighlight">\(l\in \mathbb{R}.\)</span> On dit que <span class="math notranslate nohighlight">\(f\)</span> a pour limite en <span class="math notranslate nohighlight">\(x_0\)</span> si</p>
+<p><span class="math notranslate nohighlight">\(\forall \varepsilon&gt;0,\quad \exists \delta&gt;0, \quad x\in D_f:\quad |x-x_0|&lt;\delta\Rightarrow |f(x)-l|&lt;\varepsilon.\)</span></p>
+<p>On dit aussi que <span class="math notranslate nohighlight">\(f(x)\)</span> tend vers <span class="math notranslate nohighlight">\(l\)</span> lorsque <span class="math notranslate nohighlight">\(x\)</span> tend vers <span class="math notranslate nohighlight">\(x_0.\)</span> On note alors <span class="math notranslate nohighlight">\(\lim_{x\rightarrow x_0}f(x)=l\)</span> ou bien <span class="math notranslate nohighlight">\(\lim_{x_0}f(x)=l.\)</span></p>
+</div>
+<div class="admonition-definition admonition">
+<p class="admonition-title">Définition</p>
+<p>On dit que <span class="math notranslate nohighlight">\(f\)</span> a pour limite <span class="math notranslate nohighlight">\(+\infty\)</span> en <span class="math notranslate nohighlight">\(x_0\)</span> si</p>
+<p><span class="math notranslate nohighlight">\(\forall A&gt;0, \quad \exists \delta&gt;0, \quad x\in I:\quad |x-x_0|&lt;\delta\Rightarrow f(x)&gt;A.\)</span></p>
+<p>On note alors <span class="math notranslate nohighlight">\(\lim_{x\rightarrow x_0}f(x)=+\infty.\)</span></p>
+<p>On dit que <span class="math notranslate nohighlight">\(f\)</span> a pour limite <span class="math notranslate nohighlight">\(-\infty\)</span> en <span class="math notranslate nohighlight">\(x_0\)</span> si</p>
+<p><span class="math notranslate nohighlight">\(\forall A&gt;0, \quad \exists \delta&gt;0, \quad x\in I:\quad |x-x_0|&lt;\delta\Rightarrow f(x)&lt;-A.\)</span></p>
+<p>On note alors <span class="math notranslate nohighlight">\(\lim_{x\rightarrow x_0}f(x)=-\infty.\)</span></p>
+</div>
+<p>Soit <span class="math notranslate nohighlight">\(f:I\rightarrow\mathbb{R}\)</span> une fonction définie sur un intervalle de la forme <span class="math notranslate nohighlight">\(I=]a,+\infty[.\)</span></p>
+<div class="admonition-definition admonition">
+<p class="admonition-title">Définition</p>
+<ul class="simple">
+<li><p>Soit <span class="math notranslate nohighlight">\(l\in \mathbb{R}.\)</span> On dit que <span class="math notranslate nohighlight">\(f\)</span> a pour limite <span class="math notranslate nohighlight">\(l\)</span> en <span class="math notranslate nohighlight">\(+\infty\)</span> si</p></li>
+</ul>
+<p><span class="math notranslate nohighlight">\(\forall \varepsilon&gt;0,\quad \exists B&gt;0, \quad x\in I:\quad x&gt; B\Rightarrow |f(x)-l|&lt;\varepsilon.\)</span></p>
+<p>On note alors <span class="math notranslate nohighlight">\(\lim_{x\rightarrow +\infty}f(x)=l\)</span> ou <span class="math notranslate nohighlight">\(\lim_{+\infty}=l.\)</span></p>
+<ul class="simple">
+<li><p>On dit que <span class="math notranslate nohighlight">\(f\)</span> a pour limite <span class="math notranslate nohighlight">\(+\infty\)</span> en <span class="math notranslate nohighlight">\(+\infty\)</span> si</p></li>
+</ul>
+<p><span class="math notranslate nohighlight">\(\forall A&gt;0,\quad \exists B&gt;0, \quad x\in I:\quad x&gt; B\Rightarrow f(x)&gt;A.\)</span></p>
+<p>On note alors <span class="math notranslate nohighlight">\(\lim_{x\rightarrow +\infty}f(x)=+\infty\)</span></p>
+<p>On définirait de la même manière la limite en <span class="math notranslate nohighlight">\(-\infty\)</span> pour des fonctions définies sur les intervalles de type <span class="math notranslate nohighlight">\(]-\infty,a[.\)</span></p>
+</div>
+<div class="warning admonition">
+<p class="admonition-title">Exemple</p>
+<p>On a les limites classiques suivantes pour tout <span class="math notranslate nohighlight">\(n\geq 1:\)</span></p>
+<ul class="simple">
+<li><p><span class="math notranslate nohighlight">\(\lim_{x\rightarrow +\infty}x^n=+\infty\)</span> et <span class="math notranslate nohighlight">\(\lim_{x\rightarrow-\infty}x^n=\left\{
+\begin{array}{ll}
++\infty \quad\mbox{si} \;n\;\mbox{est pair}\\
+-\infty \quad\mbox{si}\;n\;\mbox{est impair}
+\end{array}
+\right.\)</span></p></li>
+<li><p><span class="math notranslate nohighlight">\(\lim_{x\rightarrow \pm\infty}(\dfrac{1}{x^n})=0\)</span></p></li>
+<li><p>Soient <span class="math notranslate nohighlight">\(P(x)=a_n x^n+a_{n-1}x^{n-1}+...+a_1 x+a_0\)</span> et <span class="math notranslate nohighlight">\(Q(x)=b_m x^m+b_{m-1}^{m-1}+...+b_1 x+b_0\)</span> deux polynômes (<span class="math notranslate nohighlight">\(a_n\neq0\)</span> et <span class="math notranslate nohighlight">\(b_m\neq 0\)</span>). On a</p></li>
+</ul>
+<p><span class="math notranslate nohighlight">\(\lim_{x\rightarrow\pm\infty}P(x)=\lim_{x\rightarrow\pm\infty}a_n x^n\)</span> et <span class="math notranslate nohighlight">\(\lim_{x\rightarrow\pm\infty}\dfrac{P(x)}{Q(x)}=\left\{
+\begin{array}{ll}
+\pm\infty \quad\mbox{ si } \; n&gt;m\\
+\dfrac{a_n}{b_m} \quad\mbox{si}\;n=m\\
+0 \quad\mbox{si} n&lt;m
+\end{array}
+\right.\)</span></p>
+<ul class="simple">
+<li><p>Les fonctions sin et cos n’admettent pas de limite ni en <span class="math notranslate nohighlight">\(+\infty\)</span> ni en <span class="math notranslate nohighlight">\(-\infty.\)</span></p></li>
+</ul>
+</div>
+</div>
+<div class="section" id="limite-a-gauche-et-a-droite-en-un-point">
+<h2>Limite à gauche et à droite en un point<a class="headerlink" href="#limite-a-gauche-et-a-droite-en-un-point" title="Lien permanent vers ce titre">¶</a></h2>
+<div class="admonition-definition admonition">
+<p class="admonition-title">Définition</p>
+<p>Soit <span class="math notranslate nohighlight">\(f\)</span> une fonction définie sur un intervalle <span class="math notranslate nohighlight">\(]x_0,b[\)</span> (resp. <span class="math notranslate nohighlight">\(]a,x_0[\)</span>). On dit que <span class="math notranslate nohighlight">\(f\)</span> admet une limite <span class="math notranslate nohighlight">\(\ell\in \mathbb{R}\)</span> à droite (resp. à gauche) en <span class="math notranslate nohighlight">\(x_0\)</span> si</p>
+<p><span class="math notranslate nohighlight">\(\forall \varepsilon&gt;0,\quad \exists\delta&gt;0,\quad \forall x\in D_f:\quad x_0&lt; x&lt;x_0+\delta\)</span> (resp. <span class="math notranslate nohighlight">\(x_0-\delta&lt; x&lt; x_0)\Rightarrow |f(x)-l|&lt;\varepsilon.\)</span></p>
+<p>On écrit alors <span class="math notranslate nohighlight">\(\lim\limits_{\substack{x \rightarrow x_0 \\ x&gt;x_0}} f(x)=l\)</span> (resp. <span class="math notranslate nohighlight">\(\lim\limits_{\substack{x \rightarrow x_0 \\ x&lt;x_0}} f(x))=l.\)</span></p>
+<p>On note aussi <span class="math notranslate nohighlight">\(\lim\limits_{\substack{x_{0}^{+}}}f\)</span> pour la limite à droite et <span class="math notranslate nohighlight">\(\lim\limits_{\substack{x_{0}^{-}}}f\)</span> pour la limite à gauche.</p>
+</div>
+<div class="admonition-proposition admonition">
+<p class="admonition-title">Proposition</p>
+<p>Soit <span class="math notranslate nohighlight">\(\ell\in \mathbb{R}.\)</span> On a <span class="math notranslate nohighlight">\(\lim\limits_{\substack{x \rightarrow x_0}}f(x)=\ell\Leftrightarrow \lim\limits_{\substack{x \rightarrow x_{0}^{+}}}f=\lim\limits_{\substack{x \rightarrow x_{0}^{-}}}f=\ell.\)</span></p>
+</div>
+<div class="warning admonition">
+<p class="admonition-title">Exemple</p>
+<p>Considérons la fonction <span class="math notranslate nohighlight">\(f(x)=\left\{
+\begin{array}{ll}
+x-2 \quad\mbox{si} \;x\geq 1,\\
+x+1 \quad\mbox{si}\;x&lt;1.
+\end{array}
+\right.\)</span></p>
+<p>On a <span class="math notranslate nohighlight">\(\lim\limits_{\substack{x \rightarrow 1^{-}}}f(x)=\lim\limits_{\substack{x \rightarrow 1^{-}}}(x+1)=2\)</span> et <span class="math notranslate nohighlight">\(\lim\limits_{\substack{x \rightarrow 1^{+}}}f(x)=\lim\limits_{\substack{x \rightarrow 1^{+}}}(x-2)=-1.\)</span></p>
+<p>Comme <span class="math notranslate nohighlight">\(\lim\limits_{\substack{x \rightarrow 1^{-}}}f(x)\neq\lim\limits_{\substack{x \rightarrow 1^{+}}}f(x),\)</span> on en déduit que <span class="math notranslate nohighlight">\(f\)</span> n’a pas de limite en 1.</p>
+</div>
+</div>
+<div class="section" id="proprietes">
+<h2>Propriétés<a class="headerlink" href="#proprietes" title="Lien permanent vers ce titre">¶</a></h2>
+<div class="important admonition">
+<p class="admonition-title">Proposition</p>
+<p>Si une fonction admet une limite, alors cette limite est unique.</p>
+</div>
+<p>Soient deux fonctions <span class="math notranslate nohighlight">\(f\)</span> et <span class="math notranslate nohighlight">\(g.\)</span> On suppose que <span class="math notranslate nohighlight">\(x_0\)</span> est un réel, ou que <span class="math notranslate nohighlight">\(x_0=\pm\infty.\)</span></p>
+<div class="important admonition">
+<p class="admonition-title">Proposition</p>
+<p>Si <span class="math notranslate nohighlight">\(\lim\limits_{\substack{x_{0}}}f=\ell\in \mathbb{R}\)</span> et <span class="math notranslate nohighlight">\(\lim\limits_{\substack{x_{0}}}g=\ell'\in \mathbb{R},\)</span> alors:</p>
+<ul class="simple">
+<li><p><span class="math notranslate nohighlight">\(\lim\limits_{\substack{x_{0}}}(\lambda. f)=\lambda.\ell\)</span> pour tout <span class="math notranslate nohighlight">\(\lambda\in \mathbb{R}\)</span></p></li>
+<li><p><span class="math notranslate nohighlight">\(\lim\limits_{\substack{x_{0}}}(f+g)=\ell+\ell'\)</span></p></li>
+<li><p><span class="math notranslate nohighlight">\(\lim\limits_{\substack{x_{0}}}(f\times g)=\ell\times \ell'\)</span></p></li>
+<li><p>Si <span class="math notranslate nohighlight">\(\ell\neq0,\)</span> alors <span class="math notranslate nohighlight">\(\lim\limits_{\substack{x_{0}}}\dfrac{1}{f}=\dfrac{1}{\ell}\)</span></p></li>
+<li><p>Si <span class="math notranslate nohighlight">\(\lim\limits_{\substack{x_{0}}}f=\pm\infty,\)</span> alors <span class="math notranslate nohighlight">\(\lim\limits_{\substack{x_{0}}}\dfrac{1}{f}=0.\)</span></p></li>
+</ul>
+</div>
+<p>Voici une liste de formes indeterminées:</p>
+<div class="math notranslate nohighlight">
+\[
++\infty-\infty,\quad0\times\infty,\quad\dfrac{\infty}{\infty},\quad\dfrac{0}{0},\quad 1^{\infty},...
+\]</div>
+<div class="important admonition">
+<p class="admonition-title">Proposition</p>
+<ul class="simple">
+<li><p>Si <span class="math notranslate nohighlight">\(f\leq g\)</span> et si <span class="math notranslate nohighlight">\(\lim\limits_{\substack{x_{0}}}f=\ell\in \mathbb{R}\)</span> et <span class="math notranslate nohighlight">\(\lim\limits_{\substack{x_{0}}}g=\ell'\in \mathbb{R},\)</span> alors: <span class="math notranslate nohighlight">\(\ell\leqslant\ell'.\)</span></p></li>
+<li><p>Si <span class="math notranslate nohighlight">\(f\leq g\)</span> et si <span class="math notranslate nohighlight">\(\lim\limits_{\substack{x_{0}}}f=+\infty,\)</span> alors <span class="math notranslate nohighlight">\(\lim\limits_{\substack{x_{0}}}g=+\infty.\)</span></p></li>
+<li><p>Si <span class="math notranslate nohighlight">\(f\leq g\leq h\)</span> et si <span class="math notranslate nohighlight">\(\lim\limits_{\substack{x_{0}}}f=\lim\limits_{\substack{x_{0}}}h=\ell\in \mathbb{R},\)</span> alors <span class="math notranslate nohighlight">\(g\)</span> a une limite en <span class="math notranslate nohighlight">\(x_0\)</span> et <span class="math notranslate nohighlight">\(\lim\limits_{\substack{x_{0}}}g=\ell.\)</span></p></li>
+</ul>
+</div>
+</div>
+</div>
+<div class="section" id="continuite-d-une-fonction-numerique">
+<h1>Continuité d’une fonction numérique<a class="headerlink" href="#continuite-d-une-fonction-numerique" title="Lien permanent vers ce titre">¶</a></h1>
+<div class="admonition-definition admonition">
+<p class="admonition-title">Définition</p>
+<ul class="simple">
+<li><p>Soit <span class="math notranslate nohighlight">\(f\)</span> une fonction définie en un voisinage de <span class="math notranslate nohighlight">\(x_0.\)</span> On dit que <span class="math notranslate nohighlight">\(f\)</span> est continue en <span class="math notranslate nohighlight">\(x_0\)</span> si <span class="math notranslate nohighlight">\(\lim\limits_{\substack{x\rightarrow x_{0}}}f(x)=f(x_0).\)</span></p></li>
+<li><p>Soit <span class="math notranslate nohighlight">\(f\)</span> une fonction définie en un intervalle de type <span class="math notranslate nohighlight">\(]x_0-\varepsilon, x_0].\)</span> On dit que <span class="math notranslate nohighlight">\(f\)</span> est continue à droite en <span class="math notranslate nohighlight">\(x_0\)</span> si <span class="math notranslate nohighlight">\(\lim\limits_{\substack{x\rightarrow x_{0}^{+}}}f(x)=f(x_0).\)</span></p></li>
+<li><p>Soit <span class="math notranslate nohighlight">\(f\)</span> une fonction définie en un intervalle de type <span class="math notranslate nohighlight">\([x_0,x_0+\varepsilon[.\)</span> On dit que <span class="math notranslate nohighlight">\(f\)</span> est continue à gauche en <span class="math notranslate nohighlight">\(x_0\)</span> si <span class="math notranslate nohighlight">\(\lim\limits_{\substack{x\rightarrow x_{0}^{+}}}f(x)=f(x_0).\)</span></p></li>
+</ul>
+</div>
+<div class="admonition-definition admonition">
+<p class="admonition-title">Définition</p>
+<p>Soit <span class="math notranslate nohighlight">\(f\)</span> une fonction définie en un voisinage de <span class="math notranslate nohighlight">\(x_0.\)</span> On a
+<span class="math notranslate nohighlight">\(f\)</span> est continue en <span class="math notranslate nohighlight">\(x_0\Leftrightarrow\lim\limits_{\substack{x\rightarrow x_{0}^{+}}}f(x)=\lim\limits_{\substack{x\rightarrow x_{0}^{-}}}f(x)=f(x_0)\)</span></p>
+</div>
+<div class="admonition-definition admonition">
+<p class="admonition-title">Définition</p>
+<ul class="simple">
+<li><p>Une fonction <span class="math notranslate nohighlight">\(f\)</span> est dite continue sur un intervalle ouvert <span class="math notranslate nohighlight">\(I\subset D_f\)</span> si elle est continue en tout point de <span class="math notranslate nohighlight">\(I.\)</span></p></li>
+<li><p>Une fonction <span class="math notranslate nohighlight">\(f\)</span> est dite continue sur un intervalle <span class="math notranslate nohighlight">\([a,b]\subset D_f\)</span> si elle est continue sur <span class="math notranslate nohighlight">\(]a,b[\)</span> et continue à droite en <span class="math notranslate nohighlight">\(a\)</span> et à gauche en <span class="math notranslate nohighlight">\(b.\)</span></p></li>
+<li><p>Une fonction <span class="math notranslate nohighlight">\(f\)</span> est dite continue sur un intervalle <span class="math notranslate nohighlight">\([a,b[\subset D_f\)</span> si elle est continue sur <span class="math notranslate nohighlight">\(]a,b[\)</span> et continue à droite en <span class="math notranslate nohighlight">\(a.\)</span></p></li>
+</ul>
+<p>De même, on définit la continuité d’une fonction sur un intervalle <span class="math notranslate nohighlight">\(]a,b],\)</span> sur <span class="math notranslate nohighlight">\(]-\infty,a],\)</span> sur <span class="math notranslate nohighlight">\([a,+\infty[,\)</span>…</p>
+</div>
+<div class="warning admonition">
+<p class="admonition-title">Exemple</p>
+<ul class="simple">
+<li><p>La fonction racine carrée <span class="math notranslate nohighlight">\(x\mapsto \sqrt{x}\)</span> est continue sur <span class="math notranslate nohighlight">\([0,+\infty[.\)</span></p></li>
+<li><p>Les fonctions sin et cos sont continues sur <span class="math notranslate nohighlight">\(\mathbb{R}.\)</span></p></li>
+<li><p>La fonction valeur absolue <span class="math notranslate nohighlight">\(x\mapsto |x|\)</span> est continue sur <span class="math notranslate nohighlight">\(\mathbb{R}.\)</span></p></li>
+</ul>
+</div>
+<div class="important admonition">
+<p class="admonition-title">Proposition</p>
+<p>Soient <span class="math notranslate nohighlight">\(f,\,g:I\rightarrow\mathbb{R}\)</span> deux fonctions continues en un point <span class="math notranslate nohighlight">\(x_0\in I.\)</span> Alors</p>
+<ul class="simple">
+<li><p><span class="math notranslate nohighlight">\(\lambda.f\)</span> est continue en <span class="math notranslate nohighlight">\(x_0\)</span> (pour tout <span class="math notranslate nohighlight">\(\lambda\in \mathbb{R}\)</span>),</p></li>
+<li><p><span class="math notranslate nohighlight">\(f+g\)</span> est continue en <span class="math notranslate nohighlight">\(x_0.\)</span></p></li>
+<li><p><span class="math notranslate nohighlight">\(f\times g\)</span> est continue en <span class="math notranslate nohighlight">\(x_0.\)</span></p></li>
+<li><p>Si <span class="math notranslate nohighlight">\(f(x_0)\neq0,\)</span> alors <span class="math notranslate nohighlight">\(\dfrac{1}{f}\)</span> est continue en <span class="math notranslate nohighlight">\(x_0.\)</span></p></li>
+</ul>
+</div>
+<div class="warning admonition">
+<p class="admonition-title">Exemple</p>
+<p>Les polynômes sont continues sur <span class="math notranslate nohighlight">\(\mathbb{R}.\)</span></p>
+<p>Toute fraction rationnelle <span class="math notranslate nohighlight">\(x\mapsto\dfrac{P(x)}{Q(x)}\)</span> est continue sur son domaine de définition.</p>
+<p>La composition conserve la continuité (mais il faut faire attention en quels points les hypothèse s’appliquent)</p>
+</div>
+<div class="important admonition">
+<p class="admonition-title">Proposition</p>
+<p>Soient <span class="math notranslate nohighlight">\(f:I\rightarrow\mathbb{R}\)</span> et <span class="math notranslate nohighlight">\(g:J\rightarrow\mathbb{R}\)</span> deux fonctions telles que <span class="math notranslate nohighlight">\(f(I)\subset J.\)</span> Si <span class="math notranslate nohighlight">\(f\)</span> est continue en un point <span class="math notranslate nohighlight">\(x_0\in I\)</span> et si <span class="math notranslate nohighlight">\(g\)</span> est continue en <span class="math notranslate nohighlight">\(f(x_0),\)</span> alors <span class="math notranslate nohighlight">\(g\circ f\)</span> est continue en <span class="math notranslate nohighlight">\(x_0.\)</span></p>
+</div>
+</div>
+<div class="section" id="prolongement-par-continuite">
+<h1>Prolongement par continuité<a class="headerlink" href="#prolongement-par-continuite" title="Lien permanent vers ce titre">¶</a></h1>
+<div class="admonition-definition admonition">
+<p class="admonition-title">Définition</p>
+<p>Soit <span class="math notranslate nohighlight">\(I\)</span> un intervalle, <span class="math notranslate nohighlight">\(x_0\)</span> un point de <span class="math notranslate nohighlight">\(I\)</span> et <span class="math notranslate nohighlight">\(f:I\setminus\{x_0\}\rightarrow\mathbb{R}\)</span> une fonction.</p>
+<ul class="simple">
+<li><p>On dit que <span class="math notranslate nohighlight">\(f\)</span> est prolongeable par continuité en <span class="math notranslate nohighlight">\(x_0\)</span> si <span class="math notranslate nohighlight">\(f\)</span> admet une limite finie en <span class="math notranslate nohighlight">\(x_0.\)</span> Notons alors <span class="math notranslate nohighlight">\(\ell=\lim\limits_{\substack{x_{0}}}f.\)</span></p></li>
+<li><p>On définit alors la fonction <span class="math notranslate nohighlight">\(\widetilde{f}:I\rightarrow\mathbb{R}\)</span> en posant pour tout <span class="math notranslate nohighlight">\(x\in I\)</span></p></li>
+</ul>
+<p><span class="math notranslate nohighlight">\(\widetilde{f}(x)=\left\{
+\begin{array}{ll}
+f(x) \quad\mbox{si} \;x\neq x_0\\
+\ell \quad\mbox{si}\;x=x_0.
+\end{array}
+\right.\)</span></p>
+<p>Alors <span class="math notranslate nohighlight">\(\widetilde{f}\)</span> est continue en <span class="math notranslate nohighlight">\(x_0\)</span> et on l’appelle le prolongement par continuité de <span class="math notranslate nohighlight">\(f\)</span> en <span class="math notranslate nohighlight">\(x_0.\)</span></p>
+</div>
+<div class="warning admonition">
+<p class="admonition-title">Exemple</p>
+<p>Considérons la fonction <span class="math notranslate nohighlight">\(f\)</span> définie sur <span class="math notranslate nohighlight">\(\mathbb{R}-\{1\}\)</span> par <span class="math notranslate nohighlight">\(f(x)=\dfrac{x^2+x-2}{x-1}.\)</span> Etudions le prolongement par continuité de <span class="math notranslate nohighlight">\(f\)</span> en 1. On a</p>
+<div class="math notranslate nohighlight">
+\[
+\lim\limits_{\substack{x\rightarrow1}}f(x)=\lim\limits_{\substack{x\rightarrow1}}\dfrac{(x-1)(x+2)}{x-1}=\lim\limits_{\substack{x\rightarrow1}} x+2=3
+\]</div>
+<p>Donc <span class="math notranslate nohighlight">\(f\)</span> est prolongeable par continuité en 1. Le prolongement par continuité de <span class="math notranslate nohighlight">\(f\)</span> en 1 est donc
+<span class="math notranslate nohighlight">\(\widetilde{f}(x)=\left\{
+\begin{array}{ll}
+f(x) \quad\mbox{si} \;x\neq 1\\
+3 \quad\mbox{si}\;x=1.
+\end{array}
+\right.\)</span></p>
+</div>
+</div>
+<div class="section" id="theoreme-des-valeurs-intermediaires">
+<h1>Théorème des valeurs intermédiaires<a class="headerlink" href="#theoreme-des-valeurs-intermediaires" title="Lien permanent vers ce titre">¶</a></h1>
+<div class="important admonition">
+<p class="admonition-title">Théorème (Théorème des valeurs intermédiaires)</p>
+<p>Soit <span class="math notranslate nohighlight">\(f:[a,b]\rightarrow\mathbb{R}\)</span> une fonction continue sur un segment. Pour tout réel <span class="math notranslate nohighlight">\(y\)</span> compris entre <span class="math notranslate nohighlight">\(f(a)\)</span> et <span class="math notranslate nohighlight">\(f(b),\)</span> il existe <span class="math notranslate nohighlight">\(c\in [a,b]\)</span> tel que <span class="math notranslate nohighlight">\(f(c)=y.\)</span></p>
+</div>
+<p>Voici la version la plus utilisée du théorème des valeurs intermédiaires.</p>
+<div class="important admonition">
+<p class="admonition-title">Corollaire</p>
+<p>Soit <span class="math notranslate nohighlight">\(f:[a,b]\rightarrow\mathbb{R}\)</span> une fonction continue sur un segment. Si <span class="math notranslate nohighlight">\(f(a).f(b)&lt;0,\)</span> alors il existe <span class="math notranslate nohighlight">\(c\in ]a,b[\)</span> tel que <span class="math notranslate nohighlight">\(f(c)=0.\)</span></p>
+</div>
+<div class="warning admonition">
+<p class="admonition-title">Exemple</p>
+<p>Tout polynôme de degré impair possède au moins une racine réelle. En effet, un tel polynôme s’écrit <span class="math notranslate nohighlight">\(P(x)=a_n x^n+...+a_1 x+a_0\)</span> avec <span class="math notranslate nohighlight">\(n\)</span> un entier impair. On peut supposer que le coefficient <span class="math notranslate nohighlight">\(a_n\)</span> est strictement positif. Alors on a <span class="math notranslate nohighlight">\(\lim\limits_{\substack{x\rightarrow-\infty}}P(x)=-\infty\)</span> et <span class="math notranslate nohighlight">\(\lim\limits_{\substack{x\rightarrow+\infty}}P(x)=+\infty.\)</span> En particulier, il existe deux réel <span class="math notranslate nohighlight">\(a\)</span> et <span class="math notranslate nohighlight">\(b\)</span> tels que <span class="math notranslate nohighlight">\(P(a)&lt;0\)</span> et <span class="math notranslate nohighlight">\(P(b)&gt;0\)</span> et on conclut grâce au corollaire précédent qu’il existe au moins <span class="math notranslate nohighlight">\(c\in \mathbb{R}\)</span> tel que <span class="math notranslate nohighlight">\(P(c)=0.\)</span></p>
+</div>
+<p>Voici une formulation théorique du théorème des valeurs intermédiaires</p>
+<div class="important admonition">
+<p class="admonition-title">Corollaire</p>
+<p>Soit <span class="math notranslate nohighlight">\(f:I\rightarrow\mathbb{R}\)</span> une fonction continue sur un intervalle <span class="math notranslate nohighlight">\(I.\)</span> Alors <span class="math notranslate nohighlight">\(f(I)\)</span> est un intervalle.</p>
+</div>
+<p>Attention! Il serait faux de croire que l’image par une fonction <span class="math notranslate nohighlight">\(f\)</span> de l’intervalle <span class="math notranslate nohighlight">\([a,b]\)</span> soit l’intervalle <span class="math notranslate nohighlight">\([f(a), f(b)]\)</span>. Cependant, on a le théorème suivant</p>
+<div class="important admonition">
+<p class="admonition-title">Théorème</p>
+<p>Soit <span class="math notranslate nohighlight">\(f:[a,b]\rightarrow\mathbb{R}\)</span> une fonction continue sur un segment. Alors il existe deux réels <span class="math notranslate nohighlight">\(m\)</span> et <span class="math notranslate nohighlight">\(M\)</span> tels que <span class="math notranslate nohighlight">\(f([a,b])=[m,M].\)</span> Autrement dit, l’image d’un segment par une fonction continue est un segment.</p>
+</div>
+<p>Comme on sait déjà par le théorème des valeurs intermédiaires que <span class="math notranslate nohighlight">\(f([a,b])\)</span> est un intervalle, le théorème précédent signifie que si <span class="math notranslate nohighlight">\(f\)</span> est continue sur <span class="math notranslate nohighlight">\([a,b],\)</span> alors <span class="math notranslate nohighlight">\(f\)</span> est bornée sur <span class="math notranslate nohighlight">\([a,b],\)</span> et elle atteint ses bornes: <span class="math notranslate nohighlight">\(m\)</span> est le minimum de la fonction sur l’intervalle <span class="math notranslate nohighlight">\([a,b]\)</span> alors que <span class="math notranslate nohighlight">\(M\)</span> est bon maximum sur <span class="math notranslate nohighlight">\([a,b].\)</span></p>
+</div>
+<div class="section" id="theoreme-de-la-bijection">
+<h1>Théorème de la bijection<a class="headerlink" href="#theoreme-de-la-bijection" title="Lien permanent vers ce titre">¶</a></h1>
+<div class="admonition-definition admonition">
+<p class="admonition-title">Définition</p>
+<p>Soit <span class="math notranslate nohighlight">\(f:E\rightarrow F\)</span> une fonction, où <span class="math notranslate nohighlight">\(E\)</span> et <span class="math notranslate nohighlight">\(F\)</span> sont des parties de <span class="math notranslate nohighlight">\(\mathbb{R}.\)</span></p>
+<ul class="simple">
+<li><p><span class="math notranslate nohighlight">\(f\)</span> est bijective <span class="math notranslate nohighlight">\(\forall x,x'\in E,\; f(x)=f(x')\Rightarrow x=x';\)</span></p></li>
+<li><p><span class="math notranslate nohighlight">\(f\)</span> est surjective si <span class="math notranslate nohighlight">\(\forall y\in F,\exists x\in E,\;y=f(x);\)</span></p></li>
+<li><p><span class="math notranslate nohighlight">\(f\)</span> est bijective si <span class="math notranslate nohighlight">\(f\)</span> est à la fois injective et surjective, c’est-à-dire si <span class="math notranslate nohighlight">\(\forall y\in F,\,\exists! x\in E:\;y=f(x).\)</span></p></li>
+</ul>
+</div>
+<div class="important admonition">
+<p class="admonition-title">Proposition</p>
+<p>Si <span class="math notranslate nohighlight">\(f:E\rightarrow F\)</span> est une fonction bijective alors il existe une unique application <span class="math notranslate nohighlight">\(g:F\rightarrow E\)</span> telle que <span class="math notranslate nohighlight">\(g\circ f=\mbox{Id}_E\)</span> et <span class="math notranslate nohighlight">\(f\circ g=\mbox{Id}_F.\)</span> La fonction <span class="math notranslate nohighlight">\(g\)</span> est la bijection réciproque de <span class="math notranslate nohighlight">\(f\)</span> et se note <span class="math notranslate nohighlight">\(f^{-1}.\)</span></p>
+<p><span class="math notranslate nohighlight">\(\diamond\)</span> On rappelle que l’identité, Id<span class="math notranslate nohighlight">\(_E:E\rightarrow E\)</span> est simplement définie par <span class="math notranslate nohighlight">\(x\mapsto x.\)</span></p>
+<p><span class="math notranslate nohighlight">\(\diamond\)</span> <span class="math notranslate nohighlight">\(g\circ f=\)</span>Id<span class="math notranslate nohighlight">\(_E\)</span> se reformule ainsi: <span class="math notranslate nohighlight">\(\forall x\in E,\quad g(f(x))=x.\)</span></p>
+<p><span class="math notranslate nohighlight">\(\diamond\)</span> Alors que <span class="math notranslate nohighlight">\(f\circ g=\mbox{Id}_F\)</span> s’écrit: <span class="math notranslate nohighlight">\(\forall y\in F\quad f(g(y))=y.\)</span></p>
+</div>
+<p>Le théorème suivant est un outil très utile dans la pratique pour montrer qu’une fonction est bijective.</p>
+<div class="important admonition">
+<p class="admonition-title">Théorème (Théorème de la bijection)</p>
+<p>Soit <span class="math notranslate nohighlight">\(f:I\rightarrow\mathbb{R}\)</span> une fonction définie sur un intervalle <span class="math notranslate nohighlight">\(I\)</span> de <span class="math notranslate nohighlight">\(\mathbb{R}.\)</span> Si <span class="math notranslate nohighlight">\(f\)</span> est continue et strictement monotone sur <span class="math notranslate nohighlight">\(I,\)</span> alors</p>
+<ol class="simple">
+<li><p><span class="math notranslate nohighlight">\(f\)</span> établit une bijection de l’intervalle <span class="math notranslate nohighlight">\(I\)</span> dans l’intervalle <span class="math notranslate nohighlight">\(J=f(I),\)</span></p></li>
+<li><p>La fonction réciproque <span class="math notranslate nohighlight">\(f^{-1}:J\rightarrow I\)</span> est continue et strictement monotone sur <span class="math notranslate nohighlight">\(J\)</span> et elle a le même sens de variation que <span class="math notranslate nohighlight">\(f.\)</span></p></li>
+</ol>
+</div>
+<div class="warning admonition">
+<p class="admonition-title">Exemple</p>
+<p>Considérons la fonction carrée définie sur <span class="math notranslate nohighlight">\(\mathbb{R}\)</span> par <span class="math notranslate nohighlight">\(f(x)=x^2.\)</span> La fonction <span class="math notranslate nohighlight">\(f\)</span> est continue et est strictement croissante sur <span class="math notranslate nohighlight">\(I=[0,+\infty[,\)</span> donc <span class="math notranslate nohighlight">\(f\)</span> établit une bijection de <span class="math notranslate nohighlight">\(I\)</span> dans <span class="math notranslate nohighlight">\(J=f([0,+\infty[)=[0,+\infty[.\)</span> Déterminons sa fonction réciproque: Soit <span class="math notranslate nohighlight">\(x\)</span> et <span class="math notranslate nohighlight">\(y\)</span> dans <span class="math notranslate nohighlight">\(\mathbb{R}_{+},\)</span> on a</p>
+<div class="math notranslate nohighlight">
+\[
+f^{-1}(x)=y\Leftrightarrow x=f(y)\Leftrightarrow x=y^2 \Leftrightarrow y=\sqrt{x}
+\]</div>
+<p>Donc <span class="math notranslate nohighlight">\(f^{-1}(x)=\sqrt{x},\)</span> pour tout <span class="math notranslate nohighlight">\(x\in \mathbb{R}_{+}.\)</span></p>
+</div>
+<p>Généralisons en partie l’exemple précédent;</p>
+<div class="warning admonition">
+<p class="admonition-title">Exemple</p>
+<p>Soit <span class="math notranslate nohighlight">\(n\geq 1.\)</span> Soit <span class="math notranslate nohighlight">\(f:[0,+\infty[\rightarrow [0,+\infty[\)</span> définie par <span class="math notranslate nohighlight">\(f(x)=x^n.\)</span> On a <span class="math notranslate nohighlight">\(f\)</span> est continue et strictement croissante. Donc <span class="math notranslate nohighlight">\(f\)</span> admet sur <span class="math notranslate nohighlight">\(I=[0,+\infty[\)</span> une fonction réciproqie <span class="math notranslate nohighlight">\(f^{-1}\)</span> définie sur <span class="math notranslate nohighlight">\(J=f([0,+\infty[)=[0,+\infty[.\)</span></p>
+<p><span class="math notranslate nohighlight">\(f^{-1}\)</span> est notée: <span class="math notranslate nohighlight">\(x\mapsto x^{\dfrac{1}{n}}\)</span> ou aussi <span class="math notranslate nohighlight">\(x\mapsto \sqrt[n]{x};\)</span> c’est la fonction racine <span class="math notranslate nohighlight">\(n-\)</span>ième. Elle est continue et strictement croissante sur <span class="math notranslate nohighlight">\([0,+\infty[.\)</span></p>
+</div>
+</div>
+<div class="section" id="application-fonctions-logarithme-et-exponentielle">
+<h1>Application: Fonctions Logarithme et exponentielle<a class="headerlink" href="#application-fonctions-logarithme-et-exponentielle" title="Lien permanent vers ce titre">¶</a></h1>
+<div class="important admonition">
+<p class="admonition-title">Proposition</p>
+<p>Il existe une unique fonction, notée <span class="math notranslate nohighlight">\(\ln:]0,+\infty[\rightarrow\mathbb{R}\)</span> telle que:</p>
+<div class="math notranslate nohighlight">
+\[
+\ln'(x)=\dfrac{1}{x}\quad\mbox{pour tout}\,x&gt;0\qquad\mbox{et}\qquad \ln(1)=0
+\]</div>
+<p>De plus, cette fonction vérifie (pour tout <span class="math notranslate nohighlight">\(a,b&gt;0\)</span>):</p>
+<ol class="simple">
+<li><p><span class="math notranslate nohighlight">\(\ln(a\times b)=\ln(a)+\ln(b).\)</span></p></li>
+<li><p><span class="math notranslate nohighlight">\(\ln(\dfrac{1}{a})=-\ln a,\)</span></p></li>
+<li><p><span class="math notranslate nohighlight">\(\ln (a^n)=n\ln(a),\)</span> (pour tout <span class="math notranslate nohighlight">\(n\in \mathbb{N}\)</span>).</p></li>
+<li><p><span class="math notranslate nohighlight">\(\ln\)</span> est une fonction continue, strictement croissante et définit une bijection de <span class="math notranslate nohighlight">\(]0,+\infty[\)</span> sur <span class="math notranslate nohighlight">\(\mathbb{R}.\)</span></p></li>
+<li><p><span class="math notranslate nohighlight">\(\lim\limits_{\substack{x\rightarrow0}}\dfrac{\ln(1+x)}{x}=1.\)</span></p></li>
+</ol>
+</div>
+<div class="admonition-definition admonition">
+<p class="admonition-title">Définition</p>
+<p>La bijection réciproque de <span class="math notranslate nohighlight">\(\ln:]0,+\infty[\rightarrow\mathbb{R}\)</span> s’appelle la fonction exponentielle, notée exp<span class="math notranslate nohighlight">\(:\mathbb{R}\rightarrow]0,+\infty[.\)</span></p>
+</div>
+<div class="important admonition">
+<p class="admonition-title">Proposition</p>
+<p>La fonction exponentielle vérifie les propriétés suivantes:</p>
+<ol class="simple">
+<li><p>exp<span class="math notranslate nohighlight">\((\ln x)=x\)</span> pour tout <span class="math notranslate nohighlight">\(x&gt;0\)</span> et <span class="math notranslate nohighlight">\(\ln(\mbox{exp}x)=\)</span> pour tout <span class="math notranslate nohighlight">\(x\in \mathbb{R}\)</span></p></li>
+<li><p>exp<span class="math notranslate nohighlight">\((a+b)=\mbox{exp}(a)\times \mbox{exp}(b)\)</span></p></li>
+<li><p>exp<span class="math notranslate nohighlight">\((nx)=(\mbox{exp}x)^n\)</span></p></li>
+<li><p>exp<span class="math notranslate nohighlight">\(:\mathbb{R}\rightarrow]0,+\infty[\)</span> est une fonction continue, strictement croissante vérifiant <span class="math notranslate nohighlight">\(\lim\limits_{\substack{x\rightarrow-\infty}}\mbox{exp}x=0\)</span> et <span class="math notranslate nohighlight">\(\lim\limits_{\substack{x\rightarrow+\infty}}\mbox{exp}x=+\infty\)</span></p></li>
+<li><p>La fonction exponentielle est dérivable et <span class="math notranslate nohighlight">\(\mbox{exp}'x=\mbox{exp}x,\)</span> pour tout <span class="math notranslate nohighlight">\(x\in \mathbb{R}.\)</span></p></li>
+</ol>
+</div>
+<div class="tip admonition">
+<p class="admonition-title">Remarque</p>
+<p>La fonction exponentielle est l’unique fonction qui vérifie exp<span class="math notranslate nohighlight">\('(x)=\)</span>exp<span class="math notranslate nohighlight">\((x)\)</span> (pour tout <span class="math notranslate nohighlight">\(x\in \mathbb{R}\)</span>) et exp<span class="math notranslate nohighlight">\((1)=e,\)</span> où <span class="math notranslate nohighlight">\(e\simeq2.718...\)</span> est le nombre qui vérifie <span class="math notranslate nohighlight">\(\ln e=1.\)</span></p>
+<p>Par définition, pour <span class="math notranslate nohighlight">\(a&gt;0\)</span> et <span class="math notranslate nohighlight">\(b\in \mathbb{R},\,\)</span> <span class="math notranslate nohighlight">\(a^b=\mbox{exp}(b\ln a)\)</span></p>
+</div>
+<div class="tip admonition">
+<p class="admonition-title">Remarque</p>
+<p><span class="math notranslate nohighlight">\(\sqrt{a}=a^{\dfrac{1}{2}}=\mbox{exp}(\dfrac{1}{2}\ln a)\)</span></p>
+<p><span class="math notranslate nohighlight">\(\sqrt[n]{a}=a^{\dfrac{1}{n}}=\mbox{exp}(\dfrac{1}{n}\ln a)\)</span> ( la racine <span class="math notranslate nohighlight">\(n\)</span>-ième de <span class="math notranslate nohighlight">\(a\)</span>)</p>
+<p>On note aussi <span class="math notranslate nohighlight">\(\mbox{exp}x\)</span> par <span class="math notranslate nohighlight">\(e^x\)</span> ce qui se justifie par le calcul: <span class="math notranslate nohighlight">\(e^x=\mbox{exp}(x\ln e)=\mbox{exp}(x).\)</span></p>
+</div>
+<p>Les fonctions <span class="math notranslate nohighlight">\(x\mapsto a^x\)</span> s’appellent aussi des fonctions exponentielles et se ramènent systématiquement à la fonction exponentielle classique par l’égalité <span class="math notranslate nohighlight">\(a^x=\mbox{exp}(x\ln a).\)</span> Il ne faut surtout pas les confondre avec les fonctions puissances <span class="math notranslate nohighlight">\(x\mapsto x^a.\)</span> On a les propriété suivantes;</p>
+<div class="important admonition">
+<p class="admonition-title">Proposition</p>
+<p>Soient <span class="math notranslate nohighlight">\(x,y&gt;0\)</span> et <span class="math notranslate nohighlight">\(a,\,b\in \mathbb{R}.\)</span></p>
+<ol class="simple">
+<li><p><span class="math notranslate nohighlight">\(x^{a+b}=x^a x^b\)</span></p></li>
+<li><p><span class="math notranslate nohighlight">\(x^{-a}=\dfrac{1}{x^a}\)</span></p></li>
+<li><p><span class="math notranslate nohighlight">\((xy)^a=x^a y^a\)</span></p></li>
+<li><p><span class="math notranslate nohighlight">\((x^a)^b=x^{ab}\)</span></p></li>
+<li><p><span class="math notranslate nohighlight">\(\ln(x^a)=a\ln x\)</span></p></li>
+</ol>
+</div>
+<p>Comparons les fonctions <span class="math notranslate nohighlight">\(\ln x,\,\mbox{exp}x\,\)</span> avec <span class="math notranslate nohighlight">\(x:\)</span></p>
+<div class="important admonition">
+<p class="admonition-title">Proposition</p>
+<div class="math notranslate nohighlight">
+\[
+\lim\limits_{\substack{x\rightarrow+\infty}}\dfrac{\ln x}{x}=0\qquad \mbox{et}\quad \lim\limits_{\substack{x\rightarrow+\infty}}\dfrac{\mbox{exp}x}{x}=+\infty
+\]</div>
+</div>
+</div>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            kernelName: "python3",
+            path: "./."
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+              </div>
+              
+        
+        <div class='prev-next-bottom'>
+            
+
+        </div>
+        
+        </div>
+    </div>
+    <footer class="footer mt-5 mt-md-0">
+    <div class="container">
+      <p>
+        
+          Par Iaousse M'barek<br/>
+        
+      </p>
+    </div>
+  </footer>
+</main>
+
+
+      </div>
+    </div>
+  
+  <script src="_static/js/index.1c5a1a01449ed65a7b51.js"></script>
+
+  
+  </body>
+</html>

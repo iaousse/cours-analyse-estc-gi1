@@ -5,7 +5,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Topologie des espaces métriques &#8212; Cours Analyse</title>
+    <title>Exercices &#8212; Cours Analyse</title>
     
   <link href="_static/css/theme.css" rel="stylesheet" />
   <link href="_static/css/index.c5995385ac14fb8791e8eb36b4908be2.css" rel="stylesheet" />
@@ -51,8 +51,11 @@
         const thebe_selector_output = ".output"
     </script>
     <script async="async" src="_static/sphinx-thebe.js"></script>
+    <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/x-mathjax-config">MathJax.Hub.Config({"TeX": {"Macros": {"Z": "\\mathbb{Z}", "V": "V", "N": "\\mathbb{N}", "C": "\\mathbb{C}", "Q": "\\mathbb{Q}", "K": "\\mathbb{K}", "floor": ["\\lfloor#1\\rfloor", 1], "bmat": ["\\left[\\begin{array}"], "emat": ["\\end{array}\\right]"], "R": ["\\mathbb{R}"], "B": ["\\mathcal{B}"], "norm": ["{\\Vert#1\\Vert}", 1], "abs": ["{\\left|#1\\right|}", 1], "coloneqq": ["{:=}"], "eqqcolon": ["{=:}"], "emph": ["\\pmb#1", 1], "tr": "\\operatorname{Spur}", "lin": "\\operatorname{lin}", "dv": "\\mathrm{div}~", "rot": "\\mathrm{rot}~", "Dim": "\\operatorname{dim}", "diag": "\\operatorname{diag}", "Kern": "\\operatorname{Kern}", "Bild": "\\operatorname{Bild}", "Im": "\\operatorname{Im}", "Rang": "\\operatorname{Rang}", "GL": "\\operatorname{GL}", "Eig": "\\operatorname{Eig}", "End": "\\operatorname{End}", "Hau": "\\operatorname{Haupt}", "mymathbb": ["\\boldsymbol{#1}", 1], "idx": "\\mathrm{d}x", "d": "\\mathrm{d}", "i": "\\mathrm{i}", "x": "\\mathbf{x}", "sign": "\\mathrm{sign}", "vec": ["\\mathbf{#1}", 1], "veczwei": ["\\begin{pmatrix} #1 \\\\ #2 \\end{pmatrix}", 2], "M": "\\mathcal{M}", "S": "\\mathbb{S}", "bone": "\\unicode{x1D7D9}", "Re": "\\mathrm{Re}", "Um": "\\operatorname{Um}", "Res": "\\operatorname{Res}"}}, "tex2jax": {"inlineMath": [["\\(", "\\)"]], "displayMath": [["\\[", "\\]"]], "processRefs": false, "processEnvironments": false}})</script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Recherche" href="search.html" />
+    <link rel="prev" title="Suites réelles: Définitions générales" href="suites.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="en" />
     
@@ -89,7 +92,7 @@
   </a>
  </li>
 </ul>
-<ul class="nav bd-sidenav">
+<ul class="current nav bd-sidenav">
  <li class="toctree-l1 has-children">
   <a class="reference internal" href="R.html">
    Les nombres réels
@@ -120,23 +123,23 @@
    </li>
   </ul>
  </li>
- <li class="toctree-l1 has-children">
+ <li class="toctree-l1 current active has-children">
   <a class="reference internal" href="suite.html">
    Les suites des nombres réels
   </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/>
+  <input checked="" class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/>
   <label for="toctree-checkbox-2">
    <i class="fas fa-chevron-down">
    </i>
   </label>
-  <ul>
+  <ul class="current">
    <li class="toctree-l2">
     <a class="reference internal" href="suites.html">
      Suites réelles: Définitions générales
     </a>
    </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="exo2.html">
+   <li class="toctree-l2 current active">
+    <a class="current reference internal" href="#">
      Exercices
     </a>
    </li>
@@ -183,7 +186,7 @@
         <!-- ipynb file if we had a myst markdown file -->
         
         <!-- Download raw file -->
-        <a class="dropdown-buttons" href="_sources/metric-norme.md"><button type="button"
+        <a class="dropdown-buttons" href="_sources/exo2.md"><button type="button"
                 class="btn btn-secondary topbarbtn" title="Télécharger le fichier source" data-toggle="tooltip"
                 data-placement="left">.md</button></a>
         <!-- Download PDF via print -->
@@ -203,7 +206,7 @@
                 data-toggle="tooltip" data-placement="left" title="Dépôt source"><i
                     class="fab fa-github"></i>dépôt</button></a>
         <a class="issues-button"
-            href="https://github.com/executablebooks/jupyter-book/issues/new?title=Issue%20on%20page%20%2Fmetric-norme.html&body=Your%20issue%20content%20here."><button
+            href="https://github.com/executablebooks/jupyter-book/issues/new?title=Issue%20on%20page%20%2Fexo2.html&body=Your%20issue%20content%20here."><button
                 type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
                 title="Ouvrez un problème"><i class="fas fa-lightbulb"></i>signaler un problème</button></a>
         
@@ -224,6 +227,59 @@
         <!-- Table of contents -->
         <div class="d-none d-md-block col-md-2 bd-toc show">
             
+            <div class="tocsection onthispage pt-5 pb-3">
+                <i class="fas fa-list"></i> Contenu
+            </div>
+            <nav id="bd-toc-nav">
+                <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#exercice-1">
+   Exercice 1
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#exercice-2">
+   Exercice 2
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#exercice-3">
+   Exercice 3
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#exercice-4">
+   Exercice 4
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#exercice-5">
+   Exercice 5
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#exercice-6">
+   Exercice 6
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#exercice-7">
+   Exercice 7
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#exercice-8">
+   Exercice 8
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#exercice-9">
+   Exercice 9
+  </a>
+ </li>
+</ul>
+
+            </nav>
         </div>
     </div>
 </div>
@@ -232,9 +288,148 @@
         
               <div>
                 
-  <div class="section" id="topologie-des-espaces-metriques">
-<h1>Topologie des espaces métriques<a class="headerlink" href="#topologie-des-espaces-metriques" title="Lien permanent vers ce titre">¶</a></h1>
-<p>Le présent Chapitre contiendra une introduction simple aux Espaces métriques et aux Espaces vectoriels normés et a la notion de la topologie dans ces espaces.</p>
+  <div class="section" id="exercices">
+<h1>Exercices<a class="headerlink" href="#exercices" title="Lien permanent vers ce titre">¶</a></h1>
+<div class="section" id="exercice-1">
+<h2>Exercice 1<a class="headerlink" href="#exercice-1" title="Lien permanent vers ce titre">¶</a></h2>
+<p>Montrer que toute suite convergente est bornée.</p>
+</div>
+<div class="section" id="exercice-2">
+<h2>Exercice 2<a class="headerlink" href="#exercice-2" title="Lien permanent vers ce titre">¶</a></h2>
+<p>Montrer qu’une suite d’entiers qui converge est constante à partir d’un certain rang.</p>
+</div>
+<div class="section" id="exercice-3">
+<h2>Exercice 3<a class="headerlink" href="#exercice-3" title="Lien permanent vers ce titre">¶</a></h2>
+<p>Les suites suivantes sont-elles croissantes? décroissantes?</p>
+<div class="math notranslate nohighlight">
+\[
+u_n = n^2 + 5n +4
+\]</div>
+<div class="math notranslate nohighlight">
+\[
+v_n =\dfrac{-2n+3}{n+1}
+\]</div>
+<div class="math notranslate nohighlight">
+\[
+w_n = \sqrt{2n+5}
+\]</div>
+<div class="math notranslate nohighlight">
+\[
+a_n = \dfrac{2^n}{n}
+\]</div>
+</div>
+<div class="section" id="exercice-4">
+<h2>Exercice 4<a class="headerlink" href="#exercice-4" title="Lien permanent vers ce titre">¶</a></h2>
+<p>Montrer que la suite <span class="math notranslate nohighlight">\((u_n)_{n\in\mathbb{N}}\)</span> définie par</p>
+<div class="math notranslate nohighlight">
+\[
+u_n = (-1)^n + \dfrac{1}{n}
+\]</div>
+<p>n’est pas convergente.</p>
+</div>
+<div class="section" id="exercice-5">
+<h2>Exercice 5<a class="headerlink" href="#exercice-5" title="Lien permanent vers ce titre">¶</a></h2>
+<p>Étudier la nature des suites suivantes, et déterminer leur limite éventuelle :</p>
+<ol>
+<li><p>la suite</p>
+<div class="math notranslate nohighlight">
+\[
+    \dfrac{sin(n) + 3cos(n^2)}{\sqrt{n}}
+    \]</div>
+</li>
+<li><p>la suite</p>
+<div class="math notranslate nohighlight">
+\[
+    \dfrac{2n + (-1)^n}{5n + (-1)^{n+1}}
+    \]</div>
+</li>
+<li><p>la suite</p>
+<div class="math notranslate nohighlight">
+\[
+    \dfrac{n^3 + 5n}{4n^2 + sin(n) + ln(n)}
+    \]</div>
+</li>
+</ol>
+</div>
+<div class="section" id="exercice-6">
+<h2>Exercice 6<a class="headerlink" href="#exercice-6" title="Lien permanent vers ce titre">¶</a></h2>
+<p>Étudier la nature des suites suivantes, et déterminer leur limite éventuelle :</p>
+<ol>
+<li><p>la suite</p>
+<div class="math notranslate nohighlight">
+\[
+    3^n e^{-3n}
+    \]</div>
+</li>
+<li><p>la suite</p>
+<div class="math notranslate nohighlight">
+\[
+    \sqrt{2n+1} - \sqrt{2n-1}
+    \]</div>
+</li>
+<li><p>la suite</p>
+<div class="math notranslate nohighlight">
+\[
+    \dfrac{ln(n+e^n)}{n}
+    \]</div>
+</li>
+<li><p>la suite</p>
+<div class="math notranslate nohighlight">
+\[
+    \dfrac{ln(1+\sqrt{n})}{1+n^2}
+    \]</div>
+</li>
+</ol>
+</div>
+<div class="section" id="exercice-7">
+<h2>Exercice 7<a class="headerlink" href="#exercice-7" title="Lien permanent vers ce titre">¶</a></h2>
+<ol>
+<li><p>Déterminer deux réels <span class="math notranslate nohighlight">\(a\)</span> et <span class="math notranslate nohighlight">\(b\)</span> tels que:</p>
+<div class="math notranslate nohighlight">
+\[
+    \dfrac{1}{k^2 - 1} = \dfrac{a}{k+1}+\dfrac{b}{k-1}
+    \]</div>
+</li>
+<li><p>En déduire la limite de la suite:</p>
+<div class="math notranslate nohighlight">
+\[
+    \sum_{k=2}^{n}\dfrac{1}{k^2 - 1}
+    \]</div>
+</li>
+</ol>
+</div>
+<div class="section" id="exercice-8">
+<h2>Exercice 8<a class="headerlink" href="#exercice-8" title="Lien permanent vers ce titre">¶</a></h2>
+<p>Montrer que, pour tout <span class="math notranslate nohighlight">\(n\in \mathbb{N}^∗\)</span>, on a:</p>
+<div class="math notranslate nohighlight">
+\[
+\sqrt{n+1}-\sqrt{n} \leq \dfrac{1}{2\sqrt{n}}
+\]</div>
+<p>En déduire le comportement de la suite <span class="math notranslate nohighlight">\((u_n)\)</span> définie par:</p>
+<div class="math notranslate nohighlight">
+\[
+u_n = 1 + \dfrac{1}{\sqrt{2}}+ \ldots + \dfrac{1}{\sqrt{n}}
+\]</div>
+</div>
+<div class="section" id="exercice-9">
+<h2>Exercice 9<a class="headerlink" href="#exercice-9" title="Lien permanent vers ce titre">¶</a></h2>
+<p>Soit <span class="math notranslate nohighlight">\((u_n)_{n\geq 1}\)</span> la suite définie par:</p>
+<div class="math notranslate nohighlight">
+\[
+u_n = \sum_{k=1}^{n} \dfrac{1}{k^2}
+\]</div>
+<ul>
+<li><p>Démontrer que la suite <span class="math notranslate nohighlight">\((u_n)\)</span> est croissante.</p></li>
+<li><p>Démontrer que, pour tout <span class="math notranslate nohighlight">\(n \geq 1\)</span></p>
+<div class="math notranslate nohighlight">
+\[
+    \dfrac{1}{(n+1)^2} \leq \dfrac{1}{n} - \dfrac{1}{n+1}
+    \]</div>
+</li>
+<li><p>Démontrer que, pour tout <span class="math notranslate nohighlight">\(n \geq 1\)</span>, <span class="math notranslate nohighlight">\(u_n \leq 2−\dfrac{1}{n}\)</span>.</p></li>
+<li><p>En déduire que la suite <span class="math notranslate nohighlight">\((u_n)\)</span> est convergente.</p></li>
+</ul>
+</div>
 </div>
 
     <script type="text/x-thebe-config">
@@ -262,6 +457,7 @@
         
         <div class='prev-next-bottom'>
             
+    <a class='left-prev' id="prev-link" href="suites.html" title="previous page">Suites réelles: Définitions générales</a>
 
         </div>
         
