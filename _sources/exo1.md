@@ -18,7 +18,7 @@ Comment définir $\max(a,b,c),$ $\max(a_1,...,a_n)$? Et $\min(a,b)$?
 
 ## Exercice 4
 
-Montrer que $\dfrac{\ln 3}{ln 2}$ est irrationnel.
+Montrer que $\dfrac{\ln (3)}{ln (2)}$ est irrationnel.
 
 ## Exercice 5
 
@@ -30,7 +30,7 @@ Trouver une formule pour $\max(x, y,z)$.
 
 ## Exercice 6
 
-Déterminer la borne supérieure et inférieure (si elles existent) de : $A = \{u_n | n \in \N\}$ en posant $u_n = 2^n$
+Déterminer la borne supérieure et inférieure (si elles existent) de : $A = \{u_n | n \in \mathbb{N}\}$ en posant $u_n = 2^n$
 si $n$ est pair et $u_n = 2^{−n}$ sinon.
 
 ## Exercice 7
@@ -38,18 +38,18 @@ Déterminer (s’ils existent) : les majorants, les minorants, la borne supérie
 élément, le plus petit élément des ensembles suivants :
 
 $$
-[0, 1]\cap \mathbb{Q}; ]0, 1[\cap \mathbb{Q}; \N; \left\{(-1)^n + \dfrac{1}{n^2} | n \in \N^\star \right\}
+[0, 1]\cap \mathbb{Q}; ]0, 1[\cap \mathbb{Q}; \mathbb{N}; \left\{(-1)^n + \dfrac{1}{n^2} | n \in \mathbb{N}^\star \right\}
 $$
 
 ## Exercice 8
 
-Soient $A$ et $B$ deux parties bornées de $\R$. On note $A+B = \{a+b | (a,b) \in  A\times B\}$.
+Soient $A$ et $B$ deux parties bornées de $\mathbb{R}$. On note $A+B = \{a+b | (a,b) \in  A\times B\}$.
 1. Montrer que $\sup A+\sup B$ est un majorant de $A+B$.
 2. Montrer que $\sup(A+B) = \sup A+\sup B$.
 
 
 ## Exercice 9
-Soit $A$ et $B$ deux parties bornées de $\R$. Vrai ou faux?
+Soit $A$ et $B$ deux parties bornées de $\mathbb{R}$. Vrai ou faux?
 1. $A \subset B \rightarrow \sup A \leq \sup B$,
 2. $A \subset B \rightarrow \inf A \leq \inf B$,
 3. $\sup(A\cup B) = \max(\sup A,\sup B)$,

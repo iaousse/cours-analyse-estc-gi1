@@ -279,7 +279,7 @@ Parfois on tombe sur l'une des quatres "**formes indéterminées**" suivantes $+
 
 -  $\lim_{n \rightarrow +\infty} n(e^{\dfrac{1}{n}})=1,$
 
--  $\lim_{n \rightarrow +\infty} \dfrac{(\ln n)^{\alpha}}{n}=0,$
+-  $\lim_{n \rightarrow +\infty} \dfrac{(\ln (n))^{\alpha}}{n}=0,$
 
 -  $\lim_{n \rightarrow +\infty} n^{\alpha}e^{-n}=0.$
 
@@ -326,7 +326,7 @@ $$
 Calculer, à l'aide de Théorème des "gendarmes", la limite suivante 
 
 $$
-\lim_{n \rightarrow +\infty}(1+\dfrac{\sin n}{n})
+\lim_{n \rightarrow +\infty}(1+\dfrac{\sin (n)}{n})
 $$
 
 ```
@@ -394,7 +394,7 @@ On a $\forall n\geq 1:\quad u_{n+1}-u_n=\dfrac{1}{(n+1)^2}.$
 Donc $(u_n)_{n\geq1}$ est croissante. Et pour tout $n\geq1$ on a
 
 \begin{eqnarray*}
-u_{n+1}-u_n
+v_{n+1}-v_n
 &=& u_{n+1}+\dfrac{2}{n+2}-u_n-\dfrac{2}{n+1}\\
 &=& \dfrac{1}{(n+1)^2}+\dfrac{2}{n+2}-\dfrac{2}{n+1}\\
 &=& \dfrac{-n}{(n+1)^2 (n+2)}.
@@ -440,15 +440,29 @@ Dans ce cas, le réel $r$ est appelé la raison de la suite $(u_n)_{n\geq n_0}.$
 :class: important
 Si $(u_n)_{n\geq n_0}$ est une suite arithmétique de raison $r,$ alors $u_n=u_{n_0}+(n-n_0)r,\, \forall n\geq n_0.$ En particulier, on a 
 
-$$
-\lim_{n \rightarrow +\infty}u_n=\infty
-$$
+- si $r>0$:
+    
+    $$
+    \lim_{n \rightarrow +\infty}u_n=+\infty
+    $$
+ 
+- si $r<0$:
+    
+    $$
+    \lim_{n \rightarrow +\infty}u_n=-\infty
+    $$
+    
+- si $r=0$:
+    
+    $$
+    \lim_{n \rightarrow +\infty}u_n=u_0
+    $$
 
 ```
 
 ```{admonition} Proposition
 :class: important
-Soit $(u_n)_{n\geq n_0}$ une suite géométrique de raison $r\,r\neq0$ et de premier terme $u_{n_0},$ la somme des termes successifs de la suite $(u_n)$ s'exprime par la formule suivante:
+Soit $(u_n)_{n\geq n_0}$ une suite arithmétique de raison $r$,($r\neq0$) et de premier terme $u_{n_0},$ la somme des termes successifs de la suite $(u_n)$ s'exprime par la formule suivante:
 
 $$
 u_p+u_{p+1}+...+u_n=(n-p+1)\dfrac{u_p+u_n}{2}=(n-p+1)\dfrac{2u_p+(n-p)r}{2}\;n_0\leq p\leq n

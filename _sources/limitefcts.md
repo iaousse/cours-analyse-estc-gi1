@@ -34,11 +34,11 @@ Soit $f:D\rightarrow \mathbb{R}$ une fonction. On dit que:
 
 -  $f$ est croissante sur $D$ si: pour tout $x$ et $y$ dans $D$ on a $x\leq y\Rightarrow f(x)\leq f(y).$
 
--  $f$ est strictement croissante sur $D$ si: pour tout $x$ et $y$ dans $D$ on a $x\leq y\Rightarrow f(x)< f(y)$
+-  $f$ est strictement croissante sur $D$ si: pour tout $x$ et $y$ dans $D$ on a $x < y\Rightarrow f(x)< f(y)$
 
 -  $f$ est décroissante sur $D$ si: pour tout $x$ et $y$ dans $D$ on a $x\leq y\Rightarrow f(x)\geq f(y).$
 
--  $f$ est strictement décroissante sur $D$ si: pour tout $x$ et $y$ dans $D$ on a $x\leq y\Rightarrow f(x)> f(y).$
+-  $f$ est strictement décroissante sur $D$ si: pour tout $x$ et $y$ dans $D$ on a $x < y\Rightarrow f(x)> f(y).$
 
 -  $f$ est monotone (resp. strictement monotone) sur $D$ si $f$ est croissante ou décroissante (resp. strictement croissante ou strictement décroissante) sur $D.$
 
@@ -235,8 +235,10 @@ Les polynômes sont continues sur $\mathbb{R}.$
 
 Toute fraction rationnelle $x\mapsto\dfrac{P(x)}{Q(x)}$ est continue sur son domaine de définition.
 
-La composition conserve la continuité (mais il faut faire attention en quels points les hypothèse s'appliquent)
+
 ```
+
+La composition conserve la continuité (mais il faut faire attention en quels points les hypothèse s'appliquent)
 
 ```{admonition} Proposition
 :class: important
@@ -319,7 +321,7 @@ Comme on sait déjà par le théorème des valeurs intermédiaires que $f([a,b])
 ```{admonition} Définition
 Soit $f:E\rightarrow F$ une fonction, où $E$ et $F$ sont des parties de $\mathbb{R}.$
 
--  $f$ est bijective $\forall x,x'\in E,\; f(x)=f(x')\Rightarrow x=x';$
+-  $f$ est injective $\forall x,x'\in E,\; f(x)=f(x')\Rightarrow x=x';$
 
 -  $f$ est surjective si $\forall y\in F,\exists x\in E,\;y=f(x);$
 
@@ -362,7 +364,7 @@ Généralisons en partie l'exemple précédent;
 :class: warning
 Soit $n\geq 1.$ Soit $f:[0,+\infty[\rightarrow [0,+\infty[$ définie par $f(x)=x^n.$ On a $f$ est continue et strictement croissante. Donc $f$ admet sur $I=[0,+\infty[$ une fonction réciproqie $f^{-1}$ définie sur $J=f([0,+\infty[)=[0,+\infty[.$
 
-$f^{-1}$ est notée: $x\mapsto x^{\dfrac{1}{n}}$ ou aussi $x\mapsto \sqrt[n]{x};$ c'est la fonction racine $n-$ième. Elle est continue et strictement croissante sur $[0,+\infty[.$
+$f^{-1}$ est notée: $x\mapsto x^{\frac{1}{n}}$ ou aussi $x\mapsto \sqrt[n]{x};$ c'est la fonction racine $n-$ième. Elle est continue et strictement croissante sur $[0,+\infty[.$
 ```
 # Application: Fonctions Logarithme et exponentielle
 
@@ -393,31 +395,31 @@ La bijection réciproque de $\ln:]0,+\infty[\rightarrow\mathbb{R}$ s'appelle la 
 :class: important
 La fonction exponentielle vérifie les propriétés suivantes:
 
-1. exp$(\ln x)=x$ pour tout $x>0$ et $\ln(\mbox{exp}x)=$ pour tout $x\in \mathbb{R}$
+1. exp$(\ln (x))=x$ pour tout $x>0$ et $\ln(\mbox{exp}(x))=$ pour tout $x\in \mathbb{R}$
 
 2. exp$(a+b)=\mbox{exp}(a)\times \mbox{exp}(b)$
 
-3. exp$(nx)=(\mbox{exp}x)^n$
+3. exp$(nx)=(\mbox{exp}(x))^n$
 
-4. exp$:\mathbb{R}\rightarrow]0,+\infty[$ est une fonction continue, strictement croissante vérifiant $\lim\limits_{\substack{x\rightarrow-\infty}}\mbox{exp}x=0$ et $\lim\limits_{\substack{x\rightarrow+\infty}}\mbox{exp}x=+\infty$
+4. exp$:\mathbb{R}\rightarrow]0,+\infty[$ est une fonction continue, strictement croissante vérifiant $\lim\limits_{\substack{x\rightarrow-\infty}}\mbox{exp}(x)=0$ et $\lim\limits_{\substack{x\rightarrow+\infty}}\mbox{exp}(x)=+\infty$
 
-5. La fonction exponentielle est dérivable et $\mbox{exp}'x=\mbox{exp}x,$ pour tout $x\in \mathbb{R}.$
+5. La fonction exponentielle est dérivable et $\mbox{exp}'(x)=\mbox{exp}(x),$ pour tout $x\in \mathbb{R}.$
 ```
 ```{admonition} Remarque 
 :class: tip
-La fonction exponentielle est l'unique fonction qui vérifie exp$'(x)=$exp$(x)$ (pour tout $x\in \mathbb{R}$) et exp$(1)=e,$ où $e\simeq2.718...$ est le nombre qui vérifie $\ln e=1.$
+La fonction exponentielle est l'unique fonction qui vérifie exp$'(x)=$exp$(x)$ (pour tout $x\in \mathbb{R}$) et exp$(1)=e,$ où $e\simeq2.718...$ est le nombre qui vérifie $\ln (e)=1.$
 
-Par définition, pour $a>0$ et $b\in \mathbb{R},\,$ $a^b=\mbox{exp}(b\ln a)$
+Par définition, pour $a>0$ et $b\in \mathbb{R},\,$ $a^b=\mbox{exp}(b\ln (a))$
 ``` 
 ```{admonition} Remarque 
 :class: tip
-$\sqrt{a}=a^{\dfrac{1}{2}}=\mbox{exp}(\dfrac{1}{2}\ln a)$
+$\sqrt{a}=a^{\dfrac{1}{2}}=\mbox{exp}(\dfrac{1}{2}\ln (a))$
 
-$\sqrt[n]{a}=a^{\dfrac{1}{n}}=\mbox{exp}(\dfrac{1}{n}\ln a)$ ( la racine $n$-ième de $a$)
+$\sqrt[n]{a}=a^{\dfrac{1}{n}}=\mbox{exp}(\dfrac{1}{n}\ln (a))$ ( la racine $n$-ième de $a$)
 
-On note aussi $\mbox{exp}x$ par $e^x$ ce qui se justifie par le calcul: $e^x=\mbox{exp}(x\ln e)=\mbox{exp}(x).$
+On note aussi $\mbox{exp}(x)$ par $e^x$ ce qui se justifie par le calcul: $e^x=\mbox{exp}(x\ln (e))=\mbox{exp}(x).$
 ``` 
-Les fonctions $x\mapsto a^x$ s'appellent aussi des fonctions exponentielles et se ramènent systématiquement à la fonction exponentielle classique par l'égalité $a^x=\mbox{exp}(x\ln a).$ Il ne faut surtout pas les confondre avec les fonctions puissances $x\mapsto x^a.$ On a les propriété suivantes;
+Les fonctions $x\mapsto a^x$ s'appellent aussi des fonctions exponentielles et se ramènent systématiquement à la fonction exponentielle classique par l'égalité $a^x=\mbox{exp}(x\ln (a)).$ Il ne faut surtout pas les confondre avec les fonctions puissances $x\mapsto x^a.$ On a les propriété suivantes;
 
 ```{admonition} Proposition
 :class: important
@@ -431,16 +433,16 @@ Soient $x,y>0$ et $a,\,b\in \mathbb{R}.$
 
 4. $(x^a)^b=x^{ab}$
 
-5. $\ln(x^a)=a\ln x$
+5. $\ln(x^a)=a\ln (x)$
 ```
 
-Comparons les fonctions $\ln x,\,\mbox{exp}x\,$ avec $x:$
+Comparons les fonctions $\ln (x),\,\mbox{exp}(x)\,$ avec $x:$
 
 ```{admonition} Proposition
 :class: important
 
 $$
-\lim\limits_{\substack{x\rightarrow+\infty}}\dfrac{\ln x}{x}=0\qquad \mbox{et}\quad \lim\limits_{\substack{x\rightarrow+\infty}}\dfrac{\mbox{exp}x}{x}=+\infty
+\lim\limits_{\substack{x\rightarrow+\infty}}\dfrac{\ln (x)}{x}=0\qquad \mbox{et}\quad \lim\limits_{\substack{x\rightarrow+\infty}}\dfrac{\mbox{exp}x}{x}=+\infty
 $$
 
 ```

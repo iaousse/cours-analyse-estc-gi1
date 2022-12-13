@@ -146,6 +146,79 @@
    </li>
   </ul>
  </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="limitefct.html">
+   Fonctions numériques, limite et continuité
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/>
+  <label for="toctree-checkbox-3">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="limitefcts.html">
+     Fonctions numérique: Définitions générales
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="exo3.html">
+     Exercices
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="dirivf.html">
+   Dérivée d’une fonction numérique
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/>
+  <label for="toctree-checkbox-4">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="dirivfs.html">
+     Dérivabilité d’une fonction numérique
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="fcthycerinv.html">
+   Fonctions circulaires et hyperboliques inverses
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/>
+  <label for="toctree-checkbox-5">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="fcthycerinvs.html">
+     Fonctions circulaires inverses
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="complement.html">
+   Complement sur les suites et les fonctions numériques
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" type="checkbox"/>
+  <label for="toctree-checkbox-6">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="complements.html">
+     Suites et critère de Chauchy
+    </a>
+   </li>
+  </ul>
+ </li>
 </ul>
 
     </div>
@@ -520,7 +593,7 @@ u_n&lt;A
 <li><p><span class="math notranslate nohighlight">\(\lim_{n \rightarrow +\infty}n^2\cos (1-\dfrac{1}{n})=\lim_{n \rightarrow +\infty}\dfrac{\cos(1-\dfrac{1}{n})}{(\dfrac{1}{n})^2}=\dfrac{1}{2},\)</span></p></li>
 <li><p><span class="math notranslate nohighlight">\(\lim_{n \rightarrow +\infty} n\ln(1+\dfrac{1}{n})=\lim_{n \rightarrow +\infty}\dfrac{\ln(1+\dfrac{1}{n})}{\dfrac{1}{n}}=1,\)</span></p></li>
 <li><p><span class="math notranslate nohighlight">\(\lim_{n \rightarrow +\infty} n(e^{\dfrac{1}{n}})=1,\)</span></p></li>
-<li><p><span class="math notranslate nohighlight">\(\lim_{n \rightarrow +\infty} \dfrac{(\ln n)^{\alpha}}{n}=0,\)</span></p></li>
+<li><p><span class="math notranslate nohighlight">\(\lim_{n \rightarrow +\infty} \dfrac{(\ln (n))^{\alpha}}{n}=0,\)</span></p></li>
 <li><p><span class="math notranslate nohighlight">\(\lim_{n \rightarrow +\infty} n^{\alpha}e^{-n}=0.\)</span></p></li>
 </ul>
 <div class="important admonition">
@@ -564,7 +637,7 @@ u_n&lt;A
 <p>Calculer, à l’aide de Théorème des « gendarmes », la limite suivante</p>
 <div class="math notranslate nohighlight">
 \[
-\lim_{n \rightarrow +\infty}(1+\dfrac{\sin n}{n})
+\lim_{n \rightarrow +\infty}(1+\dfrac{\sin (n)}{n})
 \]</div>
 </div>
 <p>Toute suite convergente est bornée. La réciproque est fausse: la suite <span class="math notranslate nohighlight">\(((-1)^n)\)</span> est bornée mais elle diverge (elle n’admet pas de limite).En revanche, on a le résultat suivant.</p>
@@ -621,7 +694,7 @@ u_n&lt;A
 <p>Donc <span class="math notranslate nohighlight">\((u_n)_{n\geq1}\)</span> est croissante. Et pour tout <span class="math notranslate nohighlight">\(n\geq1\)</span> on a</p>
 <div class="amsmath math notranslate nohighlight">
 \[\begin{eqnarray*}
-u_{n+1}-u_n
+v_{n+1}-v_n
 &amp;=&amp; u_{n+1}+\dfrac{2}{n+2}-u_n-\dfrac{2}{n+1}\\
 &amp;=&amp; \dfrac{1}{(n+1)^2}+\dfrac{2}{n+2}-\dfrac{2}{n+1}\\
 &amp;=&amp; \dfrac{-n}{(n+1)^2 (n+2)}.
@@ -659,14 +732,30 @@ u_{n+1}=f(u_n),\quad\forall n\geq n_0
 <div class="important admonition">
 <p class="admonition-title">Proposition</p>
 <p>Si <span class="math notranslate nohighlight">\((u_n)_{n\geq n_0}\)</span> est une suite arithmétique de raison <span class="math notranslate nohighlight">\(r,\)</span> alors <span class="math notranslate nohighlight">\(u_n=u_{n_0}+(n-n_0)r,\, \forall n\geq n_0.\)</span> En particulier, on a</p>
+<ul>
+<li><p>si <span class="math notranslate nohighlight">\(r&gt;0\)</span>:</p>
 <div class="math notranslate nohighlight">
 \[
-\lim_{n \rightarrow +\infty}u_n=\infty
-\]</div>
+    \lim_{n \rightarrow +\infty}u_n=+\infty
+    \]</div>
+</li>
+<li><p>si <span class="math notranslate nohighlight">\(r&lt;0\)</span>:</p>
+<div class="math notranslate nohighlight">
+\[
+    \lim_{n \rightarrow +\infty}u_n=-\infty
+    \]</div>
+</li>
+<li><p>si <span class="math notranslate nohighlight">\(r=0\)</span>:</p>
+<div class="math notranslate nohighlight">
+\[
+    \lim_{n \rightarrow +\infty}u_n=u_0
+    \]</div>
+</li>
+</ul>
 </div>
 <div class="important admonition">
 <p class="admonition-title">Proposition</p>
-<p>Soit <span class="math notranslate nohighlight">\((u_n)_{n\geq n_0}\)</span> une suite géométrique de raison <span class="math notranslate nohighlight">\(r\,r\neq0\)</span> et de premier terme <span class="math notranslate nohighlight">\(u_{n_0},\)</span> la somme des termes successifs de la suite <span class="math notranslate nohighlight">\((u_n)\)</span> s’exprime par la formule suivante:</p>
+<p>Soit <span class="math notranslate nohighlight">\((u_n)_{n\geq n_0}\)</span> une suite arithmétique de raison <span class="math notranslate nohighlight">\(r\)</span>,(<span class="math notranslate nohighlight">\(r\neq0\)</span>) et de premier terme <span class="math notranslate nohighlight">\(u_{n_0},\)</span> la somme des termes successifs de la suite <span class="math notranslate nohighlight">\((u_n)\)</span> s’exprime par la formule suivante:</p>
 <div class="math notranslate nohighlight">
 \[
 u_p+u_{p+1}+...+u_n=(n-p+1)\dfrac{u_p+u_n}{2}=(n-p+1)\dfrac{2u_p+(n-p)r}{2}\;n_0\leq p\leq n

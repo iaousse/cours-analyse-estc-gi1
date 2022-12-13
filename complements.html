@@ -1,0 +1,497 @@
+
+<!DOCTYPE html>
+
+<html lang="fr">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Complement sur les suites et les fonctions numériques &#8212; Cours Analyse</title>
+    
+  <link href="_static/css/theme.css" rel="stylesheet" />
+  <link href="_static/css/index.c5995385ac14fb8791e8eb36b4908be2.css" rel="stylesheet" />
+
+    
+  <link rel="stylesheet"
+    href="_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    
+      
+
+    
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="_static/sphinx-book-theme.e8e5499552300ddf5d7adccae7cc3b70.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="_static/proof.css" />
+    <link rel="stylesheet" type="text/css" href="_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
+    <link rel="stylesheet" type="text/css" href="_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
+    
+  <link rel="preload" as="script" href="_static/js/index.1c5a1a01449ed65a7b51.js">
+
+    <script id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+    <script src="_static/jquery.js"></script>
+    <script src="_static/underscore.js"></script>
+    <script src="_static/doctools.js"></script>
+    <script src="_static/togglebutton.js"></script>
+    <script src="_static/clipboard.min.js"></script>
+    <script src="_static/copybutton.js"></script>
+    <script src="_static/translations.js"></script>
+    <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="_static/sphinx-book-theme.12a9622fbb08dcb3a2a40b2c02b83a57.js"></script>
+    <script async="async" src="https://unpkg.com/thebelab@latest/lib/index.js"></script>
+    <script >
+        const thebe_selector = ".thebe"
+        const thebe_selector_input = "pre"
+        const thebe_selector_output = ".output"
+    </script>
+    <script async="async" src="_static/sphinx-thebe.js"></script>
+    <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/x-mathjax-config">MathJax.Hub.Config({"TeX": {"Macros": {"Z": "\\mathbb{Z}", "V": "V", "N": "\\mathbb{N}", "C": "\\mathbb{C}", "Q": "\\mathbb{Q}", "K": "\\mathbb{K}", "floor": ["\\lfloor#1\\rfloor", 1], "bmat": ["\\left[\\begin{array}"], "emat": ["\\end{array}\\right]"], "R": ["\\mathbb{R}"], "B": ["\\mathcal{B}"], "norm": ["{\\Vert#1\\Vert}", 1], "abs": ["{\\left|#1\\right|}", 1], "coloneqq": ["{:=}"], "eqqcolon": ["{=:}"], "emph": ["\\pmb#1", 1], "tr": "\\operatorname{Spur}", "lin": "\\operatorname{lin}", "dv": "\\mathrm{div}~", "rot": "\\mathrm{rot}~", "Dim": "\\operatorname{dim}", "diag": "\\operatorname{diag}", "Kern": "\\operatorname{Kern}", "Bild": "\\operatorname{Bild}", "Im": "\\operatorname{Im}", "Rang": "\\operatorname{Rang}", "GL": "\\operatorname{GL}", "Eig": "\\operatorname{Eig}", "End": "\\operatorname{End}", "Hau": "\\operatorname{Haupt}", "mymathbb": ["\\boldsymbol{#1}", 1], "idx": "\\mathrm{d}x", "d": "\\mathrm{d}", "i": "\\mathrm{i}", "x": "\\mathbf{x}", "sign": "\\mathrm{sign}", "vec": ["\\mathbf{#1}", 1], "veczwei": ["\\begin{pmatrix} #1 \\\\ #2 \\end{pmatrix}", 2], "M": "\\mathcal{M}", "S": "\\mathbb{S}", "bone": "\\unicode{x1D7D9}", "Re": "\\mathrm{Re}", "Um": "\\operatorname{Um}", "Res": "\\operatorname{Res}"}}, "tex2jax": {"inlineMath": [["\\(", "\\)"]], "displayMath": [["\\[", "\\]"]], "processRefs": false, "processEnvironments": false}})</script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Recherche" href="search.html" />
+    <link rel="prev" title="Complement sur les suites et les fonctions numériques" href="complement.html" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="en" />
+    
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+    <div class="container-fluid" id="banner"></div>
+
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
+    
+        <div class="navbar-brand-box">
+    <a class="navbar-brand text-wrap" href="index.html">
+      
+      <img src="_static/logo.png" class="logo" alt="logo">
+      
+      
+      <h1 class="site-logo" id="site-title">Cours Analyse</h1>
+      
+    </a>
+</div><form class="bd-search d-flex align-items-center" action="search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Rechercher dans ce livre ..." aria-label="Rechercher dans ce livre ..." autocomplete="off" >
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
+    <div class="bd-toc-item active">
+        <ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="intro.html">
+   Introduction
+  </a>
+ </li>
+</ul>
+<ul class="current nav bd-sidenav">
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="R.html">
+   Les nombres réels
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/>
+  <label for="toctree-checkbox-1">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="rationnels.html">
+     Les nombres rationnels
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="proprties.html">
+     Propriétés de
+     <span class="math notranslate nohighlight">
+      \(\mathbb{R}\)
+     </span>
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="exo1.html">
+     Exercices
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="suite.html">
+   Les suites des nombres réels
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/>
+  <label for="toctree-checkbox-2">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="suites.html">
+     Suites réelles: Définitions générales
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="exo2.html">
+     Exercices
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="limitefct.html">
+   Fonctions numériques, limite et continuité
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/>
+  <label for="toctree-checkbox-3">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="limitefcts.html">
+     Fonctions numérique: Définitions générales
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="exo3.html">
+     Exercices
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="dirivf.html">
+   Dérivée d’une fonction numérique
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/>
+  <label for="toctree-checkbox-4">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="dirivfs.html">
+     Dérivabilité d’une fonction numérique
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="fcthycerinv.html">
+   Fonctions circulaires et hyperboliques inverses
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/>
+  <label for="toctree-checkbox-5">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="fcthycerinvs.html">
+     Fonctions circulaires inverses
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 current active has-children">
+  <a class="reference internal" href="complement.html">
+   Complement sur les suites et les fonctions numériques
+  </a>
+  <input checked="" class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" type="checkbox"/>
+  <label for="toctree-checkbox-6">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul class="current">
+   <li class="toctree-l2 current active">
+    <a class="current reference internal" href="#">
+     Complement sur les suites et les fonctions numériques
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+
+    </div>
+</nav> <!-- To handle the deprecated key -->
+
+<div class="navbar_extra_footer">
+  Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
+</div>
+
+</div>
+
+
+          
+
+
+          
+<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
+    
+    <div class="topbar container-xl fixed-top">
+    <div class="topbar-contents row">
+        <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show"></div>
+        <div class="col pl-md-4 topbar-main">
+            
+            <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
+                data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
+                aria-expanded="true" aria-label="Basculer la navigation" aria-controls="site-navigation"
+                title="Basculer la navigation" data-toggle="tooltip" data-placement="left">
+                <i class="fas fa-bars"></i>
+                <i class="fas fa-arrow-left"></i>
+                <i class="fas fa-arrow-up"></i>
+            </button>
+            
+            
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Téléchargez cette page"><i
+            class="fas fa-download"></i></button>
+
+    <div class="dropdown-buttons">
+        <!-- ipynb file if we had a myst markdown file -->
+        
+        <!-- Download raw file -->
+        <a class="dropdown-buttons" href="_sources/complements.md"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Télécharger le fichier source" data-toggle="tooltip"
+                data-placement="left">.md</button></a>
+        <!-- Download PDF via print -->
+        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Imprimer au format PDF"
+            onClick="window.print()" data-toggle="tooltip" data-placement="left">.pdf</button>
+    </div>
+</div>
+
+            <!-- Source interaction buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Connect with source repository"><i class="fab fa-github"></i></button>
+    <div class="dropdown-buttons sourcebuttons">
+        <a class="repository-button"
+            href="https://github.com/executablebooks/jupyter-book"><button type="button" class="btn btn-secondary topbarbtn"
+                data-toggle="tooltip" data-placement="left" title="Dépôt source"><i
+                    class="fab fa-github"></i>dépôt</button></a>
+        <a class="issues-button"
+            href="https://github.com/executablebooks/jupyter-book/issues/new?title=Issue%20on%20page%20%2Fcomplements.html&body=Your%20issue%20content%20here."><button
+                type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
+                title="Ouvrez un problème"><i class="fas fa-lightbulb"></i>signaler un problème</button></a>
+        
+    </div>
+</div>
+
+            <!-- Full screen (wrap in <a> to have style consistency -->
+
+<a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
+        data-placement="bottom" onclick="toggleFullScreen()" aria-label="Mode plein écran"
+        title="Mode plein écran"><i
+            class="fas fa-expand"></i></button></a>
+
+            <!-- Launch buttons -->
+
+        </div>
+
+        <!-- Table of contents -->
+        <div class="d-none d-md-block col-md-2 bd-toc show">
+            
+            <div class="tocsection onthispage pt-5 pb-3">
+                <i class="fas fa-list"></i> Contenu
+            </div>
+            <nav id="bd-toc-nav">
+                <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#suites-et-critere-de-chauchy">
+   Suites et critère de Chauchy
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#comparaison-des-suites">
+   COMPARAISON DES SUITES
+  </a>
+ </li>
+</ul>
+
+            </nav>
+        </div>
+    </div>
+</div>
+    <div id="main-content" class="row">
+        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
+        
+              <div>
+                
+  <div class="section" id="complement-sur-les-suites-et-les-fonctions-numeriques">
+<h1>Complement sur les suites et les fonctions numériques<a class="headerlink" href="#complement-sur-les-suites-et-les-fonctions-numeriques" title="Lien permanent vers ce titre">¶</a></h1>
+<div class="section" id="suites-et-critere-de-chauchy">
+<h2>Suites et critère de Chauchy<a class="headerlink" href="#suites-et-critere-de-chauchy" title="Lien permanent vers ce titre">¶</a></h2>
+<p>Le très grand intéret du critère de Cauchy provient du fait qu’il caractérise dans <span class="math notranslate nohighlight">\(\mathbb{R}\)</span> les suites convergentes, sans que la limite apparaisse. D’où son utilisation dans l’étude des séries par exemple, ou encore pour montrer qu’une suite n’est pas convergente.</p>
+<p>Le concept de suite de Cauchy correspond à la propriété que la distance entre deux termes de la suite devient arbitrairement petite (et non de plus en plus petite) quand ces termes sont de rang assez grand.</p>
+<div class="admonition-definition-suite-de-chauchy admonition">
+<p class="admonition-title">Définition (suite de chauchy)</p>
+<p>Soit <span class="math notranslate nohighlight">\((u_n)\)</span> une suite réelle; on dit que <span class="math notranslate nohighlight">\((u_n)\)</span> est une suite de Cauchy ou vérifie le critère de Cauchy si :</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+\forall \epsilon&gt;0, \exists N \in \mathbb{N},  \forall p, n \in \mathbb{N}, \left\{
+\begin{array}{ll}
+ p\geq N\\
+n\geq N\\
+\end{array}
+\right. \Rightarrow |u_p-u_n|&lt;\epsilon
+\end{split}\]</div>
+</div>
+<div class="admonition-theoreme-critere-de-cauchy admonition">
+<p class="admonition-title">Théorème (Critère de Cauchy)</p>
+<p>Une suite de réels est convergente dans <span class="math notranslate nohighlight">\(\mathbb{R}\)</span> si, et seulement si, c’est une suite de Cauchy.</p>
+</div>
+<p>Le critère de Cauchy est utilisé pour montrer qu’une suite <span class="math notranslate nohighlight">\((u_n)\)</span> est convergente (resp divergente) dans les cas où l’on peut obtenir facilement une majoration (resp minoration) de <span class="math notranslate nohighlight">\(|u_p−u_n|\)</span> pour <span class="math notranslate nohighlight">\(n\)</span> et <span class="math notranslate nohighlight">\(p\)</span> assez grands. C’est le cas en particulier pour certaines séries.</p>
+</div>
+<div class="section" id="comparaison-des-suites">
+<h2>COMPARAISON DES SUITES<a class="headerlink" href="#comparaison-des-suites" title="Lien permanent vers ce titre">¶</a></h2>
+<div class="admonition-definition admonition">
+<p class="admonition-title">Définition</p>
+<p>Soient <span class="math notranslate nohighlight">\((u_n)\)</span>, <span class="math notranslate nohighlight">\((v_n)\)</span> et <span class="math notranslate nohighlight">\((\epsilon_n)\)</span> trois suites telles qu’à partir d’un certain rang <span class="math notranslate nohighlight">\(u_n = v_nε_n\)</span>. On dit que :</p>
+<ul class="simple">
+<li><p><span class="math notranslate nohighlight">\(u_n\)</span> est dominée par <span class="math notranslate nohighlight">\(v_n\)</span> lorsque la suite <span class="math notranslate nohighlight">\((\epsilon_n)\)</span> est bornée. Notation : <span class="math notranslate nohighlight">\(u_n = O(v_n)\)</span>.</p></li>
+<li><p><span class="math notranslate nohighlight">\(u_n\)</span> est négligeable devant <span class="math notranslate nohighlight">\(v_n\)</span> lorsque la suite <span class="math notranslate nohighlight">\((\epsilon_n)\)</span> tend vers 0 (<span class="math notranslate nohighlight">\(\lim \epsilon_n =0\)</span>). Notation : <span class="math notranslate nohighlight">\(u_n = o(v_n)\)</span>.</p></li>
+<li><p><span class="math notranslate nohighlight">\(u_n\)</span> est équivalente à <span class="math notranslate nohighlight">\(v_n\)</span> lorsque la suite <span class="math notranslate nohighlight">\((\epsilon_n)\)</span> tend vers 1 (<span class="math notranslate nohighlight">\(\lim \epsilon_n =1\)</span>). Notation : <span class="math notranslate nohighlight">\(u_n \sim v_n\)</span>.</p></li>
+</ul>
+</div>
+<div class="admonition-theoreme-caracterisations admonition">
+<p class="admonition-title">Théorème (Caractérisations)</p>
+<p>Lorsque la suite <span class="math notranslate nohighlight">\(v\)</span> ne s’annule pas à partir d’un certain rang :</p>
+<ul class="simple">
+<li><p><span class="math notranslate nohighlight">\(u_n = O(v_n)\)</span> si et seulement si la suite <span class="math notranslate nohighlight">\(\frac{u}{v}\)</span> est bornée.</p></li>
+<li><p><span class="math notranslate nohighlight">\(u_n = o(v_n)\)</span> si et seulement si <span class="math notranslate nohighlight">\(\lim \frac{u_n}{v_n}= 0\)</span>.</p></li>
+<li><p><span class="math notranslate nohighlight">\(u_n \sim v_n\)</span> si et seulement si <span class="math notranslate nohighlight">\(lim \frac{u_n}{v_n}= 1\)</span>.</p></li>
+</ul>
+</div>
+<div class="admonition-exemple admonition">
+<p class="admonition-title">Exemple</p>
+<p>On a:</p>
+<ul class="simple">
+<li><p><span class="math notranslate nohighlight">\(n =o(n^2)\)</span> (on prend <span class="math notranslate nohighlight">\(\epsilon = \frac{1}{n} \to 0\)</span>).</p></li>
+<li><p><span class="math notranslate nohighlight">\(ln(n) = o(n)\)</span> car<span class="math notranslate nohighlight">\(\frac{ln(n)}{n} \to 0\)</span>.</p></li>
+<li><p><span class="math notranslate nohighlight">\(n\sin(n) = O(n)\)</span> car <span class="math notranslate nohighlight">\(\frac{n\sin(n)}{n}=sin(n)\)</span> bornée.</p></li>
+<li><p><span class="math notranslate nohighlight">\(\sin(n) = O(1)\)</span> car <span class="math notranslate nohighlight">\(\frac{\sin(n)}{1}=sin(n)\)</span> bornée.</p></li>
+<li><p><span class="math notranslate nohighlight">\(\frac{n}{n^2+1} \sim \frac{1}{n}\)</span> car <span class="math notranslate nohighlight">\(\dfrac{\frac{n}{n^2+1}}{\frac{1}{n}} = \frac{n^2}{n^2 +1} \to 1\)</span>.</p></li>
+<li><p><span class="math notranslate nohighlight">\((1+\frac{1}{n})^n \sim e\)</span> car <span class="math notranslate nohighlight">\(\dfrac{(1+\frac{1}{n})^n}{e} \to 1\)</span>.</p></li>
+</ul>
+</div>
+<div class="admonition-remarque admonition">
+<p class="admonition-title">Remarque</p>
+<ul class="simple">
+<li><p><span class="math notranslate nohighlight">\(u_n = O(1)\)</span> signifie que la suite <span class="math notranslate nohighlight">\((u_n)\)</span> est bornée.</p></li>
+<li><p><span class="math notranslate nohighlight">\(u_n = o(1)\)</span> signifie que <span class="math notranslate nohighlight">\(u_n\to 0\)</span>.</p></li>
+<li><p>Si <span class="math notranslate nohighlight">\(u_n = o(v_n)\)</span> alors <span class="math notranslate nohighlight">\(u_n = O(v_n)\)</span>.</p></li>
+<li><p>Si <span class="math notranslate nohighlight">\(u_n \sim v_n\)</span> alors <span class="math notranslate nohighlight">\(u_n = O(v_n)\)</span>.</p></li>
+<li><p>Si <span class="math notranslate nohighlight">\(u_n = o(v_n)\)</span> et <span class="math notranslate nohighlight">\(v_n = o(w_n)\)</span>, alors <span class="math notranslate nohighlight">\(u_n = o(w_n)\)</span> (transitivité).</p></li>
+<li><p>Si <span class="math notranslate nohighlight">\(u_n = O(v_n)\)</span> et <span class="math notranslate nohighlight">\(v_n = O(w_n)\)</span>, alors <span class="math notranslate nohighlight">\(u_n = O(w_n)\)</span> (transitivité).</p></li>
+<li><p><span class="math notranslate nohighlight">\(u_n \sim v_n \Leftrightarrow u_n − v_n = o(v_n)\)</span>.</p></li>
+<li><p>si <span class="math notranslate nohighlight">\(l \in \mathbb{R}\)</span> et si <span class="math notranslate nohighlight">\(u_n \sim l\)</span> alors <span class="math notranslate nohighlight">\(u_n \to l\)</span> (réciproque vraie lorsque <span class="math notranslate nohighlight">\(l \neq 0\)</span>).</p></li>
+<li><p>Si <span class="math notranslate nohighlight">\(u_n = o(v_n)\)</span> alors <span class="math notranslate nohighlight">\(\forall \lambda \in \mathbb{R}, \lambda u_n + v_n \sim v_n\)</span>.</p></li>
+</ul>
+</div>
+<div class="admonition-theoreme-croissances-comparees admonition">
+<p class="admonition-title">Théorème (croissances comparées)</p>
+<p>Soient <span class="math notranslate nohighlight">\(\alpha, \beta &gt; 0\)</span>:</p>
+<ul class="simple">
+<li><p>si <span class="math notranslate nohighlight">\(\alpha &lt; \beta\)</span> alors <span class="math notranslate nohighlight">\(n^\alpha = o(n^\beta)\)</span> et <span class="math notranslate nohighlight">\( \frac{1}{n^\beta} = o(\frac{1}{n^\alpha})\)</span>.</p></li>
+<li><p><span class="math notranslate nohighlight">\(ln(n)^\alpha = o(n^\beta)\)</span>.</p></li>
+<li><p><span class="math notranslate nohighlight">\(n^\alpha =o(e^{n\beta})\)</span> et <span class="math notranslate nohighlight">\(n^\alpha =o(e^{n^\beta})\)</span>.</p></li>
+<li><p><span class="math notranslate nohighlight">\(\forall a \in \mathbb{R}, a^n =o(n!)\)</span> et <span class="math notranslate nohighlight">\(n^\alpha = o(n!)\)</span>.</p></li>
+<li><p><span class="math notranslate nohighlight">\(n! = o(n^n)\)</span>.</p></li>
+</ul>
+</div>
+<div class="admonition-theoreme-les-equivalents-usuels admonition">
+<p class="admonition-title">Théorème (les équivalents usuels)</p>
+<p>Soit <span class="math notranslate nohighlight">\((u_n)\)</span> une suite de limite nulle (<span class="math notranslate nohighlight">\(\lim u_n =0\)</span>).</p>
+<p>On a:</p>
+<ul class="simple">
+<li><p>Si <span class="math notranslate nohighlight">\(f : ]− a;a[\to \mathbb{R}\)</span> (avec <span class="math notranslate nohighlight">\(a &gt; 0\)</span>) est dérivable en <span class="math notranslate nohighlight">\(0\)</span>, et si <span class="math notranslate nohighlight">\(f'(0) \neq 0\)</span>, alors on a <span class="math notranslate nohighlight">\(f(u_n)− f(0) ∼ f'(0)u_n\)</span>.</p></li>
+<li><p><span class="math notranslate nohighlight">\(\sin(u_n) \sim u_n\)</span>, <span class="math notranslate nohighlight">\(e^{u_n} - 1 \sim u_n\)</span>, <span class="math notranslate nohighlight">\(ln(1+u_n)\sim u_n\)</span>, <span class="math notranslate nohighlight">\(\tan(u_n) \sim u_n\)</span>, <span class="math notranslate nohighlight">\((1+u_n)^\alpha -1 \sim \alpha u_n\)</span>.</p></li>
+<li><p>Soit <span class="math notranslate nohighlight">\(P(x) = \sum_{k=0}^{p} a_kx^k\)</span> une fonction polynomiale avec <span class="math notranslate nohighlight">\(a_p \neq 0\)</span>, alors <span class="math notranslate nohighlight">\(P(n) \sim a_pn^p\)</span> (équivalence avec le
+terme de plus haut degré).</p></li>
+<li><p>Soit <span class="math notranslate nohighlight">\(Q(x) =\frac{P(x)}{R(x)}\)</span> une fraction rationnelle avec <span class="math notranslate nohighlight">\(a_px^p\)</span> le terme de plus haut degré de <span class="math notranslate nohighlight">\(P\)</span> (<span class="math notranslate nohighlight">\(a_p \neq 0\)</span>) et <span class="math notranslate nohighlight">\(b_rx^r\)</span> celui de <span class="math notranslate nohighlight">\(R\)</span> (<span class="math notranslate nohighlight">\(b_r \neq 0\)</span>), alors <span class="math notranslate nohighlight">\(Q(n) ∼ \frac{a_p}{b_r}n^{p−r}\)</span> (équivalence avec le rapport des termes de plus haut degré).</p></li>
+</ul>
+</div>
+<div class="admonition-theoreme admonition">
+<p class="admonition-title">Théorème</p>
+<p>Soient <span class="math notranslate nohighlight">\(u\)</span> et <span class="math notranslate nohighlight">\(v\)</span> deux suites,</p>
+<ul class="simple">
+<li><p>Si <span class="math notranslate nohighlight">\(u_n ∼ v_n\)</span> et si <span class="math notranslate nohighlight">\(\lim v_n = l \in \mathbb{R}\cup \{+\infty, -\infty\}\)</span>, alors <span class="math notranslate nohighlight">\(\lim u_n = l\)</span>.</p></li>
+<li><p>Si <span class="math notranslate nohighlight">\(u_n ∼ v_n\)</span> et si <span class="math notranslate nohighlight">\(a_n ∼ b_n\)</span>, alors <span class="math notranslate nohighlight">\(u_na_n ∼ v_nb_n\)</span> (compatibilité avec la multiplication).</p></li>
+<li><p>Si <span class="math notranslate nohighlight">\(u_n ∼ v_n\)</span> et si <span class="math notranslate nohighlight">\(v\)</span> ne s’annule pas à partir d’un certain rang, alors <span class="math notranslate nohighlight">\(\frac{1}{u_n} ∼ \frac{1}{v_n}\)</span> (compatibilité avec le
+passage à l’inverse).</p></li>
+<li><p>Si <span class="math notranslate nohighlight">\(u_n ∼ v_n\)</span> et si <span class="math notranslate nohighlight">\(v_n &gt; 0\)</span> ne s’annule pas à partir d’un certain rang, alors <span class="math notranslate nohighlight">\(u_n^\alpha ∼ v_n^\alpha\)</span> pour tout réel <span class="math notranslate nohighlight">\(\alpha\)</span>
+(compatibilité avec les puissances constantes).</p></li>
+</ul>
+</div>
+<div class="admonition warning">
+<p class="admonition-title">Avertissement</p>
+<ul class="simple">
+<li><p>Il n’y a pas compatibilité avec l’addition en général, par exemple : <span class="math notranslate nohighlight">\(n+\frac{1}{n} ∼ n\)</span> et <span class="math notranslate nohighlight">\(−n ∼ 1−n\)</span>, mais <span class="math notranslate nohighlight">\(\frac{1}{n}\)</span>
+n’est pas équivalent à <span class="math notranslate nohighlight">\(1\)</span>.</p></li>
+<li><p>Ces propriétés sont utiles pour les calculs de limites qui ne peuvent pas être faits directement : on essaie de se
+ramener à un équivalent plus simple (s’il y en a …) dont on sait calculer la limite.</p></li>
+</ul>
+</div>
+</div>
+</div>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            kernelName: "python3",
+            path: "./."
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+              </div>
+              
+        
+        <div class='prev-next-bottom'>
+            
+    <a class='left-prev' id="prev-link" href="complement.html" title="previous page">Complement sur les suites et les fonctions numériques</a>
+
+        </div>
+        
+        </div>
+    </div>
+    <footer class="footer mt-5 mt-md-0">
+    <div class="container">
+      <p>
+        
+          Par Iaousse M'barek<br/>
+        
+      </p>
+    </div>
+  </footer>
+</main>
+
+
+      </div>
+    </div>
+  
+  <script src="_static/js/index.1c5a1a01449ed65a7b51.js"></script>
+
+  
+  </body>
+</html>

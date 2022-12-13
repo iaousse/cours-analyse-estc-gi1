@@ -55,6 +55,8 @@
     <script type="text/x-mathjax-config">MathJax.Hub.Config({"TeX": {"Macros": {"Z": "\\mathbb{Z}", "V": "V", "N": "\\mathbb{N}", "C": "\\mathbb{C}", "Q": "\\mathbb{Q}", "K": "\\mathbb{K}", "floor": ["\\lfloor#1\\rfloor", 1], "bmat": ["\\left[\\begin{array}"], "emat": ["\\end{array}\\right]"], "R": ["\\mathbb{R}"], "B": ["\\mathcal{B}"], "norm": ["{\\Vert#1\\Vert}", 1], "abs": ["{\\left|#1\\right|}", 1], "coloneqq": ["{:=}"], "eqqcolon": ["{=:}"], "emph": ["\\pmb#1", 1], "tr": "\\operatorname{Spur}", "lin": "\\operatorname{lin}", "dv": "\\mathrm{div}~", "rot": "\\mathrm{rot}~", "Dim": "\\operatorname{dim}", "diag": "\\operatorname{diag}", "Kern": "\\operatorname{Kern}", "Bild": "\\operatorname{Bild}", "Im": "\\operatorname{Im}", "Rang": "\\operatorname{Rang}", "GL": "\\operatorname{GL}", "Eig": "\\operatorname{Eig}", "End": "\\operatorname{End}", "Hau": "\\operatorname{Haupt}", "mymathbb": ["\\boldsymbol{#1}", 1], "idx": "\\mathrm{d}x", "d": "\\mathrm{d}", "i": "\\mathrm{i}", "x": "\\mathbf{x}", "sign": "\\mathrm{sign}", "vec": ["\\mathbf{#1}", 1], "veczwei": ["\\begin{pmatrix} #1 \\\\ #2 \\end{pmatrix}", 2], "M": "\\mathcal{M}", "S": "\\mathbb{S}", "bone": "\\unicode{x1D7D9}", "Re": "\\mathrm{Re}", "Um": "\\operatorname{Um}", "Res": "\\operatorname{Res}"}}, "tex2jax": {"inlineMath": [["\\(", "\\)"]], "displayMath": [["\\[", "\\]"]], "processRefs": false, "processEnvironments": false}})</script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Recherche" href="search.html" />
+    <link rel="next" title="Exercices" href="exo3.html" />
+    <link rel="prev" title="Fonctions numériques, limite et continuité" href="limitefct.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="en" />
     
@@ -91,7 +93,7 @@
   </a>
  </li>
 </ul>
-<ul class="nav bd-sidenav">
+<ul class="current nav bd-sidenav">
  <li class="toctree-l1 has-children">
   <a class="reference internal" href="R.html">
    Les nombres réels
@@ -140,6 +142,79 @@
    <li class="toctree-l2">
     <a class="reference internal" href="exo2.html">
      Exercices
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 current active has-children">
+  <a class="reference internal" href="limitefct.html">
+   Fonctions numériques, limite et continuité
+  </a>
+  <input checked="" class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/>
+  <label for="toctree-checkbox-3">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul class="current">
+   <li class="toctree-l2 current active">
+    <a class="current reference internal" href="#">
+     Fonctions numérique: Définitions générales
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="exo3.html">
+     Exercices
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="dirivf.html">
+   Dérivée d’une fonction numérique
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/>
+  <label for="toctree-checkbox-4">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="dirivfs.html">
+     Dérivabilité d’une fonction numérique
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="fcthycerinv.html">
+   Fonctions circulaires et hyperboliques inverses
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/>
+  <label for="toctree-checkbox-5">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="fcthycerinvs.html">
+     Fonctions circulaires inverses
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="complement.html">
+   Complement sur les suites et les fonctions numériques
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" type="checkbox"/>
+  <label for="toctree-checkbox-6">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="complements.html">
+     Suites et critère de Chauchy
     </a>
    </li>
   </ul>
@@ -328,9 +403,9 @@ D_f:=\{x\in \mathbb{R};\;f(x)\in \mathbb{R}\}
 <p>Soit <span class="math notranslate nohighlight">\(f:D\rightarrow \mathbb{R}\)</span> une fonction. On dit que:</p>
 <ul class="simple">
 <li><p><span class="math notranslate nohighlight">\(f\)</span> est croissante sur <span class="math notranslate nohighlight">\(D\)</span> si: pour tout <span class="math notranslate nohighlight">\(x\)</span> et <span class="math notranslate nohighlight">\(y\)</span> dans <span class="math notranslate nohighlight">\(D\)</span> on a <span class="math notranslate nohighlight">\(x\leq y\Rightarrow f(x)\leq f(y).\)</span></p></li>
-<li><p><span class="math notranslate nohighlight">\(f\)</span> est strictement croissante sur <span class="math notranslate nohighlight">\(D\)</span> si: pour tout <span class="math notranslate nohighlight">\(x\)</span> et <span class="math notranslate nohighlight">\(y\)</span> dans <span class="math notranslate nohighlight">\(D\)</span> on a <span class="math notranslate nohighlight">\(x\leq y\Rightarrow f(x)&lt; f(y)\)</span></p></li>
+<li><p><span class="math notranslate nohighlight">\(f\)</span> est strictement croissante sur <span class="math notranslate nohighlight">\(D\)</span> si: pour tout <span class="math notranslate nohighlight">\(x\)</span> et <span class="math notranslate nohighlight">\(y\)</span> dans <span class="math notranslate nohighlight">\(D\)</span> on a <span class="math notranslate nohighlight">\(x &lt; y\Rightarrow f(x)&lt; f(y)\)</span></p></li>
 <li><p><span class="math notranslate nohighlight">\(f\)</span> est décroissante sur <span class="math notranslate nohighlight">\(D\)</span> si: pour tout <span class="math notranslate nohighlight">\(x\)</span> et <span class="math notranslate nohighlight">\(y\)</span> dans <span class="math notranslate nohighlight">\(D\)</span> on a <span class="math notranslate nohighlight">\(x\leq y\Rightarrow f(x)\geq f(y).\)</span></p></li>
-<li><p><span class="math notranslate nohighlight">\(f\)</span> est strictement décroissante sur <span class="math notranslate nohighlight">\(D\)</span> si: pour tout <span class="math notranslate nohighlight">\(x\)</span> et <span class="math notranslate nohighlight">\(y\)</span> dans <span class="math notranslate nohighlight">\(D\)</span> on a <span class="math notranslate nohighlight">\(x\leq y\Rightarrow f(x)&gt; f(y).\)</span></p></li>
+<li><p><span class="math notranslate nohighlight">\(f\)</span> est strictement décroissante sur <span class="math notranslate nohighlight">\(D\)</span> si: pour tout <span class="math notranslate nohighlight">\(x\)</span> et <span class="math notranslate nohighlight">\(y\)</span> dans <span class="math notranslate nohighlight">\(D\)</span> on a <span class="math notranslate nohighlight">\(x &lt; y\Rightarrow f(x)&gt; f(y).\)</span></p></li>
 <li><p><span class="math notranslate nohighlight">\(f\)</span> est monotone (resp. strictement monotone) sur <span class="math notranslate nohighlight">\(D\)</span> si <span class="math notranslate nohighlight">\(f\)</span> est croissante ou décroissante (resp. strictement croissante ou strictement décroissante) sur <span class="math notranslate nohighlight">\(D.\)</span></p></li>
 </ul>
 </div>
@@ -515,8 +590,8 @@ x+1 \quad\mbox{si}\;x&lt;1.
 <p class="admonition-title">Exemple</p>
 <p>Les polynômes sont continues sur <span class="math notranslate nohighlight">\(\mathbb{R}.\)</span></p>
 <p>Toute fraction rationnelle <span class="math notranslate nohighlight">\(x\mapsto\dfrac{P(x)}{Q(x)}\)</span> est continue sur son domaine de définition.</p>
-<p>La composition conserve la continuité (mais il faut faire attention en quels points les hypothèse s’appliquent)</p>
 </div>
+<p>La composition conserve la continuité (mais il faut faire attention en quels points les hypothèse s’appliquent)</p>
 <div class="important admonition">
 <p class="admonition-title">Proposition</p>
 <p>Soient <span class="math notranslate nohighlight">\(f:I\rightarrow\mathbb{R}\)</span> et <span class="math notranslate nohighlight">\(g:J\rightarrow\mathbb{R}\)</span> deux fonctions telles que <span class="math notranslate nohighlight">\(f(I)\subset J.\)</span> Si <span class="math notranslate nohighlight">\(f\)</span> est continue en un point <span class="math notranslate nohighlight">\(x_0\in I\)</span> et si <span class="math notranslate nohighlight">\(g\)</span> est continue en <span class="math notranslate nohighlight">\(f(x_0),\)</span> alors <span class="math notranslate nohighlight">\(g\circ f\)</span> est continue en <span class="math notranslate nohighlight">\(x_0.\)</span></p>
@@ -588,7 +663,7 @@ f(x) \quad\mbox{si} \;x\neq 1\\
 <p class="admonition-title">Définition</p>
 <p>Soit <span class="math notranslate nohighlight">\(f:E\rightarrow F\)</span> une fonction, où <span class="math notranslate nohighlight">\(E\)</span> et <span class="math notranslate nohighlight">\(F\)</span> sont des parties de <span class="math notranslate nohighlight">\(\mathbb{R}.\)</span></p>
 <ul class="simple">
-<li><p><span class="math notranslate nohighlight">\(f\)</span> est bijective <span class="math notranslate nohighlight">\(\forall x,x'\in E,\; f(x)=f(x')\Rightarrow x=x';\)</span></p></li>
+<li><p><span class="math notranslate nohighlight">\(f\)</span> est injective <span class="math notranslate nohighlight">\(\forall x,x'\in E,\; f(x)=f(x')\Rightarrow x=x';\)</span></p></li>
 <li><p><span class="math notranslate nohighlight">\(f\)</span> est surjective si <span class="math notranslate nohighlight">\(\forall y\in F,\exists x\in E,\;y=f(x);\)</span></p></li>
 <li><p><span class="math notranslate nohighlight">\(f\)</span> est bijective si <span class="math notranslate nohighlight">\(f\)</span> est à la fois injective et surjective, c’est-à-dire si <span class="math notranslate nohighlight">\(\forall y\in F,\,\exists! x\in E:\;y=f(x).\)</span></p></li>
 </ul>
@@ -622,7 +697,7 @@ f^{-1}(x)=y\Leftrightarrow x=f(y)\Leftrightarrow x=y^2 \Leftrightarrow y=\sqrt{x
 <div class="warning admonition">
 <p class="admonition-title">Exemple</p>
 <p>Soit <span class="math notranslate nohighlight">\(n\geq 1.\)</span> Soit <span class="math notranslate nohighlight">\(f:[0,+\infty[\rightarrow [0,+\infty[\)</span> définie par <span class="math notranslate nohighlight">\(f(x)=x^n.\)</span> On a <span class="math notranslate nohighlight">\(f\)</span> est continue et strictement croissante. Donc <span class="math notranslate nohighlight">\(f\)</span> admet sur <span class="math notranslate nohighlight">\(I=[0,+\infty[\)</span> une fonction réciproqie <span class="math notranslate nohighlight">\(f^{-1}\)</span> définie sur <span class="math notranslate nohighlight">\(J=f([0,+\infty[)=[0,+\infty[.\)</span></p>
-<p><span class="math notranslate nohighlight">\(f^{-1}\)</span> est notée: <span class="math notranslate nohighlight">\(x\mapsto x^{\dfrac{1}{n}}\)</span> ou aussi <span class="math notranslate nohighlight">\(x\mapsto \sqrt[n]{x};\)</span> c’est la fonction racine <span class="math notranslate nohighlight">\(n-\)</span>ième. Elle est continue et strictement croissante sur <span class="math notranslate nohighlight">\([0,+\infty[.\)</span></p>
+<p><span class="math notranslate nohighlight">\(f^{-1}\)</span> est notée: <span class="math notranslate nohighlight">\(x\mapsto x^{\frac{1}{n}}\)</span> ou aussi <span class="math notranslate nohighlight">\(x\mapsto \sqrt[n]{x};\)</span> c’est la fonction racine <span class="math notranslate nohighlight">\(n-\)</span>ième. Elle est continue et strictement croissante sur <span class="math notranslate nohighlight">\([0,+\infty[.\)</span></p>
 </div>
 </div>
 <div class="section" id="application-fonctions-logarithme-et-exponentielle">
@@ -651,25 +726,25 @@ f^{-1}(x)=y\Leftrightarrow x=f(y)\Leftrightarrow x=y^2 \Leftrightarrow y=\sqrt{x
 <p class="admonition-title">Proposition</p>
 <p>La fonction exponentielle vérifie les propriétés suivantes:</p>
 <ol class="simple">
-<li><p>exp<span class="math notranslate nohighlight">\((\ln x)=x\)</span> pour tout <span class="math notranslate nohighlight">\(x&gt;0\)</span> et <span class="math notranslate nohighlight">\(\ln(\mbox{exp}x)=\)</span> pour tout <span class="math notranslate nohighlight">\(x\in \mathbb{R}\)</span></p></li>
+<li><p>exp<span class="math notranslate nohighlight">\((\ln (x))=x\)</span> pour tout <span class="math notranslate nohighlight">\(x&gt;0\)</span> et <span class="math notranslate nohighlight">\(\ln(\mbox{exp}(x))=\)</span> pour tout <span class="math notranslate nohighlight">\(x\in \mathbb{R}\)</span></p></li>
 <li><p>exp<span class="math notranslate nohighlight">\((a+b)=\mbox{exp}(a)\times \mbox{exp}(b)\)</span></p></li>
-<li><p>exp<span class="math notranslate nohighlight">\((nx)=(\mbox{exp}x)^n\)</span></p></li>
-<li><p>exp<span class="math notranslate nohighlight">\(:\mathbb{R}\rightarrow]0,+\infty[\)</span> est une fonction continue, strictement croissante vérifiant <span class="math notranslate nohighlight">\(\lim\limits_{\substack{x\rightarrow-\infty}}\mbox{exp}x=0\)</span> et <span class="math notranslate nohighlight">\(\lim\limits_{\substack{x\rightarrow+\infty}}\mbox{exp}x=+\infty\)</span></p></li>
-<li><p>La fonction exponentielle est dérivable et <span class="math notranslate nohighlight">\(\mbox{exp}'x=\mbox{exp}x,\)</span> pour tout <span class="math notranslate nohighlight">\(x\in \mathbb{R}.\)</span></p></li>
+<li><p>exp<span class="math notranslate nohighlight">\((nx)=(\mbox{exp}(x))^n\)</span></p></li>
+<li><p>exp<span class="math notranslate nohighlight">\(:\mathbb{R}\rightarrow]0,+\infty[\)</span> est une fonction continue, strictement croissante vérifiant <span class="math notranslate nohighlight">\(\lim\limits_{\substack{x\rightarrow-\infty}}\mbox{exp}(x)=0\)</span> et <span class="math notranslate nohighlight">\(\lim\limits_{\substack{x\rightarrow+\infty}}\mbox{exp}(x)=+\infty\)</span></p></li>
+<li><p>La fonction exponentielle est dérivable et <span class="math notranslate nohighlight">\(\mbox{exp}'(x)=\mbox{exp}(x),\)</span> pour tout <span class="math notranslate nohighlight">\(x\in \mathbb{R}.\)</span></p></li>
 </ol>
 </div>
 <div class="tip admonition">
 <p class="admonition-title">Remarque</p>
-<p>La fonction exponentielle est l’unique fonction qui vérifie exp<span class="math notranslate nohighlight">\('(x)=\)</span>exp<span class="math notranslate nohighlight">\((x)\)</span> (pour tout <span class="math notranslate nohighlight">\(x\in \mathbb{R}\)</span>) et exp<span class="math notranslate nohighlight">\((1)=e,\)</span> où <span class="math notranslate nohighlight">\(e\simeq2.718...\)</span> est le nombre qui vérifie <span class="math notranslate nohighlight">\(\ln e=1.\)</span></p>
-<p>Par définition, pour <span class="math notranslate nohighlight">\(a&gt;0\)</span> et <span class="math notranslate nohighlight">\(b\in \mathbb{R},\,\)</span> <span class="math notranslate nohighlight">\(a^b=\mbox{exp}(b\ln a)\)</span></p>
+<p>La fonction exponentielle est l’unique fonction qui vérifie exp<span class="math notranslate nohighlight">\('(x)=\)</span>exp<span class="math notranslate nohighlight">\((x)\)</span> (pour tout <span class="math notranslate nohighlight">\(x\in \mathbb{R}\)</span>) et exp<span class="math notranslate nohighlight">\((1)=e,\)</span> où <span class="math notranslate nohighlight">\(e\simeq2.718...\)</span> est le nombre qui vérifie <span class="math notranslate nohighlight">\(\ln (e)=1.\)</span></p>
+<p>Par définition, pour <span class="math notranslate nohighlight">\(a&gt;0\)</span> et <span class="math notranslate nohighlight">\(b\in \mathbb{R},\,\)</span> <span class="math notranslate nohighlight">\(a^b=\mbox{exp}(b\ln (a))\)</span></p>
 </div>
 <div class="tip admonition">
 <p class="admonition-title">Remarque</p>
-<p><span class="math notranslate nohighlight">\(\sqrt{a}=a^{\dfrac{1}{2}}=\mbox{exp}(\dfrac{1}{2}\ln a)\)</span></p>
-<p><span class="math notranslate nohighlight">\(\sqrt[n]{a}=a^{\dfrac{1}{n}}=\mbox{exp}(\dfrac{1}{n}\ln a)\)</span> ( la racine <span class="math notranslate nohighlight">\(n\)</span>-ième de <span class="math notranslate nohighlight">\(a\)</span>)</p>
-<p>On note aussi <span class="math notranslate nohighlight">\(\mbox{exp}x\)</span> par <span class="math notranslate nohighlight">\(e^x\)</span> ce qui se justifie par le calcul: <span class="math notranslate nohighlight">\(e^x=\mbox{exp}(x\ln e)=\mbox{exp}(x).\)</span></p>
+<p><span class="math notranslate nohighlight">\(\sqrt{a}=a^{\dfrac{1}{2}}=\mbox{exp}(\dfrac{1}{2}\ln (a))\)</span></p>
+<p><span class="math notranslate nohighlight">\(\sqrt[n]{a}=a^{\dfrac{1}{n}}=\mbox{exp}(\dfrac{1}{n}\ln (a))\)</span> ( la racine <span class="math notranslate nohighlight">\(n\)</span>-ième de <span class="math notranslate nohighlight">\(a\)</span>)</p>
+<p>On note aussi <span class="math notranslate nohighlight">\(\mbox{exp}(x)\)</span> par <span class="math notranslate nohighlight">\(e^x\)</span> ce qui se justifie par le calcul: <span class="math notranslate nohighlight">\(e^x=\mbox{exp}(x\ln (e))=\mbox{exp}(x).\)</span></p>
 </div>
-<p>Les fonctions <span class="math notranslate nohighlight">\(x\mapsto a^x\)</span> s’appellent aussi des fonctions exponentielles et se ramènent systématiquement à la fonction exponentielle classique par l’égalité <span class="math notranslate nohighlight">\(a^x=\mbox{exp}(x\ln a).\)</span> Il ne faut surtout pas les confondre avec les fonctions puissances <span class="math notranslate nohighlight">\(x\mapsto x^a.\)</span> On a les propriété suivantes;</p>
+<p>Les fonctions <span class="math notranslate nohighlight">\(x\mapsto a^x\)</span> s’appellent aussi des fonctions exponentielles et se ramènent systématiquement à la fonction exponentielle classique par l’égalité <span class="math notranslate nohighlight">\(a^x=\mbox{exp}(x\ln (a)).\)</span> Il ne faut surtout pas les confondre avec les fonctions puissances <span class="math notranslate nohighlight">\(x\mapsto x^a.\)</span> On a les propriété suivantes;</p>
 <div class="important admonition">
 <p class="admonition-title">Proposition</p>
 <p>Soient <span class="math notranslate nohighlight">\(x,y&gt;0\)</span> et <span class="math notranslate nohighlight">\(a,\,b\in \mathbb{R}.\)</span></p>
@@ -678,15 +753,15 @@ f^{-1}(x)=y\Leftrightarrow x=f(y)\Leftrightarrow x=y^2 \Leftrightarrow y=\sqrt{x
 <li><p><span class="math notranslate nohighlight">\(x^{-a}=\dfrac{1}{x^a}\)</span></p></li>
 <li><p><span class="math notranslate nohighlight">\((xy)^a=x^a y^a\)</span></p></li>
 <li><p><span class="math notranslate nohighlight">\((x^a)^b=x^{ab}\)</span></p></li>
-<li><p><span class="math notranslate nohighlight">\(\ln(x^a)=a\ln x\)</span></p></li>
+<li><p><span class="math notranslate nohighlight">\(\ln(x^a)=a\ln (x)\)</span></p></li>
 </ol>
 </div>
-<p>Comparons les fonctions <span class="math notranslate nohighlight">\(\ln x,\,\mbox{exp}x\,\)</span> avec <span class="math notranslate nohighlight">\(x:\)</span></p>
+<p>Comparons les fonctions <span class="math notranslate nohighlight">\(\ln (x),\,\mbox{exp}(x)\,\)</span> avec <span class="math notranslate nohighlight">\(x:\)</span></p>
 <div class="important admonition">
 <p class="admonition-title">Proposition</p>
 <div class="math notranslate nohighlight">
 \[
-\lim\limits_{\substack{x\rightarrow+\infty}}\dfrac{\ln x}{x}=0\qquad \mbox{et}\quad \lim\limits_{\substack{x\rightarrow+\infty}}\dfrac{\mbox{exp}x}{x}=+\infty
+\lim\limits_{\substack{x\rightarrow+\infty}}\dfrac{\ln (x)}{x}=0\qquad \mbox{et}\quad \lim\limits_{\substack{x\rightarrow+\infty}}\dfrac{\mbox{exp}x}{x}=+\infty
 \]</div>
 </div>
 </div>
@@ -716,6 +791,8 @@ f^{-1}(x)=y\Leftrightarrow x=f(y)\Leftrightarrow x=y^2 \Leftrightarrow y=\sqrt{x
         
         <div class='prev-next-bottom'>
             
+    <a class='left-prev' id="prev-link" href="limitefct.html" title="previous page">Fonctions numériques, limite et continuité</a>
+    <a class='right-next' id="next-link" href="exo3.html" title="next page">Exercices</a>
 
         </div>
         

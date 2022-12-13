@@ -1,0 +1,704 @@
+
+<!DOCTYPE html>
+
+<html lang="fr">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dérivabilité d’une fonction numérique &#8212; Cours Analyse</title>
+    
+  <link href="_static/css/theme.css" rel="stylesheet" />
+  <link href="_static/css/index.c5995385ac14fb8791e8eb36b4908be2.css" rel="stylesheet" />
+
+    
+  <link rel="stylesheet"
+    href="_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    
+      
+
+    
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="_static/sphinx-book-theme.e8e5499552300ddf5d7adccae7cc3b70.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="_static/proof.css" />
+    <link rel="stylesheet" type="text/css" href="_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
+    <link rel="stylesheet" type="text/css" href="_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
+    
+  <link rel="preload" as="script" href="_static/js/index.1c5a1a01449ed65a7b51.js">
+
+    <script id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+    <script src="_static/jquery.js"></script>
+    <script src="_static/underscore.js"></script>
+    <script src="_static/doctools.js"></script>
+    <script src="_static/togglebutton.js"></script>
+    <script src="_static/clipboard.min.js"></script>
+    <script src="_static/copybutton.js"></script>
+    <script src="_static/translations.js"></script>
+    <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="_static/sphinx-book-theme.12a9622fbb08dcb3a2a40b2c02b83a57.js"></script>
+    <script async="async" src="https://unpkg.com/thebelab@latest/lib/index.js"></script>
+    <script >
+        const thebe_selector = ".thebe"
+        const thebe_selector_input = "pre"
+        const thebe_selector_output = ".output"
+    </script>
+    <script async="async" src="_static/sphinx-thebe.js"></script>
+    <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/x-mathjax-config">MathJax.Hub.Config({"TeX": {"Macros": {"Z": "\\mathbb{Z}", "V": "V", "N": "\\mathbb{N}", "C": "\\mathbb{C}", "Q": "\\mathbb{Q}", "K": "\\mathbb{K}", "floor": ["\\lfloor#1\\rfloor", 1], "bmat": ["\\left[\\begin{array}"], "emat": ["\\end{array}\\right]"], "R": ["\\mathbb{R}"], "B": ["\\mathcal{B}"], "norm": ["{\\Vert#1\\Vert}", 1], "abs": ["{\\left|#1\\right|}", 1], "coloneqq": ["{:=}"], "eqqcolon": ["{=:}"], "emph": ["\\pmb#1", 1], "tr": "\\operatorname{Spur}", "lin": "\\operatorname{lin}", "dv": "\\mathrm{div}~", "rot": "\\mathrm{rot}~", "Dim": "\\operatorname{dim}", "diag": "\\operatorname{diag}", "Kern": "\\operatorname{Kern}", "Bild": "\\operatorname{Bild}", "Im": "\\operatorname{Im}", "Rang": "\\operatorname{Rang}", "GL": "\\operatorname{GL}", "Eig": "\\operatorname{Eig}", "End": "\\operatorname{End}", "Hau": "\\operatorname{Haupt}", "mymathbb": ["\\boldsymbol{#1}", 1], "idx": "\\mathrm{d}x", "d": "\\mathrm{d}", "i": "\\mathrm{i}", "x": "\\mathbf{x}", "sign": "\\mathrm{sign}", "vec": ["\\mathbf{#1}", 1], "veczwei": ["\\begin{pmatrix} #1 \\\\ #2 \\end{pmatrix}", 2], "M": "\\mathcal{M}", "S": "\\mathbb{S}", "bone": "\\unicode{x1D7D9}", "Re": "\\mathrm{Re}", "Um": "\\operatorname{Um}", "Res": "\\operatorname{Res}"}}, "tex2jax": {"inlineMath": [["\\(", "\\)"]], "displayMath": [["\\[", "\\]"]], "processRefs": false, "processEnvironments": false}})</script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Recherche" href="search.html" />
+    <link rel="next" title="Fonctions circulaires et hyperboliques inverses" href="fcthycerinv.html" />
+    <link rel="prev" title="Dérivée d’une fonction numérique" href="dirivf.html" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="en" />
+    
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+    <div class="container-fluid" id="banner"></div>
+
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
+    
+        <div class="navbar-brand-box">
+    <a class="navbar-brand text-wrap" href="index.html">
+      
+      <img src="_static/logo.png" class="logo" alt="logo">
+      
+      
+      <h1 class="site-logo" id="site-title">Cours Analyse</h1>
+      
+    </a>
+</div><form class="bd-search d-flex align-items-center" action="search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Rechercher dans ce livre ..." aria-label="Rechercher dans ce livre ..." autocomplete="off" >
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
+    <div class="bd-toc-item active">
+        <ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="intro.html">
+   Introduction
+  </a>
+ </li>
+</ul>
+<ul class="current nav bd-sidenav">
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="R.html">
+   Les nombres réels
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/>
+  <label for="toctree-checkbox-1">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="rationnels.html">
+     Les nombres rationnels
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="proprties.html">
+     Propriétés de
+     <span class="math notranslate nohighlight">
+      \(\mathbb{R}\)
+     </span>
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="exo1.html">
+     Exercices
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="suite.html">
+   Les suites des nombres réels
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/>
+  <label for="toctree-checkbox-2">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="suites.html">
+     Suites réelles: Définitions générales
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="exo2.html">
+     Exercices
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="limitefct.html">
+   Fonctions numériques, limite et continuité
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/>
+  <label for="toctree-checkbox-3">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="limitefcts.html">
+     Fonctions numérique: Définitions générales
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="exo3.html">
+     Exercices
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 current active has-children">
+  <a class="reference internal" href="dirivf.html">
+   Dérivée d’une fonction numérique
+  </a>
+  <input checked="" class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/>
+  <label for="toctree-checkbox-4">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul class="current">
+   <li class="toctree-l2 current active">
+    <a class="current reference internal" href="#">
+     Dérivabilité d’une fonction numérique
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="fcthycerinv.html">
+   Fonctions circulaires et hyperboliques inverses
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/>
+  <label for="toctree-checkbox-5">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="fcthycerinvs.html">
+     Fonctions circulaires inverses
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="complement.html">
+   Complement sur les suites et les fonctions numériques
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" type="checkbox"/>
+  <label for="toctree-checkbox-6">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="complements.html">
+     Suites et critère de Chauchy
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+
+    </div>
+</nav> <!-- To handle the deprecated key -->
+
+<div class="navbar_extra_footer">
+  Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
+</div>
+
+</div>
+
+
+          
+
+
+          
+<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
+    
+    <div class="topbar container-xl fixed-top">
+    <div class="topbar-contents row">
+        <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show"></div>
+        <div class="col pl-md-4 topbar-main">
+            
+            <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
+                data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
+                aria-expanded="true" aria-label="Basculer la navigation" aria-controls="site-navigation"
+                title="Basculer la navigation" data-toggle="tooltip" data-placement="left">
+                <i class="fas fa-bars"></i>
+                <i class="fas fa-arrow-left"></i>
+                <i class="fas fa-arrow-up"></i>
+            </button>
+            
+            
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Téléchargez cette page"><i
+            class="fas fa-download"></i></button>
+
+    <div class="dropdown-buttons">
+        <!-- ipynb file if we had a myst markdown file -->
+        
+        <!-- Download raw file -->
+        <a class="dropdown-buttons" href="_sources/dirivfs.md"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Télécharger le fichier source" data-toggle="tooltip"
+                data-placement="left">.md</button></a>
+        <!-- Download PDF via print -->
+        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Imprimer au format PDF"
+            onClick="window.print()" data-toggle="tooltip" data-placement="left">.pdf</button>
+    </div>
+</div>
+
+            <!-- Source interaction buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Connect with source repository"><i class="fab fa-github"></i></button>
+    <div class="dropdown-buttons sourcebuttons">
+        <a class="repository-button"
+            href="https://github.com/executablebooks/jupyter-book"><button type="button" class="btn btn-secondary topbarbtn"
+                data-toggle="tooltip" data-placement="left" title="Dépôt source"><i
+                    class="fab fa-github"></i>dépôt</button></a>
+        <a class="issues-button"
+            href="https://github.com/executablebooks/jupyter-book/issues/new?title=Issue%20on%20page%20%2Fdirivfs.html&body=Your%20issue%20content%20here."><button
+                type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
+                title="Ouvrez un problème"><i class="fas fa-lightbulb"></i>signaler un problème</button></a>
+        
+    </div>
+</div>
+
+            <!-- Full screen (wrap in <a> to have style consistency -->
+
+<a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
+        data-placement="bottom" onclick="toggleFullScreen()" aria-label="Mode plein écran"
+        title="Mode plein écran"><i
+            class="fas fa-expand"></i></button></a>
+
+            <!-- Launch buttons -->
+
+        </div>
+
+        <!-- Table of contents -->
+        <div class="d-none d-md-block col-md-2 bd-toc show">
+            
+            <div class="tocsection onthispage pt-5 pb-3">
+                <i class="fas fa-list"></i> Contenu
+            </div>
+            <nav id="bd-toc-nav">
+                <ul class="visible nav section-nav flex-column">
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#">
+   Dérivabilité d’une fonction numérique
+  </a>
+ </li>
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#operations-sur-les-fonctions-derivables">
+   Opérations sur les fonctions dérivables
+  </a>
+ </li>
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#quelques-applications-de-la-derivabilite">
+   Quelques applications de la dérivabilité
+  </a>
+  <ul class="visible nav section-nav flex-column">
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#etude-de-sens-de-variation-d-une-fonction">
+     Etude de sens de variation d’une fonction
+    </a>
+   </li>
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#etude-d-extremums-d-une-fonction">
+     Etude d’extremums d’une fonction
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#theoreme-de-rolle-theoreme-des-accroissements-finis">
+   Théorème de Rolle-Théorème des accroissements finis
+  </a>
+ </li>
+</ul>
+
+            </nav>
+        </div>
+    </div>
+</div>
+    <div id="main-content" class="row">
+        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
+        
+              <div>
+                
+  <div class="section" id="derivabilite-d-une-fonction-numerique">
+<h1>Dérivabilité d’une fonction numérique<a class="headerlink" href="#derivabilite-d-une-fonction-numerique" title="Lien permanent vers ce titre">¶</a></h1>
+<p>Soit <span class="math notranslate nohighlight">\(I\)</span> un intervalle ouvert de <span class="math notranslate nohighlight">\(\mathbb{R}\)</span> et <span class="math notranslate nohighlight">\(f:I\rightarrow\mathbb{R}\)</span> une fonction. Soit <span class="math notranslate nohighlight">\(x_0 \in I.\)</span></p>
+<div class="admonition-definition admonition">
+<p class="admonition-title">Definition</p>
+<p><span class="math notranslate nohighlight">\(f\)</span> est dérivable en <span class="math notranslate nohighlight">\(x_0\)</span> si le taux d’accroissement <span class="math notranslate nohighlight">\(\frac{f(x)-f(x_0)}{x-x_0}\)</span> a une limite finie lorsque <span class="math notranslate nohighlight">\(x\)</span> tend vers <span class="math notranslate nohighlight">\(x_0.\)</span> La limite s’appelle alors le nombre dérivé de <span class="math notranslate nohighlight">\(f\)</span> en <span class="math notranslate nohighlight">\(x_0\)</span> et est noté <span class="math notranslate nohighlight">\(f'(x_0).\)</span> Ainsi</p>
+<div class="math notranslate nohighlight">
+\[
+f'(x_0)=\lim\limits_{\substack{x\rightarrow x_0}}\frac{f(x)-f(x_0)}{x-x_0}
+\]</div>
+</div>
+<div class="admonition-definition admonition">
+<p class="admonition-title">Définition</p>
+<p><span class="math notranslate nohighlight">\(f\)</span> est dérivable sur <span class="math notranslate nohighlight">\(I\)</span> si <span class="math notranslate nohighlight">\(f\)</span> est dérivable en tout point <span class="math notranslate nohighlight">\(x_0\in I.\)</span> La fonction <span class="math notranslate nohighlight">\(x\mapsto f'(x)\)</span> est la fonction dérivée de <span class="math notranslate nohighlight">\(f,\)</span> elle se note <span class="math notranslate nohighlight">\(f'\)</span> ou <span class="math notranslate nohighlight">\(\frac{df}{dx}.\)</span></p>
+</div>
+<div class="warning admonition">
+<p class="admonition-title">Exemple</p>
+<p>La fonction définie par <span class="math notranslate nohighlight">\(f(x)=x^2\)</span> est dérivable en tout point <span class="math notranslate nohighlight">\(x_0\in \mathbb{R}.\)</span> En effet,</p>
+<div class="math notranslate nohighlight">
+\[
+\frac{f(x)-f(x_0)}{x-x_0}=\frac{x^2-x_{0}^{2}}{x-x_0}=\frac{(x-x_0)(x+x_0}{x-x_0}=x+x_0\underset{x\to x_0}{\longrightarrow}2x_0
+\]</div>
+<p>On a même montré que le nombre dérivé de <span class="math notranslate nohighlight">\(f\)</span> en <span class="math notranslate nohighlight">\(x_0\)</span> est <span class="math notranslate nohighlight">\(2x_0.\)</span> Autrement dit: <span class="math notranslate nohighlight">\(f'(x)=2x,\)</span> pour tout <span class="math notranslate nohighlight">\(x\in \mathbb{R}.\)</span></p>
+</div>
+<p>De même, on peut montrer que la fonction <span class="math notranslate nohighlight">\(f(x)=x^3\)</span> est dérivable sur <span class="math notranslate nohighlight">\(\mathbb{R}\)</span> et que <span class="math notranslate nohighlight">\(f'(x)=3x^2,\,\forall x\in \mathbb{R}.\)</span></p>
+<div class="admonition-definition admonition">
+<p class="admonition-title">Définition</p>
+<ul class="simple">
+<li><p>Soit <span class="math notranslate nohighlight">\(f\)</span> une fonction définie sur un intervalle de type <span class="math notranslate nohighlight">\([x_0,x_0+\varepsilon[.\)</span> On dit que <span class="math notranslate nohighlight">\(f\)</span> est dérivable en <span class="math notranslate nohighlight">\(x_0\)</span> à droite si</p></li>
+</ul>
+<div class="math notranslate nohighlight">
+\[
+\lim\limits_{\substack{x_{0}^{+}}}\frac{f(x)-f(x_0)}{x-x_0}=\ell\in \mathbb{R}
+\]</div>
+<p>Dans ce cas le nombre <span class="math notranslate nohighlight">\(\ell\)</span> est appelé dérivé de <span class="math notranslate nohighlight">\(f\)</span> à droite en <span class="math notranslate nohighlight">\(x_0\)</span> et est noté par <span class="math notranslate nohighlight">\(f'_d (x_0).\)</span></p>
+<ul class="simple">
+<li><p>Soit <span class="math notranslate nohighlight">\(f\)</span> une fonction définie sur un intervalle de type <span class="math notranslate nohighlight">\(]x_0-\varepsilon,x_0].\)</span> On dit que <span class="math notranslate nohighlight">\(f\)</span> est dérivable en <span class="math notranslate nohighlight">\(x_0\)</span> à gauche si</p></li>
+</ul>
+<div class="math notranslate nohighlight">
+\[
+\lim\limits_{\substack{x_{0}^{-}}}\frac{f(x)-f(x_0)}{x-x_0}=\ell\in \mathbb{R}
+\]</div>
+<p>Dans ce cas le nombre <span class="math notranslate nohighlight">\(\ell\)</span> est appelé dérivé de <span class="math notranslate nohighlight">\(f\)</span> à gauche en <span class="math notranslate nohighlight">\(x_0\)</span> et est noté par <span class="math notranslate nohighlight">\(f'_g (x_0).\)</span></p>
+</div>
+<div class="warning admonition">
+<p class="admonition-title">Exemple</p>
+<p>La fonction <span class="math notranslate nohighlight">\(f(x)=\sqrt{x}\)</span> n’est pas dérivable à droite en <span class="math notranslate nohighlight">\(x_0=0.\)</span> En effet, on a</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+\lim\limits_{\substack{x \rightarrow 0 \\ x&gt;0}}\frac{f(x)-f(0)}{x-0}=\lim\limits_{\substack{x \rightarrow 0 \\ x&gt;0}}\frac{\sqrt{x}}{x}=\lim\limits_{\substack{x \rightarrow 0 \\ x&gt;0}}\frac{1}{\sqrt{x}}=+\infty
+\end{split}\]</div>
+</div>
+<div class="important admonition">
+<p class="admonition-title">Proposition</p>
+<p><span class="math notranslate nohighlight">\(f\)</span> est dérivable en <span class="math notranslate nohighlight">\(x_0\Leftrightarrow f'_d(x_0)=f'_g(x_0).\)</span></p>
+</div>
+</div>
+<div class="section" id="operations-sur-les-fonctions-derivables">
+<h1>Opérations sur les fonctions dérivables<a class="headerlink" href="#operations-sur-les-fonctions-derivables" title="Lien permanent vers ce titre">¶</a></h1>
+<div class="important admonition">
+<p class="admonition-title">Proposition</p>
+<p>Soient <span class="math notranslate nohighlight">\(f,g:I\rightarrow \mathbb{R}\)</span> deux fonctions dérivables sur <span class="math notranslate nohighlight">\(I.\)</span> Alors pour tout <span class="math notranslate nohighlight">\(x\in I:\)</span></p>
+<ul class="simple">
+<li><p><span class="math notranslate nohighlight">\((f+g)'(x)=f'(x)+g'(x),\)</span></p></li>
+<li><p><span class="math notranslate nohighlight">\((\lambda f)'(x)=\lambda f'(x)\)</span> où <span class="math notranslate nohighlight">\(\lambda\)</span> est un réel fixé,</p></li>
+<li><p><span class="math notranslate nohighlight">\((f\times g)'(x)=f'(x)g(x)+f(x)g'(x),\)</span></p></li>
+<li><p><span class="math notranslate nohighlight">\((\frac{1}{f})'(x)=-\frac{f'(x)}{(f(x))^2}\)</span> (si <span class="math notranslate nohighlight">\(f(x)\neq0\)</span>),</p></li>
+<li><p><span class="math notranslate nohighlight">\((\frac{f}{g})'(x)=\frac{f'(x)g(x)-f(x)g'(x)}{(g(x))^2}\)</span> (si <span class="math notranslate nohighlight">\(g(x)\neq 0\)</span>)</p></li>
+</ul>
+</div>
+<div class="warning admonition">
+<p class="admonition-title">Exemple</p>
+<ol class="simple">
+<li><p>Soit <span class="math notranslate nohighlight">\(f:\mathbb{R}\rightarrow \mathbb{R}\)</span> la fonction définie par <span class="math notranslate nohighlight">\(f(x)=x+\mbox{exp}(x).\)</span> <span class="math notranslate nohighlight">\(f\)</span> est dérivable sur <span class="math notranslate nohighlight">\(\mathbb{R}\)</span> car <span class="math notranslate nohighlight">\(f\)</span> est la somme de deux fonctions dérivables sur <span class="math notranslate nohighlight">\(\mathbb{R}.\)</span> De plus, on a <span class="math notranslate nohighlight">\(f'(x)=1+\mbox{exp}(x),\)</span> pour tout <span class="math notranslate nohighlight">\(x\in \mathbb{R}.\)</span></p></li>
+<li><p>Soit <span class="math notranslate nohighlight">\(g\)</span> la fonction définie sur <span class="math notranslate nohighlight">\(\mathbb{R}-\{1/2\}\)</span> par <span class="math notranslate nohighlight">\(g(x)=\frac{x^2+3x-1}{2x-1}.\)</span> La fonction <span class="math notranslate nohighlight">\(g\)</span> est dérivable sur son domaine de définition et, pour tout <span class="math notranslate nohighlight">\(x\in \mathbb{R}-\{1/2\},\)</span> on a</p></li>
+</ol>
+<div class="math notranslate nohighlight">
+\[
+g'(x)=\frac{(2x+3)(2x-1)-2(x^2+3x-1)}{(2x-1)^2}=\frac{2x^2-2x-1}{(2x-1)^2}
+\]</div>
+</div>
+<div class="important admonition">
+<p class="admonition-title">Proposition</p>
+<p>Si <span class="math notranslate nohighlight">\(f\)</span> est dérivable en <span class="math notranslate nohighlight">\(x\)</span> et <span class="math notranslate nohighlight">\(g\)</span> est dérivable en <span class="math notranslate nohighlight">\(f(x)\)</span> alors <span class="math notranslate nohighlight">\(g\circ f\)</span> est dérivable en <span class="math notranslate nohighlight">\(x\)</span> de dérivée:</p>
+<div class="math notranslate nohighlight">
+\[
+(g\circ f)'(x)=g'(f(x)).f'(x)
+\]</div>
+</div>
+<div class="important admonition">
+<p class="admonition-title">Corollaire</p>
+<p>Soit <span class="math notranslate nohighlight">\(I\)</span> un intervalle ouvert. Soit <span class="math notranslate nohighlight">\(f:I\rightarrow J\)</span> dérivable et bijective dont on note <span class="math notranslate nohighlight">\(f^{-1}:J\rightarrow I\)</span> la bijection réciproque. Si <span class="math notranslate nohighlight">\(f'\)</span> ne s’annule pas sur <span class="math notranslate nohighlight">\(I\)</span> alors <span class="math notranslate nohighlight">\(f^{-1}\)</span> est dérivable et on a pour tout <span class="math notranslate nohighlight">\(x\in J:\)</span></p>
+<div class="math notranslate nohighlight">
+\[
+(f^{-1})'(x)=\frac{1}{f'(f^{-1}))}
+\]</div>
+</div>
+<p>Le tableau suivant résume les principales formules à connaître où <span class="math notranslate nohighlight">\(x\)</span> est une variable réelle;</p>
+<table class="colwidths-auto table">
+<thead>
+<tr class="row-odd"><th class="head"><p>Fonction</p></th>
+<th class="head"><p>Dérivée</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><span class="math notranslate nohighlight">\(x^n\)</span></p></td>
+<td><p><span class="math notranslate nohighlight">\(n x^{n-1}\)</span></p></td>
+</tr>
+<tr class="row-odd"><td><p><span class="math notranslate nohighlight">\(\frac{1}{x}\)</span></p></td>
+<td><p><span class="math notranslate nohighlight">\(-\frac{1}{x^2}\)</span></p></td>
+</tr>
+<tr class="row-even"><td><p><span class="math notranslate nohighlight">\(\sqrt{x}\)</span></p></td>
+<td><p><span class="math notranslate nohighlight">\(\frac{1}{2}\frac{1}{\sqrt{x}}\)</span></p></td>
+</tr>
+<tr class="row-odd"><td><p><span class="math notranslate nohighlight">\(x^{\alpha}\)</span></p></td>
+<td><p><span class="math notranslate nohighlight">\(\alpha x^{\alpha-1}\; (\alpha \in \mathbb{R})\)</span></p></td>
+</tr>
+<tr class="row-even"><td><p><span class="math notranslate nohighlight">\(e^{x}\)</span></p></td>
+<td><p><span class="math notranslate nohighlight">\(e^{x}\)</span></p></td>
+</tr>
+<tr class="row-odd"><td><p><span class="math notranslate nohighlight">\(\ln x\)</span></p></td>
+<td><p><span class="math notranslate nohighlight">\(\frac{1}{x}\)</span></p></td>
+</tr>
+<tr class="row-even"><td><p><span class="math notranslate nohighlight">\(\cos x\)</span></p></td>
+<td><p><span class="math notranslate nohighlight">\(-\sin x\)</span></p></td>
+</tr>
+<tr class="row-odd"><td><p><span class="math notranslate nohighlight">\(\sin x\)</span></p></td>
+<td><p><span class="math notranslate nohighlight">\(\cos x \)</span></p></td>
+</tr>
+<tr class="row-even"><td><p><span class="math notranslate nohighlight">\(\tan x\)</span></p></td>
+<td><p><span class="math notranslate nohighlight">\(1+\tan^2 x=\frac{1}{\cos^2 x}\)</span></p></td>
+</tr>
+</tbody>
+</table>
+<p>Le tableau suivant résume les principales formules à connaître de la composée des fonctions dérivable où <span class="math notranslate nohighlight">\(u\)</span> est une fonction dérivable;</p>
+<table class="colwidths-auto table">
+<thead>
+<tr class="row-odd"><th class="head"><p>Fonction</p></th>
+<th class="head"><p>Dérivée</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><span class="math notranslate nohighlight">\(u^n\)</span></p></td>
+<td><p><span class="math notranslate nohighlight">\(n u' u^{n-1}\, n\in \mathbb{Z}\)</span></p></td>
+</tr>
+<tr class="row-odd"><td><p><span class="math notranslate nohighlight">\(\frac{1}{u}\)</span></p></td>
+<td><p><span class="math notranslate nohighlight">\(-\frac{u'}{u^2}\)</span></p></td>
+</tr>
+<tr class="row-even"><td><p><span class="math notranslate nohighlight">\(\sqrt{u}\)</span></p></td>
+<td><p><span class="math notranslate nohighlight">\(\frac{1}{2}\frac{u'}{\sqrt{u}}\)</span></p></td>
+</tr>
+<tr class="row-odd"><td><p><span class="math notranslate nohighlight">\(u^{\alpha}\)</span></p></td>
+<td><p><span class="math notranslate nohighlight">\(\alpha u' u^{\alpha-1}\; (\alpha \in \mathbb{R})\)</span></p></td>
+</tr>
+<tr class="row-even"><td><p><span class="math notranslate nohighlight">\(e^{u}\)</span></p></td>
+<td><p><span class="math notranslate nohighlight">\(u' e^{u}\)</span></p></td>
+</tr>
+<tr class="row-odd"><td><p><span class="math notranslate nohighlight">\(\ln u\)</span></p></td>
+<td><p><span class="math notranslate nohighlight">\(\frac{u'}{u}\)</span></p></td>
+</tr>
+<tr class="row-even"><td><p><span class="math notranslate nohighlight">\(\cos u\)</span></p></td>
+<td><p><span class="math notranslate nohighlight">\(-u' \sin u\)</span></p></td>
+</tr>
+<tr class="row-odd"><td><p><span class="math notranslate nohighlight">\(\sin u\)</span></p></td>
+<td><p><span class="math notranslate nohighlight">\(u' \cos u \)</span></p></td>
+</tr>
+<tr class="row-even"><td><p><span class="math notranslate nohighlight">\(\tan u\)</span></p></td>
+<td><p><span class="math notranslate nohighlight">\(u' (1+\tan^2 u) =\frac{u'}{\cos^2 u}\)</span></p></td>
+</tr>
+</tbody>
+</table>
+<div class="tip admonition">
+<p class="admonition-title">Remarque</p>
+<p>Si vous voulez dériver une fonction avec un exposant dépendant de <span class="math notranslate nohighlight">\(x\)</span> il faut absolument repasser à la forme exponentielle. Par exemple si <span class="math notranslate nohighlight">\(f(x)=2^x\)</span> alors on réécrit d’abord <span class="math notranslate nohighlight">\(f(x)=e^{x\ln 2}\)</span> pour pouvoir calculer <span class="math notranslate nohighlight">\(f'(x)=\ln 2. e^{x\ln 2}=\ln 2 . 2^x.\)</span></p>
+</div>
+</div>
+<div class="section" id="quelques-applications-de-la-derivabilite">
+<h1>Quelques applications de la dérivabilité<a class="headerlink" href="#quelques-applications-de-la-derivabilite" title="Lien permanent vers ce titre">¶</a></h1>
+<div class="section" id="etude-de-sens-de-variation-d-une-fonction">
+<h2>Etude de sens de variation d’une fonction<a class="headerlink" href="#etude-de-sens-de-variation-d-une-fonction" title="Lien permanent vers ce titre">¶</a></h2>
+<div class="important admonition">
+<p class="admonition-title">Proposition (Dérivée et monotonie d’une fonction)</p>
+<p>Soit <span class="math notranslate nohighlight">\(f:[a,b]\rightarrow\mathbb{R}\)</span> une fonction continue sur <span class="math notranslate nohighlight">\([a,b]\)</span> et dérivable sur <span class="math notranslate nohighlight">\(]a,b[.\)</span></p>
+<ol class="simple">
+<li><p><span class="math notranslate nohighlight">\(\forall x\in ]a,b[,\;f'(x)\geq 0 (\mbox{resp.}f'(x)&gt;0)\Rightarrow f\)</span> est croissante (resp. <span class="math notranslate nohighlight">\(f\)</span> est strictement croissante).</p></li>
+<li><p><span class="math notranslate nohighlight">\(\forall x\in ]a,b[,\;f'(x)\leq 0 (\mbox{resp.}f'(x)&lt;0)\Rightarrow f\)</span> est décroissante (resp. <span class="math notranslate nohighlight">\(f\)</span> est strictement décroissante).</p></li>
+<li><p><span class="math notranslate nohighlight">\(\forall x\in ]a,b[,\;f'(x)=0\Leftrightarrow f\)</span> est constante.</p></li>
+</ol>
+</div>
+<div class="warning admonition">
+<p class="admonition-title">Exemple</p>
+<p>Soit <span class="math notranslate nohighlight">\(g\)</span> la fonction définie sur <span class="math notranslate nohighlight">\(\mathbb{R}\)</span> par <span class="math notranslate nohighlight">\(g(x)=(1-x)e^x.\)</span> On a</p>
+<div class="math notranslate nohighlight">
+\[
+\forall x\in \mathbb{R}:\;g'(x)=-e^x+(1-x)e^x=(-1+1-x)e^x=-xe^x
+\]</div>
+<p>Donc <span class="math notranslate nohighlight">\(g'(x)=0\Leftrightarrow x=0\)</span> et <span class="math notranslate nohighlight">\(g'(x)&gt;0\Leftrightarrow x&lt;0.\)</span> En déduit que <span class="math notranslate nohighlight">\(g\)</span> est strictement décroissante sur <span class="math notranslate nohighlight">\(]0,+\infty[\)</span> et est strictement croissante sur <span class="math notranslate nohighlight">\(]-\infty,0[.\)</span></p>
+</div>
+</div>
+<div class="section" id="etude-d-extremums-d-une-fonction">
+<h2>Etude d’extremums d’une fonction<a class="headerlink" href="#etude-d-extremums-d-une-fonction" title="Lien permanent vers ce titre">¶</a></h2>
+<div class="admonition-definition admonition">
+<p class="admonition-title">Définition</p>
+<p>On dit que <span class="math notranslate nohighlight">\(f\)</span> admet un maximum (resp. un minimum) en un point <span class="math notranslate nohighlight">\(x_0\in D_f\)</span> si</p>
+<div class="math notranslate nohighlight">
+\[
+\forall x\in D_f,\; f(x)\leq f(x_0)\quad (\mbox{resp.}\, f(x)\geq f(x_0))
+\]</div>
+<p>On dit que <span class="math notranslate nohighlight">\(f\)</span> admet un maximum (resp. un minimum) local en un point <span class="math notranslate nohighlight">\(x_0\)</span> s’il existe un voisinage <span class="math notranslate nohighlight">\(I\subset D_f\)</span> de <span class="math notranslate nohighlight">\(x_0\)</span> tel que</p>
+<div class="math notranslate nohighlight">
+\[
+\forall x\in I,\;f(x)\leq f(x_0)\quad (\mbox{resp.}\, f(x)\geq f(x_0))
+\]</div>
+<p>On dit que <span class="math notranslate nohighlight">\(f\)</span> admet un extremum (resp. un extremum local) si <span class="math notranslate nohighlight">\(f\)</span> admet un maximum ou un minimum (resp. un maximum local ou un minimum local).</p>
+</div>
+<div class="important admonition">
+<p class="admonition-title">Proposition (Dérivée et extremums locaux d’une fonction)</p>
+<p>Soit <span class="math notranslate nohighlight">\(f\)</span> une fonction dérivable sur un intervalle <span class="math notranslate nohighlight">\(I\)</span> et soit <span class="math notranslate nohighlight">\(x_0\)</span> un point dans l’interieur de <span class="math notranslate nohighlight">\(I\)</span> tel que <span class="math notranslate nohighlight">\(f'(x_0)=0.\)</span></p>
+<p><span class="math notranslate nohighlight">\(\diamond\)</span> S’il existe <span class="math notranslate nohighlight">\(h&gt;0\)</span> tel que <span class="math notranslate nohighlight">\(]x_0 -h,x_0 +h[\subset I\)</span> avec <span class="math notranslate nohighlight">\(f'&gt;0\)</span> sur <span class="math notranslate nohighlight">\(]x_0-h,x_0[\)</span> et <span class="math notranslate nohighlight">\(f'&lt;0\)</span> sur <span class="math notranslate nohighlight">\(]x_0,x_0+h[,\)</span> alors <span class="math notranslate nohighlight">\(f\)</span> admet un maximum local en <span class="math notranslate nohighlight">\(x_0.\)</span></p>
+<p><span class="math notranslate nohighlight">\(\diamond\)</span> S’il existe <span class="math notranslate nohighlight">\(h&gt;0\)</span> tel que <span class="math notranslate nohighlight">\(]x_0 -h,x_0 +h[\subset I\)</span> avec <span class="math notranslate nohighlight">\(f'&lt;0\)</span> sur <span class="math notranslate nohighlight">\(]x_0-h,x_0[\)</span> et <span class="math notranslate nohighlight">\(f'&gt;0\)</span> sur <span class="math notranslate nohighlight">\(]x_0,x_0+h[,\)</span> alors <span class="math notranslate nohighlight">\(f\)</span> admet un minimum local en <span class="math notranslate nohighlight">\(x_0.\)</span></p>
+</div>
+<div class="warning admonition">
+<p class="admonition-title">Exemple</p>
+<p>Considérons la fonction <span class="math notranslate nohighlight">\(g\)</span> définie dans l’exemple précédent <span class="math notranslate nohighlight">\(g(x)=(1-x)e^x.\)</span> D’après le tableau de variation de <span class="math notranslate nohighlight">\(g,\)</span> elle admet un maximum global en <span class="math notranslate nohighlight">\(x_0=0\)</span> puisque</p>
+<div class="math notranslate nohighlight">
+\[
+\forall x\in \mathbb{R};\; g(x)\leq g(0)
+\]</div>
+<p>La fonction <span class="math notranslate nohighlight">\(g\)</span> n’admet pas de minimum (ni global ni local)</p>
+</div>
+</div>
+</div>
+<div class="section" id="theoreme-de-rolle-theoreme-des-accroissements-finis">
+<h1>Théorème de Rolle-Théorème des accroissements finis<a class="headerlink" href="#theoreme-de-rolle-theoreme-des-accroissements-finis" title="Lien permanent vers ce titre">¶</a></h1>
+<div class="important admonition">
+<p class="admonition-title">Théorème(Théorème de Rolle)</p>
+<p>Soit <span class="math notranslate nohighlight">\(f:[a,b]\rightarrow\mathbb{R}\)</span> telle que</p>
+<p><span class="math notranslate nohighlight">\(\diamond\)</span> <span class="math notranslate nohighlight">\(f\)</span> est continue sur <span class="math notranslate nohighlight">\([a,b],\)</span></p>
+<p><span class="math notranslate nohighlight">\(\diamond\)</span> <span class="math notranslate nohighlight">\(f\)</span> est dérivable sur <span class="math notranslate nohighlight">\(]a,b[,\)</span></p>
+<p><span class="math notranslate nohighlight">\(\diamond\)</span> <span class="math notranslate nohighlight">\(f(a)=f(b).\)</span></p>
+<p>Alors il existe <span class="math notranslate nohighlight">\(c\in ]a,b[\)</span> tel que <span class="math notranslate nohighlight">\(f'(c)=0.\)</span></p>
+</div>
+<div class="warning admonition">
+<p class="admonition-title">Exemple</p>
+<p>Soit <span class="math notranslate nohighlight">\(f(x)=x^3-x.\)</span> On a <span class="math notranslate nohighlight">\(f(-1)=f(1).\)</span> De plus, <span class="math notranslate nohighlight">\(f\)</span> est continue et dérivable sur <span class="math notranslate nohighlight">\(\mathbb{R}.\)</span> En particulier, <span class="math notranslate nohighlight">\(f\)</span> est continue sur <span class="math notranslate nohighlight">\([-1,1]\)</span> et est dérivable sur <span class="math notranslate nohighlight">\(]-1,1[.\)</span> D’après le Théorème de Rolle, il existe <span class="math notranslate nohighlight">\(c\in ]-1,1[\)</span> tel que <span class="math notranslate nohighlight">\(f'(c)=0.\)</span></p>
+</div>
+<div class="important admonition">
+<p class="admonition-title">Théorème (Théorème des accroissements finis)</p>
+<p>Soit <span class="math notranslate nohighlight">\(f:[a,b]\rightarrow \mathbb{R}\)</span> une fonction continue sur <span class="math notranslate nohighlight">\([a,b]\)</span> et dérivable sur <span class="math notranslate nohighlight">\(]a,b[.\)</span> Il existe <span class="math notranslate nohighlight">\(c\in ]a,b[\)</span> tel que</p>
+<div class="math notranslate nohighlight">
+\[
+f(b)-f(a)=f'(c)(b-a)
+\]</div>
+</div>
+<div class="important admonition">
+<p class="admonition-title">Corollaire (Inégalité des accroissements finis)</p>
+<p>Soit <span class="math notranslate nohighlight">\(f:I\rightarrow\mathbb{R}\)</span> une fonction dérivable sur un intervalle <span class="math notranslate nohighlight">\(I\)</span> ouvert. S’il existe une constante <span class="math notranslate nohighlight">\(M\)</span> telle que pour tout <span class="math notranslate nohighlight">\(x\in I,\,|f'(x)|\leq M\)</span> alors</p>
+<div class="math notranslate nohighlight">
+\[
+|f(x)-f(y)|\leq M|x-y|,\;\forall x,y\in I
+\]</div>
+</div>
+<div class="warning admonition">
+<p class="admonition-title">Exemple</p>
+<p>En utilisant le théorème des accroissements finis, on va montrer que</p>
+<div class="math notranslate nohighlight">
+\[
+x&lt;e^x -1&lt;xe^x,\;\forall x&gt;0
+\]</div>
+<p>Fixons donc <span class="math notranslate nohighlight">\(x\)</span> tel que <span class="math notranslate nohighlight">\(x&gt;0\)</span> et considérons la fonction <span class="math notranslate nohighlight">\(f(t)=e^t\)</span> sur l’intervalle <span class="math notranslate nohighlight">\([0,x].\)</span> <span class="math notranslate nohighlight">\(f\)</span> est continue sur <span class="math notranslate nohighlight">\([0,x]\)</span> et est dérivable sur <span class="math notranslate nohighlight">\(]0,x[.\)</span> Donc, d’après le théorème des accroissements finis, il existe <span class="math notranslate nohighlight">\(c\in ]0,x[\)</span> tel que</p>
+<div class="math notranslate nohighlight">
+\[
+f'x)-f(0)=f'(c)(x-0)
+\]</div>
+<p>C-à-d: <span class="math notranslate nohighlight">\(\exists c\in ]0,x[:\;e^x-1=xe^c,\)</span> or, <span class="math notranslate nohighlight">\(0&lt;c&lt;x\)</span> implique <span class="math notranslate nohighlight">\(1&lt;e^c&lt;e^x,\)</span> donc puisque <span class="math notranslate nohighlight">\(x&gt;0,\)</span> on a <span class="math notranslate nohighlight">\(x&lt;xe^c&lt;xe^x.\)</span> Ainsi <span class="math notranslate nohighlight">\(x&lt;e^x-1&lt;xe^x.\)</span></p>
+</div>
+<div class="important admonition">
+<p class="admonition-title">Proposition (Règle de l’Hospital)</p>
+<p>Soient <span class="math notranslate nohighlight">\(f,g:I\rightarrow \mathbb{R}\)</span> deux fonctions dérivables et soit <span class="math notranslate nohighlight">\(x_0\in I.\)</span> On suppose que</p>
+<ul class="simple">
+<li><p><span class="math notranslate nohighlight">\(f(x_0)=g(x_0)=0,\)</span></p></li>
+<li><p><span class="math notranslate nohighlight">\(\forall x\in I\setminus\{x_0\},\;g'(x)\neq0.\)</span></p></li>
+</ul>
+<p>Si <span class="math notranslate nohighlight">\(\lim\limits_{\substack{x\rightarrow x_0}}\frac{f'(x)}{g'(x)}=\ell \,(\ell\in \mathbb{R})\)</span> alors <span class="math notranslate nohighlight">\(\lim\limits_{\substack{x\rightarrow x_0}}\frac{f(x)}{g(x)}=\ell.\)</span></p>
+</div>
+<div class="warning admonition">
+<p class="admonition-title">Exemple</p>
+<p>Calculer la limite en 1 de <span class="math notranslate nohighlight">\(\frac{\ln(x^2+x-1)}{\ln(x)}.\)</span> On vérifie que:</p>
+<ul class="simple">
+<li><p><span class="math notranslate nohighlight">\(f(x)=\ln(x^2+x-1),\, f(1)=0,\,f'(x)=\frac{2x+1}{x^2+x-1},\)</span></p></li>
+<li><p><span class="math notranslate nohighlight">\(g(x)=\ln(x),\,g(1)=0,\,g'(x)=\frac{1}{x},\)</span></p></li>
+<li><p>Prenons <span class="math notranslate nohighlight">\(I=]0,1],\,x_0=1,\)</span> alors <span class="math notranslate nohighlight">\(g'\)</span> ne s’annule pas sur <span class="math notranslate nohighlight">\(I\setminus\{x_0\}.\)</span></p></li>
+</ul>
+<div class="math notranslate nohighlight">
+\[
+\frac{f'(x)}{g'(x)}=\frac{2x+1}{x^2+x-1}\times x=\frac{2x^2+x}{x^2+x-1}\rightarrow 3,\,qd \,x\rightarrow 1
+\]</div>
+<p>Donc, <span class="math notranslate nohighlight">\(\frac{f'(x)}{g'(x)}\rightarrow 3,\,qd x\rightarrow 1.\)</span></p>
+</div>
+</div>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            kernelName: "python3",
+            path: "./."
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+              </div>
+              
+        
+        <div class='prev-next-bottom'>
+            
+    <a class='left-prev' id="prev-link" href="dirivf.html" title="previous page">Dérivée d’une fonction numérique</a>
+    <a class='right-next' id="next-link" href="fcthycerinv.html" title="next page">Fonctions circulaires et hyperboliques inverses</a>
+
+        </div>
+        
+        </div>
+    </div>
+    <footer class="footer mt-5 mt-md-0">
+    <div class="container">
+      <p>
+        
+          Par Iaousse M'barek<br/>
+        
+      </p>
+    </div>
+  </footer>
+</main>
+
+
+      </div>
+    </div>
+  
+  <script src="_static/js/index.1c5a1a01449ed65a7b51.js"></script>
+
+  
+  </body>
+</html>
