@@ -55,6 +55,7 @@
     <script type="text/x-mathjax-config">MathJax.Hub.Config({"TeX": {"Macros": {"Z": "\\mathbb{Z}", "V": "V", "N": "\\mathbb{N}", "C": "\\mathbb{C}", "Q": "\\mathbb{Q}", "K": "\\mathbb{K}", "floor": ["\\lfloor#1\\rfloor", 1], "bmat": ["\\left[\\begin{array}"], "emat": ["\\end{array}\\right]"], "R": ["\\mathbb{R}"], "B": ["\\mathcal{B}"], "norm": ["{\\Vert#1\\Vert}", 1], "abs": ["{\\left|#1\\right|}", 1], "coloneqq": ["{:=}"], "eqqcolon": ["{=:}"], "emph": ["\\pmb#1", 1], "tr": "\\operatorname{Spur}", "lin": "\\operatorname{lin}", "dv": "\\mathrm{div}~", "rot": "\\mathrm{rot}~", "Dim": "\\operatorname{dim}", "diag": "\\operatorname{diag}", "Kern": "\\operatorname{Kern}", "Bild": "\\operatorname{Bild}", "Im": "\\operatorname{Im}", "Rang": "\\operatorname{Rang}", "GL": "\\operatorname{GL}", "Eig": "\\operatorname{Eig}", "End": "\\operatorname{End}", "Hau": "\\operatorname{Haupt}", "mymathbb": ["\\boldsymbol{#1}", 1], "idx": "\\mathrm{d}x", "d": "\\mathrm{d}", "i": "\\mathrm{i}", "x": "\\mathbf{x}", "sign": "\\mathrm{sign}", "vec": ["\\mathbf{#1}", 1], "veczwei": ["\\begin{pmatrix} #1 \\\\ #2 \\end{pmatrix}", 2], "M": "\\mathcal{M}", "S": "\\mathbb{S}", "bone": "\\unicode{x1D7D9}", "Re": "\\mathrm{Re}", "Um": "\\operatorname{Um}", "Res": "\\operatorname{Res}"}}, "tex2jax": {"inlineMath": [["\\(", "\\)"]], "displayMath": [["\\[", "\\]"]], "processRefs": false, "processEnvironments": false}})</script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Recherche" href="search.html" />
+    <link rel="next" title="Exercices" href="exo6.html" />
     <link rel="prev" title="Complement sur les suites et les fonctions numériques" href="complement.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="en" />
@@ -216,6 +217,11 @@
      Complement sur les suites et les fonctions numériques
     </a>
    </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="exo6.html">
+     Exercices
+    </a>
+   </li>
   </ul>
  </li>
 </ul>
@@ -313,6 +319,29 @@
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#comparaison-des-suites">
    COMPARAISON DES SUITES
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#derivees-successives">
+   Dérivées successives
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#fonctions-de-classe-c-n">
+   Fonctions de classe
+   <span class="math notranslate nohighlight">
+    \(C^n\)
+   </span>
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#derivee-n-ieme-usuelles">
+   Dérivée n-ième usuelles
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#comparaison-des-fonctions">
+   COMPARAISON DES fonctions
   </a>
  </li>
 </ul>
@@ -413,34 +442,312 @@ n\geq N\\
 <p>Soit <span class="math notranslate nohighlight">\((u_n)\)</span> une suite de limite nulle (<span class="math notranslate nohighlight">\(\lim u_n =0\)</span>).</p>
 <p>On a:</p>
 <ul class="simple">
-<li><p>Si <span class="math notranslate nohighlight">\(f : ]− a;a[\to \mathbb{R}\)</span> (avec <span class="math notranslate nohighlight">\(a &gt; 0\)</span>) est dérivable en <span class="math notranslate nohighlight">\(0\)</span>, et si <span class="math notranslate nohighlight">\(f'(0) \neq 0\)</span>, alors on a <span class="math notranslate nohighlight">\(f(u_n)− f(0) ∼ f'(0)u_n\)</span>.</p></li>
+<li><p>Si <span class="math notranslate nohighlight">\(f : ]− a;a[\to \mathbb{R}\)</span> (avec <span class="math notranslate nohighlight">\(a &gt; 0\)</span>) est dérivable en <span class="math notranslate nohighlight">\(0\)</span>, et si <span class="math notranslate nohighlight">\(f'(0) \neq 0\)</span>, alors on a <span class="math notranslate nohighlight">\(f(u_n)− f(0) \sim f'(0)u_n\)</span>.</p></li>
 <li><p><span class="math notranslate nohighlight">\(\sin(u_n) \sim u_n\)</span>, <span class="math notranslate nohighlight">\(e^{u_n} - 1 \sim u_n\)</span>, <span class="math notranslate nohighlight">\(ln(1+u_n)\sim u_n\)</span>, <span class="math notranslate nohighlight">\(\tan(u_n) \sim u_n\)</span>, <span class="math notranslate nohighlight">\((1+u_n)^\alpha -1 \sim \alpha u_n\)</span>.</p></li>
 <li><p>Soit <span class="math notranslate nohighlight">\(P(x) = \sum_{k=0}^{p} a_kx^k\)</span> une fonction polynomiale avec <span class="math notranslate nohighlight">\(a_p \neq 0\)</span>, alors <span class="math notranslate nohighlight">\(P(n) \sim a_pn^p\)</span> (équivalence avec le
 terme de plus haut degré).</p></li>
-<li><p>Soit <span class="math notranslate nohighlight">\(Q(x) =\frac{P(x)}{R(x)}\)</span> une fraction rationnelle avec <span class="math notranslate nohighlight">\(a_px^p\)</span> le terme de plus haut degré de <span class="math notranslate nohighlight">\(P\)</span> (<span class="math notranslate nohighlight">\(a_p \neq 0\)</span>) et <span class="math notranslate nohighlight">\(b_rx^r\)</span> celui de <span class="math notranslate nohighlight">\(R\)</span> (<span class="math notranslate nohighlight">\(b_r \neq 0\)</span>), alors <span class="math notranslate nohighlight">\(Q(n) ∼ \frac{a_p}{b_r}n^{p−r}\)</span> (équivalence avec le rapport des termes de plus haut degré).</p></li>
+<li><p>Soit <span class="math notranslate nohighlight">\(Q(x) =\frac{P(x)}{R(x)}\)</span> une fraction rationnelle avec <span class="math notranslate nohighlight">\(a_px^p\)</span> le terme de plus haut degré de <span class="math notranslate nohighlight">\(P\)</span> (<span class="math notranslate nohighlight">\(a_p \neq 0\)</span>) et <span class="math notranslate nohighlight">\(b_rx^r\)</span> celui de <span class="math notranslate nohighlight">\(R\)</span> (<span class="math notranslate nohighlight">\(b_r \neq 0\)</span>), alors <span class="math notranslate nohighlight">\(Q(n) \sim \frac{a_p}{b_r}n^{p−r}\)</span> (équivalence avec le rapport des termes de plus haut degré).</p></li>
 </ul>
 </div>
 <div class="admonition-theoreme admonition">
 <p class="admonition-title">Théorème</p>
 <p>Soient <span class="math notranslate nohighlight">\(u\)</span> et <span class="math notranslate nohighlight">\(v\)</span> deux suites,</p>
 <ul class="simple">
-<li><p>Si <span class="math notranslate nohighlight">\(u_n ∼ v_n\)</span> et si <span class="math notranslate nohighlight">\(\lim v_n = l \in \mathbb{R}\cup \{+\infty, -\infty\}\)</span>, alors <span class="math notranslate nohighlight">\(\lim u_n = l\)</span>.</p></li>
-<li><p>Si <span class="math notranslate nohighlight">\(u_n ∼ v_n\)</span> et si <span class="math notranslate nohighlight">\(a_n ∼ b_n\)</span>, alors <span class="math notranslate nohighlight">\(u_na_n ∼ v_nb_n\)</span> (compatibilité avec la multiplication).</p></li>
-<li><p>Si <span class="math notranslate nohighlight">\(u_n ∼ v_n\)</span> et si <span class="math notranslate nohighlight">\(v\)</span> ne s’annule pas à partir d’un certain rang, alors <span class="math notranslate nohighlight">\(\frac{1}{u_n} ∼ \frac{1}{v_n}\)</span> (compatibilité avec le
+<li><p>Si <span class="math notranslate nohighlight">\(u_n \sim v_n\)</span> alors les deux suites ont le meme singe à partir d’un certain rang.</p></li>
+<li><p>Si <span class="math notranslate nohighlight">\(u_n \sim v_n\)</span> et si <span class="math notranslate nohighlight">\(\lim v_n = l \in \mathbb{R}\cup \{+\infty, -\infty\}\)</span>, alors <span class="math notranslate nohighlight">\(\lim u_n = l\)</span>.</p></li>
+<li><p>Si <span class="math notranslate nohighlight">\(u_n \sim v_n\)</span> et si <span class="math notranslate nohighlight">\(a_n \sim b_n\)</span>, alors <span class="math notranslate nohighlight">\(u_na_n \sim v_nb_n\)</span> (compatibilité avec la multiplication).</p></li>
+<li><p>Si <span class="math notranslate nohighlight">\(u_n \sim v_n\)</span> et si <span class="math notranslate nohighlight">\(v\)</span> ne s’annule pas à partir d’un certain rang, alors <span class="math notranslate nohighlight">\(\frac{1}{u_n} \sim \frac{1}{v_n}\)</span> (compatibilité avec le
 passage à l’inverse).</p></li>
-<li><p>Si <span class="math notranslate nohighlight">\(u_n ∼ v_n\)</span> et si <span class="math notranslate nohighlight">\(v_n &gt; 0\)</span> ne s’annule pas à partir d’un certain rang, alors <span class="math notranslate nohighlight">\(u_n^\alpha ∼ v_n^\alpha\)</span> pour tout réel <span class="math notranslate nohighlight">\(\alpha\)</span>
+<li><p>Si <span class="math notranslate nohighlight">\(u_n \sim v_n\)</span> et si <span class="math notranslate nohighlight">\(v_n &gt; 0\)</span> ne s’annule pas à partir d’un certain rang, alors <span class="math notranslate nohighlight">\(u_n^\alpha \sim v_n^\alpha\)</span> pour tout réel <span class="math notranslate nohighlight">\(\alpha\)</span>
 (compatibilité avec les puissances constantes).</p></li>
 </ul>
 </div>
 <div class="admonition warning">
 <p class="admonition-title">Avertissement</p>
 <ul class="simple">
-<li><p>Il n’y a pas compatibilité avec l’addition en général, par exemple : <span class="math notranslate nohighlight">\(n+\frac{1}{n} ∼ n\)</span> et <span class="math notranslate nohighlight">\(−n ∼ 1−n\)</span>, mais <span class="math notranslate nohighlight">\(\frac{1}{n}\)</span>
+<li><p>Si <span class="math notranslate nohighlight">\(u_n = o(v_n)\)</span> et <span class="math notranslate nohighlight">\(w_n = o(v_n)\)</span> ce ne veut pas dire que <span class="math notranslate nohighlight">\(u_n=v_n\)</span>!!!</p></li>
+<li><p>Il n’y a pas compatibilité avec l’addition en général, par exemple : <span class="math notranslate nohighlight">\(n+\frac{1}{n} \sim n\)</span> et <span class="math notranslate nohighlight">\(−n \sim 1−n\)</span>, mais <span class="math notranslate nohighlight">\(\frac{1}{n}\)</span>
 n’est pas équivalent à <span class="math notranslate nohighlight">\(1\)</span>.</p></li>
 <li><p>Ces propriétés sont utiles pour les calculs de limites qui ne peuvent pas être faits directement : on essaie de se
 ramener à un équivalent plus simple (s’il y en a …) dont on sait calculer la limite.</p></li>
 </ul>
 </div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>L’écriture <span class="math notranslate nohighlight">\(u_n = v_n + o(w_n)\)</span> signifie que <span class="math notranslate nohighlight">\(u_n-v_n = o(w_n)\)</span>.</p>
+</div>
+<div class="admonition-exemples admonition">
+<p class="admonition-title">Exemples</p>
+<ul class="simple">
+<li><p><span class="math notranslate nohighlight">\(\dfrac{1}{n} = o(1)\)</span></p></li>
+<li><p><span class="math notranslate nohighlight">\(1=o(n)\)</span></p></li>
+<li><p><span class="math notranslate nohighlight">\((\dfrac{1}{2})^n = o(n)\)</span></p></li>
+<li><p><span class="math notranslate nohighlight">\(n^2 = o(n^3)\)</span></p></li>
+<li><p><span class="math notranslate nohighlight">\((ln(n))^2 = o(n)\)</span></p></li>
+<li><p><span class="math notranslate nohighlight">\(3^n = o(n!)\)</span></p></li>
+<li><p><span class="math notranslate nohighlight">\(e^n = o(3^n)\)</span></p></li>
+<li><p><span class="math notranslate nohighlight">\(n^3 = o(e^n)\)</span></p></li>
+<li><p><span class="math notranslate nohighlight">\(\dfrac{1}{n+1} = \dfrac{1}{n} + o(\dfrac{1}{n})\)</span></p></li>
+<li><p><span class="math notranslate nohighlight">\(n^2 + 2ln(n) + 4 + \dfrac{1}{n} \sim n^2\)</span></p></li>
+<li><p><span class="math notranslate nohighlight">\(\dfrac{2}{n} - \dfrac{4}{n^2} + \dfrac{2}{n^4} \sim \dfrac{2}{n}\)</span></p></li>
+<li><p><span class="math notranslate nohighlight">\(2n^2 - n+n^3 \sim n^3\)</span></p></li>
+<li><p><span class="math notranslate nohighlight">\(ln(n) + (ln(n))^2 \sim (ln(n))^2\)</span></p></li>
+</ul>
+</div>
+<div class="admonition-theoreme-formule-de-stirling admonition">
+<p class="admonition-title">Theoreme (formule de stirling)</p>
+<p><span class="math notranslate nohighlight">\(n! \sim (\frac{n}{e})^n\sqrt{2\pi n}\)</span></p>
+</div>
+</div>
+<div class="section" id="derivees-successives">
+<h2>Dérivées successives<a class="headerlink" href="#derivees-successives" title="Lien permanent vers ce titre">¶</a></h2>
+<div class="admonition-definition admonition">
+<p class="admonition-title">Définition</p>
+<p>Soit une fonction <span class="math notranslate nohighlight">\(f\)</span> dérivable sur <span class="math notranslate nohighlight">\(D \subset \mathbb{R}\)</span>. Sa fonction dérivée <span class="math notranslate nohighlight">\(f^{'}\)</span> est appelé dérivée première (ou d’ordre 1) de la fonction <span class="math notranslate nohighlight">\(f\)</span> sur <span class="math notranslate nohighlight">\(D\)</span>.
+<span class="math notranslate nohighlight">\(f^{&quot;}\)</span>, est appelé dérivée seconde (ou d’ordre 2) de la fonction <span class="math notranslate nohighlight">\(f\)</span>.
+Par itération, pour tout naturel <span class="math notranslate nohighlight">\(n &gt; 2\)</span>, on définit la fonction dérivée n-ième (ou d’ordre <span class="math notranslate nohighlight">\(n\)</span>), notée <span class="math notranslate nohighlight">\(f^{(n)}\)</span> comme étant la fonction dérivée de la fonction dérivée d’ordre <span class="math notranslate nohighlight">\((n − 1)\)</span>, soit : <span class="math notranslate nohighlight">\(f^{(n)}= (f^{(n-1)})^{'}\)</span>.</p>
+</div>
+<div class="admonition-exemple admonition">
+<p class="admonition-title">Exemple</p>
+<p>Déterminer les dérivées d’ordre 1, 2 et 3 des fonctions suivantes :</p>
+<ul class="simple">
+<li><p><span class="math notranslate nohighlight">\(f(x) = x^4 - 2x^2 + x- 1\)</span></p></li>
+<li><p><span class="math notranslate nohighlight">\(g(x) = cos(2x) + sin(2x)\)</span></p></li>
+</ul>
+</div>
+<div class="admonition-exercice admonition">
+<p class="admonition-title">Exercice</p>
+<p>Soit la fonction <span class="math notranslate nohighlight">\(f\)</span> définie sur <span class="math notranslate nohighlight">\(] − 1 ; +\infty[\)</span> par : <span class="math notranslate nohighlight">\(f(x) = ln(x + 1)\)</span>.</p>
+<ol class="simple">
+<li><p>Calculer les dérivées d’ordre 1, 2, 3 et 4.</p></li>
+<li><p>En déduire et Démontrer par récurrence l’expression de la dérivée d’ordre <span class="math notranslate nohighlight">\(n\)</span>.</p></li>
+</ol>
+</div>
+</div>
+<div class="section" id="fonctions-de-classe-c-n">
+<h2>Fonctions de classe <span class="math notranslate nohighlight">\(C^n\)</span><a class="headerlink" href="#fonctions-de-classe-c-n" title="Lien permanent vers ce titre">¶</a></h2>
+<div class="admonition-definition admonition">
+<p class="admonition-title">Définition</p>
+<p>On note :</p>
+<ul class="simple">
+<li><p><span class="math notranslate nohighlight">\(C^0(I)\)</span> est l’ensemble des fonctions continues sur <span class="math notranslate nohighlight">\(I\)</span>.</p></li>
+<li><p><span class="math notranslate nohighlight">\(C^1(I)\)</span> est l’ensemble des fonctions continûment dérivables sur <span class="math notranslate nohighlight">\(I\)</span>, i.e. l’ensemble des fonctions qui sont dérivables sur <span class="math notranslate nohighlight">\(I\)</span> dont la fonction dérivée <span class="math notranslate nohighlight">\(f^{'}\)</span> est continue sur <span class="math notranslate nohighlight">\(I\)</span>.</p></li>
+<li><p><span class="math notranslate nohighlight">\(C^n(I)\)</span> est l’ensemble des fonctions <span class="math notranslate nohighlight">\(n\)</span> fois continûment dérivables sur <span class="math notranslate nohighlight">\(I\)</span>, i.e. l’ensemble des fonctions n-fois dérivables sur <span class="math notranslate nohighlight">\(I\)</span> dont la fonction dérivée n-ième <span class="math notranslate nohighlight">\(f^(n)\)</span> est continue sur <span class="math notranslate nohighlight">\(I\)</span> ;</p></li>
+<li><p><span class="math notranslate nohighlight">\(C^\infty(I)\)</span> est l’ensemble des fonctions indéfiniment dérivables sur <span class="math notranslate nohighlight">\(I\)</span>.</p></li>
+</ul>
+</div>
+</div>
+<div class="section" id="derivee-n-ieme-usuelles">
+<h2>Dérivée n-ième usuelles<a class="headerlink" href="#derivee-n-ieme-usuelles" title="Lien permanent vers ce titre">¶</a></h2>
+<div class="admonition-proposition admonition">
+<p class="admonition-title">Proposition</p>
+<p>Soient <span class="math notranslate nohighlight">\(a\in \mathbb{R}\)</span>, <span class="math notranslate nohighlight">\(n\in \mathbb{N}\)</span>, <span class="math notranslate nohighlight">\(f\)</span> et <span class="math notranslate nohighlight">\(g\)</span> deux fonctions telles ques <span class="math notranslate nohighlight">\(\forall x \in \mathbb{R}, f(x) = x^n\)</span> et <span class="math notranslate nohighlight">\(g(x) = (x-a)^n\)</span>. Alors <span class="math notranslate nohighlight">\(f\)</span> et <span class="math notranslate nohighlight">\(g\)</span> sont de classe <span class="math notranslate nohighlight">\(C^\infty\)</span> sur <span class="math notranslate nohighlight">\(\mathbb{R}\)</span> et <span class="math notranslate nohighlight">\(\forall k \in \mathbb{N}, \forall x \in \mathbb{R},\)</span></p>
+<div class="math notranslate nohighlight">
+\[\begin{split} f^{(k)}(x) =\left\{
+\begin{array}{ll}
+n(n-1)\times ...\times (n-k+1)x^{n-k} \quad\mbox{si} \;k \leq n\\
+0 \quad\mbox{si}\;k&gt;l
+\end{array}
+\right.\end{split}\]</div>
+<div class="math notranslate nohighlight">
+\[\begin{split}g^{(k)}(x) =\left\{
+\begin{array}{ll}
+n(n-1)\times ...\times (n-k+1)(x-a)^{n-k} \quad\mbox{si} \;k \leq n\\
+0 \quad\mbox{si}\;k&gt;l
+\end{array}
+\right.\end{split}\]</div>
+</div>
+<div class="admonition-proposition admonition">
+<p class="admonition-title">Proposition</p>
+<p>Soient <span class="math notranslate nohighlight">\(a\in \mathbb{R}\)</span>, <span class="math notranslate nohighlight">\(f\)</span> et <span class="math notranslate nohighlight">\(g\)</span> deux fonctions telles ques <span class="math notranslate nohighlight">\(\forall x \in \mathbb{R^{*}}, f(x) = \dfrac{1}{x}\)</span> et <span class="math notranslate nohighlight">\(\forall x \in \mathbb{R}\setminus \{a\}, g(x) = \dfrac{1}{x-a}\)</span>. Alors <span class="math notranslate nohighlight">\(f\)</span> et <span class="math notranslate nohighlight">\(g\)</span> sont de classe <span class="math notranslate nohighlight">\(C^\infty\)</span> sur <span class="math notranslate nohighlight">\(\mathbb{R^{*}}\)</span> et <span class="math notranslate nohighlight">\(\mathbb{R}\setminus \{a\}\)</span> respectivement et on a:</p>
+<ul class="simple">
+<li><p><span class="math notranslate nohighlight">\(forall n \in \mathbb{N}, \forall x \in \mathbb{R^{*}}, f^{(n)}(x) =\dfrac{(-1)^nn!}{x^{n+1}}\)</span></p></li>
+<li><p><span class="math notranslate nohighlight">\(forall n \in \mathbb{N}, \forall x \in \mathbb{R^{*}}, g^{(n)}(x) =\dfrac{(-1)^nn!}{(x-a)^{n+1}}\)</span></p></li>
+</ul>
+</div>
+<div class="admonition-proposition admonition">
+<p class="admonition-title">Proposition</p>
+<p>Les fonctions <span class="math notranslate nohighlight">\(\exp, \ln, \sin, \cos\)</span> sont de classe <span class="math notranslate nohighlight">\(C^\infty\)</span> sur leur domaine de définition et on pour tout <span class="math notranslate nohighlight">\(n\in \mathbb{N}\)</span>:</p>
+<ul class="simple">
+<li><p><span class="math notranslate nohighlight">\(exp^{(n)}(x) = exp(x)\)</span></p></li>
+<li><p><span class="math notranslate nohighlight">\(ln^{(n)}(x) = \dfrac{(-1)^{n-1}(n-1)!}{x^{n}}\)</span></p></li>
+<li><p><span class="math notranslate nohighlight">\(sin^{(n)}(x) = sin(x+n\frac{\pi}{2})\)</span></p></li>
+<li><p><span class="math notranslate nohighlight">\(cos^{(n)}(x) = cos(x+ n\frac{\pi}{2})\)</span></p></li>
+</ul>
+</div>
+<div class="admonition-proposition admonition">
+<p class="admonition-title">Proposition</p>
+<p>Si <span class="math notranslate nohighlight">\(f\)</span> et <span class="math notranslate nohighlight">\(g\)</span> sont deux fonctions de classe <span class="math notranslate nohighlight">\(C^n\)</span> sur un intervalle <span class="math notranslate nohighlight">\(I\)</span>, alors pour tout <span class="math notranslate nohighlight">\(\lambda\in \mathbb{R}, (\lambda f + g)\)</span> et <span class="math notranslate nohighlight">\(fg\)</span> sont encore des fonctions de classe <span class="math notranslate nohighlight">\(C^n\)</span> et de plus :</p>
+<ul class="simple">
+<li><p><span class="math notranslate nohighlight">\((αf + g)^{(n)} = αf^{(n)} + g^{(n)}\)</span></p></li>
+<li><p><span class="math notranslate nohighlight">\((fg)^{(n)} = \sum_{i=0}^{n} \binom{k}{n}f^{(k)}g^{(n-k})\)</span> ( avec <span class="math notranslate nohighlight">\(\binom{k}{n} =\dfrac{n!}{k!(n-k)!})\)</span></p></li>
+</ul>
+</div>
+<div class="admonition-proposition admonition">
+<p class="admonition-title">Proposition</p>
+<p>Soient <span class="math notranslate nohighlight">\(I\)</span> et <span class="math notranslate nohighlight">\(J\)</span> deux intervalles et soit <span class="math notranslate nohighlight">\(f : I \to \mathbb{R}\)</span> et <span class="math notranslate nohighlight">\(g : J \to \mathbb{R}\)</span> avec <span class="math notranslate nohighlight">\(f(I) \subset J\)</span>.
+Si <span class="math notranslate nohighlight">\(f\)</span> est de classe <span class="math notranslate nohighlight">\(C^n\)</span> sur <span class="math notranslate nohighlight">\(I\)</span>, et si <span class="math notranslate nohighlight">\(g\)</span> est de classe <span class="math notranslate nohighlight">\(C^n\)</span> sur <span class="math notranslate nohighlight">\(J\)</span>, alors <span class="math notranslate nohighlight">\(g\circ f\)</span> est de classe <span class="math notranslate nohighlight">\(C^n\)</span> sur <span class="math notranslate nohighlight">\(I\)</span>.</p>
+</div>
+<div class="admonition-remarques admonition">
+<p class="admonition-title">Remarques</p>
+<ul class="simple">
+<li><p><span class="math notranslate nohighlight">\(\forall \alpha \in \mathbb{R}, x \mapsto x^\alpha=\exp(\alpha\ln(x))\)</span> est de classe <span class="math notranslate nohighlight">\(C^\infty\)</span> sur <span class="math notranslate nohighlight">\(]0, +\infty[\)</span>.</p></li>
+<li><p><span class="math notranslate nohighlight">\(\forall a &gt;0, x \mapsto a^x=exp(x\ln(a))\)</span> est de classe <span class="math notranslate nohighlight">\(C^\infty\)</span> sur <span class="math notranslate nohighlight">\(\mathbb{R}\)</span>.</p></li>
+<li><p>Si <span class="math notranslate nohighlight">\(f\)</span> et <span class="math notranslate nohighlight">\(g\)</span> sont deux fonctions de classe <span class="math notranslate nohighlight">\(C^n\)</span> sur un intervalle <span class="math notranslate nohighlight">\(I\)</span> et si <span class="math notranslate nohighlight">\(g\)</span> ne s’annule pas sur l’intervalle <span class="math notranslate nohighlight">\(I\)</span>, alors la fonction <span class="math notranslate nohighlight">\( x \mapsto\dfrac{f(x)}{g(x)}\)</span> est de classe <span class="math notranslate nohighlight">\(C^n\)</span> sur l’intervalle <span class="math notranslate nohighlight">\(I\)</span>.</p></li>
+</ul>
+</div>
+</div>
+<div class="section" id="comparaison-des-fonctions">
+<h2>COMPARAISON DES fonctions<a class="headerlink" href="#comparaison-des-fonctions" title="Lien permanent vers ce titre">¶</a></h2>
+<p>Soit I un intervalle de <span class="math notranslate nohighlight">\(\mathbb{R}\)</span> et <span class="math notranslate nohighlight">\(a\in \bar{I}\)</span>. Nous supposerons ici que <span class="math notranslate nohighlight">\(f\)</span> et <span class="math notranslate nohighlight">\(g\)</span> sont deux fonctions qui ne s’annulent pas sur un voisinage de <span class="math notranslate nohighlight">\(a\)</span> privé de <span class="math notranslate nohighlight">\(a\)</span>.
+Il s’agit ici de comparer les 2 fonctions au voisinage de <span class="math notranslate nohighlight">\(a\)</span>.  Pour cela, formons leur rapport <span class="math notranslate nohighlight">\(\dfrac{f(x)}{g(x)}\)</span> et regardons ce qui se passe lorsque <span class="math notranslate nohighlight">\(x \to a\)</span>.</p>
+<div class="admonition-definition admonition">
+<p class="admonition-title">Définition</p>
+<ol class="simple">
+<li><p>Si <span class="math notranslate nohighlight">\(\dfrac{f(x)}{g(x)}\)</span> est bornée au voisinage de <span class="math notranslate nohighlight">\(a\)</span>, on dira que <span class="math notranslate nohighlight">\(f\)</span> est dominée par <span class="math notranslate nohighlight">\(g\)</span> au voisinage de <span class="math notranslate nohighlight">\(a\)</span> et on écrit:</p></li>
+</ol>
+<div class="math notranslate nohighlight">
+\[
+f = \underset{x\to a}{O}(g) \mbox{ ou } f = \underset{a}{O}(g) \mbox{ ou encore } f = O(g) \mbox{ au voisinage de } a
+\]</div>
+<ol class="simple">
+<li><p>Si <span class="math notranslate nohighlight">\(\dfrac{f(x)}{g(x)}\)</span> tend vers <span class="math notranslate nohighlight">\(0\)</span> lorsque <span class="math notranslate nohighlight">\(x\)</span> tend vers <span class="math notranslate nohighlight">\(a\)</span> (<span class="math notranslate nohighlight">\(\underset{x\to a}{\lim} \dfrac{f(x)}{g(x)}= 0\)</span>), on dira que <span class="math notranslate nohighlight">\(f\)</span> est négligeable devant <span class="math notranslate nohighlight">\(g\)</span> au voisinage de <span class="math notranslate nohighlight">\(a\)</span> et on écrit:</p></li>
+</ol>
+<div class="math notranslate nohighlight">
+\[
+f = \underset{x\to a}{o}(g) \mbox{ ou } f = \underset{a}{o}(g) \mbox{ ou encore } f = o(g) \mbox{ au voisinage de } a
+\]</div>
+<ol class="simple">
+<li><p>Si <span class="math notranslate nohighlight">\(\dfrac{f(x)}{g(x)}\)</span> tend vers <span class="math notranslate nohighlight">\(1\)</span> lorsque <span class="math notranslate nohighlight">\(x\)</span> tend vers <span class="math notranslate nohighlight">\(a\)</span> (<span class="math notranslate nohighlight">\(\underset{x\to a}{\lim} \dfrac{f(x)}{g(x)}= 1\)</span>), on dira que <span class="math notranslate nohighlight">\(f\)</span> et <span class="math notranslate nohighlight">\(g\)</span> sont équivalentes au voisinage de <span class="math notranslate nohighlight">\(a\)</span> et on écrit:</p></li>
+</ol>
+<div class="math notranslate nohighlight">
+\[
+f = \underset{x\to a}{\sim}g \mbox{ ou } f = \underset{a}{\sim}g \mbox{ ou encore } f \sim g \mbox{ au voisinage de } a
+\]</div>
+</div>
+<div class="admonition-remarque admonition">
+<p class="admonition-title">Remarque</p>
+<ul class="simple">
+<li><p>Notation : <span class="math notranslate nohighlight">\(f(x) = O(g(x))\)</span>, <span class="math notranslate nohighlight">\(f(x) = o(g(x))\)</span>, <span class="math notranslate nohighlight">\(f(x) \sim g(x)\)</span> au voisinage de <span class="math notranslate nohighlight">\(a\)</span>.</p></li>
+<li><p>Par abus de langage, on notera <span class="math notranslate nohighlight">\(O(g)\)</span> (respectivement <span class="math notranslate nohighlight">\(o(g)\)</span>) toute fonction étant un grand <span class="math notranslate nohighlight">\(O\)</span>  (repectivement petit <span class="math notranslate nohighlight">\(o\)</span>) de <span class="math notranslate nohighlight">\(g\)</span> au voisinage de <span class="math notranslate nohighlight">\(a\)</span>.</p></li>
+<li><p>Lorsque <span class="math notranslate nohighlight">\(f(x) = O(g(x))\)</span>, on pourra dans un calcul remplacer <span class="math notranslate nohighlight">\(f(x)\)</span> par <span class="math notranslate nohighlight">\(O(g(x))\)</span> mais <strong>ATTENTION! IL EST FAUX de remplacer <span class="math notranslate nohighlight">\(O(g(x))\)</span> par <span class="math notranslate nohighlight">\(f(x)\)</span></strong>.</p></li>
+<li><p>Lorsque <span class="math notranslate nohighlight">\(f(x) = o(g(x))\)</span>, on pourra dans un calcul remplacer <span class="math notranslate nohighlight">\(f(x)\)</span> par <span class="math notranslate nohighlight">\(o(g(x))\)</span> mais <strong>ATTENTION! IL EST FAUX de remplacer <span class="math notranslate nohighlight">\(o(g(x))\)</span> par <span class="math notranslate nohighlight">\(f(x)\)</span></strong>.</p></li>
+<li><p><strong>Ne JAMAIS écrire que <span class="math notranslate nohighlight">\(f(x) \underset{a}{\sim}0\)</span>  puisque la fonction nulle ne vérifie pas les conditions d’application de la définition!!</strong></p></li>
+<li><p>Il faut toujours specifier le voisinage du point dont on compare deux fonctions!</p></li>
+<li><p><span class="math notranslate nohighlight">\(f = O(1)\)</span> au voisinage de <span class="math notranslate nohighlight">\(a\)</span> signifie que <span class="math notranslate nohighlight">\(f\)</span> est bornée au voisinage de <span class="math notranslate nohighlight">\(a\)</span>.</p></li>
+<li><p><span class="math notranslate nohighlight">\(f = o(1)\)</span> au voisinage de <span class="math notranslate nohighlight">\(a\)</span> signifie que <span class="math notranslate nohighlight">\(f\)</span> tend vers <span class="math notranslate nohighlight">\(0\)</span> lorsque <span class="math notranslate nohighlight">\(x\to a\)</span> (<span class="math notranslate nohighlight">\(\underset{x\to a}{\lim} f(x) = 0\)</span>).</p></li>
+<li><p>Il n’y a aucune relation entre <span class="math notranslate nohighlight">\(f(x) \underset{a}{\sim} g(x)\)</span> et <span class="math notranslate nohighlight">\(\underset{x\to a}{\lim} f(x) - g(x) = 0\)</span>.</p></li>
+</ul>
+</div>
+<div class="admonition-exemples admonition">
+<p class="admonition-title">Exemples</p>
+<ol class="simple">
+<li><p>Soit <span class="math notranslate nohighlight">\(f(x) = 3x^5 − x^4 + 2x\)</span>. Alors:</p>
+<ul class="simple">
+<li><p><span class="math notranslate nohighlight">\(f(x) = O(x)\)</span> au voisinage de <span class="math notranslate nohighlight">\(0\)</span>.</p></li>
+<li><p><span class="math notranslate nohighlight">\(f(x) = O(x^5)\)</span> au voisinge de <span class="math notranslate nohighlight">\(+\infty\)</span>.</p></li>
+<li><p><span class="math notranslate nohighlight">\(f(x) = o(x)\)</span> au voisinge de <span class="math notranslate nohighlight">\(0\)</span>.</p></li>
+<li><p><span class="math notranslate nohighlight">\(f(x) = o(x^6)\)</span> au voisinage de <span class="math notranslate nohighlight">\(+\infty\)</span>.</p></li>
+</ul>
+</li>
+<li><p>Si <span class="math notranslate nohighlight">\(P\)</span> est une fonction polynomiale non nulle :</p>
+<ul class="simple">
+<li><p><span class="math notranslate nohighlight">\(P\)</span> est équivalente à son monôme de plus haut degré au voisinage de <span class="math notranslate nohighlight">\(+\infty\)</span></p></li>
+<li><p><span class="math notranslate nohighlight">\(P\)</span> est équivalente à son monôme de plus bas degré au voisinage de <span class="math notranslate nohighlight">\(0\)</span></p></li>
+</ul>
+</li>
+<li><p>Au voisinage de <span class="math notranslate nohighlight">\(+\infty\)</span> : <span class="math notranslate nohighlight">\(ch(x) \sim \dfrac{e^x}{2}\)</span> et <span class="math notranslate nohighlight">\(sh(x) \sim \dfrac{e^x}{2}\)</span></p></li>
+</ol>
+</div>
+<div class="admonition-remarque admonition">
+<p class="admonition-title">Remarque</p>
+<p>Une fonction donnée admet une infinité d’équivalents au voisinage d’un point a. Seulement l’intérêt
+d’un équivalent est de remplacer une fonction par une autre fonction plus simple. On choisira donc toujours l’équivalent le
+plus simple.</p>
+<p>Par exemple, au voisinage de <span class="math notranslate nohighlight">\(+\infty\)</span> on a:</p>
+<ul class="simple">
+<li><p><span class="math notranslate nohighlight">\(x^3 - 2x^2 + 3x-5 \sim x^3\)</span></p></li>
+<li><p><span class="math notranslate nohighlight">\(x^3 - 2x^2 + 3x-5 \sim x^3-5x+8\)</span></p></li>
+<li><p><span class="math notranslate nohighlight">\(x^3 - 2x^2 + 3x-5 \sim x^3+4x^2-6\)</span></p></li>
+<li><p><span class="math notranslate nohighlight">\(x^3 - 2x^2 + 3x-5 \sim x^3 - 2x^2\)</span></p></li>
+</ul>
+<p>Seul le premier équivalent a un intérêt!!</p>
+</div>
+<div class="admonition-proprietes admonition">
+<p class="admonition-title">Proprietes</p>
+<ul class="simple">
+<li><p>Soit <span class="math notranslate nohighlight">\(p, q \in \mathbb{N}\)</span> alors <span class="math notranslate nohighlight">\(x^p = o(x^q) \Leftrightarrow p&lt;p\)</span>.</p></li>
+<li><p>Si au voisinage d’un point <span class="math notranslate nohighlight">\(a\)</span> on a <span class="math notranslate nohighlight">\(f(x) = o(g(x))\)</span> alors <span class="math notranslate nohighlight">\(f(x) = O(g(x))\)</span>.</p></li>
+<li><p>Soient <span class="math notranslate nohighlight">\(\alpha, \beta, \gamma &gt;0\)</span> trois reels strictment positifs:</p>
+<ul>
+<li><p>Comparaison <span class="math notranslate nohighlight">\(ln\)</span> et puissances:</p>
+<ul>
+<li><p>au voisinage de <span class="math notranslate nohighlight">\(+\infty\)</span>: <span class="math notranslate nohighlight">\((ln(x))^\alpha = o(x^\beta)\)</span>.</p></li>
+<li><p>au voisinage de 0+: <span class="math notranslate nohighlight">\(|ln(x)|^\alpha = o(\frac{1}{x^\beta})\)</span>.</p></li>
+</ul>
+</li>
+<li><p>Comparaison puissance et exponentielle :</p>
+<ul>
+<li><p>au voisinage de <span class="math notranslate nohighlight">\(+\infty\)</span>: <span class="math notranslate nohighlight">\(x^\beta = o(e^{\gamma x})\)</span></p></li>
+<li><p>au voisinage de <span class="math notranslate nohighlight">\(+\infty\)</span>: <span class="math notranslate nohighlight">\(x^\beta = o(a^{x})\)</span> si <span class="math notranslate nohighlight">\(a&gt;1\)</span>.</p></li>
+<li><p>au voisinage de <span class="math notranslate nohighlight">\(-\infty\)</span>: <span class="math notranslate nohighlight">\(e^{\gamma x} = o(\frac{1}{x^\beta})\)</span> si <span class="math notranslate nohighlight">\(\beta \in \mathbb{N}\)</span>.</p></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="admonition-proposition admonition">
+<p class="admonition-title">Proposition</p>
+<ul class="simple">
+<li><p>Opérations sur les relations de comparaisons</p></li>
+<li></li>
+<li><p>Caractérisation de l’équivalence de deux fonctions</p></li>
+<li><p>Lien entre les relations de comparaison</p></li>
+<li><p>Calculs avec des équivalents</p></li>
+</ul>
+</div>
+<div class="admonition-theoreme-les-equivalents-de-references admonition">
+<p class="admonition-title">Theoreme (Les équivalents de références)</p>
+<p>Les limites usuelles en 0, nous donnent les équivalents suivants au voisinage de <span class="math notranslate nohighlight">\(0\)</span> :</p>
+<ul class="simple">
+<li><p><span class="math notranslate nohighlight">\(sin x \sim x\)</span></p></li>
+<li><p><span class="math notranslate nohighlight">\(arcsin x \sim x\)</span></p></li>
+<li><p><span class="math notranslate nohighlight">\(sh x \sim x\)</span></p></li>
+<li><p><span class="math notranslate nohighlight">\(tan x \sim x\)</span></p></li>
+<li><p><span class="math notranslate nohighlight">\(arctan x \sim x\)</span></p></li>
+<li><p><span class="math notranslate nohighlight">\(th x \sim x\)</span></p></li>
+<li><p><span class="math notranslate nohighlight">\(1 − cos x \sim \frac{x^2}{2}\)</span></p></li>
+<li><p><span class="math notranslate nohighlight">\(1 − ch x \sim \frac{x^2}{2}\)</span></p></li>
+<li><p><span class="math notranslate nohighlight">\(ln(1 + x) \sim x\)</span></p></li>
+<li><p><span class="math notranslate nohighlight">\(e^x − 1 \sim x\)</span></p></li>
+<li><p><span class="math notranslate nohighlight">\((1 + x)^α − 1 \sim αx\)</span></p></li>
+</ul>
+<p>Plus généralement, au voisinage de a lorsque <span class="math notranslate nohighlight">\(\underset{x\to a}{f(x) \to 0}\)</span>, on a :</p>
+<ul class="simple">
+<li><p><span class="math notranslate nohighlight">\(sin f(x) \sim f(x)\)</span></p></li>
+<li><p><span class="math notranslate nohighlight">\(arcsin f(x) \sim f(x)\)</span></p></li>
+<li><p><span class="math notranslate nohighlight">\(sh f(x) \sim f(x)\)</span></p></li>
+<li><p><span class="math notranslate nohighlight">\(tan f(x) \sim f(x)\)</span></p></li>
+<li><p><span class="math notranslate nohighlight">\(arctan f(x) \sim f(x)\)</span></p></li>
+<li><p><span class="math notranslate nohighlight">\(th x \sim f(x)\)</span></p></li>
+<li><p><span class="math notranslate nohighlight">\(1 − cos f(x) \sim \frac{f(x)^2}{2}\)</span></p></li>
+<li><p><span class="math notranslate nohighlight">\(1 − ch f(x) \sim \frac{f(x)^2}{2}\)</span></p></li>
+<li><p><span class="math notranslate nohighlight">\(ln(1 + f(x)) \sim f(x)\)</span></p></li>
+<li><p><span class="math notranslate nohighlight">\(e^{f(x)} − 1 \sim f(x)\)</span></p></li>
+<li><p><span class="math notranslate nohighlight">\((1 + f(x))^α − 1 \sim αf(x)\)</span></p></li>
+</ul>
+</div>
+<div class="admonition-theoreme-calcul-avec-les-equivalence admonition">
+<p class="admonition-title">Theoreme (calcul avec les equivalence)</p>
+<ol class="simple">
+<li><p>Si <span class="math notranslate nohighlight">\(\underset{x\to a}{f(x) \to l}\)</span> et <span class="math notranslate nohighlight">\(l\neq 0\)</span> alors <span class="math notranslate nohighlight">\(f\underset{a}{\sim}l\)</span>.</p></li>
+<li><p>Si <span class="math notranslate nohighlight">\(f_1 \underset{a}{\sim}g_1\)</span> et  <span class="math notranslate nohighlight">\(f_2 \underset{a}{\sim}g_2\)</span> alors  <span class="math notranslate nohighlight">\(f_1f_2 \underset{a}{\sim}g_1g_2\)</span> et  <span class="math notranslate nohighlight">\(\frac{f_1}{f_2} \underset{a}{\sim}\frac{g_1}{g_2}\)</span>.</p></li>
+<li><p>Soit <span class="math notranslate nohighlight">\(\alpha \in \mathbb{R}\)</span>. Si <span class="math notranslate nohighlight">\(f \underset{a}{\sim}g\)</span> et <span class="math notranslate nohighlight">\(f\)</span> et <span class="math notranslate nohighlight">\(g\)</span> sont positives alors <span class="math notranslate nohighlight">\(f^\alpha \underset{a}{\sim}g^\alpha\)</span> .</p></li>
+</ol>
+</div>
+<p>Un équivalent donne localement le signe de la fonction</p>
+<p>Un équivalent donne la limite !</p>
 </div>
 </div>
 
@@ -470,6 +777,7 @@ ramener à un équivalent plus simple (s’il y en a …) dont on sait calculer 
         <div class='prev-next-bottom'>
             
     <a class='left-prev' id="prev-link" href="complement.html" title="previous page">Complement sur les suites et les fonctions numériques</a>
+    <a class='right-next' id="next-link" href="exo6.html" title="next page">Exercices</a>
 
         </div>
         

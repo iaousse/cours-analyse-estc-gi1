@@ -5,7 +5,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Complement sur les suites et les fonctions numériques &#8212; Cours Analyse</title>
+    <title>Exercices &#8212; Cours Analyse</title>
     
   <link href="_static/css/theme.css" rel="stylesheet" />
   <link href="_static/css/index.c5995385ac14fb8791e8eb36b4908be2.css" rel="stylesheet" />
@@ -51,10 +51,10 @@
         const thebe_selector_output = ".output"
     </script>
     <script async="async" src="_static/sphinx-thebe.js"></script>
+    <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/x-mathjax-config">MathJax.Hub.Config({"TeX": {"Macros": {"Z": "\\mathbb{Z}", "V": "V", "N": "\\mathbb{N}", "C": "\\mathbb{C}", "Q": "\\mathbb{Q}", "K": "\\mathbb{K}", "floor": ["\\lfloor#1\\rfloor", 1], "bmat": ["\\left[\\begin{array}"], "emat": ["\\end{array}\\right]"], "R": ["\\mathbb{R}"], "B": ["\\mathcal{B}"], "norm": ["{\\Vert#1\\Vert}", 1], "abs": ["{\\left|#1\\right|}", 1], "coloneqq": ["{:=}"], "eqqcolon": ["{=:}"], "emph": ["\\pmb#1", 1], "tr": "\\operatorname{Spur}", "lin": "\\operatorname{lin}", "dv": "\\mathrm{div}~", "rot": "\\mathrm{rot}~", "Dim": "\\operatorname{dim}", "diag": "\\operatorname{diag}", "Kern": "\\operatorname{Kern}", "Bild": "\\operatorname{Bild}", "Im": "\\operatorname{Im}", "Rang": "\\operatorname{Rang}", "GL": "\\operatorname{GL}", "Eig": "\\operatorname{Eig}", "End": "\\operatorname{End}", "Hau": "\\operatorname{Haupt}", "mymathbb": ["\\boldsymbol{#1}", 1], "idx": "\\mathrm{d}x", "d": "\\mathrm{d}", "i": "\\mathrm{i}", "x": "\\mathbf{x}", "sign": "\\mathrm{sign}", "vec": ["\\mathbf{#1}", 1], "veczwei": ["\\begin{pmatrix} #1 \\\\ #2 \\end{pmatrix}", 2], "M": "\\mathcal{M}", "S": "\\mathbb{S}", "bone": "\\unicode{x1D7D9}", "Re": "\\mathrm{Re}", "Um": "\\operatorname{Um}", "Res": "\\operatorname{Res}"}}, "tex2jax": {"inlineMath": [["\\(", "\\)"]], "displayMath": [["\\[", "\\]"]], "processRefs": false, "processEnvironments": false}})</script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Recherche" href="search.html" />
-    <link rel="next" title="Complement sur les suites et les fonctions numériques" href="complements.html" />
-    <link rel="prev" title="Fonctions circulaires inverses" href="fcthycerinvs.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="en" />
     
@@ -91,7 +91,7 @@
   </a>
  </li>
 </ul>
-<ul class="current nav bd-sidenav">
+<ul class="nav bd-sidenav">
  <li class="toctree-l1 has-children">
   <a class="reference internal" href="R.html">
    Les nombres réels
@@ -200,11 +200,11 @@
    </li>
   </ul>
  </li>
- <li class="toctree-l1 current active has-children">
-  <a class="current reference internal" href="#">
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="complement.html">
    Complement sur les suites et les fonctions numériques
   </a>
-  <input checked="" class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" type="checkbox"/>
+  <input class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" type="checkbox"/>
   <label for="toctree-checkbox-6">
    <i class="fas fa-chevron-down">
    </i>
@@ -263,7 +263,7 @@
         <!-- ipynb file if we had a myst markdown file -->
         
         <!-- Download raw file -->
-        <a class="dropdown-buttons" href="_sources/complement.md"><button type="button"
+        <a class="dropdown-buttons" href="_sources/exo5.md"><button type="button"
                 class="btn btn-secondary topbarbtn" title="Télécharger le fichier source" data-toggle="tooltip"
                 data-placement="left">.md</button></a>
         <!-- Download PDF via print -->
@@ -283,7 +283,7 @@
                 data-toggle="tooltip" data-placement="left" title="Dépôt source"><i
                     class="fab fa-github"></i>dépôt</button></a>
         <a class="issues-button"
-            href="https://github.com/executablebooks/jupyter-book/issues/new?title=Issue%20on%20page%20%2Fcomplement.html&body=Your%20issue%20content%20here."><button
+            href="https://github.com/executablebooks/jupyter-book/issues/new?title=Issue%20on%20page%20%2Fexo5.html&body=Your%20issue%20content%20here."><button
                 type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
                 title="Ouvrez un problème"><i class="fas fa-lightbulb"></i>signaler un problème</button></a>
         
@@ -304,6 +304,49 @@
         <!-- Table of contents -->
         <div class="d-none d-md-block col-md-2 bd-toc show">
             
+            <div class="tocsection onthispage pt-5 pb-3">
+                <i class="fas fa-list"></i> Contenu
+            </div>
+            <nav id="bd-toc-nav">
+                <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#exercice-1">
+   Exercice 1
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#exercice-2">
+   Exercice 2
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#exercice-3">
+   Exercice 3
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#exercice-4">
+   Exercice 4
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#exercice-5">
+   Exercice 5
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#exercice-6">
+   Exercice 6
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#exercice-7">
+   Exercice 7
+  </a>
+ </li>
+</ul>
+
+            </nav>
         </div>
     </div>
 </div>
@@ -312,10 +355,63 @@
         
               <div>
                 
-  <div class="section" id="complement-sur-les-suites-et-les-fonctions-numeriques">
-<h1>Complement sur les suites et les fonctions numériques<a class="headerlink" href="#complement-sur-les-suites-et-les-fonctions-numeriques" title="Lien permanent vers ce titre">¶</a></h1>
-<p>Le présent Chapitre contiendra : quelques notions qui completent les suites et les fonctions numeriques</p>
-<div class="toctree-wrapper compound">
+  <div class="section" id="exercices">
+<h1>Exercices<a class="headerlink" href="#exercices" title="Lien permanent vers ce titre">¶</a></h1>
+<div class="section" id="exercice-1">
+<h2>Exercice 1<a class="headerlink" href="#exercice-1" title="Lien permanent vers ce titre">¶</a></h2>
+<p>Démontrer que, pour tous <span class="math notranslate nohighlight">\(x,y \in \mathbb{R}\)</span>:</p>
+<div class="math notranslate nohighlight">
+\[
+\sh(x+y)=\sh(x)\ch(y)+\ch(x)\sh(y)
+\]</div>
+<div class="math notranslate nohighlight">
+\[
+\ch(x+y)=\ch(x)\ch(y)+\sh(x)\sh(y).
+\]</div>
+</div>
+<div class="section" id="exercice-2">
+<h2>Exercice 2<a class="headerlink" href="#exercice-2" title="Lien permanent vers ce titre">¶</a></h2>
+<p>Déterminer la valeur de <span class="math notranslate nohighlight">\( \arcsin(-1/2), \arccos(-\sqrt 2/2), \arctan(\sqrt 3)\)</span>.</p>
+</div>
+<div class="section" id="exercice-3">
+<h2>Exercice 3<a class="headerlink" href="#exercice-3" title="Lien permanent vers ce titre">¶</a></h2>
+<p>Calculer</p>
+<div class="math notranslate nohighlight">
+\[
+\arccos \left(\cos\frac{2\pi}3\right),\quad \arccos\left(\cos\frac{-2\pi}{3}\right),\quad\arccos\left(\cos\frac{4\pi}{3}\right),\quad \arccos\left(\sin\frac{17\pi}5\right).
+\]</div>
+</div>
+<div class="section" id="exercice-4">
+<h2>Exercice 4<a class="headerlink" href="#exercice-4" title="Lien permanent vers ce titre">¶</a></h2>
+<p>Soit <span class="math notranslate nohighlight">\(a\neq 0\)</span> un réel.</p>
+<ol class="simple">
+<li><p>Déterminer la dérivée de la fonction <span class="math notranslate nohighlight">\(f\)</span> définie sur <span class="math notranslate nohighlight">\(\mathbb{R}\)</span> par <span class="math notranslate nohighlight">\(f(x)=\arctan(ax)\)</span>.</p></li>
+<li><p>En déduire une primitive de <span class="math notranslate nohighlight">\(\frac{1}{4+x^2}\)</span>.</p></li>
+</ol>
+</div>
+<div class="section" id="exercice-5">
+<h2>Exercice 5<a class="headerlink" href="#exercice-5" title="Lien permanent vers ce titre">¶</a></h2>
+<p>Simplifier les expressions suivantes :</p>
+<div class="math notranslate nohighlight">
+\[
+\tan(\arcsin x),\quad \sin(\arccos x),\quad \cos(\arctan x).
+\]</div>
+</div>
+<div class="section" id="exercice-6">
+<h2>Exercice 6<a class="headerlink" href="#exercice-6" title="Lien permanent vers ce titre">¶</a></h2>
+<p>Soit <span class="math notranslate nohighlight">\(f\)</span> la fonction définie par</p>
+<div class="math notranslate nohighlight">
+\[
+f(x)=\arcsin\left(2x\sqrt{1-x^2}\right).
+\]</div>
+<ol class="simple">
+<li><p>Quel est l’ensemble de définition de <span class="math notranslate nohighlight">\(f\)</span>?</p></li>
+<li><p>En posant <span class="math notranslate nohighlight">\(x=\sin t\)</span>, simplifier l’écriture de <span class="math notranslate nohighlight">\(f\)</span>.</p></li>
+</ol>
+</div>
+<div class="section" id="exercice-7">
+<h2>Exercice 7<a class="headerlink" href="#exercice-7" title="Lien permanent vers ce titre">¶</a></h2>
+<p>Montrer que, pour tout <span class="math notranslate nohighlight">\(x\in[-1,1], \arccos(x)+\arcsin(x)=\frac\pi2\)</span></p>
 </div>
 </div>
 
@@ -344,8 +440,6 @@
         
         <div class='prev-next-bottom'>
             
-    <a class='left-prev' id="prev-link" href="fcthycerinvs.html" title="previous page">Fonctions circulaires inverses</a>
-    <a class='right-next' id="next-link" href="complements.html" title="next page">Complement sur les suites et les fonctions numériques</a>
 
         </div>
         

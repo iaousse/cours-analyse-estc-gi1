@@ -5,7 +5,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Complement sur les suites et les fonctions numériques &#8212; Cours Analyse</title>
+    <title>Exercices &#8212; Cours Analyse</title>
     
   <link href="_static/css/theme.css" rel="stylesheet" />
   <link href="_static/css/index.c5995385ac14fb8791e8eb36b4908be2.css" rel="stylesheet" />
@@ -51,10 +51,10 @@
         const thebe_selector_output = ".output"
     </script>
     <script async="async" src="_static/sphinx-thebe.js"></script>
+    <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/x-mathjax-config">MathJax.Hub.Config({"TeX": {"Macros": {"Z": "\\mathbb{Z}", "V": "V", "N": "\\mathbb{N}", "C": "\\mathbb{C}", "Q": "\\mathbb{Q}", "K": "\\mathbb{K}", "floor": ["\\lfloor#1\\rfloor", 1], "bmat": ["\\left[\\begin{array}"], "emat": ["\\end{array}\\right]"], "R": ["\\mathbb{R}"], "B": ["\\mathcal{B}"], "norm": ["{\\Vert#1\\Vert}", 1], "abs": ["{\\left|#1\\right|}", 1], "coloneqq": ["{:=}"], "eqqcolon": ["{=:}"], "emph": ["\\pmb#1", 1], "tr": "\\operatorname{Spur}", "lin": "\\operatorname{lin}", "dv": "\\mathrm{div}~", "rot": "\\mathrm{rot}~", "Dim": "\\operatorname{dim}", "diag": "\\operatorname{diag}", "Kern": "\\operatorname{Kern}", "Bild": "\\operatorname{Bild}", "Im": "\\operatorname{Im}", "Rang": "\\operatorname{Rang}", "GL": "\\operatorname{GL}", "Eig": "\\operatorname{Eig}", "End": "\\operatorname{End}", "Hau": "\\operatorname{Haupt}", "mymathbb": ["\\boldsymbol{#1}", 1], "idx": "\\mathrm{d}x", "d": "\\mathrm{d}", "i": "\\mathrm{i}", "x": "\\mathbf{x}", "sign": "\\mathrm{sign}", "vec": ["\\mathbf{#1}", 1], "veczwei": ["\\begin{pmatrix} #1 \\\\ #2 \\end{pmatrix}", 2], "M": "\\mathcal{M}", "S": "\\mathbb{S}", "bone": "\\unicode{x1D7D9}", "Re": "\\mathrm{Re}", "Um": "\\operatorname{Um}", "Res": "\\operatorname{Res}"}}, "tex2jax": {"inlineMath": [["\\(", "\\)"]], "displayMath": [["\\[", "\\]"]], "processRefs": false, "processEnvironments": false}})</script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Recherche" href="search.html" />
-    <link rel="next" title="Complement sur les suites et les fonctions numériques" href="complements.html" />
-    <link rel="prev" title="Fonctions circulaires inverses" href="fcthycerinvs.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="en" />
     
@@ -91,7 +91,7 @@
   </a>
  </li>
 </ul>
-<ul class="current nav bd-sidenav">
+<ul class="nav bd-sidenav">
  <li class="toctree-l1 has-children">
   <a class="reference internal" href="R.html">
    Les nombres réels
@@ -200,11 +200,11 @@
    </li>
   </ul>
  </li>
- <li class="toctree-l1 current active has-children">
-  <a class="current reference internal" href="#">
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="complement.html">
    Complement sur les suites et les fonctions numériques
   </a>
-  <input checked="" class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" type="checkbox"/>
+  <input class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" type="checkbox"/>
   <label for="toctree-checkbox-6">
    <i class="fas fa-chevron-down">
    </i>
@@ -263,7 +263,7 @@
         <!-- ipynb file if we had a myst markdown file -->
         
         <!-- Download raw file -->
-        <a class="dropdown-buttons" href="_sources/complement.md"><button type="button"
+        <a class="dropdown-buttons" href="_sources/exo5-Copy1.md"><button type="button"
                 class="btn btn-secondary topbarbtn" title="Télécharger le fichier source" data-toggle="tooltip"
                 data-placement="left">.md</button></a>
         <!-- Download PDF via print -->
@@ -283,7 +283,7 @@
                 data-toggle="tooltip" data-placement="left" title="Dépôt source"><i
                     class="fab fa-github"></i>dépôt</button></a>
         <a class="issues-button"
-            href="https://github.com/executablebooks/jupyter-book/issues/new?title=Issue%20on%20page%20%2Fcomplement.html&body=Your%20issue%20content%20here."><button
+            href="https://github.com/executablebooks/jupyter-book/issues/new?title=Issue%20on%20page%20%2Fexo5-Copy1.html&body=Your%20issue%20content%20here."><button
                 type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
                 title="Ouvrez un problème"><i class="fas fa-lightbulb"></i>signaler un problème</button></a>
         
@@ -304,6 +304,54 @@
         <!-- Table of contents -->
         <div class="d-none d-md-block col-md-2 bd-toc show">
             
+            <div class="tocsection onthispage pt-5 pb-3">
+                <i class="fas fa-list"></i> Contenu
+            </div>
+            <nav id="bd-toc-nav">
+                <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#exercice-1">
+   Exercice 1
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#exercice-2">
+   Exercice 2
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#exercice-3">
+   Exercice 3
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#exercice-4">
+   Exercice 4
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#exercice-5">
+   Exercice 5
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#exercice-6">
+   Exercice 6
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#exercice-7">
+   Exercice 7
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#exercice-8">
+   Exercice 8
+  </a>
+ </li>
+</ul>
+
+            </nav>
         </div>
     </div>
 </div>
@@ -312,10 +360,111 @@
         
               <div>
                 
-  <div class="section" id="complement-sur-les-suites-et-les-fonctions-numeriques">
-<h1>Complement sur les suites et les fonctions numériques<a class="headerlink" href="#complement-sur-les-suites-et-les-fonctions-numeriques" title="Lien permanent vers ce titre">¶</a></h1>
-<p>Le présent Chapitre contiendra : quelques notions qui completent les suites et les fonctions numeriques</p>
-<div class="toctree-wrapper compound">
+  <div class="section" id="exercices">
+<h1>Exercices<a class="headerlink" href="#exercices" title="Lien permanent vers ce titre">¶</a></h1>
+<div class="section" id="exercice-1">
+<h2>Exercice 1<a class="headerlink" href="#exercice-1" title="Lien permanent vers ce titre">¶</a></h2>
+<p>Quels sont les équivalents corrects parmi les propositions suivantes?</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{array}{lllll}
+ \mathbf 1.\ n\sim_{+\infty}n+1&amp;\quad&amp;\mathbf 2.\ n^2\sim_{+\infty}n^2+n&amp;\quad&amp;\mathbf 3.\ \ln(n)\sim_{+\infty}\ln(10^6 n)\\
+ \mathbf 4.\ \exp(n)\sim_{+\infty}\exp\left(n+10^{-6}\right)&amp;\quad&amp;\mathbf 5.\ \exp(n)\sim_{+\infty}\exp(2n)&amp;\quad&amp;\mathbf 6.\ \ln(n)\sim_{+\infty}\ln(n+1).
+\end{array}
+\end{split}\]</div>
+</div>
+<div class="section" id="exercice-2">
+<h2>Exercice 2<a class="headerlink" href="#exercice-2" title="Lien permanent vers ce titre">¶</a></h2>
+<p>Trouver un équivalent le plus simple possible aux suites suivantes :</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+\begin{array}{lll}
+\mathbf 1.\ u_n=\frac{1}{n-1}-\frac{1}{n+1}&amp;\quad&amp;\mathbf 2.\ v_n=\sqrt{n+1}-\sqrt{n-1}\\
+\mathbf 3.\ w_n=\frac{n^3-\sqrt{1+n^2}}{\ln n-2n^2}&amp;\quad&amp;\mathbf 4.\ z_n=\sin\left(\frac1{\sqrt{n+1}}\right).
+\end{array}
+\end{split}\]</div>
+</div>
+<div class="section" id="exercice-3">
+<h2>Exercice 3<a class="headerlink" href="#exercice-3" title="Lien permanent vers ce titre">¶</a></h2>
+<p>Déterminer un équivalent le plus simple possible des fonctions suivantes :</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+\begin{array}{lcl}
+\mathbf 1.\ x+1+\ln x\textrm{ en 0 et en }+\infty&amp;\quad\quad&amp;\displaystyle \mathbf 2.\ \cos(\sin x)\textrm{ en 0}\\
+\displaystyle \mathbf 3.\ \cosh(\sqrt x)\textrm{ en }+\infty
+&amp;\quad\quad&amp;\displaystyle \mathbf 4.\ \frac{\sin x\ln(1+x^2)}{x\tan x}\textrm{ en 0}\\
+\displaystyle \mathbf 5.\ \ln(\sin x)\textrm{ en }0
+&amp;\quad\quad&amp;\displaystyle \mathbf 6.\ \ln(\cos x)\textrm{ en 0}
+\end{array}\end{split}\]</div>
+</div>
+<div class="section" id="exercice-4">
+<h2>Exercice 4<a class="headerlink" href="#exercice-4" title="Lien permanent vers ce titre">¶</a></h2>
+<p>Classer les suites suivantes par ordre de « négligeabilité » :</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+\begin{array}{llll}
+a_n=\frac 1n&amp;b_n=\frac1{n^2}&amp;c_n=\frac{\ln n}n&amp;d_n=\frac{e^n}{n^3}\\
+e_n=n&amp;f_n=1&amp;g_n=\sqrt{ne^n}.
+\end{array}\end{split}\]</div>
+</div>
+<div class="section" id="exercice-5">
+<h2>Exercice 5<a class="headerlink" href="#exercice-5" title="Lien permanent vers ce titre">¶</a></h2>
+<p>Classer les fonctions suivantes par ordre de négligeabilité en <span class="math notranslate nohighlight">\(+\infty\)</span></p>
+<div class="math notranslate nohighlight">
+\[
+f_1(x)=x,\ f_2(x)=\exp(x),\ f_3(x)=\frac 1x,\ f_4(x)=2,\ f_5(x)=\ln(x),\ f_6(x)=\sqrt x\ln x,\ f_7(x)=\frac{e^x}{\sqrt x}.
+\]</div>
+</div>
+<div class="section" id="exercice-6">
+<h2>Exercice 6<a class="headerlink" href="#exercice-6" title="Lien permanent vers ce titre">¶</a></h2>
+<ol>
+<li><p>Démontrer que</p>
+<div class="math notranslate nohighlight">
+\[
+    \ln(1+x)+x^2\sim_0 x\textrm{ et }x^2+x^3\sim_0 x^2.
+    \]</div>
+<p>En déduire <span class="math notranslate nohighlight">\(\displaystyle \lim_{x\to 0^+}\frac{\ln(1+x)+x^2}{x^2+x^3}\)</span></p>
+</li>
+<li><p>Démontrer que
+$<span class="math notranslate nohighlight">\(
+ \sin(2x)\sim_0 2x\textrm{ et }\tan(3x)\sim_0 3x.
+ \)</span><span class="math notranslate nohighlight">\(
+ En déduire \)</span>\displaystyle \lim_{x\to 0^+}\frac{\sin(2x)}{\tan(3x)}$</p></li>
+</ol>
+</div>
+<div class="section" id="exercice-7">
+<h2>Exercice 7<a class="headerlink" href="#exercice-7" title="Lien permanent vers ce titre">¶</a></h2>
+<p>En utilisant (éventuellement) des équivalents, déterminer les limites suivantes :</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+\begin{array}{lcl}
+\displaystyle \mathbf 1.\ \lim_{x\to 0}\frac{(1-\cos x)(1+2x)}{x^2-x^4}&amp;&amp;\displaystyle \mathbf 2.\ \lim_{x\to 0}x(3+x)\frac{\sqrt{x+3}}{\sqrt x\sin(\sqrt x)}\\
+\displaystyle \mathbf 3.\ \lim_{x\to 0}\frac{\ln (1+\sin x)}{\tan(6x)}&amp;&amp;
+\displaystyle \mathbf 4.\ \lim_{x\to\pi/2}\frac{\ln(\sin^2 x)}{\left(\frac{\pi}{2}-x\right)^2}\\
+\displaystyle \mathbf 5.\ \lim_{x\to 0}\frac{\ln(\cos x)}{1-\cos 2x}&amp;&amp;\displaystyle \mathbf 6.\ \lim_{x\to+\infty}\sqrt{4x+1}\ln\left(1-\frac{\sqrt{x+1}}{x+2}\right)\\
+\displaystyle \mathbf 7.\ \lim_{x\to+\infty}\exp\left(\frac1{x^2}\right)-
+\exp\left(\frac{1}{(x+1)^2}\right)
+&amp;&amp;\displaystyle \mathbf 8.\ \lim_{x\to 0}\left(\frac{x}{\sin x}\right)^{\frac{\sin x}{x-\sin x}}\\\displaystyle \mathbf 9.\ \lim_{x\to 0}\frac{(1-\cos x)\arctan x}{x\tan x}
+\end{array}\end{split}\]</div>
+</div>
+<div class="section" id="exercice-8">
+<h2>Exercice 8<a class="headerlink" href="#exercice-8" title="Lien permanent vers ce titre">¶</a></h2>
+<p>Comparer les fonctions suivantes :</p>
+<ol class="simple">
+<li><p><span class="math notranslate nohighlight">\(x\ln x\)</span> et <span class="math notranslate nohighlight">\(\ln(1+2x)\)</span> au voisinage de <span class="math notranslate nohighlight">\(0\)</span>.</p></li>
+<li><p><span class="math notranslate nohighlight">\(x\ln x\)</span> et <span class="math notranslate nohighlight">\(\sqrt{x^2+3x}\ln(x^2)\sin x\)</span> au voisinage de <span class="math notranslate nohighlight">\(+\infty\)</span>.</p></li>
+</ol>
+<p>Étudier si les fonctions suivantes sont dérivables et <span class="math notranslate nohighlight">\(C^1\)</span> sur <span class="math notranslate nohighlight">\(\mathbb{R}\)</span>:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+f(x)=\left\{\begin{array}{ll}
+x^2\sin\left(\frac 1x\right)&amp;x\neq 0\\
+0&amp;x=0
+\end{array}\right.\quad\quad\quad
+g(x)=\left\{\begin{array}{ll}
+x^3\sin\left(\frac 1x\right)&amp;x\neq 0\\
+0&amp;x=0.
+\end{array}\right.
+\end{split}\]</div>
 </div>
 </div>
 
@@ -344,8 +493,6 @@
         
         <div class='prev-next-bottom'>
             
-    <a class='left-prev' id="prev-link" href="fcthycerinvs.html" title="previous page">Fonctions circulaires inverses</a>
-    <a class='right-next' id="next-link" href="complements.html" title="next page">Complement sur les suites et les fonctions numériques</a>
 
         </div>
         
