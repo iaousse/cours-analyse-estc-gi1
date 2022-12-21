@@ -1,0 +1,576 @@
+
+<!DOCTYPE html>
+
+<html lang="fr">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Fonctions continues par morceaux &#8212; Cours Analyse</title>
+    
+  <link href="_static/css/theme.css" rel="stylesheet" />
+  <link href="_static/css/index.c5995385ac14fb8791e8eb36b4908be2.css" rel="stylesheet" />
+
+    
+  <link rel="stylesheet"
+    href="_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    
+      
+
+    
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="_static/sphinx-book-theme.e8e5499552300ddf5d7adccae7cc3b70.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="_static/proof.css" />
+    <link rel="stylesheet" type="text/css" href="_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
+    <link rel="stylesheet" type="text/css" href="_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
+    
+  <link rel="preload" as="script" href="_static/js/index.1c5a1a01449ed65a7b51.js">
+
+    <script id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+    <script src="_static/jquery.js"></script>
+    <script src="_static/underscore.js"></script>
+    <script src="_static/doctools.js"></script>
+    <script src="_static/togglebutton.js"></script>
+    <script src="_static/clipboard.min.js"></script>
+    <script src="_static/copybutton.js"></script>
+    <script src="_static/translations.js"></script>
+    <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="_static/sphinx-book-theme.12a9622fbb08dcb3a2a40b2c02b83a57.js"></script>
+    <script async="async" src="https://unpkg.com/thebelab@latest/lib/index.js"></script>
+    <script >
+        const thebe_selector = ".thebe"
+        const thebe_selector_input = "pre"
+        const thebe_selector_output = ".output"
+    </script>
+    <script async="async" src="_static/sphinx-thebe.js"></script>
+    <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/x-mathjax-config">MathJax.Hub.Config({"TeX": {"Macros": {"Z": "\\mathbb{Z}", "V": "V", "N": "\\mathbb{N}", "C": "\\mathbb{C}", "Q": "\\mathbb{Q}", "K": "\\mathbb{K}", "floor": ["\\lfloor#1\\rfloor", 1], "bmat": ["\\left[\\begin{array}"], "emat": ["\\end{array}\\right]"], "R": ["\\mathbb{R}"], "B": ["\\mathcal{B}"], "norm": ["{\\Vert#1\\Vert}", 1], "abs": ["{\\left|#1\\right|}", 1], "coloneqq": ["{:=}"], "eqqcolon": ["{=:}"], "emph": ["\\pmb#1", 1], "tr": "\\operatorname{Spur}", "lin": "\\operatorname{lin}", "dv": "\\mathrm{div}~", "rot": "\\mathrm{rot}~", "Dim": "\\operatorname{dim}", "diag": "\\operatorname{diag}", "Kern": "\\operatorname{Kern}", "Bild": "\\operatorname{Bild}", "Im": "\\operatorname{Im}", "Rang": "\\operatorname{Rang}", "GL": "\\operatorname{GL}", "Eig": "\\operatorname{Eig}", "End": "\\operatorname{End}", "Hau": "\\operatorname{Haupt}", "mymathbb": ["\\boldsymbol{#1}", 1], "idx": "\\mathrm{d}x", "d": "\\mathrm{d}", "i": "\\mathrm{i}", "x": "\\mathbf{x}", "sign": "\\mathrm{sign}", "vec": ["\\mathbf{#1}", 1], "veczwei": ["\\begin{pmatrix} #1 \\\\ #2 \\end{pmatrix}", 2], "M": "\\mathcal{M}", "S": "\\mathbb{S}", "bone": "\\unicode{x1D7D9}", "Re": "\\mathrm{Re}", "Um": "\\operatorname{Um}", "Res": "\\operatorname{Res}"}}, "tex2jax": {"inlineMath": [["\\(", "\\)"]], "displayMath": [["\\[", "\\]"]], "processRefs": false, "processEnvironments": false}})</script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Recherche" href="search.html" />
+    <link rel="next" title="Propriétés de l’intégrale" href="pptint.html" />
+    <link rel="prev" title="Intégrale des fonctions en escalier" href="fe.html" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="en" />
+    
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+    <div class="container-fluid" id="banner"></div>
+
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
+    
+        <div class="navbar-brand-box">
+    <a class="navbar-brand text-wrap" href="index.html">
+      
+      <img src="_static/logo.png" class="logo" alt="logo">
+      
+      
+      <h1 class="site-logo" id="site-title">Cours Analyse</h1>
+      
+    </a>
+</div><form class="bd-search d-flex align-items-center" action="search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Rechercher dans ce livre ..." aria-label="Rechercher dans ce livre ..." autocomplete="off" >
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
+    <div class="bd-toc-item active">
+        <ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="intro.html">
+   Introduction
+  </a>
+ </li>
+</ul>
+<ul class="current nav bd-sidenav">
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="R.html">
+   Les nombres réels
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/>
+  <label for="toctree-checkbox-1">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="rationnels.html">
+     Les nombres rationnels
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="proprties.html">
+     Propriétés de
+     <span class="math notranslate nohighlight">
+      \(\mathbb{R}\)
+     </span>
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="exo1.html">
+     Exercices
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="suite.html">
+   Les suites des nombres réels
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/>
+  <label for="toctree-checkbox-2">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="suites.html">
+     Suites réelles: Définitions générales
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="exo2.html">
+     Exercices
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="limitefct.html">
+   Fonctions numériques, limite et continuité
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/>
+  <label for="toctree-checkbox-3">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="limitefcts.html">
+     Fonctions numérique: Définitions générales
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="exo3.html">
+     Exercices
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="dirivf.html">
+   Dérivée d’une fonction numérique- fonctions usuelles
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/>
+  <label for="toctree-checkbox-4">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="dirivfs.html">
+     Dérivabilité d’une fonction numérique
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="fcthycerinvs.html">
+     Fonctions circulaires inverses
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="exo5.html">
+     Exercices
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="complement.html">
+   Complement sur les suites et les fonctions numériques
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/>
+  <label for="toctree-checkbox-5">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="complements.html">
+     Complément sur les suites et les fonctions numériques
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="exo6.html">
+     Exercices
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="dl.html">
+     Dévelopements limités
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 current active has-children">
+  <a class="reference internal" href="integrationd.html">
+   Intégration
+  </a>
+  <input checked="" class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" type="checkbox"/>
+  <label for="toctree-checkbox-6">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul class="current">
+   <li class="toctree-l2">
+    <a class="reference internal" href="fe.html">
+     Intégrale des fonctions en escalier
+    </a>
+   </li>
+   <li class="toctree-l2 current active">
+    <a class="current reference internal" href="#">
+     Fonctions continues par morceaux
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="pptint.html">
+     Propriétés de l’intégrale
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="fcmint.html">
+     Fonctions continue par morceaux sur un intervalle
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="pintfc.html">
+     Primitive et intégrale des fonctions continues
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="methodcalp.html">
+     Méthodes de calcul des primitives
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="exoint.html">
+     Exercices
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+
+    </div>
+</nav> <!-- To handle the deprecated key -->
+
+<div class="navbar_extra_footer">
+  Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
+</div>
+
+</div>
+
+
+          
+
+
+          
+<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
+    
+    <div class="topbar container-xl fixed-top">
+    <div class="topbar-contents row">
+        <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show"></div>
+        <div class="col pl-md-4 topbar-main">
+            
+            <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
+                data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
+                aria-expanded="true" aria-label="Basculer la navigation" aria-controls="site-navigation"
+                title="Basculer la navigation" data-toggle="tooltip" data-placement="left">
+                <i class="fas fa-bars"></i>
+                <i class="fas fa-arrow-left"></i>
+                <i class="fas fa-arrow-up"></i>
+            </button>
+            
+            
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Téléchargez cette page"><i
+            class="fas fa-download"></i></button>
+
+    <div class="dropdown-buttons">
+        <!-- ipynb file if we had a myst markdown file -->
+        
+        <!-- Download raw file -->
+        <a class="dropdown-buttons" href="_sources/fcm.md"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Télécharger le fichier source" data-toggle="tooltip"
+                data-placement="left">.md</button></a>
+        <!-- Download PDF via print -->
+        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Imprimer au format PDF"
+            onClick="window.print()" data-toggle="tooltip" data-placement="left">.pdf</button>
+    </div>
+</div>
+
+            <!-- Source interaction buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Connect with source repository"><i class="fab fa-github"></i></button>
+    <div class="dropdown-buttons sourcebuttons">
+        <a class="repository-button"
+            href="https://github.com/executablebooks/jupyter-book"><button type="button" class="btn btn-secondary topbarbtn"
+                data-toggle="tooltip" data-placement="left" title="Dépôt source"><i
+                    class="fab fa-github"></i>dépôt</button></a>
+        <a class="issues-button"
+            href="https://github.com/executablebooks/jupyter-book/issues/new?title=Issue%20on%20page%20%2Ffcm.html&body=Your%20issue%20content%20here."><button
+                type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
+                title="Ouvrez un problème"><i class="fas fa-lightbulb"></i>signaler un problème</button></a>
+        
+    </div>
+</div>
+
+            <!-- Full screen (wrap in <a> to have style consistency -->
+
+<a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
+        data-placement="bottom" onclick="toggleFullScreen()" aria-label="Mode plein écran"
+        title="Mode plein écran"><i
+            class="fas fa-expand"></i></button></a>
+
+            <!-- Launch buttons -->
+
+        </div>
+
+        <!-- Table of contents -->
+        <div class="d-none d-md-block col-md-2 bd-toc show">
+            
+            <div class="tocsection onthispage pt-5 pb-3">
+                <i class="fas fa-list"></i> Contenu
+            </div>
+            <nav id="bd-toc-nav">
+                <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#definition-exemples">
+   Définition, exemples
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#integrale-d-une-fonction-continue-par-morceaux">
+   Intégrale d’une fonction continue par morceaux
+  </a>
+ </li>
+</ul>
+
+            </nav>
+        </div>
+    </div>
+</div>
+    <div id="main-content" class="row">
+        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
+        
+              <div>
+                
+  <div class="section" id="fonctions-continues-par-morceaux">
+<h1>Fonctions continues par morceaux<a class="headerlink" href="#fonctions-continues-par-morceaux" title="Lien permanent vers ce titre">¶</a></h1>
+<div class="section" id="definition-exemples">
+<h2>Définition, exemples<a class="headerlink" href="#definition-exemples" title="Lien permanent vers ce titre">¶</a></h2>
+<div class="admonition-definition-4 admonition">
+<p class="admonition-title">Définition 4</p>
+<p>Une application <span class="math notranslate nohighlight">\(f\)</span> de <span class="math notranslate nohighlight">\([a, b]\)</span> dans <span class="math notranslate nohighlight">\(\mathbb{R}\)</span> est dite continue par morceaux s’il existe une subdivision <span class="math notranslate nohighlight">\(u=(x_i)_{i=0}^n\)</span> de <span class="math notranslate nohighlight">\([a, b]\)</span> telle que pour chaque <span class="math notranslate nohighlight">\(i \in \{1,\ldots, n\}\)</span> la restriction de <span class="math notranslate nohighlight">\(f\)</span> à <span class="math notranslate nohighlight">\(]x_{i-1}, x_i[\)</span> soit continue et admette des limites finies en <span class="math notranslate nohighlight">\(x_{i-1}\)</span> et <span class="math notranslate nohighlight">\(x_{i}\)</span>.</p>
+</div>
+<p>La subdivision <span class="math notranslate nohighlight">\(u\)</span> est dite adaptée à la fonction <span class="math notranslate nohighlight">\(f\)</span>.</p>
+<p>L’exemple suivant donne une illustration graphique d’une fonction continue par morceaux.</p>
+<p><strong>Illustration avec un exemple graphique</strong>:</p>
+<a class="bg-primary mb-1 reference internal image-reference" href="_images/fig1.PNG"><img alt="fishy" class="bg-primary mb-1 align-center" src="_images/fig1.PNG" style="width: 500px;" /></a>
+<div class="admonition-exemples admonition">
+<p class="admonition-title">Exemples</p>
+<ul class="simple">
+<li><p>Toute fonction en escalier est continue par morceaux.</p></li>
+<li><p>Toute fonction continue est continue par morceaux.</p></li>
+<li><p>La fonction <span class="math notranslate nohighlight">\(f\)</span> définie sur <span class="math notranslate nohighlight">\([-1, 1]\)</span> par :</p></li>
+</ul>
+<div class="math notranslate nohighlight">
+\[f(0)=0 \mbox{  et  } \forall x \in [-1, 1] \setminus \{0\}, f(x)=\dfrac{1}{x}
+\]</div>
+<p>n’est pas continue par morceaux, car elle n’a pas de limite finie à droite et à gauche de <span class="math notranslate nohighlight">\(0\)</span>.</p>
+</div>
+<div class="admonition-remarques admonition">
+<p class="admonition-title">Remarques</p>
+<p>Comme pour les fonctions en escalier, on peut vérifier que :</p>
+<ul class="simple">
+<li><p>si <span class="math notranslate nohighlight">\(u\)</span> est une subdivision adaptée à une fonction <span class="math notranslate nohighlight">\(f\)</span> continue par marceaux,
+alors toute subdivision plus fine que <span class="math notranslate nohighlight">\(u\)</span> est adaptée à <span class="math notranslate nohighlight">\(f\)</span>,</p></li>
+<li><p>si <span class="math notranslate nohighlight">\(f\)</span> et <span class="math notranslate nohighlight">\(g\)</span> sont deux fonctions continues par morceaux sur <span class="math notranslate nohighlight">\([a, b]\)</span> , alors il existe
+une subdivision adaptée à <span class="math notranslate nohighlight">\(f\)</span> et <span class="math notranslate nohighlight">\(g\)</span>.</p></li>
+</ul>
+</div>
+<div class="admonition-proposition-6 admonition">
+<p class="admonition-title">Proposition 6</p>
+<p>Une fonction continue par morceaux sur  <span class="math notranslate nohighlight">\([a, b]\)</span> est bornée sur <span class="math notranslate nohighlight">\([a, b]\)</span> .</p>
+</div>
+<div class="dropdown admonition">
+<p class="admonition-title">Démonstration</p>
+<p>Soit <span class="math notranslate nohighlight">\(f\)</span> une fonction continue par morceaux sur  <span class="math notranslate nohighlight">\([a, b]\)</span>. Soit <span class="math notranslate nohighlight">\(u=(x_i)_{i=0}^n\)</span> une subdivision adaptée à <span class="math notranslate nohighlight">\(f\)</span>.</p>
+<p>Pour chaque <span class="math notranslate nohighlight">\(i \in \{1, \ldots, n\}\)</span> admet des limites finies en <span class="math notranslate nohighlight">\(x_{i-1}\)</span> et <span class="math notranslate nohighlight">\(x_i\)</span>. Donc la restriction de <span class="math notranslate nohighlight">\(f\)</span> sur <span class="math notranslate nohighlight">\(]x_{i-1}, x_i[\)</span> admet un prolongement par continuité sur <span class="math notranslate nohighlight">\([x_{i-1}, x_i]\)</span> qui donc borne. Par suite, <span class="math notranslate nohighlight">\(f\)</span> est bornée sur <span class="math notranslate nohighlight">\(]x_{i-1}, x_i[\)</span>. Soit <span class="math notranslate nohighlight">\(M_i = \sup_{]x_{i-1}, x_i[}|f|\)</span></p>
+<p>En prenant <span class="math notranslate nohighlight">\(M = max (M_1, M_2, \ldots, M_n, |f(x_0)|, \ldots, |f(x_0)|)\)</span>, nous aurons <span class="math notranslate nohighlight">\(\forall x \in [a, b], |f(x)| \leq M\)</span>.</p>
+<p>Par suite, <span class="math notranslate nohighlight">\(f\)</span> est bornée sur <span class="math notranslate nohighlight">\([a, b]\)</span>.</p>
+</div>
+<div class="admonition-proposition-7 admonition">
+<p class="admonition-title">Proposition 7</p>
+<p>Soient <span class="math notranslate nohighlight">\(f\)</span> et <span class="math notranslate nohighlight">\(g\)</span> deux fonctions continues par morceaux sur <span class="math notranslate nohighlight">\([a,b]\)</span>. Les assertions suivantes sont correctes :</p>
+<ul class="simple">
+<li><p><span class="math notranslate nohighlight">\( \forall \lambda, \mu \in \mathbb R, \lambda f + \mu g\)</span> est continue par morceaux.</p></li>
+<li><p><span class="math notranslate nohighlight">\(fg\)</span> est continue par morceaux.</p></li>
+</ul>
+</div>
+<div class="dropdown admonition">
+<p class="admonition-title">Démonstration</p>
+<p>Soit <span class="math notranslate nohighlight">\(u=(x_i)_{i=0}^n\)</span> une subdivision adaptée à <span class="math notranslate nohighlight">\(f\)</span> et <span class="math notranslate nohighlight">\(g\)</span>.</p>
+<p>Les restrictions des fonctions <span class="math notranslate nohighlight">\(f\)</span> et <span class="math notranslate nohighlight">\(g\)</span> à chacun des intervalles <span class="math notranslate nohighlight">\( ]x_{i-1}, x_i[\)</span> sont continues et admettent des limites finies en  <span class="math notranslate nohighlight">\(x_{i-1}\)</span> et <span class="math notranslate nohighlight">\(x_i\)</span>, donc il en est de même pour <span class="math notranslate nohighlight">\(\lambda f + \mu g\)</span> et <span class="math notranslate nohighlight">\(fg\)</span>. Les fonctions
+<span class="math notranslate nohighlight">\(\lambda f + \mu g\)</span> et <span class="math notranslate nohighlight">\(fg\)</span> sont donc continues par morceaux sur <span class="math notranslate nohighlight">\([a, b]\)</span>.</p>
+</div>
+</div>
+<div class="section" id="integrale-d-une-fonction-continue-par-morceaux">
+<h2>Intégrale d’une fonction continue par morceaux<a class="headerlink" href="#integrale-d-une-fonction-continue-par-morceaux" title="Lien permanent vers ce titre">¶</a></h2>
+<div class="admonition-theoreme-admis admonition">
+<p class="admonition-title">Théorème (admis)</p>
+<p>Soit <span class="math notranslate nohighlight">\(f\)</span> une fonction continue par morceaux sur le segment <span class="math notranslate nohighlight">\([a, b]\)</span> . Pour tout
+réel <span class="math notranslate nohighlight">\(\epsilon &gt; O\)</span>:</p>
+<ul class="simple">
+<li><p>il existe une fonction en escalier <span class="math notranslate nohighlight">\(\theta\)</span> telle que <span class="math notranslate nohighlight">\(|f - \theta| \leq \epsilon\)</span></p></li>
+<li><p>il existe des fonctions en escalier <span class="math notranslate nohighlight">\(\varphi\)</span> et <span class="math notranslate nohighlight">\(\psi\)</span> telles que :</p></li>
+</ul>
+<div class="math notranslate nohighlight">
+\[
+\varphi \leq f \leq \psi \mbox{   et  } \psi - \varphi \leq \epsilon
+\]</div>
+</div>
+<p><strong>Notations</strong>: Dans ce qui suit, pour une fonction continue par morceaux <span class="math notranslate nohighlight">\(f\)</span> nous allons adopte les notations suivantes :</p>
+<ul class="simple">
+<li><p><span class="math notranslate nohighlight">\(\mathcal{E}^+(f)\)</span> l’ensemble des fonctions en escalier plus grandes que <span class="math notranslate nohighlight">\(f\)</span>.</p></li>
+<li><p><span class="math notranslate nohighlight">\(\mathcal{E}^-(f)\)</span> l’ensemble des fonctions en escalier plus petites que <span class="math notranslate nohighlight">\(f\)</span>.</p></li>
+</ul>
+<div class="admonition-proposition-8 admonition">
+<p class="admonition-title">Proposition 8</p>
+<p>Soit <span class="math notranslate nohighlight">\(f\)</span> une fonction continue par morceaux sur le segment <span class="math notranslate nohighlight">\([a, b]\)</span>. Alors :</p>
+<ul class="simple">
+<li><p><span class="math notranslate nohighlight">\(\left\{\int_{[a, b]} \varphi | \varphi \in \mathcal{E}^-(f)\right\}\)</span> admet une borne supérieure,</p></li>
+<li><p><span class="math notranslate nohighlight">\(\left\{\int_{[a, b]} \psi | \psi \in \mathcal{E}^+(f)\right\}\)</span> admet une borne inferieure,</p></li>
+</ul>
+<p>de plus,</p>
+<div class="math notranslate nohighlight">
+\[
+sup\left\{\int_{[a, b]} \varphi | \varphi \in \mathcal{E}^-(f)\right\}= inf\left\{\int_{[a, b]} \psi | \psi \in \mathcal{E}^+(f)\right\}
+\]</div>
+</div>
+<div class="dropdown admonition">
+<p class="admonition-title">Démonstration</p>
+<p>Soit <span class="math notranslate nohighlight">\(f\)</span> une fonction continue par morceaux sur <span class="math notranslate nohighlight">\([a, b]\)</span>. Donc <span class="math notranslate nohighlight">\(\left\{f(x)|x\in [a, b]\right\}\)</span> est une partie non vide de <span class="math notranslate nohighlight">\(\mathbb R\)</span> bornée donc admet une borne supérieure et une borne inferieure. Soit <span class="math notranslate nohighlight">\(m=\inf_{[a, b]} f\)</span> et <span class="math notranslate nohighlight">\(M=\sup_{[a, b]} f\)</span>.</p>
+<ul class="simple">
+<li><p>Les deux fonctions constantes <span class="math notranslate nohighlight">\(m\)</span> et <span class="math notranslate nohighlight">\(M\)</span> sur <span class="math notranslate nohighlight">\([a, b]\)</span> sont aussi continues par morceaux sur <span class="math notranslate nohighlight">\([a, b]\)</span>. <span class="math notranslate nohighlight">\(\left\{\int_{[a, b]} \varphi | \varphi \in \mathcal{E}^-(f)\right\}\)</span> est donc une partie de <span class="math notranslate nohighlight">\(\mathbb R\)</span> non vide majorée (par <span class="math notranslate nohighlight">\(M(b-a)\)</span>). Alors, elle possède une borne supérieure (<span class="math notranslate nohighlight">\(\alpha\)</span>). De même, <span class="math notranslate nohighlight">\(\left\{\int_{[a, b]} \psi | \psi \in \mathcal{E}^+(f)\right\}\)</span> une partie de <span class="math notranslate nohighlight">\(\mathbb R\)</span> non vide minorée donc possède une borne inferieure (<span class="math notranslate nohighlight">\(\beta\)</span>).</p></li>
+<li><p>Toute fonction <span class="math notranslate nohighlight">\(\varphi \in \mathcal{E}^-(f)\)</span> est inférieure à toute fonction <span class="math notranslate nohighlight">\(\psi \in \mathcal{E}^+(f)\)</span>. Par suite :</p></li>
+</ul>
+<div class="math notranslate nohighlight">
+\[
+\int_{[a, b]} \varphi \leq \int_{[a, b]} \psi
+\]</div>
+<p>Fixons <span class="math notranslate nohighlight">\(\psi \in \mathcal{E}^+(f)\)</span>. L’ensemble <span class="math notranslate nohighlight">\(\left\{\int_{[a, b]} \varphi | \varphi \in \mathcal{E}^-(f)\right\}\)</span> est majoreé par <span class="math notranslate nohighlight">\(\int_{[a, b]} \psi\)</span>. Alors nous avons forcement <span class="math notranslate nohighlight">\(\alpha \leq \int_{[a, b]} \psi\)</span> et ça pour tout <span class="math notranslate nohighlight">\(\psi \in \mathcal{E}^+(f)\)</span>. Donc <span class="math notranslate nohighlight">\(\alpha\)</span> est un minorant de <span class="math notranslate nohighlight">\(\left\{\int_{[a, b]} \psi | \psi \in \mathcal{E}^+(f)\right\}\)</span>. Par conséquent, <span class="math notranslate nohighlight">\(\alpha \leq \beta\)</span>.</p>
+<p>Donc</p>
+<div class="math notranslate nohighlight">
+\[
+\alpha \leq \beta
+\]</div>
+<ul class="simple">
+<li><p>soit <span class="math notranslate nohighlight">\(\epsilon &gt;0\)</span>. En utilisant le théorème précédant, il existe deux fonctions en escalier <span class="math notranslate nohighlight">\(\varphi \in \mathcal{E}^-(f)\)</span> et <span class="math notranslate nohighlight">\(\psi \in \mathcal{E}^+(f)\)</span>  tel que <span class="math notranslate nohighlight">\(\psi - \varphi \leq \epsilon\)</span>.</p></li>
+</ul>
+<p>Donc <span class="math notranslate nohighlight">\(\int_{[a, b]} \psi - \int_{[a, b]} \varphi \leq \int_{[a, b]} \epsilon = \epsilon(b-a)\)</span></p>
+<p>donc <span class="math notranslate nohighlight">\(0 \leq \beta - \alpha \leq \epsilon(b-a)\)</span></p>
+<p>Et ca pour tout <span class="math notranslate nohighlight">\(\epsilon \geq 0\)</span>.</p>
+<p>Donc <span class="math notranslate nohighlight">\(\alpha = \beta\)</span>.</p>
+</div>
+<div class="admonition-definition admonition">
+<p class="admonition-title">Définition</p>
+<p>Soit <span class="math notranslate nohighlight">\(f\)</span> une fonction continue par morceaux sur le segment <span class="math notranslate nohighlight">\([a, b]\)</span>.</p>
+<p>On appelle intégrale de <span class="math notranslate nohighlight">\(f\)</span> sur <span class="math notranslate nohighlight">\([a, b]\)</span> le réel</p>
+<div class="math notranslate nohighlight">
+\[
+\int_{[a, b]} f = sup\left\{\int_{[a, b]} \varphi | \varphi \in \mathcal{E}^-(f)\right\}= inf\left\{\int_{[a, b]} \psi | \psi \in \mathcal{E}^+(f)\right\}
+\]</div>
+</div>
+<p><strong>Question</strong> : Comparer l’intégrale d’une fonction en escalier avec son intégral en tant que fonction continue par morceaux.</p>
+<div class="hint dropdown admonition">
+<p class="admonition-title">Indications pour la réponse</p>
+<ul class="simple">
+<li><p>Une fonction en escalier est continue par morceaux ;</p></li>
+<li><p>si <span class="math notranslate nohighlight">\(f\)</span> est une fonction en escalier, alors <span class="math notranslate nohighlight">\(f \in \left\{\int_{[a, b]} \varphi | \varphi \in \mathcal{E}^-(f)\right\}\)</span> et <span class="math notranslate nohighlight">\( f \in \left\{\int_{[a, b]} \psi | \psi \in \mathcal{E}^+(f)\right\}\)</span>.</p></li>
+</ul>
+</div>
+<p>Nous avons vu que si <span class="math notranslate nohighlight">\(f\)</span> une fonction continue par morceaux sur <span class="math notranslate nohighlight">\([a, b]\)</span>, alors <span class="math notranslate nohighlight">\(f\)</span> est bornée. Soient <span class="math notranslate nohighlight">\(m = inf \left\{f(x)| x\in [a, b]\right\}\)</span> et <span class="math notranslate nohighlight">\(M = sup \left\{f(x)| x\in [a, b]\right\}\)</span>. <span class="math notranslate nohighlight">\(m\)</span> et <span class="math notranslate nohighlight">\(M\)</span> sont donc des fonctions en escalier sur <span class="math notranslate nohighlight">\([a, b]\)</span>. Leurs intégrales sont respectivement <span class="math notranslate nohighlight">\(m(b-a)\)</span> et <span class="math notranslate nohighlight">\(M(b-a)\)</span>.</p>
+<p>Et puisque <span class="math notranslate nohighlight">\(m \leq f \leq M\)</span>, nous avons <span class="math notranslate nohighlight">\(m(b-a)\leq \int_{[a,b]} f \leq M(b-a)\)</span>.</p>
+<p>Donc, la quantité <span class="math notranslate nohighlight">\(\dfrac{1}{b-a}\int_{[a, b]} f\)</span> est comprise entre <span class="math notranslate nohighlight">\(m\)</span> et <span class="math notranslate nohighlight">\(M\)</span>.</p>
+<div class="admonition-definition admonition">
+<p class="admonition-title">Définition</p>
+<p>Soit <span class="math notranslate nohighlight">\(f\)</span> une fonction continue par morceaux sur <span class="math notranslate nohighlight">\([a, b]\)</span>. La quantité <span class="math notranslate nohighlight">\(\dfrac{1}{b-a}\int_{[a, b]} f\)</span> s’appelle <strong>la valeur moyenne</strong> de <span class="math notranslate nohighlight">\(f\)</span>.</p>
+</div>
+</div>
+</div>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            kernelName: "python3",
+            path: "./."
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+              </div>
+              
+        
+        <div class='prev-next-bottom'>
+            
+    <a class='left-prev' id="prev-link" href="fe.html" title="previous page">Intégrale des fonctions en escalier</a>
+    <a class='right-next' id="next-link" href="pptint.html" title="next page">Propriétés de l’intégrale</a>
+
+        </div>
+        
+        </div>
+    </div>
+    <footer class="footer mt-5 mt-md-0">
+    <div class="container">
+      <p>
+        
+          Par Iaousse M'barek<br/>
+        
+      </p>
+    </div>
+  </footer>
+</main>
+
+
+      </div>
+    </div>
+  
+  <script src="_static/js/index.1c5a1a01449ed65a7b51.js"></script>
+
+  
+  </body>
+</html>

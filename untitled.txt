@@ -1,0 +1,12 @@
+exo limite fonctions: https://www.alloschool.com/assets/documents/course-439/limites-et-continuite-corrige-serie-d-exercices-2.pdf
+definition : standard
+
+theoreme: :class: important
+
+exemple: :class: warning
+
+proposition: :class: important
+
+remarque:   :class: tip
+
+preuve, demonstration    :class: seealso,  :class: dropdown

@@ -9,25 +9,30 @@
     - file: exo1
 - file: suite
   sections:
-    - file: rationnels
-    - file: notebooks
+    - file: suites
+    - file: exo2
 - file: limitefct
   sections:
-    - file: markdown
-    - file: notebooks
-- file: fctusuel
+    - file: limitefcts
+    - file: exo3
+- file: dirivf
   sections:
-    - file: markdown
-    - file: notebooks
-- file: driv
+    - file: dirivfs
+    - file: exo4t
+    - file: fcthycerinvs
+    - file: exo5
+- file: complement
   sections:
-    - file: markdown
-    - file: notebooks
-- file: integral
+    - file: complements
+    - file: exo6
+    - file: dl
+- file: integrationd
   sections:
-    - file: markdown
-    - file: notebooks
-- file: dl
-  sections:
-    - file: markdown
-    - file: notebooks
+    - file: fe
+    - file: fcm
+    - file: pptint
+    - file: sumreiman
+    - file: fcmint
+    - file: pintfc
+    - file: methodcalp
+    - file: exoint

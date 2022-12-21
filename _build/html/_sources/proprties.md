@@ -19,6 +19,7 @@ Ce sont les propriétés dont on a habitué. Pour $a,\,b,\,c\in\mathbb{R},$ on a
 On résume toutes ces propriétés en disant que :
 
 ```{admonition} Proposition
+:class: important
 $(\mathbb{R},+,\times)$ est un corps commutatif.
 ```
 ## Ordre sur $\mathbb{R}$
@@ -33,11 +34,11 @@ Soit $E$ un ensemble.
 1. Une relation $\mathcal{R}$ sur $E$ est un sous-ensemble de l'ensemble produit $E\times E.$ Pour $(x,y)\in E\times E,$ on dit que $x$ est en relation avec $y$ et on note $x\mathcal{R}y$ pour dire que $(x,y)\in R.$
 
 2. Une relation $\mathcal{R}$ est une relation d'ordre si 
-    - $\mathcal{R}$ est \textit{réflexive}: Pour tout $x\in E,$ $x\mathcal{R}x$
+    - $\mathcal{R}$ est _réflexive_: Pour tout $x\in E,$ $x\mathcal{R}x$
 
-    - $\mathcal{R}$ est \textit{antisymétrique}: pour tout $x,y\in E,$ $(x\mathcal{R}y\:\mbox{et} y\mathcal{R}x) \Rightarrow x=y.$
+    - $\mathcal{R}$ est _antisymétrique_: pour tout $x,y\in E,$ $(x\mathcal{R}y\:\mbox{et} y\mathcal{R}x) \Rightarrow x=y.$
 
-    - $\mathcal{R}$ est \textit{transitive}: pour tout $x,y,z\in E,$ $(x\mathcal{R}y\:\mbox{et} y\mathcal{R}z)\Rightarrow x\mathcal{R}z$
+    - $\mathcal{R}$ est _transitive_: pour tout $x,y,z\in E,$ $(x\mathcal{R}y\:\mbox{et} y\mathcal{R}z)\Rightarrow x\mathcal{R}z$
 
 ```
 
@@ -47,6 +48,7 @@ $(E,\mathcal{R})$ est un ensemble totalement ordonné.
 ```
 
 ```{admonition} Proposition
+:class: important
 La relation $\leq$ sur $\mathbb{R}$ est une relation d'ordre, et de plus, elle est totale.
 ```
 
@@ -92,8 +94,8 @@ $$
 ## Propriété d'Archimède
 
 ```{admonition} Proposition (Propriété d'Archimède)
-
-$\R$ est _archimédien_, c'est-à-dire: 
+:class: important
+$\mathbb{R}$ est _archimédien_, c'est-à-dire: 
 
 $$
 \forall x\in \mathbb{R},\exists n\in \mathbb{N};\,n> x
@@ -107,7 +109,7 @@ Cette propriété peut sembler évidente, elle est pourtant essentielle puisque 
 d'un nombre réel:
 
 ```{admonition} Proposition (partie entière)
-label: partent
+:class: important
 Soit $x\in R,$ il existe un unique entier relatif, la partie entière notée $E(x),$ tel que:
 
 $$
@@ -117,6 +119,7 @@ $$
 ```
 
 ```{admonition} Exemple
+:class: warning
 - $E(2, 853) = 2, E(\pi) = 3, E(-3,5) =-4.$
 
 - $E(x)=3\Leftrightarrow 3\leq x <4$
@@ -128,7 +131,7 @@ Pour la démonstration de la proposition de la [partie entière](partent) il y a
 qu'il est unique:
 
 ```{admonition} Preuve
-
+ :class: seealso, dropdown
 - **Existence**
 
 Supposons $x>0$.
@@ -177,6 +180,7 @@ $$
 ```
 
 ```{admonition} Proposition
+:class: important
 1. $|x|\geq0,\quad |x|=|-x|;\quad |x|>0\Leftrightarrow x\neq0$
 
 2. $\sqrt{x^2}=|x|$
@@ -192,16 +196,7 @@ $$
 Sur la droite numérique, $|x-y|$ représente la distance entre les réels $x$ et $y$ ; en particulier $|x|$ représente la distance
 entre les réels $x$ et 0. De plus on a $|x-a|<r\Leftrightarrow a-r<x<a+r.$
 
-```{admonition} Exercice
-1. Soient $x$ et $y$ deux réels. Montrer que $|x|\geq ||x+y|-|y||.$
 
-2. Soient $x_1,\ldots,x_n$ des réels. Montrer que $|x_1 +\ldots+ x_n
-|\leq|x1
-| + \ldots + |x_n
-|$. Dans quel cas a-t-on égalité?
-
-3. Soient $x, y > 0$ des réels. Comparer $E(x + y)$ avec $E(x)+E( y).$ Comparer $E(xy)$ et $E(x)E(y).$
-```
 
 
 # Densité de $\mathbb{Q}$ dans $\mathbb{R}$
@@ -219,6 +214,7 @@ $$
 ```
 
 ```{admonition} Remarque
+:class: tip
 Par définition;
 
 - $I=\varnothing$ est un intervalle.
@@ -240,7 +236,7 @@ Soit $a$ un réel, $V\subset R$ un sous-ensemble. On dit que $V$ est un voisinag
 ## Densité
 
 ```{admonition} Théorème
-
+:class: important
 1. $\mathbb{Q}$ est dense dans $\mathbb{R}$: tout intervalle ouvert (non vide) de $\mathbb{R}$ contient une infinité de rationnels.
 
 2.  $\mathbb{R}\setminus \mathbb{Q}$ est dense dans $\mathbb{R}$ : tout intervalle ouvert (non vide) de $\mathbb{R}$ contient une infinité d'irrationnels.
@@ -263,7 +259,7 @@ Le plus grand élément s'appelle aussi le maximum et le plus petit élément, l
 le plus grand élément ou le plus petit élément n'existent pas toujours.
 ```
 ```{admonition} Exemple
-
+:class: warning
 - 3 est un majorant de $]0, 2[ ;$
 
 - −7,$\pi,$ 0 sont des minorants de $]0,+\infty[$ mais il n'y a pas de majorant.
@@ -294,7 +290,7 @@ note $\inf A.$
 ```
 
 ```{admonition} Exemple
-
+:class: warning
 Soit $A =]0,1].$
 
 1. $\sup A = 1$ : en effet les majorants de $A$ sont les éléments de $[1,+\infty[.$ Donc le plus petit des majorants est 1.
@@ -318,12 +314,13 @@ Soit $A =]0,1].$
 ```
 
 ```{admonition} Théorème
+:class: important
 Toute partie de $\mathbb{R}$ non vide et majorée admet une borne supérieure.
 ```
 De la même façon : Toute partie de $\mathbb{R}$ non vide et minorée admet une borne inférieure.
 
 ```{admonition} Proposition (Caractérisation de la borne supérieure)
-
+:class: important
 Soit $A$ une partie non vide et majorée de $\mathbb{R}.$ La borne supérieure de $A$ est l'unique réel $\sup A$ tel que
 
 1. si $x\in A,$ alors $x \leqslant\sup A,$

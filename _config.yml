@@ -38,6 +38,7 @@ sphinx:
     latex_engine: pdflatex
     html_search_language: fr
     language: fr
+    html_show_copyright: false
     mathjax_config:
       TeX:
         Macros:
