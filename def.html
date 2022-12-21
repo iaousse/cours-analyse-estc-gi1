@@ -1,0 +1,729 @@
+
+<!DOCTYPE html>
+
+<html lang="fr">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Intégration sur un intervalle quelconque &#8212; Cours Analyse</title>
+    
+  <link href="_static/css/theme.css" rel="stylesheet" />
+  <link href="_static/css/index.c5995385ac14fb8791e8eb36b4908be2.css" rel="stylesheet" />
+
+    
+  <link rel="stylesheet"
+    href="_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    
+      
+
+    
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="_static/sphinx-book-theme.e8e5499552300ddf5d7adccae7cc3b70.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="_static/proof.css" />
+    <link rel="stylesheet" type="text/css" href="_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
+    <link rel="stylesheet" type="text/css" href="_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
+    
+  <link rel="preload" as="script" href="_static/js/index.1c5a1a01449ed65a7b51.js">
+
+    <script id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+    <script src="_static/jquery.js"></script>
+    <script src="_static/underscore.js"></script>
+    <script src="_static/doctools.js"></script>
+    <script src="_static/togglebutton.js"></script>
+    <script src="_static/clipboard.min.js"></script>
+    <script src="_static/copybutton.js"></script>
+    <script src="_static/translations.js"></script>
+    <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="_static/sphinx-book-theme.12a9622fbb08dcb3a2a40b2c02b83a57.js"></script>
+    <script async="async" src="https://unpkg.com/thebelab@latest/lib/index.js"></script>
+    <script >
+        const thebe_selector = ".thebe"
+        const thebe_selector_input = "pre"
+        const thebe_selector_output = ".output"
+    </script>
+    <script async="async" src="_static/sphinx-thebe.js"></script>
+    <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/x-mathjax-config">MathJax.Hub.Config({"TeX": {"Macros": {"Z": "\\mathbb{Z}", "V": "V", "N": "\\mathbb{N}", "C": "\\mathbb{C}", "Q": "\\mathbb{Q}", "K": "\\mathbb{K}", "floor": ["\\lfloor#1\\rfloor", 1], "bmat": ["\\left[\\begin{array}"], "emat": ["\\end{array}\\right]"], "R": ["\\mathbb{R}"], "B": ["\\mathcal{B}"], "norm": ["{\\Vert#1\\Vert}", 1], "abs": ["{\\left|#1\\right|}", 1], "coloneqq": ["{:=}"], "eqqcolon": ["{=:}"], "emph": ["\\pmb#1", 1], "tr": "\\operatorname{Spur}", "lin": "\\operatorname{lin}", "dv": "\\mathrm{div}~", "rot": "\\mathrm{rot}~", "Dim": "\\operatorname{dim}", "diag": "\\operatorname{diag}", "Kern": "\\operatorname{Kern}", "Bild": "\\operatorname{Bild}", "Im": "\\operatorname{Im}", "Rang": "\\operatorname{Rang}", "GL": "\\operatorname{GL}", "Eig": "\\operatorname{Eig}", "End": "\\operatorname{End}", "Hau": "\\operatorname{Haupt}", "mymathbb": ["\\boldsymbol{#1}", 1], "idx": "\\mathrm{d}x", "d": "\\mathrm{d}", "i": "\\mathrm{i}", "x": "\\mathbf{x}", "sign": "\\mathrm{sign}", "vec": ["\\mathbf{#1}", 1], "veczwei": ["\\begin{pmatrix} #1 \\\\ #2 \\end{pmatrix}", 2], "M": "\\mathcal{M}", "S": "\\mathbb{S}", "bone": "\\unicode{x1D7D9}", "Re": "\\mathrm{Re}", "Um": "\\operatorname{Um}", "Res": "\\operatorname{Res}"}}, "tex2jax": {"inlineMath": [["\\(", "\\)"]], "displayMath": [["\\[", "\\]"]], "processRefs": false, "processEnvironments": false}})</script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Recherche" href="search.html" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="en" />
+    
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+    <div class="container-fluid" id="banner"></div>
+
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
+    
+        <div class="navbar-brand-box">
+    <a class="navbar-brand text-wrap" href="index.html">
+      
+      <img src="_static/logo.png" class="logo" alt="logo">
+      
+      
+      <h1 class="site-logo" id="site-title">Cours Analyse</h1>
+      
+    </a>
+</div><form class="bd-search d-flex align-items-center" action="search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Rechercher dans ce livre ..." aria-label="Rechercher dans ce livre ..." autocomplete="off" >
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
+    <div class="bd-toc-item active">
+        <ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="intro.html">
+   Introduction
+  </a>
+ </li>
+</ul>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="R.html">
+   Les nombres réels
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/>
+  <label for="toctree-checkbox-1">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="rationnels.html">
+     Les nombres rationnels
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="proprties.html">
+     Propriétés de
+     <span class="math notranslate nohighlight">
+      \(\mathbb{R}\)
+     </span>
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="exo1.html">
+     Exercices
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="suite.html">
+   Les suites des nombres réels
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/>
+  <label for="toctree-checkbox-2">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="suites.html">
+     Suites réelles: Définitions générales
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="exo2.html">
+     Exercices
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="limitefct.html">
+   Fonctions numériques, limite et continuité
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/>
+  <label for="toctree-checkbox-3">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="limitefcts.html">
+     Fonctions numérique: Définitions générales
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="exo3.html">
+     Exercices
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="dirivf.html">
+   Dérivée d’une fonction numérique- fonctions usuelles
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/>
+  <label for="toctree-checkbox-4">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="dirivfs.html">
+     Dérivabilité d’une fonction numérique
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="fcthycerinvs.html">
+     Fonctions circulaires inverses
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="exo5.html">
+     Exercices
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="complement.html">
+   Complement sur les suites et les fonctions numériques
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/>
+  <label for="toctree-checkbox-5">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="complements.html">
+     Complément sur les suites et les fonctions numériques
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="exo6.html">
+     Exercices
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="dl.html">
+     Dévelopements limités
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="integrationd.html">
+   Intégration
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" type="checkbox"/>
+  <label for="toctree-checkbox-6">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="fe.html">
+     Intégrale des fonctions en escalier
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="fcm.html">
+     Fonctions continues par morceaux
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="pptint.html">
+     Propriétés de l’intégrale
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="fcmint.html">
+     Fonctions continue par morceaux sur un intervalle
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="pintfc.html">
+     Primitive et intégrale des fonctions continues
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="methodcalp.html">
+     Méthodes de calcul des primitives
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="exoint.html">
+     Exercices
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+
+    </div>
+</nav> <!-- To handle the deprecated key -->
+
+<div class="navbar_extra_footer">
+  Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
+</div>
+
+</div>
+
+
+          
+
+
+          
+<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
+    
+    <div class="topbar container-xl fixed-top">
+    <div class="topbar-contents row">
+        <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show"></div>
+        <div class="col pl-md-4 topbar-main">
+            
+            <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
+                data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
+                aria-expanded="true" aria-label="Basculer la navigation" aria-controls="site-navigation"
+                title="Basculer la navigation" data-toggle="tooltip" data-placement="left">
+                <i class="fas fa-bars"></i>
+                <i class="fas fa-arrow-left"></i>
+                <i class="fas fa-arrow-up"></i>
+            </button>
+            
+            
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Téléchargez cette page"><i
+            class="fas fa-download"></i></button>
+
+    <div class="dropdown-buttons">
+        <!-- ipynb file if we had a myst markdown file -->
+        
+        <!-- Download raw file -->
+        <a class="dropdown-buttons" href="_sources/def.md"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Télécharger le fichier source" data-toggle="tooltip"
+                data-placement="left">.md</button></a>
+        <!-- Download PDF via print -->
+        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Imprimer au format PDF"
+            onClick="window.print()" data-toggle="tooltip" data-placement="left">.pdf</button>
+    </div>
+</div>
+
+            <!-- Source interaction buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Connect with source repository"><i class="fab fa-github"></i></button>
+    <div class="dropdown-buttons sourcebuttons">
+        <a class="repository-button"
+            href="https://github.com/executablebooks/jupyter-book"><button type="button" class="btn btn-secondary topbarbtn"
+                data-toggle="tooltip" data-placement="left" title="Dépôt source"><i
+                    class="fab fa-github"></i>dépôt</button></a>
+        <a class="issues-button"
+            href="https://github.com/executablebooks/jupyter-book/issues/new?title=Issue%20on%20page%20%2Fdef.html&body=Your%20issue%20content%20here."><button
+                type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
+                title="Ouvrez un problème"><i class="fas fa-lightbulb"></i>signaler un problème</button></a>
+        
+    </div>
+</div>
+
+            <!-- Full screen (wrap in <a> to have style consistency -->
+
+<a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
+        data-placement="bottom" onclick="toggleFullScreen()" aria-label="Mode plein écran"
+        title="Mode plein écran"><i
+            class="fas fa-expand"></i></button></a>
+
+            <!-- Launch buttons -->
+
+        </div>
+
+        <!-- Table of contents -->
+        <div class="d-none d-md-block col-md-2 bd-toc show">
+            
+            <div class="tocsection onthispage pt-5 pb-3">
+                <i class="fas fa-list"></i> Contenu
+            </div>
+            <nav id="bd-toc-nav">
+                <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#integration-sur-un-intervalle-semi-ouvert">
+   Intégration sur un intervalle semi-ouvert
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#reste-d-une-integrale-convergente">
+   Reste d’une intégrale convergente
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#integrale-d-une-fonction-sur-un-intervalle-ouvert">
+   Intégrale d’une fonction sur un intervalle ouvert
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#proprietes-des-integrales-convergentes">
+   Propriétés des intégrales convergentes
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#positivite">
+     Positivité
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#integration-par-parties">
+     Intégration par parties
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#changement-de-variables">
+     Changement de variables
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#cas-des-fonctions-positives">
+   Cas des fonctions positives
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#condition-necessaire-et-suffisante-de-convergence">
+     Condition nécessaire et suffisante de convergence
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#critere-de-comparaison">
+     Critère de comparaison
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#cas-des-fonctions-de-signe-quelconque">
+   Cas des fonctions de signe quelconque
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#convergence-absolue">
+     Convergence absolue
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+
+            </nav>
+        </div>
+    </div>
+</div>
+    <div id="main-content" class="row">
+        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
+        
+              <div>
+                
+  <div class="section" id="integration-sur-un-intervalle-quelconque">
+<h1>Intégration sur un intervalle quelconque<a class="headerlink" href="#integration-sur-un-intervalle-quelconque" title="Lien permanent vers ce titre">¶</a></h1>
+<p>Dans les chapitres précédents, nous avons définies <span class="math notranslate nohighlight">\(\int_a^b f(t)dt\)</span>, pour une fonction continue ou continue par morceaux sur <span class="math notranslate nohighlight">\([a, b]\)</span>. Dans le présent chapitre, étant donnée une fonction continue seulement sur <span class="math notranslate nohighlight">\(]a, b[\)</span>, on cherche a donner un sens a <span class="math notranslate nohighlight">\(\int_a^b f(t)dt\)</span>.</p>
+<div class="section" id="integration-sur-un-intervalle-semi-ouvert">
+<h2>Intégration sur un intervalle semi-ouvert<a class="headerlink" href="#integration-sur-un-intervalle-semi-ouvert" title="Lien permanent vers ce titre">¶</a></h2>
+<div class="admonition-definition admonition">
+<p class="admonition-title">Définition</p>
+<p>Soit <span class="math notranslate nohighlight">\(f\)</span> une fonction continue sur l’intervalle <span class="math notranslate nohighlight">\([a, b[\)</span> ou <span class="math notranslate nohighlight">\((-\infty &lt;a &lt; b \leq +\infty)\)</span>.
+On dit que l’intégrale <span class="math notranslate nohighlight">\(\int_a^b f(t)dt\)</span> converge ou est convergent si la fonction <span class="math notranslate nohighlight">\(x\mapsto \int_a^x f(t)dt\)</span>, qui est définie sur <span class="math notranslate nohighlight">\([a, b[\)</span>  possède une limite finie en <span class="math notranslate nohighlight">\(b\)</span>.</p>
+</div>
+<p>On note donc <span class="math notranslate nohighlight">\(\int_a^b f(t)dt = \lim_{x\to b} \int_a^x f(t)dt\)</span>. Si cette intégrale n’est pas convergente, on dit qu’elle est convergente. L’intégrale <span class="math notranslate nohighlight">\(\int_a^b f(t)dt\)</span> est dite impropre (ou généralisée). On dit aussi qu’il y a une impropreté en <span class="math notranslate nohighlight">\(b\)</span>. Ou encore que l’intégrale est généralisée en <span class="math notranslate nohighlight">\(b\)</span>.</p>
+<p><strong>Remarques :</strong></p>
+<ul class="simple">
+<li><p>Si f est continue sur <span class="math notranslate nohighlight">\([a, b]\)</span>, on retrouve la définition de l’intégrale d’une fonction continue sur le segment <span class="math notranslate nohighlight">\([a, b]\)</span>.</p></li>
+<li><p>Si <span class="math notranslate nohighlight">\(b\)</span> est fini et <span class="math notranslate nohighlight">\(f\)</span> admet un prolongement par continuité en <span class="math notranslate nohighlight">\(b\)</span>, l’intégrale <span class="math notranslate nohighlight">\(\int_a^b f(t)dt\)</span> converge, car si <span class="math notranslate nohighlight">\(\tilde{f}\)</span> est le prolongement par continuité de <span class="math notranslate nohighlight">\(f\)</span>, on obtient:</p></li>
+</ul>
+<div class="math notranslate nohighlight">
+\[
+\lim_{x \to b} \int_a^x f(t)dt = \lim_{x\to b} \int_a^x \tilde{f}(t)dt = \int_a^b \tilde{f}(t)dt
+\]</div>
+<p>On dit qu’on a une « fausse impropreté » en <span class="math notranslate nohighlight">\(b\)</span>.</p>
+<ul class="simple">
+<li><p>Si <span class="math notranslate nohighlight">\(b=+\infty\)</span>, l’intégrale <span class="math notranslate nohighlight">\(\int_a^b f(t)dt\)</span> est toujours impropre.</p></li>
+</ul>
+<div class="admonition-proposition admonition">
+<p class="admonition-title">Proposition</p>
+<p>Si <span class="math notranslate nohighlight">\(f\)</span> est une fonction continue sur l’intervalle <span class="math notranslate nohighlight">\([a, b[\)</span>, <span class="math notranslate nohighlight">\((-\infty &lt;a &lt; b \leq +\infty)\)</span>, l’intégrale <span class="math notranslate nohighlight">\(\int_a^b f(t)dt\)</span> est convergent si, et seulement si, toute primitive <span class="math notranslate nohighlight">\(F\)</span> de <span class="math notranslate nohighlight">\(f\)</span> possède une limite finie en <span class="math notranslate nohighlight">\(b\)</span> et l’in a alors:</p>
+<div class="math notranslate nohighlight">
+\[
+\int_a^b f(t)dt = \lim_{x\to b} F(x) - F(a)
+\]</div>
+</div>
+<div class="admonition-preuve admonition">
+<p class="admonition-title">Preuve</p>
+<p>Nous avons <span class="math notranslate nohighlight">\(\int_a^x f(t)dt=F(x)-F(a)\)</span>.</p>
+</div>
+<p><strong>Remarques :</strong></p>
+<ul class="simple">
+<li><p>Dans le cas où on connait une primitive de <span class="math notranslate nohighlight">\(f\)</span>, on peut ainsi déterminer la nature convergente ou divergente de l’intégrale et la calculer.</p></li>
+<li><p>Il résulte de cette proposition que si <span class="math notranslate nohighlight">\(c\in ]a, b[\)</span>, l’intégrale <span class="math notranslate nohighlight">\(\int_a^b f(t)dt\)</span> converge si, et seulement si, <span class="math notranslate nohighlight">\(\int_c^b f(t)dt\)</span> converge. La nature de l’intégrale <span class="math notranslate nohighlight">\(\int_a^b f(t)dt\)</span> ne dépend pas donc que du comportement de <span class="math notranslate nohighlight">\(f\)</span> au voisinage de l’impropre <span class="math notranslate nohighlight">\(b\)</span>.</p></li>
+</ul>
+<div class="admonition-exemples admonition">
+<p class="admonition-title">Exemples</p>
+<ul class="simple">
+<li><p>la fonction <span class="math notranslate nohighlight">\( t \mapsto e^{-t}\)</span> est continue sur <span class="math notranslate nohighlight">\([0, +\infty[\)</span> et a pour primitive la fonction <span class="math notranslate nohighlight">\(t\mapsto -e^{-t}\)</span>. Comme <span class="math notranslate nohighlight">\(\lim_{t \to +\infty} -e^{-t} = 0\)</span>, l’integrale <span class="math notranslate nohighlight">\(\int_0^{+\infty} e^{-t}dt\)</span> converge et</p></li>
+</ul>
+<div class="math notranslate nohighlight">
+\[
+\int_0^{+\infty}e^{-t}dt = \lim_{t\to +\infty} -e^{-t} + e^{0} = 1
+\]</div>
+<p>2- L’intégrale <span class="math notranslate nohighlight">\(\int_0^{+\infty} sin(t)dt\)</span> diverge, car la fonction <span class="math notranslate nohighlight">\(-cos\)</span>, primitive de <span class="math notranslate nohighlight">\(sin\)</span> n’a pas de limite en <span class="math notranslate nohighlight">\(+\infty\)</span>.</p>
+</div>
+</div>
+<div class="section" id="reste-d-une-integrale-convergente">
+<h2>Reste d’une intégrale convergente<a class="headerlink" href="#reste-d-une-integrale-convergente" title="Lien permanent vers ce titre">¶</a></h2>
+<div class="admonition-definition admonition">
+<p class="admonition-title">Définition</p>
+<p>Soit <span class="math notranslate nohighlight">\(f\)</span> une fonction continue sur l’intervalle <span class="math notranslate nohighlight">\([a, b[\)</span>, <span class="math notranslate nohighlight">\((-\infty &lt;a &lt; b \leq +\infty)\)</span></p>
+<p>On suppose que l’intégrale <span class="math notranslate nohighlight">\(\int_a^b f(t)dt\)</span>  est convergente. On appelle reste de cette intégrale impropre l’intégrale <span class="math notranslate nohighlight">\(\int_x^b f(t)dt\)</span> ou <span class="math notranslate nohighlight">\(x\in]a, b[\)</span>.</p>
+</div>
+<div class="admonition-proposition admonition">
+<p class="admonition-title">Proposition</p>
+<p>Soit <span class="math notranslate nohighlight">\(f\)</span> une fonction continue sur l’intervalle <span class="math notranslate nohighlight">\([a, b[\)</span>, <span class="math notranslate nohighlight">\((-\infty &lt;a &lt; b \leq +\infty)\)</span> telle que l’intégrale <span class="math notranslate nohighlight">\(\int_a^b f(t)dt\)</span> converge, Le reste <span class="math notranslate nohighlight">\(\int_x^b f(t)dt\)</span> ou <span class="math notranslate nohighlight">\(x\in ]a, b[\)</span> a pour limite 0 quand <span class="math notranslate nohighlight">\(x\)</span> tend vers <span class="math notranslate nohighlight">\(b\)</span>.</p>
+</div>
+<div class="admonition-preuve admonition">
+<p class="admonition-title">Preuve</p>
+<p>Nous avons <span class="math notranslate nohighlight">\(\lim_{x\to b} \int_x^b f(t)dt = \lim_{x\to b} ( \lim_{u\to b} F(u)- F(x)) = \lim_{u\to b} F(u)- \lim_{x\to b}F(x) =0\)</span></p>
+</div>
+<p>On définit de la même façon l’intégrale d’une fonction continue sur <span class="math notranslate nohighlight">\(]a, b]\)</span>.</p>
+<div class="admonition-definition admonition">
+<p class="admonition-title">Définition</p>
+<p>Soit <span class="math notranslate nohighlight">\(f\)</span> une fonction continue sur l’intervalle <span class="math notranslate nohighlight">\(]a, b]\)</span> ou <span class="math notranslate nohighlight">\((-\infty \leq a &lt; b &lt; +\infty)\)</span>.
+On dit que l’intégrale <span class="math notranslate nohighlight">\(\int_a^b f(t)dt\)</span> converge ou est convergent si la fonction <span class="math notranslate nohighlight">\(x\mapsto \int_x^b f(t)dt\)</span>, qui est définie sur <span class="math notranslate nohighlight">\(]a, b]\)</span>  possède une limite finie en <span class="math notranslate nohighlight">\(a\)</span>.</p>
+</div>
+<p>On note donc <span class="math notranslate nohighlight">\(\int_a^b f(t)dt = \lim_{x\to a} \int_x^b f(t)dt\)</span>.</p>
+<div class="admonition-proposition admonition">
+<p class="admonition-title">Proposition</p>
+<p>Soit <span class="math notranslate nohighlight">\(f\)</span> une fonction continue sur l’intervalle <span class="math notranslate nohighlight">\(]a, b]\)</span> ou <span class="math notranslate nohighlight">\((-\infty \leq a &lt; b &lt; +\infty)\)</span>, l’intégrale <span class="math notranslate nohighlight">\(\int_a^b f(t)dt\)</span> est convergent si, et seulement si, toute primitive <span class="math notranslate nohighlight">\(F\)</span> de <span class="math notranslate nohighlight">\(f\)</span> possède une limite finie en <span class="math notranslate nohighlight">\(a\)</span> et l’on a alors:</p>
+<div class="math notranslate nohighlight">
+\[
+\int_a^b f(t)dt = F(b) -\lim_{x\to a}F(x)
+\]</div>
+</div>
+<div class="admonition-exemple admonition">
+<p class="admonition-title">Exemple</p>
+<p>Montrons la convergence de <span class="math notranslate nohighlight">\(\int_0^1 ln(t)dt\)</span>, qui est impropre car la fonction <span class="math notranslate nohighlight">\(ln\)</span> est continue sur <span class="math notranslate nohighlight">\(]0, 1]\)</span> mais n’est pas définie en 0.</p>
+<p>On obtient pour <span class="math notranslate nohighlight">\(x\in ]0, 1]\)</span>, en intégrant par parties,</p>
+<p><span class="math notranslate nohighlight">\(\int_x^1 ln(t)dt=[tln(t)]_{x}^1 - \int_x^1dt = xln(x)-1 + x\)</span>.</p>
+<p>Comme <span class="math notranslate nohighlight">\(\lim_{x\to 0} xln(x)=0\)</span>, on en déduit que <span class="math notranslate nohighlight">\(\int_0^1ln(t)dt \)</span> converge et <span class="math notranslate nohighlight">\(\int_0^1ln(t)dt =-1\)</span>.</p>
+</div>
+<p><strong>Remarques :</strong> Comme précédemment, si <span class="math notranslate nohighlight">\(f\)</span> est continue sur <span class="math notranslate nohighlight">\(]a, b]\)</span>, le reste de l’intégrale convergente <span class="math notranslate nohighlight">\(\int_a^b f(t)dt\)</span>, qui est <span class="math notranslate nohighlight">\(\int_a^x f(t)dt\)</span>, tend vers 0 quand <span class="math notranslate nohighlight">\(x\)</span> tend vers <span class="math notranslate nohighlight">\(a\)</span>.</p>
+</div>
+<div class="section" id="integrale-d-une-fonction-sur-un-intervalle-ouvert">
+<h2>Intégrale d’une fonction sur un intervalle ouvert<a class="headerlink" href="#integrale-d-une-fonction-sur-un-intervalle-ouvert" title="Lien permanent vers ce titre">¶</a></h2>
+<div class="admonition-definition admonition">
+<p class="admonition-title">Définition</p>
+<p>Soit <span class="math notranslate nohighlight">\(f\)</span> continue sur <span class="math notranslate nohighlight">\(]a, b[\)</span> ou <span class="math notranslate nohighlight">\((-\infty \leq a &lt; b \leq +\infty)\)</span>, <span class="math notranslate nohighlight">\(c \in ]a, b[\)</span>. On dit que l’intégrale <span class="math notranslate nohighlight">\(\int_a^b f(t)dt\)</span> converge si <span class="math notranslate nohighlight">\(\int_a^c f(t)dt\)</span> et <span class="math notranslate nohighlight">\(\int_c^b f(t)dt\)</span> convergent et l’on pose, en cas de convergence,</p>
+<div class="math notranslate nohighlight">
+\[
+\int_a^b f(t)dt = \int_a^c f(t)dt + \int_c^b f(t)dt
+\]</div>
+</div>
+<p>Cette définition ne dépend pas du choix du point <span class="math notranslate nohighlight">\(c\)</span> comme le montre la proposition suivante:</p>
+<div class="admonition-proposition admonition">
+<p class="admonition-title">Proposition</p>
+<p>Soit <span class="math notranslate nohighlight">\(f\)</span> continue sur <span class="math notranslate nohighlight">\(]a, b[\)</span> ou <span class="math notranslate nohighlight">\((-\infty \leq a &lt; b \leq +\infty)\)</span>, <span class="math notranslate nohighlight">\(c \in ]a, b[\)</span>. L’intégrale <span class="math notranslate nohighlight">\(\int_a^b f(t)dt\)</span> converge si, et seulement si, toute primitive <span class="math notranslate nohighlight">\(F\)</span> de <span class="math notranslate nohighlight">\(f\)</span> sur <span class="math notranslate nohighlight">\(]a, b[\)</span> possède une limite finie en <span class="math notranslate nohighlight">\(a\)</span> et <span class="math notranslate nohighlight">\(b\)</span> et en cas de convergence, on a</p>
+<div class="math notranslate nohighlight">
+\[
+\int_a^b f(t)dt = \lim_b F - \lim_a F
+\]</div>
+</div>
+<div class="admonition-theoreme admonition">
+<p class="admonition-title">Théorème</p>
+<p>Soit <span class="math notranslate nohighlight">\(\alpha\)</span> un réel quelconque.</p>
+<p>Si <span class="math notranslate nohighlight">\(a\)</span> est un réel positif, l’intégrale <span class="math notranslate nohighlight">\(\int_0^a \dfrac{1}{t^\alpha} dt \)</span> converge si, et seulement si, <span class="math notranslate nohighlight">\(\alpha &lt;1\)</span>; l’intégrale <span class="math notranslate nohighlight">\(\int_a^{+\infty} \dfrac{1}{t^\alpha} dt \)</span> converge si, et seulement si, <span class="math notranslate nohighlight">\(\alpha &gt; 1\)</span>.</p>
+<p>Plus généralement, si <span class="math notranslate nohighlight">\(a\)</span> et <span class="math notranslate nohighlight">\(b\)</span> sont des réels tels <span class="math notranslate nohighlight">\(a&lt;b\)</span>, <span class="math notranslate nohighlight">\(\int_a^b \dfrac{1}{(t-a)^{\alpha}}dt \)</span> converge si, et seulement si <span class="math notranslate nohighlight">\(\alpha &lt;1\)</span>.</p>
+</div>
+</div>
+<div class="section" id="proprietes-des-integrales-convergentes">
+<h2>Propriétés des intégrales convergentes<a class="headerlink" href="#proprietes-des-integrales-convergentes" title="Lien permanent vers ce titre">¶</a></h2>
+<div class="admonition-definition admonition">
+<p class="admonition-title">Définition</p>
+<p>Soit <span class="math notranslate nohighlight">\(f : [a, b] \to \mathbb R\)</span>.</p>
+<p>On suppose qu’il existe une subdivision <span class="math notranslate nohighlight">\(a_0=a &lt; a_1 &lt; \ldots &lt; a_p=b\)</span> de <span class="math notranslate nohighlight">\([a, b]\)</span> telle que <span class="math notranslate nohighlight">\(f\)</span> soit définie et continue sur chaque intervalle <span class="math notranslate nohighlight">\(]a_k, a_{k+1}[\)</span>(<span class="math notranslate nohighlight">\(0\leq k \leq (p-1)\)</span>). On dit que l’intégrale <span class="math notranslate nohighlight">\(\int_a^b f(t)dt\)</span> converge si, pour <span class="math notranslate nohighlight">\(0\leq k \leq p-1\)</span>, <span class="math notranslate nohighlight">\(\int_{a_{k}}^{a_{k+1}} f(t)dt\)</span> converge. Le cas échéant, on pose :</p>
+<div class="math notranslate nohighlight">
+\[
+\int_a^b f(t)dt = \sum_{k=0}^{p-1} \int_{a_{k}}^{a_{k+1}} f(t)dt
+\]</div>
+</div>
+<p><strong>Remarques :</strong></p>
+<ul class="simple">
+<li><p>Dans la définition précédente, le résultat ne dépend pas de la subdivision choisie.</p></li>
+<li><p>Si <span class="math notranslate nohighlight">\(f\)</span> est continue par morceaux alors les intégrales <span class="math notranslate nohighlight">\(\int_{a_{k}}^{a_{k+1}} f(t)dt\)</span> convergent car sa restriction sur <span class="math notranslate nohighlight">\([a_k, a_{k+1}]\)</span> possède un prolongement par continuité en <span class="math notranslate nohighlight">\(a_k\)</span> et <span class="math notranslate nohighlight">\(a_{k+1}\)</span>.</p></li>
+</ul>
+<p>Les théorèmes qui suivent sont des versions « intégrales impropres » des propriétés des intégrales sur un segment.</p>
+<div class="admonition-theoreme admonition">
+<p class="admonition-title">Théorème</p>
+<p>Soit <span class="math notranslate nohighlight">\(f\)</span> et <span class="math notranslate nohighlight">\(g\)</span> deux fonctions définies et continue sur l’intervalle <span class="math notranslate nohighlight">\([a, b]\)</span>, <span class="math notranslate nohighlight">\((-\infty \leq a &lt; b \leq +\infty)\)</span> sauf en un nombre fini de points, <span class="math notranslate nohighlight">\(\lambda\)</span> et <span class="math notranslate nohighlight">\(\mu\)</span> deux réels. Si les intégrales <span class="math notranslate nohighlight">\(\int_a^b f(t)dt\)</span> et <span class="math notranslate nohighlight">\(\int_a^b g(t)dt\)</span> convergent, alors <span class="math notranslate nohighlight">\(\int_a^b (\lambda f + \mu g)(t)dt\)</span> converge et</p>
+<div class="math notranslate nohighlight">
+\[
+\int_a^b (\lambda f + \mu g)(t)dt = \lambda\int_a^b f(t)dt + \mu\int_a^b g(t)dt
+\]</div>
+</div>
+<div class="admonition-proposition admonition">
+<p class="admonition-title">Proposition</p>
+<p>Soit <span class="math notranslate nohighlight">\(f\)</span> une fonction définie et continue sur l’intervalle <span class="math notranslate nohighlight">\([a, b]\)</span>, <span class="math notranslate nohighlight">\((-\infty \leq a &lt; b \leq +\infty)\)</span> sauf en un nombre fini de points, <span class="math notranslate nohighlight">\(c \in ]a, b[\)</span>. Si l’intégrale <span class="math notranslate nohighlight">\(\int_a^b f(t)dt\)</span> converge, alors <span class="math notranslate nohighlight">\(\int_a^c f(t)dt\)</span>  et <span class="math notranslate nohighlight">\(\int_c^b f(t)dt\)</span> convergent et</p>
+<div class="math notranslate nohighlight">
+\[
+\int_a^b f(t)dt =\int_a^c f(t)dt + \int_c^b f(t)dt
+\]</div>
+</div>
+<div class="section" id="positivite">
+<h3>Positivité<a class="headerlink" href="#positivite" title="Lien permanent vers ce titre">¶</a></h3>
+<div class="admonition-proposition admonition">
+<p class="admonition-title">Proposition</p>
+<p>Soit <span class="math notranslate nohighlight">\(f\)</span> une fonction definie sur <span class="math notranslate nohighlight">\(]a, b[\)</span> (<span class="math notranslate nohighlight">\(-\infty \leq a &lt; b \leq +\infty\)</span>).</p>
+<p>Si <span class="math notranslate nohighlight">\(\int_a^b f(t)dt\)</span> converge et si <span class="math notranslate nohighlight">\(f\)</span> est positive sur <span class="math notranslate nohighlight">\(]a, b[\)</span>, alors on a <span class="math notranslate nohighlight">\(\int_a^b f(t)dt\geq 0\)</span>. Si de plus <span class="math notranslate nohighlight">\(f\)</span> n’est pas la fonction nulle, on obtient <span class="math notranslate nohighlight">\(\int_a^b f(t)dt&gt;0\)</span>.</p>
+</div>
+<div class="admonition-corollaire admonition">
+<p class="admonition-title">Corollaire</p>
+<p>Soient <span class="math notranslate nohighlight">\(f\)</span> et <span class="math notranslate nohighlight">\(g\)</span> deux fonctions définies et continues sur <span class="math notranslate nohighlight">\(]a, b[\)</span> (<span class="math notranslate nohighlight">\(-\infty \leq a &lt; b \leq +\infty\)</span>).
+Si les intégrales <span class="math notranslate nohighlight">\(\int_a^b f(t)dt\)</span> et <span class="math notranslate nohighlight">\(\int_a^b g(t)dt\)</span> convergent et si <span class="math notranslate nohighlight">\(f\leq g\)</span>, alors on a</p>
+<div class="math notranslate nohighlight">
+\[
+\int_a^bf(t)dt \leq \int_a^b g(t)dt
+\]</div>
+<p>Si de plus <span class="math notranslate nohighlight">\(f\)</span> n’est pas égale à <span class="math notranslate nohighlight">\(g\)</span>. On obtient</p>
+<div class="math notranslate nohighlight">
+\[
+\int_a^b f(t)dt &lt; \int_a^b g(t)dt
+\]</div>
+</div>
+</div>
+<div class="section" id="integration-par-parties">
+<h3>Intégration par parties<a class="headerlink" href="#integration-par-parties" title="Lien permanent vers ce titre">¶</a></h3>
+<div class="admonition-theoreme admonition">
+<p class="admonition-title">Théorème</p>
+<p>Soient <span class="math notranslate nohighlight">\(u\)</span> et <span class="math notranslate nohighlight">\(v\)</span> deux fonctions de classe <span class="math notranslate nohighlight">\(\mathcal C^1\)</span> de <span class="math notranslate nohighlight">\(]a, b[\)</span> dans <span class="math notranslate nohighlight">\(\mathbb R\)</span> avec (<span class="math notranslate nohighlight">\(-\infty \leq a &lt; b \leq +\infty\)</span>). Si le produit <span class="math notranslate nohighlight">\(uv\)</span> possède une limite finie en <span class="math notranslate nohighlight">\(a\)</span> et <span class="math notranslate nohighlight">\(b\)</span>, les intégrales <span class="math notranslate nohighlight">\(\int_a^b u^{'}(t)v(t)dt\)</span> et <span class="math notranslate nohighlight">\(\int_a^b u(t)v^{'}(t)dt\)</span> ont même nature et, en cas de convergence, on dispose de l’égalité</p>
+<div class="math notranslate nohighlight">
+\[
+\int_a^b u^{'}(t)v(t)dt= \lim_{b} uv - \lim_{a} uv - \int_a^b u(t)v^{'}(t)dt
+\]</div>
+</div>
+</div>
+<div class="section" id="changement-de-variables">
+<h3>Changement de variables<a class="headerlink" href="#changement-de-variables" title="Lien permanent vers ce titre">¶</a></h3>
+<div class="admonition-theoreme admonition">
+<p class="admonition-title">Théorème</p>
+<p>Soient <span class="math notranslate nohighlight">\(\varphi\)</span> une fonction de classe <span class="math notranslate nohighlight">\(\mathcal C^1\)</span>, strictement monotone, réalisant une bijection de <span class="math notranslate nohighlight">\(]\alpha, \beta[\)</span> sur <span class="math notranslate nohighlight">\(]a, b[\)</span> et <span class="math notranslate nohighlight">\(f : ]a, b[ \to \mathbb R\)</span>, continue. Les intégrales <span class="math notranslate nohighlight">\(\int_\alpha^\beta f(\varphi(t))\varphi^{'}(t)dt\)</span> et <span class="math notranslate nohighlight">\(\int_a^b f(t)dt\)</span> ont même nature et en cas de convergence</p>
+<div class="math notranslate nohighlight">
+\[
+\int_a^b f(t)dt = \int_\alpha^\beta f(\varphi(t))\varphi^{'}(t)dt \mbox{ si } \varphi \mbox{ est croissante}
+\]</div>
+<div class="math notranslate nohighlight">
+\[
+\int_a^b f(t)dt = - \int_\alpha^\beta f(\varphi(t))\varphi^{'}(t)dt \mbox{ si } \varphi \mbox{ est décroissante}
+\]</div>
+</div>
+</div>
+</div>
+<div class="section" id="cas-des-fonctions-positives">
+<h2>Cas des fonctions positives<a class="headerlink" href="#cas-des-fonctions-positives" title="Lien permanent vers ce titre">¶</a></h2>
+<p>Pour la plupart des fonctions, on ne sait pas expliciter de primitive. C’est pourquoi il est utile de disposer de méthodes permettant de montrer la convergence des intégrales impropres sans en calculer la valeur. Dans cette section, on traite du cas où la fonction garde un signe constant au voisinage de l’impropreté.</p>
+<div class="section" id="condition-necessaire-et-suffisante-de-convergence">
+<h3>Condition nécessaire et suffisante de convergence<a class="headerlink" href="#condition-necessaire-et-suffisante-de-convergence" title="Lien permanent vers ce titre">¶</a></h3>
+<div class="admonition-theoreme admonition">
+<p class="admonition-title">Théorème</p>
+<p>Soit <span class="math notranslate nohighlight">\(f\)</span> une fonction continue et positive sur <span class="math notranslate nohighlight">\([a, b[\)</span>. L’intégrale <span class="math notranslate nohighlight">\(\int_a^b f(t)dt\)</span> converge si, et seulement si, la fonction <span class="math notranslate nohighlight">\(x\mapsto \int_a^x f(t)dt\)</span> est majorée sur <span class="math notranslate nohighlight">\([a, b[\)</span>.</p>
+<p>De même,</p>
+<p>Si <span class="math notranslate nohighlight">\(f\)</span> une fonction continue et positive sur <span class="math notranslate nohighlight">\(]a, b]\)</span>. L’intégrale <span class="math notranslate nohighlight">\(\int_a^b f(t)dt\)</span> converge si, et seulement si, la fonction <span class="math notranslate nohighlight">\(x\mapsto \int_x^b f(t)dt\)</span> est majorée sur <span class="math notranslate nohighlight">\(]a, b]\)</span>.</p>
+</div>
+</div>
+<div class="section" id="critere-de-comparaison">
+<h3>Critère de comparaison<a class="headerlink" href="#critere-de-comparaison" title="Lien permanent vers ce titre">¶</a></h3>
+<div class="admonition-theoreme admonition">
+<p class="admonition-title">Théorème</p>
+<p>Soient <span class="math notranslate nohighlight">\(f\)</span> et <span class="math notranslate nohighlight">\(g\)</span> deux fonctions continues sur <span class="math notranslate nohighlight">\([a, b[\)</span>. On suppose qu’il existe <span class="math notranslate nohighlight">\(c\in [a, b[\)</span> tel que <span class="math notranslate nohighlight">\(0\leq f(t)\leq g(t)\)</span> pour tout <span class="math notranslate nohighlight">\(t\in [a, b[\)</span>.</p>
+<p>Si l’intégrale <span class="math notranslate nohighlight">\(\int_a^b g(t)dt\)</span> converge, alors <span class="math notranslate nohighlight">\(\int_a^b f(t)dt\)</span> converge.</p>
+<p>Si l’intégrale <span class="math notranslate nohighlight">\(\int_a^b f(t)dt\)</span> diverge, alors <span class="math notranslate nohighlight">\(\int_a^b g(t)dt\)</span> diverge.</p>
+</div>
+</div>
+</div>
+<div class="section" id="cas-des-fonctions-de-signe-quelconque">
+<h2>Cas des fonctions de signe quelconque<a class="headerlink" href="#cas-des-fonctions-de-signe-quelconque" title="Lien permanent vers ce titre">¶</a></h2>
+<div class="section" id="convergence-absolue">
+<h3>Convergence absolue<a class="headerlink" href="#convergence-absolue" title="Lien permanent vers ce titre">¶</a></h3>
+<div class="admonition-definition admonition">
+<p class="admonition-title">Définition</p>
+<p>Soit <span class="math notranslate nohighlight">\(f : [a, b] \to \mathbb R\)</span> une fonction continue (<span class="math notranslate nohighlight">\(-\infty \leq a &lt; b \leq +\infty\)</span>). On dit que l’intégrale <span class="math notranslate nohighlight">\(\int_a^b f(t)dt\)</span> est absolument convergente si <span class="math notranslate nohighlight">\(\int_a^b |f(t)|dt\)</span> est convergente.</p>
+</div>
+<div class="admonition-theoreme admonition">
+<p class="admonition-title">Théorème</p>
+<p>Soit <span class="math notranslate nohighlight">\(f : [a, b] \to \mathbb R\)</span> une fonction continue (<span class="math notranslate nohighlight">\(-\infty \leq a &lt; b \leq +\infty\)</span>). si <span class="math notranslate nohighlight">\(\int_a^b f(t)dt\)</span> est absolument convergente, elle est convergente. De plus, on dispose de l’inégalité</p>
+<div class="math notranslate nohighlight">
+\[
+\left | \int_a^b f(t)dt\right | \leq \int_a^b |f(t)|dt
+\]</div>
+</div>
+<div class="admonition-exemple admonition">
+<p class="admonition-title">Exemple</p>
+<p>Pour <span class="math notranslate nohighlight">\(\alpha &gt;1\)</span>, l’intégrale <span class="math notranslate nohighlight">\(\int_1^{+\infty} \dfrac{sin(t)}{t^\alpha}dt\)</span> est absolument convergente car, pour <span class="math notranslate nohighlight">\(t\geq 1\)</span>, <span class="math notranslate nohighlight">\(\left |\dfrac{sin(t)}{t^\alpha} \right | \leq \dfrac{1}{t^\alpha}\)</span> et <span class="math notranslate nohighlight">\(\int_1^{+\infty} \dfrac{1}{t^\alpha}dt\)</span> converge.</p>
+</div>
+</div>
+</div>
+</div>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            kernelName: "python3",
+            path: "./."
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+              </div>
+              
+        
+        <div class='prev-next-bottom'>
+            
+
+        </div>
+        
+        </div>
+    </div>
+    <footer class="footer mt-5 mt-md-0">
+    <div class="container">
+      <p>
+        
+          Par Iaousse M'barek<br/>
+        
+      </p>
+    </div>
+  </footer>
+</main>
+
+
+      </div>
+    </div>
+  
+  <script src="_static/js/index.1c5a1a01449ed65a7b51.js"></script>
+
+  
+  </body>
+</html>

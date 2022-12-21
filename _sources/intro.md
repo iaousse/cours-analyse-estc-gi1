@@ -8,8 +8,7 @@ Après avoir manipuler les mathématiques au lycée. Vous allez apprendre dans v
 4. Dérivabilité d'une fonction numérique ;
 5. Fonctions usuelles ;
 6. Développements limités ;
-7. Calcul Intégral ;
-8. Equations différentielles.
+7. Calcul Intégral.
 
 
 Cet élément fait partie du module MATHEMATIQUES qui a pour but de permettre aux étudiants d'acquérir une formation en analyse mathématique en tenant compte des besoins spécifiques à l'informatique.

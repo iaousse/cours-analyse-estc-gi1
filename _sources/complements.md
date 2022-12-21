@@ -1,4 +1,4 @@
-# Complement sur les suites et les fonctions numériques
+# Complément sur les suites et les fonctions numériques
 ## Suites et critère de Chauchy
 Le très grand intéret du critère de Cauchy provient du fait qu'il caractérise dans $\mathbb{R}$ les suites convergentes, sans que la limite apparaisse. D'où son utilisation dans l'étude des séries par exemple, ou encore pour montrer qu'une suite n'est pas convergente.
 
@@ -24,7 +24,7 @@ Une suite de réels est convergente dans $\mathbb{R}$ si, et seulement si, c'est
 ```
 Le critère de Cauchy est utilisé pour montrer qu'une suite $(u_n)$ est convergente (resp divergente) dans les cas où l'on peut obtenir facilement une majoration (resp minoration) de $|u_p−u_n|$ pour $n$ et $p$ assez grands. C'est le cas en particulier pour certaines séries.
 
-## COMPARAISON DES SUITES
+## Comparaison des suites
 
 ```{admonition} Définition
 Soient $(u_n)$, $(v_n)$ et $(\epsilon_n)$ trois suites telles qu'à partir d'un certain rang $u_n = v_nε_n$. On dit que :
@@ -78,12 +78,14 @@ Soient $\alpha, \beta > 0$:
 
 ```{admonition} Théorème (les équivalents usuels)
 
-Soit $(u_n)$ une suite de limite nulle ($\lim u_n =0$).
+- Soit $(u_n)$ une suite de limite nulle ($\lim u_n =0$). On a:
 
-On a:
-
-- Si $f : ]− a;a[\to \mathbb{R}$ (avec $a > 0$) est dérivable en $0$, et si $f'(0) \neq 0$, alors on a $f(u_n)− f(0) \sim f'(0)u_n$.
-- $\sin(u_n) \sim u_n$, $e^{u_n} - 1 \sim u_n$, $ln(1+u_n)\sim u_n$, $\tan(u_n) \sim u_n$, $(1+u_n)^\alpha -1 \sim \alpha u_n$.
+    - Si $f : ]− a;a[\to \mathbb{R}$ (avec $a > 0$) est dérivable en $0$, et si $f'(0) \neq 0$, alors on a $f(u_n)− f(0) \sim f'(0)u_n$.
+    - $\sin(u_n) \sim u_n$, 
+    - $e^{u_n} - 1 \sim u_n$, 
+    - $ln(1+u_n)\sim u_n$, 
+    - $\tan(u_n) \sim u_n$, 
+    - $(1+u_n)^\alpha -1 \sim \alpha u_n$.
 - Soit $P(x) = \sum_{k=0}^{p} a_kx^k$ une fonction polynomiale avec $a_p \neq 0$, alors $P(n) \sim a_pn^p$ (équivalence avec le
 terme de plus haut degré).
 - Soit $Q(x) =\frac{P(x)}{R(x)}$ une fraction rationnelle avec $a_px^p$ le terme de plus haut degré de $P$ ($a_p \neq 0$) et $b_rx^r$ celui de $R$ ($b_r \neq 0$), alors $Q(n) \sim \frac{a_p}{b_r}n^{p−r}$ (équivalence avec le rapport des termes de plus haut degré).
@@ -103,7 +105,7 @@ passage à l'inverse).
 ```
 
 ```{warning}
-- Si $u_n = o(v_n)$ et $w_n = o(v_n)$ ce ne veut pas dire que $u_n=v_n$!!!
+- Si $u_n = o(v_n)$ et $w_n = o(v_n)$ ce ne veut pas dire que $u_n=w_n$!!!
 - Il n'y a pas compatibilité avec l'addition en général, par exemple : $n+\frac{1}{n} \sim n$ et $−n \sim 1−n$, mais $\frac{1}{n}$
 n'est pas équivalent à $1$.
 - Ces propriétés sont utiles pour les calculs de limites qui ne peuvent pas être faits directement : on essaie de se
@@ -131,7 +133,7 @@ L'écriture $u_n = v_n + o(w_n)$ signifie que $u_n-v_n = o(w_n)$.
 - $ln(n) + (ln(n))^2 \sim (ln(n))^2$
 
 ```
-```{admonition} Theoreme (formule de stirling)
+```{admonition} Théorème (formule de stirling)
 
 $n! \sim (\frac{n}{e})^n\sqrt{2\pi n}$
 
@@ -150,75 +152,79 @@ Déterminer les dérivées d'ordre 1, 2 et 3 des fonctions suivantes :
 - $g(x) = cos(2x) + sin(2x)$
 ```
 ```{admonition} Exercice
-Soit la fonction $f$ définie sur $] − 1 ; +\infty[$ par : $f(x) = ln(x + 1)$.
+Soit la fonction $f$ définie sur $] − 1 ; +\infty[$ par : $f(x) = \ln(x + 1)$.
 1. Calculer les dérivées d'ordre 1, 2, 3 et 4. 
 1. En déduire et Démontrer par récurrence l'expression de la dérivée d'ordre $n$.
 ```
 
-## Fonctions de classe $C^n$
+## Fonctions de classe $\mathscr{C}^n$
 ```{admonition} Définition
 On note :
-- $C^0(I)$ est l'ensemble des fonctions continues sur $I$.
-- $C^1(I)$ est l'ensemble des fonctions continûment dérivables sur $I$, i.e. l'ensemble des fonctions qui sont dérivables sur $I$ dont la fonction dérivée $f^{'}$ est continue sur $I$.
-- $C^n(I)$ est l'ensemble des fonctions $n$ fois continûment dérivables sur $I$, i.e. l'ensemble des fonctions n-fois dérivables sur $I$ dont la fonction dérivée n-ième $f^(n)$ est continue sur $I$ ;
-- $C^\infty(I)$ est l'ensemble des fonctions indéfiniment dérivables sur $I$.
+- $\mathscr{C}^0(I)$ est l'ensemble des fonctions continues sur $I$.
+- $\mathscr{C}^1(I)$ est l'ensemble des fonctions continûment dérivables sur $I$, i.e. l'ensemble des fonctions qui sont dérivables sur $I$ dont la fonction dérivée $f^{'}$ est continue sur $I$.
+- $\mathscr{C}^n(I)$ est l'ensemble des fonctions $n$ fois continûment dérivables sur $I$, i.e. l'ensemble des fonctions n-fois dérivables sur $I$ dont la fonction dérivée n-ième $f^{(n)}$ est continue sur $I$ ;
+- $\mathscr{C}^\infty(I)$ est l'ensemble des fonctions indéfiniment dérivables sur $I$.
 
 ```
 ## Dérivée n-ième usuelles
 
 ```{admonition} Proposition 
-Soient $a\in \mathbb{R}$, $n\in \mathbb{N}$, $f$ et $g$ deux fonctions telles ques $\forall x \in \mathbb{R}, f(x) = x^n$ et $g(x) = (x-a)^n$. Alors $f$ et $g$ sont de classe $C^\infty$ sur $\mathbb{R}$ et $\forall k \in \mathbb{N}, \forall x \in \mathbb{R},$
+Soient $a\in \mathbb{R}$, $n\in \mathbb{N}$, $f$ et $g$ deux fonctions telles ques $\forall x \in \mathbb{R}, f(x) = x^n$ et $g(x) = (x-a)^n$. Alors $f$ et $g$ sont de classe $\mathscr{C}^\infty$ sur $\mathbb{R}$ et $\forall k \in \mathbb{N}, \forall x \in \mathbb{R},$
 
-$$ f^{(k)}(x) =\left\{
+$$ 
+f^{(k)}(x) =\left\{
 \begin{array}{ll}
 n(n-1)\times ...\times (n-k+1)x^{n-k} \quad\mbox{si} \;k \leq n\\
 0 \quad\mbox{si}\;k>l
 \end{array}
-\right.$$
+\right.
+$$
 
-$$g^{(k)}(x) =\left\{
+$$
+g^{(k)}(x) =\left\{
 \begin{array}{ll}
 n(n-1)\times ...\times (n-k+1)(x-a)^{n-k} \quad\mbox{si} \;k \leq n\\
 0 \quad\mbox{si}\;k>l
 \end{array}
-\right.$$
+\right.
+$$
 
 ```
 ```{admonition} Proposition 
-Soient $a\in \mathbb{R}$, $f$ et $g$ deux fonctions telles ques $\forall x \in \mathbb{R^{*}}, f(x) = \dfrac{1}{x}$ et $\forall x \in \mathbb{R}\setminus \{a\}, g(x) = \dfrac{1}{x-a}$. Alors $f$ et $g$ sont de classe $C^\infty$ sur $\mathbb{R^{*}}$ et $\mathbb{R}\setminus \{a\}$ respectivement et on a:
-- $forall n \in \mathbb{N}, \forall x \in \mathbb{R^{*}}, f^{(n)}(x) =\dfrac{(-1)^nn!}{x^{n+1}}$
-- $forall n \in \mathbb{N}, \forall x \in \mathbb{R^{*}}, g^{(n)}(x) =\dfrac{(-1)^nn!}{(x-a)^{n+1}}$
+Soient $a\in \mathbb{R}$, $f$ et $g$ deux fonctions telles ques $\forall x \in \mathbb{R^{*}}, f(x) = \dfrac{1}{x}$ et $\forall x \in \mathbb{R}\setminus \{a\}, g(x) = \dfrac{1}{x-a}$. Alors $f$ et $g$ sont de classe $\mathscr{C}^\infty$ sur $\mathbb{R^{*}}$ et $\mathbb{R}\setminus \{a\}$ respectivement et on a:
+- $\forall n \in \mathbb{N}, \forall x \in \mathbb{R^{*}}, f^{(n)}(x) =\dfrac{(-1)^nn!}{x^{n+1}}$
+- $\forall n \in \mathbb{N}, \forall x \in \mathbb{R^{*}}, g^{(n)}(x) =\dfrac{(-1)^nn!}{(x-a)^{n+1}}$
 
 ```
 
 ```{admonition} Proposition 
-Les fonctions $\exp, \ln, \sin, \cos$ sont de classe $C^\infty$ sur leur domaine de définition et on pour tout $n\in \mathbb{N}$:
+Les fonctions $\exp, \ln, \sin, \cos$ sont de classe $\mathscr{C}^\infty$ sur leur domaine de définition et on pour tout $n\in \mathbb{N}$:
 
-- $exp^{(n)}(x) = exp(x)$
-- $ln^{(n)}(x) = \dfrac{(-1)^{n-1}(n-1)!}{x^{n}}$
-- $sin^{(n)}(x) = sin(x+n\frac{\pi}{2})$
-- $cos^{(n)}(x) = cos(x+ n\frac{\pi}{2})$
+- $\exp^{(n)}(x) = \exp(x)$
+- $\ln^{(n)}(x) = \dfrac{(-1)^{n-1}(n-1)!}{x^{n}}$
+- $\sin^{(n)}(x) = \sin(x+n\frac{\pi}{2})$
+- $\cos^{(n)}(x) = \cos(x+ n\frac{\pi}{2})$
 ```
 
 ```{admonition} Proposition
-Si $f$ et $g$ sont deux fonctions de classe $C^n$ sur un intervalle $I$, alors pour tout $\lambda\in \mathbb{R}, (\lambda f + g)$ et $fg$ sont encore des fonctions de classe $C^n$ et de plus : 
+Si $f$ et $g$ sont deux fonctions de classe $\mathscr{C}^n$ sur un intervalle $I$, alors pour tout $\lambda\in \mathbb{R}, (\lambda f + g)$ et $fg$ sont encore des fonctions de classe $\mathscr{C}^n$ et de plus : 
 - $(αf + g)^{(n)} = αf^{(n)} + g^{(n)}$
-- $(fg)^{(n)} = \sum_{i=0}^{n} \binom{k}{n}f^{(k)}g^{(n-k})$ ( avec $\binom{k}{n} =\dfrac{n!}{k!(n-k)!})$
+- $(fg)^{(n)} = \sum_{i=0}^{n} \binom{n}{k}f^{(k)}g^{(n-k})$ ( avec $\binom{n}{k} =\dfrac{n!}{k!(n-k)!})$
 ```
 
 ```{admonition} Proposition
 Soient $I$ et $J$ deux intervalles et soit $f : I \to \mathbb{R}$ et $g : J \to \mathbb{R}$ avec $f(I) \subset J$.
-Si $f$ est de classe $C^n$ sur $I$, et si $g$ est de classe $C^n$ sur $J$, alors $g\circ f$ est de classe $C^n$ sur $I$.
+Si $f$ est de classe $\mathscr{C}^n$ sur $I$, et si $g$ est de classe $\mathscr{C}^n$ sur $J$, alors $g\circ f$ est de classe $\mathscr{C}^n$ sur $I$.
 ```
 
 ```{admonition} Remarques
-- $\forall \alpha \in \mathbb{R}, x \mapsto x^\alpha=\exp(\alpha\ln(x))$ est de classe $C^\infty$ sur $]0, +\infty[$.
-- $\forall a >0, x \mapsto a^x=exp(x\ln(a))$ est de classe $C^\infty$ sur $\mathbb{R}$.
-- Si $f$ et $g$ sont deux fonctions de classe $C^n$ sur un intervalle $I$ et si $g$ ne s'annule pas sur l'intervalle $I$, alors la fonction $ x \mapsto\dfrac{f(x)}{g(x)}$ est de classe $C^n$ sur l'intervalle $I$.
+- $\forall \alpha \in \mathbb{R}, x \mapsto x^\alpha=\exp(\alpha\ln(x))$ est de classe $\mathscr{C}^\infty$ sur $]0, +\infty[$.
+- $\forall a >0, x \mapsto a^x=\exp(x\ln(a))$ est de classe $\mathscr{C}^\infty$ sur $\mathbb{R}$.
+- Si $f$ et $g$ sont deux fonctions de classe $\mathscr{C}^n$ sur un intervalle $I$ et si $g$ ne s'annule pas sur l'intervalle $I$, alors la fonction $ x \mapsto\dfrac{f(x)}{g(x)}$ est de classe $\mathscr{C}^n$ sur l'intervalle $I$.
 
 ```
 
-## COMPARAISON DES fonctions
+## Comparaison des fonctions
 Soit I un intervalle de $\mathbb{R}$ et $a\in \bar{I}$. Nous supposerons ici que $f$ et $g$ sont deux fonctions qui ne s'annulent pas sur un voisinage de $a$ privé de $a$.
 Il s'agit ici de comparer les 2 fonctions au voisinage de $a$.  Pour cela, formons leur rapport $\dfrac{f(x)}{g(x)}$ et regardons ce qui se passe lorsque $x \to a$.
 
@@ -227,21 +233,21 @@ Il s'agit ici de comparer les 2 fonctions au voisinage de $a$.  Pour cela, formo
 1. Si $\dfrac{f(x)}{g(x)}$ est bornée au voisinage de $a$, on dira que $f$ est dominée par $g$ au voisinage de $a$ et on écrit: 
 
 $$
-f = \underset{x\to a}{O}(g) \mbox{ ou } f = \underset{a}{O}(g) \mbox{ ou encore } f = O(g) \mbox{ au voisinage de } a
+f  \underset{x\to a}{O}(g) \mbox{ ou } f  \underset{a}{O}(g) \mbox{ ou encore } f = O(g) \mbox{ au voisinage de } a
 $$
 
 1. Si $\dfrac{f(x)}{g(x)}$ tend vers $0$ lorsque $x$ tend vers $a$ ($\underset{x\to a}{\lim} \dfrac{f(x)}{g(x)}= 0$), on dira que $f$ est négligeable devant $g$ au voisinage de $a$ et on écrit: 
 
 
 $$
-f = \underset{x\to a}{o}(g) \mbox{ ou } f = \underset{a}{o}(g) \mbox{ ou encore } f = o(g) \mbox{ au voisinage de } a
+f  \underset{x\to a}{o}(g) \mbox{ ou } f  \underset{a}{o}(g) \mbox{ ou encore } f = o(g) \mbox{ au voisinage de } a
 $$
 
 1. Si $\dfrac{f(x)}{g(x)}$ tend vers $1$ lorsque $x$ tend vers $a$ ($\underset{x\to a}{\lim} \dfrac{f(x)}{g(x)}= 1$), on dira que $f$ et $g$ sont équivalentes au voisinage de $a$ et on écrit: 
 
 
 $$
-f = \underset{x\to a}{\sim}g \mbox{ ou } f = \underset{a}{\sim}g \mbox{ ou encore } f \sim g \mbox{ au voisinage de } a
+f  \underset{x\to a}{\sim}g \mbox{ ou } f  \underset{a}{\sim}g \mbox{ ou encore } f \sim g \mbox{ au voisinage de } a
 $$
 
 ```
@@ -288,13 +294,13 @@ Seul le premier équivalent a un intérêt!!
 
 ```{admonition} Proprietes
 
-- Soit $p, q \in \mathbb{N}$ alors $x^p = o(x^q) \Leftrightarrow p<p$.
+- Soit $p, q \in \mathbb{N}$ alors $x^p = o(x^q)$ au voisinage de $0$ $\Leftrightarrow p<p$.
 - Si au voisinage d'un point $a$ on a $f(x) = o(g(x))$ alors $f(x) = O(g(x))$.
 
 - Soient $\alpha, \beta, \gamma >0$ trois reels strictment positifs:
-    - Comparaison $ln$ et puissances:
-        - au voisinage de $+\infty$: $(ln(x))^\alpha = o(x^\beta)$.
-        - au voisinage de 0+: $|ln(x)|^\alpha = o(\frac{1}{x^\beta})$.
+    - Comparaison $\ln$ et puissances:
+        - au voisinage de $+\infty$: $(\ln(x))^\alpha = o(x^\beta)$.
+        - au voisinage de 0+: $|\ln(x)|^\alpha = o(\frac{1}{x^\beta})$.
     -  Comparaison puissance et exponentielle :
         - au voisinage de $+\infty$: $x^\beta = o(e^{\gamma x})$
         - au voisinage de $+\infty$: $x^\beta = o(a^{x})$ si $a>1$.
@@ -304,50 +310,75 @@ Seul le premier équivalent a un intérêt!!
 ```{admonition} Proposition
 
 - Opérations sur les relations de comparaisons
-- 
+
+    1. $f = o(g), g = o(h) \Leftarrow f = o(h)$ cad (transitivité) idem avec $O$
+    2. $f_1 = o(g), f_2 = o(g) \Leftarrow f_1 + f_2 = o(g)$ cad $o(g) + o(g) = o(g)$ idem avec $O$
+    3. $f_1 = o(g_1), f_2 = o(g_2) \Leftarrow f_1f_2 = o(g_1g_2)$ cad $o(g_1)o(g_2) = o(g_1g_2)$ idem avec $O$
+    4. $f = o(g) \Leftarrow hf = o(hg)$ cad $ho(g) = o(hg)$ idem avec $O$
+    5. $f = o(\lambda g) (\lambda \in \mathbb{R}^{*}) \Leftarrow f = o(g)$ cad $ o(\lambda g) = o(g)$ idem avec $O$
 
 - Caractérisation de l'équivalence de deux fonctions
+    On a au voisinage d’un point $a$ :  
+    
+    $$
+    f(x) \sim g(x) \Leftrightarrow f(x) = g(x) + o(g(x))
+    $$
+    
+    Cela sera particulieremet utile lorsqu’on souhaitera remplacer une expression par un équivalent dans une égalité
+
 
 - Lien entre les relations de comparaison
 
+On se place au voisinage d’un point $a$.
+    1. Si $f(x) \sim g(x)$ alors $f(x) = O(g(x))$.
+    2. Si $f(x) \sim g(x)$ et $f(x) = o(h(x))$ alors $g(x) = o(h(x))$.
+    3. Si $f(x) \sim g(x)$ et    $h(x) = o(f(x))$ alors $h(x) = o(g(x))$
+
+
 - Calculs avec des équivalents
+
+
+    1. si $f(x) \underset{x\to a}{\to} l$ et $l\neq 0$ alors $f \underset{a}{\sim} l$
+    2. si $f_1 \underset{a}{\sim} g_1$ et $f_2 \underset{a}{\sim} g_2$ alors $f_1f_2 \underset{a}{\sim} g_1g_2$ et $\dfrac{f_1}{f_2} \underset{a}{\sim} \dfrac{g_1}{g_2}$
+    2. si $f \underset{a}{\sim} g$ et $f$ et $g$ sont positive alors $f^\alpha \underset{a}{\sim} g^\alpha$ pour tout $\alpha \in \mathbb{R}$.
+
 
 ```
 
-```{admonition} Theoreme (Les équivalents de références)
+```{admonition} Théorème (Les équivalents de références)
 Les limites usuelles en 0, nous donnent les équivalents suivants au voisinage de $0$ :
 
-- $sin x \sim x$
-- $arcsin x \sim x$
+- $\sin x \sim x$
+- $\arcsin x \sim x$
 - $sh x \sim x$
-- $tan x \sim x$
-- $arctan x \sim x$
+- $\tan x \sim x$
+- $\arctan x \sim x$
 - $th x \sim x$
-- $1 − cos x \sim \frac{x^2}{2}$
+- $1 − \cos x \sim \frac{x^2}{2}$
 
 - $1 − ch x \sim \frac{x^2}{2}$
-- $ln(1 + x) \sim x$
+- $\ln(1 + x) \sim x$
 - $e^x − 1 \sim x$
 - $(1 + x)^α − 1 \sim αx$
 
 Plus généralement, au voisinage de a lorsque $\underset{x\to a}{f(x) \to 0}$, on a :
 
-- $sin f(x) \sim f(x)$
-- $arcsin f(x) \sim f(x)$
+- $\sin f(x) \sim f(x)$
+- $\arcsin f(x) \sim f(x)$
 - $sh f(x) \sim f(x)$
-- $tan f(x) \sim f(x)$
-- $arctan f(x) \sim f(x)$
+- $\tan f(x) \sim f(x)$
+- $\arctan f(x) \sim f(x)$
 - $th x \sim f(x)$
-- $1 − cos f(x) \sim \frac{f(x)^2}{2}$
+- $1 − \cos f(x) \sim \frac{f(x)^2}{2}$
 
 - $1 − ch f(x) \sim \frac{f(x)^2}{2}$
-- $ln(1 + f(x)) \sim f(x)$
+- $\ln(1 + f(x)) \sim f(x)$
 - $e^{f(x)} − 1 \sim f(x)$
 - $(1 + f(x))^α − 1 \sim αf(x)$
 
 ```
 
-```{admonition} Theoreme (calcul avec les equivalence)
+```{admonition} Théorème (calcul avec les equivalence)
 1. Si $\underset{x\to a}{f(x) \to l}$ et $l\neq 0$ alors $f\underset{a}{\sim}l$.
 
 2. Si $f_1 \underset{a}{\sim}g_1$ et  $f_2 \underset{a}{\sim}g_2$ alors  $f_1f_2 \underset{a}{\sim}g_1g_2$ et  $\frac{f_1}{f_2} \underset{a}{\sim}\frac{g_1}{g_2}$.
@@ -355,7 +386,27 @@ Plus généralement, au voisinage de a lorsque $\underset{x\to a}{f(x) \to 0}$, 
 ```
 
 
+```{admonition} Proposition (Un équivalent donne localement le signe de la fonction)
 
-Un équivalent donne localement le signe de la fonction
+Soient deux fonctions $f, g : I \to \mathbb{R}$ et un point $a \in \bar{I}$.
+Si au voisinage du point a, $f \sim g$ alors, il existe un voisinage $V$ de $a$ sur lequel $f$ et $g$ ont même signe.
+```
 
-Un équivalent donne la limite !
+
+```{admonition} Proposition (Un équivalent donne la limite)
+
+
+Soient deux fonctions $f, g : I \to \mathbb{R}$ et un point $a \in \bar{I}$.
+
+Si $f\underset{a}{\sim} g$ et $\underset{x\to a}{\lim} g(x) = l$ alors $\underset{x\to a}{\lim} f(x) = l$.
+```
+
+
+
+
+
+
+
+
+
+

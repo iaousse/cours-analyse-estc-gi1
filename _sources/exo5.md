@@ -5,11 +5,11 @@ Démontrer que, pour tous $x,y \in \mathbb{R}$:
 
 
 $$
-\sh(x+y)=\sh(x)\ch(y)+\ch(x)\sh(y)
+sh(x+y)=sh(x)ch(y)+ch(x)sh(y)
 $$
 
 $$
-\ch(x+y)=\ch(x)\ch(y)+\sh(x)\sh(y).
+ch(x+y)=ch(x)ch(y)+sh(x)sh(y).
 $$
 
 ## Exercice 2
