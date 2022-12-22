@@ -144,13 +144,12 @@ La formule de Taylor-Young permet d'obtenir immédiatement des développements l
     $$
     
 2. Si $f$ admet un DL en un point $a$ à l'ordre $n$ alors elle en possède un pour tout $k\leq n.$ En effet
-
-$$
-\begin{eqnarray*}
-f(x)&=& f(a)+f'(a)(x-a)+\frac{f''(a)}{2!}(x-a)^2+\ldots+\frac{f^{(k)}(a)}{k!}(x-a)^k\\
-&& +\frac{f^{(k+1)}(a)}{(k+1)!}(x-a)^{k+1}+\ldots+\frac{f^{(n)}(a)}{n!}(x-a)^n+(x-a)^n \varepsilon(x)
-\end{eqnarray*}
-$$
+    
+    \begin{eqnarray*}
+    f(x)&=& f(a)+f'(a)(x-a)+\frac{f''(a)}{2!}(x-a)^2+\ldots+\frac{f^{(k)}(a)}{k!}(x-a)^k\\
+    && +\frac{f^{(k+1)}(a)}{(k+1)!}(x-a)^{k+1}+\ldots+\frac{f^{(n)}(a)}{n!}(x-a)^n+(x-a)^n \varepsilon(x)
+    \end{eqnarray*}
+    
 
 
 ```
@@ -206,17 +205,17 @@ voisinage de $0.$ Souvent on ramène donc le problème en $0$ en faisant le chan
 ```{admonition} Exercice
 $DL$ de $f(x)=exp x$ en $1.$
 
-On pose $h=x-1.$ Si $x$ est proche de $1$ alors $h$ est proche de $0.$ Nous allons nous ramener à un $DL$ de $exp h$ en
+On pose $h=x-1.$ Si $x$ est proche de $1$ alors $h$ est proche de $0.$ Nous allons nous ramener à un $DL$ de $\exp h$ en
 $h = 0.$ On note $e = exp 1.$
 
-$$
+
 \begin{eqnarray*}
 \exp 
 &=&\mbox{exp(1+(x-1))}=\exp (1)\exp (x-1)=e\exp h\\
 &=& e(1+h+\frac{h^2}{2}+\ldots+\frac{h^n}{n!}+h^n \varepsilon(h))\\
 &=& e(1+(x-1)+\frac{(x-1)^2}{2}+\ldots+\frac{(x-1)^n}{n!}+(x-1)^n \varepsilon(x-1)))\\
 \end{eqnarray*}
-$$
+
 
 où $\lim\limits_{\substack{x \rightarrow 1}}\varepsilon(x-1)=0$
 ```
@@ -234,11 +233,18 @@ $$
 
 - $f+g$ admet un $DL$ en $0$ l'ordre $n$ qui est:
 
-$(f+g)(x)=f(x)+g(x)=(c_0+d_0)+(c_1+d_1)x+(c_0+d_0)x^2+\ldots+(c_n+d_n) x^n +x^{n}\varepsilon(x)$
-
+    \begin{eqnarray*}
+    (f+g)(x)
+    &=& f(x)+g(x)\\
+    &=& (c_0+d_0)+(c_1+d_1)x+(c_0+d_0)x^2+\ldots+(c_n+d_n) x^n +x^{n}\varepsilon(x)
+    \end{eqnarray*}
 - $f\times g$ admet un $DL$ en $0$ l'ordre $n$ qui est:
-
-$(f\times g)(x)=f(x)\times g(x)=T_n(x)+x^n \varepsilon(x)$ où $T_n(x)$ est le polynôme $(c_0+c_1 x+\ldots+c_n x^n)\times (d_0+d_1 x+\ldots+d_n x^n)$ tronqué à l'ordre $n.$
+    \begin{eqnarray*}
+    (f\times g)(x)
+    &=& f(x)\times g(x)\\
+    &=& T_n(x)+x^n \varepsilon(x)
+    \end{eqnarray*}
+    où $T_n(x)$ est le polynôme $(c_0+c_1 x+\ldots+c_n x^n)\times (d_0+d_1 x+\ldots+d_n x^n)$ tronqué à l'ordre $n.$
 ```
 ```{admonition} Exercice
 Calculer le $DL$ de $\cos x \times\sqrt{1+x}$ à l'ordre $2,$ 
@@ -247,13 +253,13 @@ On a $\cos x= 1-\frac{x^2}{2}+x^2 \varepsilon_1 (x)$ et $\sqrt{1+x}=1+\frac{1}{2
 
 Donc:
 
-$$
+
 \begin{eqnarray*}
 \cos x \times\sqrt{1+x}
 &=& (1-\frac{x^2}{2}+x^2 \varepsilon_1 (x))\times (1+\frac{1}{2}x-\frac{1}{8}x^2+x^2\varepsilon_2 (x))\\
 &=& 1+\frac{1}{2}x-\frac{5}{8}x^2+x^2 \varepsilon(x)
 \end{eqnarray*}
-$$
+
 
 ```
 ### Composition
@@ -267,14 +273,13 @@ polynôme tronqué à l'ordre $n$ de la composition $C(D(x)).$
 ```{admonition} Exercice
 Soit $h(x)=\sqrt{\cos x},$ On cherche le $DL$ de $h$ en $0$ à l'ordre $4.$ On pose $f(u)=\sqrt{1+u},$ alors on a $f(u)=1+\frac{1}{2}u-\frac{1}{8}u^2+u^2\varepsilon (u)$ au voisinage de $0$ à l'ordre $2,$ et si on pose $u(x)=\cos x-1,$ alors $h(x)=f(u(x)),$ et $u(0)=0,$ D'autre part le $DL$ de $u(x)$ en $x = 0$ à l'ordre $4$ est: $u=-\frac{1}{2}x^2+\frac{1}{24}x^4+x^4 \varepsilon(x),$ en appliquant la prop .., on a $u^2=\frac{1}{4}x^4+x^4 \varepsilon(x).$ D'où,
 
-$$
+
 \begin{eqnarray*}
 h(x)=f(u)=1+\frac{1}{2}u-\frac{1}{8}u^2+u^2\varepsilon (u)
 &=& 1+\frac{1}{2}(-\frac{1}{2}x^2+\frac{1}{24}x^4)-\frac{1}{8}(\frac{1}{4}x^4)+x^4 \varepsilon(x)\\
 &=& 1-\frac{1}{4}x^2+\frac{1}{48}x^4-\frac{1}{32}x^4+x^4\varepsilon(x)\\
 &=& 1-\frac{1}{4}x^2-\frac{1}{96}x^4+x^4\varepsilon(x)
 \end{eqnarray*}
-$$
 
 ```
 ### Division
@@ -296,22 +301,50 @@ $\frac{1}{g(x)}=\frac{1}{d_0}\frac{1}{1+\frac{d_1}{d_0}x+\ldots+\frac{d_n}{d_0}x
 DL de $\frac{1+x}{2+x}$ en $0$ à l'ordre $4.$
 
 
-$$
+
 \begin{eqnarray*}
 \frac{1+x}{2+x}
 &=& (1+x)\frac{1}{2}\frac{1}{1+\frac{x}{2}}\\
 &=& \frac{1}{2}(1+x)(1-\frac{x}{2}+(\frac{x}{2})^2-(\frac{x}{2})^3+(\frac{x}{2})^4+x^4 \varepsilon(x))\\
 &=& \frac{1}{2}+\frac{x}{4}-\frac{x^2}{8}+\frac{x^3}{16}-\frac{x^4}{32}+x^4 \varepsilon(x)
 \end{eqnarray*}
-$$
+
 
 ```
 
 ## Applications des développements limités, Calculs de limites
 
-Les DL sont très efficaces pour calculer des limites ayant des formes indéterminées ! Il suffit juste de remarquer que si $f(x)=c_0+c_1 (x-a)+\ldots$ alors $\lim\limits_{\substack{x \rightarrow a}}f(x)=c_0=0$
+Les DL sont très efficaces pour calculer des limites ayant des formes indéterminées ! Il suffit juste de remarquer que si $f(x)=c_0+c_1 (x-a)+\ldots$ alors $\lim\limits_{\substack{x \rightarrow a}}f(x)=c_0$
 
 Limite en $0$ de $\frac{\ln(1+x)-\tan x+\frac{1}{2}\sin^2 x}{3 x^2 \sin^2 x}$
 
-Notons $\frac{f(x)}{g(x)}$ cette fraction, en $0,$ $f(x)=\ln(1+x)-\tan x+\frac{1}{2}\sin^2 x=(x-\frac{x^2}{2}+\frac{x^3}{3}-\frac{x^4}{4}+o(x^4))-(x+\frac{x^3}{3}+o(x^4))+\frac{1}{2}(x-\frac{x^3}{6}+o(x^3))^2=-\frac{5}{12}x^4+o(x^4)$ et $g(x)=3x^2 \sin^2 x=3x^4+o(x^4).$ Ainsi, $\frac{f(x)}{g(x)}=\frac{-\frac{5}{12}x^4+o(x^4)}{3x^4+o(x^4)}=\frac{-\frac{5}{12}+o(1)}{3+o(1)}.$ D'où, $\lim\limits_{\substack{x \rightarrow a}}\frac{f(x)}{g(x)}=-\frac{5}{36}.$
+Notons $\frac{f(x)}{g(x)}$ cette fraction. 
+
+En $0,$ 
+
+\begin{eqnarray*}
+f(x)
+&=& \ln(1+x)-\tan x+\frac{1}{2}\sin^2 x\\
+&=& (x-\frac{x^2}{2}+\frac{x^3}{3}-\frac{x^4}{4}+o(x^4))-(x+\frac{x^3}{3}+o(x^4))+\frac{1}{2}(x-\frac{x^3}{6}+o(x^3))^2\\
+&=& \frac{5}{12}x^4+o(x^4)\\
+g(x)
+&=& 3x^2 \sin^2 x\\
+&=& 3x^4+o(x^4)
+\end{eqnarray*}
+
+Ainsi
+$\frac{f(x)}{g(x)}=\frac{-\frac{5}{12}x^4+o(x^4)}{3x^4+o(x^4)}=\frac{-\frac{5}{12}+o(1)}{3+o(1)}.$
+
+
+D'où, 
+
+$$
+\lim\limits_{\substack{x \rightarrow a}}\frac{f(x)}{g(x)}=-\frac{5}{36}
+$$
+
+
+
+
+
+
 

@@ -55,8 +55,8 @@
     <script type="text/x-mathjax-config">MathJax.Hub.Config({"TeX": {"Macros": {"Z": "\\mathbb{Z}", "V": "V", "N": "\\mathbb{N}", "C": "\\mathbb{C}", "Q": "\\mathbb{Q}", "K": "\\mathbb{K}", "floor": ["\\lfloor#1\\rfloor", 1], "bmat": ["\\left[\\begin{array}"], "emat": ["\\end{array}\\right]"], "R": ["\\mathbb{R}"], "B": ["\\mathcal{B}"], "norm": ["{\\Vert#1\\Vert}", 1], "abs": ["{\\left|#1\\right|}", 1], "coloneqq": ["{:=}"], "eqqcolon": ["{=:}"], "emph": ["\\pmb#1", 1], "tr": "\\operatorname{Spur}", "lin": "\\operatorname{lin}", "dv": "\\mathrm{div}~", "rot": "\\mathrm{rot}~", "Dim": "\\operatorname{dim}", "diag": "\\operatorname{diag}", "Kern": "\\operatorname{Kern}", "Bild": "\\operatorname{Bild}", "Im": "\\operatorname{Im}", "Rang": "\\operatorname{Rang}", "GL": "\\operatorname{GL}", "Eig": "\\operatorname{Eig}", "End": "\\operatorname{End}", "Hau": "\\operatorname{Haupt}", "mymathbb": ["\\boldsymbol{#1}", 1], "idx": "\\mathrm{d}x", "d": "\\mathrm{d}", "i": "\\mathrm{i}", "x": "\\mathbf{x}", "sign": "\\mathrm{sign}", "vec": ["\\mathbf{#1}", 1], "veczwei": ["\\begin{pmatrix} #1 \\\\ #2 \\end{pmatrix}", 2], "M": "\\mathcal{M}", "S": "\\mathbb{S}", "bone": "\\unicode{x1D7D9}", "Re": "\\mathrm{Re}", "Um": "\\operatorname{Um}", "Res": "\\operatorname{Res}"}}, "tex2jax": {"inlineMath": [["\\(", "\\)"]], "displayMath": [["\\[", "\\]"]], "processRefs": false, "processEnvironments": false}})</script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Recherche" href="search.html" />
-    <link rel="next" title="Intégration" href="integrationd.html" />
-    <link rel="prev" title="Exercices" href="exo6.html" />
+    <link rel="next" title="Exercices" href="exo6.html" />
+    <link rel="prev" title="Complément sur les suites et les fonctions numériques" href="complements.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="en" />
     
@@ -210,14 +210,14 @@
      Complément sur les suites et les fonctions numériques
     </a>
    </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="exo6.html">
-     Exercices
-    </a>
-   </li>
    <li class="toctree-l2 current active">
     <a class="current reference internal" href="#">
      Dévelopements limités
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="exo6.html">
+     Exercices
     </a>
    </li>
   </ul>
@@ -556,15 +556,14 @@ f(x)=c_0+c_1(x-a)+c_2(x-a)^2+\ldots+c_n(x-a)^n+(x-a)^n \varepsilon(x)
     f(x)=f(0)+f'(0)x+\frac{f''(0)}{2!}x^2+\ldots+\frac{f^{(n)}(0)}{n!}x^n+x^n \varepsilon(x)
     \]</div>
 </li>
-<li><p>Si <span class="math notranslate nohighlight">\(f\)</span> admet un DL en un point <span class="math notranslate nohighlight">\(a\)</span> à l’ordre <span class="math notranslate nohighlight">\(n\)</span> alors elle en possède un pour tout <span class="math notranslate nohighlight">\(k\leq n.\)</span> En effet</p></li>
+<li><p>Si <span class="math notranslate nohighlight">\(f\)</span> admet un DL en un point <span class="math notranslate nohighlight">\(a\)</span> à l’ordre <span class="math notranslate nohighlight">\(n\)</span> alors elle en possède un pour tout <span class="math notranslate nohighlight">\(k\leq n.\)</span> En effet</p>
+<div class="amsmath math notranslate nohighlight">
+\[\begin{eqnarray*}
+    f(x)&amp;=&amp; f(a)+f'(a)(x-a)+\frac{f''(a)}{2!}(x-a)^2+\ldots+\frac{f^{(k)}(a)}{k!}(x-a)^k\\
+    &amp;&amp; +\frac{f^{(k+1)}(a)}{(k+1)!}(x-a)^{k+1}+\ldots+\frac{f^{(n)}(a)}{n!}(x-a)^n+(x-a)^n \varepsilon(x)
+    \end{eqnarray*}\]</div>
+</li>
 </ol>
-<div class="math notranslate nohighlight">
-\[\begin{split}
-\begin{eqnarray*}
-f(x)&amp;=&amp; f(a)+f'(a)(x-a)+\frac{f''(a)}{2!}(x-a)^2+\ldots+\frac{f^{(k)}(a)}{k!}(x-a)^k\\
-&amp;&amp; +\frac{f^{(k+1)}(a)}{(k+1)!}(x-a)^{k+1}+\ldots+\frac{f^{(n)}(a)}{n!}(x-a)^n+(x-a)^n \varepsilon(x)
-\end{eqnarray*}
-\end{split}\]</div>
 </div>
 </div>
 <div class="section" id="unicite">
@@ -608,17 +607,15 @@ voisinage de <span class="math notranslate nohighlight">\(0.\)</span> Souvent on
 <div class="admonition-exercice admonition">
 <p class="admonition-title">Exercice</p>
 <p><span class="math notranslate nohighlight">\(DL\)</span> de <span class="math notranslate nohighlight">\(f(x)=exp x\)</span> en <span class="math notranslate nohighlight">\(1.\)</span></p>
-<p>On pose <span class="math notranslate nohighlight">\(h=x-1.\)</span> Si <span class="math notranslate nohighlight">\(x\)</span> est proche de <span class="math notranslate nohighlight">\(1\)</span> alors <span class="math notranslate nohighlight">\(h\)</span> est proche de <span class="math notranslate nohighlight">\(0.\)</span> Nous allons nous ramener à un <span class="math notranslate nohighlight">\(DL\)</span> de <span class="math notranslate nohighlight">\(exp h\)</span> en
+<p>On pose <span class="math notranslate nohighlight">\(h=x-1.\)</span> Si <span class="math notranslate nohighlight">\(x\)</span> est proche de <span class="math notranslate nohighlight">\(1\)</span> alors <span class="math notranslate nohighlight">\(h\)</span> est proche de <span class="math notranslate nohighlight">\(0.\)</span> Nous allons nous ramener à un <span class="math notranslate nohighlight">\(DL\)</span> de <span class="math notranslate nohighlight">\(\exp h\)</span> en
 <span class="math notranslate nohighlight">\(h = 0.\)</span> On note <span class="math notranslate nohighlight">\(e = exp 1.\)</span></p>
-<div class="math notranslate nohighlight">
-\[\begin{split}
-\begin{eqnarray*}
+<div class="amsmath math notranslate nohighlight">
+\[\begin{eqnarray*}
 \exp 
 &amp;=&amp;\mbox{exp(1+(x-1))}=\exp (1)\exp (x-1)=e\exp h\\
 &amp;=&amp; e(1+h+\frac{h^2}{2}+\ldots+\frac{h^n}{n!}+h^n \varepsilon(h))\\
 &amp;=&amp; e(1+(x-1)+\frac{(x-1)^2}{2}+\ldots+\frac{(x-1)^n}{n!}+(x-1)^n \varepsilon(x-1)))\\
-\end{eqnarray*}
-\end{split}\]</div>
+\end{eqnarray*}\]</div>
 <p>où <span class="math notranslate nohighlight">\(\lim\limits_{\substack{x \rightarrow 1}}\varepsilon(x-1)=0\)</span></p>
 </div>
 </div>
@@ -634,28 +631,37 @@ f(x)=c_0+c_1 x+\ldots+c_n x^n +x^n \varepsilon_1 (x)\quad\mbox{et}\quad g(x)=d_0
 \]</div>
 <div class="admonition-proposition admonition">
 <p class="admonition-title">Proposition</p>
-<ul class="simple">
-<li><p><span class="math notranslate nohighlight">\(f+g\)</span> admet un <span class="math notranslate nohighlight">\(DL\)</span> en <span class="math notranslate nohighlight">\(0\)</span> l’ordre <span class="math notranslate nohighlight">\(n\)</span> qui est:</p></li>
+<ul>
+<li><p><span class="math notranslate nohighlight">\(f+g\)</span> admet un <span class="math notranslate nohighlight">\(DL\)</span> en <span class="math notranslate nohighlight">\(0\)</span> l’ordre <span class="math notranslate nohighlight">\(n\)</span> qui est:</p>
+<div class="amsmath math notranslate nohighlight">
+\[\begin{eqnarray*}
+    (f+g)(x)
+    &amp;=&amp; f(x)+g(x)\\
+    &amp;=&amp; (c_0+d_0)+(c_1+d_1)x+(c_0+d_0)x^2+\ldots+(c_n+d_n) x^n +x^{n}\varepsilon(x)
+    \end{eqnarray*}\]</div>
+</li>
+<li><p><span class="math notranslate nohighlight">\(f\times g\)</span> admet un <span class="math notranslate nohighlight">\(DL\)</span> en <span class="math notranslate nohighlight">\(0\)</span> l’ordre <span class="math notranslate nohighlight">\(n\)</span> qui est:</p>
+<div class="amsmath math notranslate nohighlight">
+\[\begin{eqnarray*}
+    (f\times g)(x)
+    &amp;=&amp; f(x)\times g(x)\\
+    &amp;=&amp; T_n(x)+x^n \varepsilon(x)
+    \end{eqnarray*}\]</div>
+<p>où <span class="math notranslate nohighlight">\(T_n(x)\)</span> est le polynôme <span class="math notranslate nohighlight">\((c_0+c_1 x+\ldots+c_n x^n)\times (d_0+d_1 x+\ldots+d_n x^n)\)</span> tronqué à l’ordre <span class="math notranslate nohighlight">\(n.\)</span></p>
+</li>
 </ul>
-<p><span class="math notranslate nohighlight">\((f+g)(x)=f(x)+g(x)=(c_0+d_0)+(c_1+d_1)x+(c_0+d_0)x^2+\ldots+(c_n+d_n) x^n +x^{n}\varepsilon(x)\)</span></p>
-<ul class="simple">
-<li><p><span class="math notranslate nohighlight">\(f\times g\)</span> admet un <span class="math notranslate nohighlight">\(DL\)</span> en <span class="math notranslate nohighlight">\(0\)</span> l’ordre <span class="math notranslate nohighlight">\(n\)</span> qui est:</p></li>
-</ul>
-<p><span class="math notranslate nohighlight">\((f\times g)(x)=f(x)\times g(x)=T_n(x)+x^n \varepsilon(x)\)</span> où <span class="math notranslate nohighlight">\(T_n(x)\)</span> est le polynôme <span class="math notranslate nohighlight">\((c_0+c_1 x+\ldots+c_n x^n)\times (d_0+d_1 x+\ldots+d_n x^n)\)</span> tronqué à l’ordre <span class="math notranslate nohighlight">\(n.\)</span></p>
 </div>
 <div class="admonition-exercice admonition">
 <p class="admonition-title">Exercice</p>
 <p>Calculer le <span class="math notranslate nohighlight">\(DL\)</span> de <span class="math notranslate nohighlight">\(\cos x \times\sqrt{1+x}\)</span> à l’ordre <span class="math notranslate nohighlight">\(2,\)</span></p>
 <p>On a <span class="math notranslate nohighlight">\(\cos x= 1-\frac{x^2}{2}+x^2 \varepsilon_1 (x)\)</span> et <span class="math notranslate nohighlight">\(\sqrt{1+x}=1+\frac{1}{2}x-\frac{1}{8}x^2+x^2\varepsilon_2 (x).\)</span></p>
 <p>Donc:</p>
-<div class="math notranslate nohighlight">
-\[\begin{split}
-\begin{eqnarray*}
+<div class="amsmath math notranslate nohighlight">
+\[\begin{eqnarray*}
 \cos x \times\sqrt{1+x}
 &amp;=&amp; (1-\frac{x^2}{2}+x^2 \varepsilon_1 (x))\times (1+\frac{1}{2}x-\frac{1}{8}x^2+x^2\varepsilon_2 (x))\\
 &amp;=&amp; 1+\frac{1}{2}x-\frac{5}{8}x^2+x^2 \varepsilon(x)
-\end{eqnarray*}
-\end{split}\]</div>
+\end{eqnarray*}\]</div>
 </div>
 </div>
 <div class="section" id="composition">
@@ -669,15 +675,13 @@ polynôme tronqué à l’ordre <span class="math notranslate nohighlight">\(n\)
 <div class="admonition-exercice admonition">
 <p class="admonition-title">Exercice</p>
 <p>Soit <span class="math notranslate nohighlight">\(h(x)=\sqrt{\cos x},\)</span> On cherche le <span class="math notranslate nohighlight">\(DL\)</span> de <span class="math notranslate nohighlight">\(h\)</span> en <span class="math notranslate nohighlight">\(0\)</span> à l’ordre <span class="math notranslate nohighlight">\(4.\)</span> On pose <span class="math notranslate nohighlight">\(f(u)=\sqrt{1+u},\)</span> alors on a <span class="math notranslate nohighlight">\(f(u)=1+\frac{1}{2}u-\frac{1}{8}u^2+u^2\varepsilon (u)\)</span> au voisinage de <span class="math notranslate nohighlight">\(0\)</span> à l’ordre <span class="math notranslate nohighlight">\(2,\)</span> et si on pose <span class="math notranslate nohighlight">\(u(x)=\cos x-1,\)</span> alors <span class="math notranslate nohighlight">\(h(x)=f(u(x)),\)</span> et <span class="math notranslate nohighlight">\(u(0)=0,\)</span> D’autre part le <span class="math notranslate nohighlight">\(DL\)</span> de <span class="math notranslate nohighlight">\(u(x)\)</span> en <span class="math notranslate nohighlight">\(x = 0\)</span> à l’ordre <span class="math notranslate nohighlight">\(4\)</span> est: <span class="math notranslate nohighlight">\(u=-\frac{1}{2}x^2+\frac{1}{24}x^4+x^4 \varepsilon(x),\)</span> en appliquant la prop .., on a <span class="math notranslate nohighlight">\(u^2=\frac{1}{4}x^4+x^4 \varepsilon(x).\)</span> D’où,</p>
-<div class="math notranslate nohighlight">
-\[\begin{split}
-\begin{eqnarray*}
+<div class="amsmath math notranslate nohighlight">
+\[\begin{eqnarray*}
 h(x)=f(u)=1+\frac{1}{2}u-\frac{1}{8}u^2+u^2\varepsilon (u)
 &amp;=&amp; 1+\frac{1}{2}(-\frac{1}{2}x^2+\frac{1}{24}x^4)-\frac{1}{8}(\frac{1}{4}x^4)+x^4 \varepsilon(x)\\
 &amp;=&amp; 1-\frac{1}{4}x^2+\frac{1}{48}x^4-\frac{1}{32}x^4+x^4\varepsilon(x)\\
 &amp;=&amp; 1-\frac{1}{4}x^2-\frac{1}{96}x^4+x^4\varepsilon(x)
-\end{eqnarray*}
-\end{split}\]</div>
+\end{eqnarray*}\]</div>
 </div>
 </div>
 <div class="section" id="division">
@@ -696,23 +700,39 @@ h(x)=f(u)=1+\frac{1}{2}u-\frac{1}{8}u^2+u^2\varepsilon (u)
 <div class="admonition-exercice admonition">
 <p class="admonition-title">Exercice</p>
 <p>DL de <span class="math notranslate nohighlight">\(\frac{1+x}{2+x}\)</span> en <span class="math notranslate nohighlight">\(0\)</span> à l’ordre <span class="math notranslate nohighlight">\(4.\)</span></p>
-<div class="math notranslate nohighlight">
-\[\begin{split}
-\begin{eqnarray*}
+<div class="amsmath math notranslate nohighlight">
+\[\begin{eqnarray*}
 \frac{1+x}{2+x}
 &amp;=&amp; (1+x)\frac{1}{2}\frac{1}{1+\frac{x}{2}}\\
 &amp;=&amp; \frac{1}{2}(1+x)(1-\frac{x}{2}+(\frac{x}{2})^2-(\frac{x}{2})^3+(\frac{x}{2})^4+x^4 \varepsilon(x))\\
 &amp;=&amp; \frac{1}{2}+\frac{x}{4}-\frac{x^2}{8}+\frac{x^3}{16}-\frac{x^4}{32}+x^4 \varepsilon(x)
-\end{eqnarray*}
-\end{split}\]</div>
+\end{eqnarray*}\]</div>
 </div>
 </div>
 </div>
 <div class="section" id="applications-des-developpements-limites-calculs-de-limites">
 <h2>Applications des développements limités, Calculs de limites<a class="headerlink" href="#applications-des-developpements-limites-calculs-de-limites" title="Lien permanent vers ce titre">¶</a></h2>
-<p>Les DL sont très efficaces pour calculer des limites ayant des formes indéterminées ! Il suffit juste de remarquer que si <span class="math notranslate nohighlight">\(f(x)=c_0+c_1 (x-a)+\ldots\)</span> alors <span class="math notranslate nohighlight">\(\lim\limits_{\substack{x \rightarrow a}}f(x)=c_0=0\)</span></p>
+<p>Les DL sont très efficaces pour calculer des limites ayant des formes indéterminées ! Il suffit juste de remarquer que si <span class="math notranslate nohighlight">\(f(x)=c_0+c_1 (x-a)+\ldots\)</span> alors <span class="math notranslate nohighlight">\(\lim\limits_{\substack{x \rightarrow a}}f(x)=c_0\)</span></p>
 <p>Limite en <span class="math notranslate nohighlight">\(0\)</span> de <span class="math notranslate nohighlight">\(\frac{\ln(1+x)-\tan x+\frac{1}{2}\sin^2 x}{3 x^2 \sin^2 x}\)</span></p>
-<p>Notons <span class="math notranslate nohighlight">\(\frac{f(x)}{g(x)}\)</span> cette fraction, en <span class="math notranslate nohighlight">\(0,\)</span> <span class="math notranslate nohighlight">\(f(x)=\ln(1+x)-\tan x+\frac{1}{2}\sin^2 x=(x-\frac{x^2}{2}+\frac{x^3}{3}-\frac{x^4}{4}+o(x^4))-(x+\frac{x^3}{3}+o(x^4))+\frac{1}{2}(x-\frac{x^3}{6}+o(x^3))^2=-\frac{5}{12}x^4+o(x^4)\)</span> et <span class="math notranslate nohighlight">\(g(x)=3x^2 \sin^2 x=3x^4+o(x^4).\)</span> Ainsi, <span class="math notranslate nohighlight">\(\frac{f(x)}{g(x)}=\frac{-\frac{5}{12}x^4+o(x^4)}{3x^4+o(x^4)}=\frac{-\frac{5}{12}+o(1)}{3+o(1)}.\)</span> D’où, <span class="math notranslate nohighlight">\(\lim\limits_{\substack{x \rightarrow a}}\frac{f(x)}{g(x)}=-\frac{5}{36}.\)</span></p>
+<p>Notons <span class="math notranslate nohighlight">\(\frac{f(x)}{g(x)}\)</span> cette fraction.</p>
+<p>En <span class="math notranslate nohighlight">\(0,\)</span></p>
+<div class="amsmath math notranslate nohighlight">
+\[\begin{eqnarray*}
+f(x)
+&amp;=&amp; \ln(1+x)-\tan x+\frac{1}{2}\sin^2 x\\
+&amp;=&amp; (x-\frac{x^2}{2}+\frac{x^3}{3}-\frac{x^4}{4}+o(x^4))-(x+\frac{x^3}{3}+o(x^4))+\frac{1}{2}(x-\frac{x^3}{6}+o(x^3))^2\\
+&amp;=&amp; \frac{5}{12}x^4+o(x^4)\\
+g(x)
+&amp;=&amp; 3x^2 \sin^2 x\\
+&amp;=&amp; 3x^4+o(x^4)
+\end{eqnarray*}\]</div>
+<p>Ainsi
+<span class="math notranslate nohighlight">\(\frac{f(x)}{g(x)}=\frac{-\frac{5}{12}x^4+o(x^4)}{3x^4+o(x^4)}=\frac{-\frac{5}{12}+o(1)}{3+o(1)}.\)</span></p>
+<p>D’où,</p>
+<div class="math notranslate nohighlight">
+\[
+\lim\limits_{\substack{x \rightarrow a}}\frac{f(x)}{g(x)}=-\frac{5}{36}
+\]</div>
 </div>
 </div>
 
@@ -741,8 +761,8 @@ h(x)=f(u)=1+\frac{1}{2}u-\frac{1}{8}u^2+u^2\varepsilon (u)
         
         <div class='prev-next-bottom'>
             
-    <a class='left-prev' id="prev-link" href="exo6.html" title="previous page">Exercices</a>
-    <a class='right-next' id="next-link" href="integrationd.html" title="next page">Intégration</a>
+    <a class='left-prev' id="prev-link" href="complements.html" title="previous page">Complément sur les suites et les fonctions numériques</a>
+    <a class='right-next' id="next-link" href="exo6.html" title="next page">Exercices</a>
 
         </div>
         

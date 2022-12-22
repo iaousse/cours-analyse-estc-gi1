@@ -311,11 +311,11 @@ Seul le premier équivalent a un intérêt!!
 
 - Opérations sur les relations de comparaisons
 
-    1. $f = o(g), g = o(h) \Leftarrow f = o(h)$ cad (transitivité) idem avec $O$
-    2. $f_1 = o(g), f_2 = o(g) \Leftarrow f_1 + f_2 = o(g)$ cad $o(g) + o(g) = o(g)$ idem avec $O$
-    3. $f_1 = o(g_1), f_2 = o(g_2) \Leftarrow f_1f_2 = o(g_1g_2)$ cad $o(g_1)o(g_2) = o(g_1g_2)$ idem avec $O$
-    4. $f = o(g) \Leftarrow hf = o(hg)$ cad $ho(g) = o(hg)$ idem avec $O$
-    5. $f = o(\lambda g) (\lambda \in \mathbb{R}^{*}) \Leftarrow f = o(g)$ cad $ o(\lambda g) = o(g)$ idem avec $O$
+    1. $f = o(g), g = o(h) \Leftarrow f = o(h)$ cad (transitivité) la même chose avec $O$
+    2. $f_1 = o(g), f_2 = o(g) \Leftarrow f_1 + f_2 = o(g)$ cad $o(g) + o(g) = o(g)$ la même chose avec $O$
+    3. $f_1 = o(g_1), f_2 = o(g_2) \Leftarrow f_1f_2 = o(g_1g_2)$ cad $o(g_1)o(g_2) = o(g_1g_2)$ la même chose avec $O$
+    4. $f = o(g) \Leftarrow hf = o(hg)$ cad $ho(g) = o(hg)$ la même chose avec $O$
+    5. $f = o(\lambda g) (\lambda \in \mathbb{R}^{*}) \Leftarrow f = o(g)$ cad $ o(\lambda g) = o(g)$ la même chose avec $O$
 
 - Caractérisation de l'équivalence de deux fonctions
     On a au voisinage d’un point $a$ :  
