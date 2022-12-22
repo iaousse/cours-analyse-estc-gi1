@@ -233,6 +233,26 @@
   </label>
   <ul>
    <li class="toctree-l2">
+    <a class="reference internal" href="fe.html">
+     Intégrale des fonctions en escalier
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="fcm.html">
+     Fonctions continues par morceaux
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="pptint.html">
+     Propriétés de l’intégrale
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="fcmint.html">
+     Fonctions continue par morceaux sur un intervalle
+    </a>
+   </li>
+   <li class="toctree-l2">
     <a class="reference internal" href="pintfc.html">
      Primitive et intégrale des fonctions continues
     </a>
@@ -418,13 +438,13 @@
 <p>Soit <span class="math notranslate nohighlight">\(f : I\rightarrow\mathbb{R}\)</span> une fonction de classe <span class="math notranslate nohighlight">\(\mathscr{C}^{n+1},\,(n\in\mathbb{N},\)</span> et soit <span class="math notranslate nohighlight">\(a, x ∈\in I.\)</span> Il existe un réel <span class="math notranslate nohighlight">\(c\)</span> entre <span class="math notranslate nohighlight">\(a\)</span> et <span class="math notranslate nohighlight">\(x\)</span> tel que:</p>
 <div class="math notranslate nohighlight">
 \[
-f(x)=f(a)+f'(a)(x-a)+\frac{f''(a)}{2!}(x-a)^2+...+\frac{f^{(n)}(a)}{n!}(x-a)^n+\frac{f^{(n+1)}(c)}{(n+1)!}(x-a)^{n+1}
+f(x)=f(a)+f'(a)(x-a)+\frac{f''(a)}{2!}(x-a)^2+\ldots+\frac{f^{(n)}(a)}{n!}(x-a)^n+\frac{f^{(n+1)}(c)}{(n+1)!}(x-a)^{n+1}
 \]</div>
 </div>
 <p>On notera par <span class="math notranslate nohighlight">\(T_n\)</span> la partie définie par</p>
 <div class="math notranslate nohighlight">
 \[
-T_n(x):=f(a)+f'(a)(x-a)+\frac{f''(a)}{2!}(x-a)^2+...+\frac{f^{(n)}(a)}{n!}(x-a)^n
+T_n(x):=f(a)+f'(a)(x-a)+\frac{f''(a)}{2!}(x-a)^2+\ldots+\frac{f^{(n)}(a)}{n!}(x-a)^n
 \]</div>
 <div class="admonition-exercice admonition">
 <p class="admonition-title">Exercice</p>
@@ -446,12 +466,16 @@ T_n(x):=f(a)+f'(a)(x-a)+\frac{f''(a)}{2!}(x-a)^2+...+\frac{f^{(n)}(a)}{n!}(x-a)^
 <div class="admonition-exercice admonition">
 <p class="admonition-title">Exercice</p>
 <p>Approximation de <span class="math notranslate nohighlight">\(\sin(0,01)\)</span></p>
-<p>Soit <span class="math notranslate nohighlight">\(f(x)=\sin(x),\)</span> alors <span class="math notranslate nohighlight">\(f'(x)=\cos x,\,f''(x)=-\sin x,\,f^{(3)}(x)=-\cos x,\\
-\,f^{(4)}(x)=\sin x.\)</span> On obtient donc <span class="math notranslate nohighlight">\(f(0)=0,\,f'(0)=1,\,f''(0)=0,\,f^{(3)}(x)=-1.\)</span> La formule de Taylor ci-dessus en <span class="math notranslate nohighlight">\(a=0\)</span> à l’ordre 3 devient <span class="math notranslate nohighlight">\(f(x)=0+1.x+0.\frac{x^2}{2!}-1.\frac{x^3}{3!}+f^{(4)}(c)\frac{x^4}{4!}\)</span></p>
+<p>Soit <span class="math notranslate nohighlight">\(f(x)=\sin(x),\)</span> alors <span class="math notranslate nohighlight">\(f'(x)=\cos x\)</span>, <span class="math notranslate nohighlight">\(f''(x)=-\sin x\)</span> ,<span class="math notranslate nohighlight">\(f^{(3)}(x)=-\cos x\)</span>, <span class="math notranslate nohighlight">\(f^{(4)}(x)=\sin x\)</span>.
+On obtient donc <span class="math notranslate nohighlight">\(f(0)=0\)</span> ,<span class="math notranslate nohighlight">\(f'(0)=1\)</span>, <span class="math notranslate nohighlight">\(f''(0)=0\)</span>, <span class="math notranslate nohighlight">\(f^{(3)}(x)=-1.\)</span> La formule de Taylor ci-dessus en <span class="math notranslate nohighlight">\(a=0\)</span> à l’ordre 3 devient</p>
+<div class="math notranslate nohighlight">
+\[
+f(x)=0+1.x+0.\frac{x^2}{2!}-1.\frac{x^3}{3!}+f^{(4)}(c)\frac{x^4}{4!}
+\]</div>
 <p>Pour <span class="math notranslate nohighlight">\(x=0,01,\)</span> et en négligeant le reste (qui est assez petit), on obtient:</p>
 <div class="math notranslate nohighlight">
 \[
-\sin(0,01)\approx 0,01-\frac{(0,01)^3}{6}=0,00999983333...
+\sin(0,01)\approx 0,01-\frac{(0,01)^3}{6}=0,00999983333\ldots
 \]</div>
 </div>
 <div class="admonition-remarque admonition">
@@ -467,14 +491,14 @@ T_n(x):=f(a)+f'(a)(x-a)+\frac{f''(a)}{2!}(x-a)^2+...+\frac{f^{(n)}(a)}{n!}(x-a)^
 <p>Soit <span class="math notranslate nohighlight">\(f : I\rightarrow\mathbb{R}\)</span> une fonction de classe <span class="math notranslate nohighlight">\(\mathscr{C}^{n},\,(n\in\mathbb{N},\)</span> et soit <span class="math notranslate nohighlight">\(a\in I.\)</span> Alors pour tout <span class="math notranslate nohighlight">\(x\in I\)</span> on a:</p>
 <div class="math notranslate nohighlight">
 \[
-f(x)=f(a)+f'(a)(x-a)+\frac{f''(a)}{2!}(x-a)^2+...+\frac{f^{(n)}(a)}{n!}(x-a)^n+(x-a)^n \varepsilon(x)
+f(x)=f(a)+f'(a)(x-a)+\frac{f''(a)}{2!}(x-a)^2+\ldots+\frac{f^{(n)}(a)}{n!}(x-a)^n+(x-a)^n \varepsilon(x)
 \]</div>
 <p>avec <span class="math notranslate nohighlight">\(\varepsilon(x)\rightarrow0\)</span> quand <span class="math notranslate nohighlight">\(x\rightarrow a.\)</span></p>
 </div>
 <div class="admonition-exercice admonition">
 <p class="admonition-title">Exercice</p>
-<p>Soit <span class="math notranslate nohighlight">\(f :]-1,+\infty[\rightarrow \mathbb{R},\, x \mapsto\ln(1+x);\)</span> <span class="math notranslate nohighlight">\(f\)</span> est infiniment dérivable. Appliquons la formule de Taylor-Young à la fonction <span class="math notranslate nohighlight">\(f\)</span> au voisinage de <span class="math notranslate nohighlight">\(0,\)</span> soit <span class="math notranslate nohighlight">\(T_n\)</span> la fonction polynômiale associée à chaque <span class="math notranslate nohighlight">\(n,\)</span> pour cela on calcule d’abord <span class="math notranslate nohighlight">\(f^{(k)}(0)\)</span> pour <span class="math notranslate nohighlight">\(k=0,1,...,n.\)</span></p>
-<p><span class="math notranslate nohighlight">\(f(0)=0,\,f'(0)=1,\,f''(0)=-1,\,f^{(3)}(0)=2,...\)</span> Montrer par récurrence que <span class="math notranslate nohighlight">\(f^{(n)}(x)=(-1)^{n-1}(n-1)!\frac{1}{(1+x)^n}\)</span> et alors <span class="math notranslate nohighlight">\(f^{(n)}(0)=(-1)^{n-1}(n-1)!\)</span></p>
+<p>Soit <span class="math notranslate nohighlight">\(f :]-1,+\infty[\rightarrow \mathbb{R},\, x \mapsto\ln(1+x);\)</span> <span class="math notranslate nohighlight">\(f\)</span> est infiniment dérivable. Appliquons la formule de Taylor-Young à la fonction <span class="math notranslate nohighlight">\(f\)</span> au voisinage de <span class="math notranslate nohighlight">\(0,\)</span> soit <span class="math notranslate nohighlight">\(T_n\)</span> la fonction polynômiale associée à chaque <span class="math notranslate nohighlight">\(n,\)</span> pour cela on calcule d’abord <span class="math notranslate nohighlight">\(f^{(k)}(0)\)</span> pour <span class="math notranslate nohighlight">\(k=0,1,\ldots,n.\)</span></p>
+<p><span class="math notranslate nohighlight">\(f(0)=0,\,f'(0)=1,\,f''(0)=-1,\,f^{(3)}(0)=2,\ldots\)</span> Montrer par récurrence que <span class="math notranslate nohighlight">\(f^{(n)}(x)=(-1)^{n-1}(n-1)!\frac{1}{(1+x)^n}\)</span> et alors <span class="math notranslate nohighlight">\(f^{(n)}(0)=(-1)^{n-1}(n-1)!\)</span></p>
 <p>Voici donc les premiers polynômes de Taylor:</p>
 <div class="math notranslate nohighlight">
 \[
@@ -494,13 +518,13 @@ des polynômes <span class="math notranslate nohighlight">\(T_0,\,T_1,\,T_2,\,T_
 <p><strong>Cas particulier : Formule de Taylor-Young au voisinage de 0.</strong> On se ramène souvent au cas particulier où <span class="math notranslate nohighlight">\(a=0\)</span></p>
 <div class="math notranslate nohighlight">
 \[
-f(x)=f(0)+f'(0)x+\frac{f''(0)}{2!}x^2+...+\frac{f^{(n)}(0)}{n!}x^n+x^n \varepsilon(x)
+f(x)=f(0)+f'(0)x+\frac{f''(0)}{2!}x^2+\ldots+\frac{f^{(n)}(0)}{n!}x^n+x^n \varepsilon(x)
 \]</div>
 <p>avec <span class="math notranslate nohighlight">\(\varepsilon(x)\rightarrow0\)</span> quand <span class="math notranslate nohighlight">\(x\rightarrow .\)</span></p>
 <p>On écrit souvent cette formule avec la notation dite « petit <span class="math notranslate nohighlight">\(o\)</span> »</p>
 <div class="math notranslate nohighlight">
 \[
-f(x)=f(0)+f'(0)x+\frac{f''(0)}{2!}x^2+...+\frac{f^{(n)}(0)}{n!}x^n+o(x^n)
+f(x)=f(0)+f'(0)x+\frac{f''(0)}{2!}x^2+\ldots+\frac{f^{(n)}(0)}{n!}x^n+o(x^n)
 \]</div>
 </div>
 <div class="section" id="developpements-limites-au-voisinage-d-un-point">
@@ -511,14 +535,14 @@ f(x)=f(0)+f'(0)x+\frac{f''(0)}{2!}x^2+...+\frac{f^{(n)}(0)}{n!}x^n+o(x^n)
 <div class="admonition-definition admonition">
 <p class="admonition-title">Definition</p>
 <p>Pour <span class="math notranslate nohighlight">\(a\in  I\)</span> et <span class="math notranslate nohighlight">\(n\in\mathbb{N},\)</span> on dit que <span class="math notranslate nohighlight">\(f\)</span> admet un <strong>développement limité (DL)</strong> au point <span class="math notranslate nohighlight">\(a\)</span> et à l’ordre <span class="math notranslate nohighlight">\(n,\)</span> s’il existe des
-réels <span class="math notranslate nohighlight">\(c_0,c_1,...,c_n\)</span> et une fonction <span class="math notranslate nohighlight">\(\varepsilon:I\rightarrow\mathbb{R}\)</span> telle que <span class="math notranslate nohighlight">\(\lim\limits_{\substack{x \rightarrow a}}\varepsilon(x)=0\)</span> de sorte que pour tout <span class="math notranslate nohighlight">\(x\in I:\)</span></p>
+réels <span class="math notranslate nohighlight">\(c_0,c_1,\ldots,c_n\)</span> et une fonction <span class="math notranslate nohighlight">\(\varepsilon:I\rightarrow\mathbb{R}\)</span> telle que <span class="math notranslate nohighlight">\(\lim\limits_{\substack{x \rightarrow a}}\varepsilon(x)=0\)</span> de sorte que pour tout <span class="math notranslate nohighlight">\(x\in I:\)</span></p>
 <div class="math notranslate nohighlight">
 \[
-f(x)=c_0+c_1(x-a)+c_2(x-a)^2+...+c_n(x-a)^n+(x-a)^n \varepsilon(x)
+f(x)=c_0+c_1(x-a)+c_2(x-a)^2+\ldots+c_n(x-a)^n+(x-a)^n \varepsilon(x)
 \]</div>
 <ul class="simple">
 <li><p>L’égalité précédente s’appelle un DL de <span class="math notranslate nohighlight">\(f\)</span> au voisinage de <span class="math notranslate nohighlight">\(a\)</span> à l’ordre <span class="math notranslate nohighlight">\(n.\)</span></p></li>
-<li><p>Le terme <span class="math notranslate nohighlight">\(c_0+c_1(x-a)+c_2(x-a)^2+...+c_n(x-a)^n\)</span> est appelé <strong>la partie polynomiale du DL</strong>.</p></li>
+<li><p>Le terme <span class="math notranslate nohighlight">\(c_0+c_1(x-a)+c_2(x-a)^2+\ldots+c_n(x-a)^n\)</span> est appelé <strong>la partie polynomiale du DL</strong>.</p></li>
 <li><p>Le terme  <span class="math notranslate nohighlight">\((x-a)^n \varepsilon(x)\)</span> est appelé <strong>le reste du DL.</strong></p></li>
 </ul>
 </div>
@@ -529,14 +553,18 @@ f(x)=c_0+c_1(x-a)+c_2(x-a)^2+...+c_n(x-a)^n+(x-a)^n \varepsilon(x)
 <li><p>Si <span class="math notranslate nohighlight">\(f\)</span> est de classe <span class="math notranslate nohighlight">\(\mathscr{C}^{n}\)</span> au voisinage d’un point <span class="math notranslate nohighlight">\(0,\)</span> un DL en <span class="math notranslate nohighlight">\(0\)</span> à l’ordre <span class="math notranslate nohighlight">\(n\)</span> est l’expression:</p>
 <div class="math notranslate nohighlight">
 \[
-    f(x)=f(0)+f'(0)x+\frac{f''(0)}{2!}x^2+...+\frac{f^{(n)}(0)}{n!}x^n+x^n \varepsilon(x)
+    f(x)=f(0)+f'(0)x+\frac{f''(0)}{2!}x^2+\ldots+\frac{f^{(n)}(0)}{n!}x^n+x^n \varepsilon(x)
     \]</div>
 </li>
-<li><p>Si <span class="math notranslate nohighlight">\(f\)</span> admet un DL en un point <span class="math notranslate nohighlight">\(a\)</span> à l’ordre <span class="math notranslate nohighlight">\(n\)</span> alors elle en possède un pour tout <span class="math notranslate nohighlight">\(k\leq n.\)</span> En effet</p>
-<p><span class="math notranslate nohighlight">\(f(x)=f(a)+f'(a)(x-a)+\frac{f''(a)}{2!}(x-a)^2+...+\frac{f^{(k)}(a)}{k!}(x-a)^k\\
- +\frac{f^{(k+1)}(a)}{(k+1)!}(x-a)^{k+1}+...+\frac{f^{(n)}(a)}{n!}(x-a)^n+(x-a)^n \varepsilon(x)\)</span></p>
-</li>
+<li><p>Si <span class="math notranslate nohighlight">\(f\)</span> admet un DL en un point <span class="math notranslate nohighlight">\(a\)</span> à l’ordre <span class="math notranslate nohighlight">\(n\)</span> alors elle en possède un pour tout <span class="math notranslate nohighlight">\(k\leq n.\)</span> En effet</p></li>
 </ol>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+\begin{eqnarray*}
+f(x)&amp;=&amp; f(a)+f'(a)(x-a)+\frac{f''(a)}{2!}(x-a)^2+\ldots+\frac{f^{(k)}(a)}{k!}(x-a)^k\\
+&amp;&amp; +\frac{f^{(k+1)}(a)}{(k+1)!}(x-a)^{k+1}+\ldots+\frac{f^{(n)}(a)}{n!}(x-a)^n+(x-a)^n \varepsilon(x)
+\end{eqnarray*}
+\end{split}\]</div>
 </div>
 </div>
 <div class="section" id="unicite">
@@ -560,18 +588,18 @@ conséquent <span class="math notranslate nohighlight">\(y = c_0 + c_1(x-a)\)</s
 <div class="section" id="dl-des-fonctions-usuelles-a-l-origine">
 <h3>DL des fonctions usuelles à l’origine<a class="headerlink" href="#dl-des-fonctions-usuelles-a-l-origine" title="Lien permanent vers ce titre">¶</a></h3>
 <p>Les DL suivants en <span class="math notranslate nohighlight">\(0\)</span> proviennent de la formule de Taylor-Young.</p>
-<p><span class="math notranslate nohighlight">\(\exp x=1+\frac{x}{1!}+\frac{x^2}{2!}+...+\frac{x^n}{n!}+x^n \varepsilon(x)\)</span></p>
-<p><span class="math notranslate nohighlight">\(chx=1+\frac{x^2}{2!}+\frac{x^4}{4!}...+\frac{x^{2n}}{(2n)!}+x^{2n+1} \varepsilon(x)\)</span></p>
-<p><span class="math notranslate nohighlight">\(shx=1+\frac{x}{1!}\frac{x^3}{3!}+\frac{x^5}{5!}...+\frac{x^{2n+1}}{(2n+1)!}+x^{2n+2} \varepsilon(x)\)</span></p>
-<p><span class="math notranslate nohighlight">\(\cos x=1-\frac{x^2}{2!}+\frac{x^4}{4!}...+(-1)^n\frac{x^{2n}}{(2n)!}+x^{2n+1} \varepsilon(x)\)</span></p>
-<p><span class="math notranslate nohighlight">\(shx=1+\frac{x}{1!}\frac{x^3}{3!}+\frac{x^5}{5!}...+(-1)^n\frac{x^{2n+1}}{(2n+1)!}+x^{2n+2} \varepsilon(x)\)</span></p>
-<p><span class="math notranslate nohighlight">\(\frac{1}{1-x}=1+x+x^2+...+x^n+x^n \varepsilon(x)\)</span></p>
-<p><span class="math notranslate nohighlight">\(\frac{1}{1+x}=1-x+x^2-x^3+...+(-1)^n x^n+x^n \varepsilon(x)\)</span></p>
-<p><span class="math notranslate nohighlight">\(\ln(1+x)=x-\frac{x^2}{2}+\frac{x^3}{3}-...+(-1)^{n-1} \frac{x^n}{n}+x^n \varepsilon(x)\)</span></p>
+<p><span class="math notranslate nohighlight">\(\exp x=1+\frac{x}{1!}+\frac{x^2}{2!}+\ldots+\frac{x^n}{n!}+x^n \varepsilon(x)\)</span></p>
+<p><span class="math notranslate nohighlight">\(chx=1+\frac{x^2}{2!}+\frac{x^4}{4!}\ldots+\frac{x^{2n}}{(2n)!}+x^{2n+1} \varepsilon(x)\)</span></p>
+<p><span class="math notranslate nohighlight">\(shx=1+\frac{x}{1!}\frac{x^3}{3!}+\frac{x^5}{5!}\ldots+\frac{x^{2n+1}}{(2n+1)!}+x^{2n+2} \varepsilon(x)\)</span></p>
+<p><span class="math notranslate nohighlight">\(\cos x=1-\frac{x^2}{2!}+\frac{x^4}{4!}\ldots+(-1)^n\frac{x^{2n}}{(2n)!}+x^{2n+1} \varepsilon(x)\)</span></p>
+<p><span class="math notranslate nohighlight">\(shx=1+\frac{x}{1!}\frac{x^3}{3!}+\frac{x^5}{5!}\ldots+(-1)^n\frac{x^{2n+1}}{(2n+1)!}+x^{2n+2} \varepsilon(x)\)</span></p>
+<p><span class="math notranslate nohighlight">\(\frac{1}{1-x}=1+x+x^2+\ldots+x^n+x^n \varepsilon(x)\)</span></p>
+<p><span class="math notranslate nohighlight">\(\frac{1}{1+x}=1-x+x^2-x^3+\ldots+(-1)^n x^n+x^n \varepsilon(x)\)</span></p>
+<p><span class="math notranslate nohighlight">\(\ln(1+x)=x-\frac{x^2}{2}+\frac{x^3}{3}-\ldots+(-1)^{n-1} \frac{x^n}{n}+x^n \varepsilon(x)\)</span></p>
 <p>Généralement, pour <span class="math notranslate nohighlight">\(\alpha\neq -1,\)</span> on a:</p>
-<p><span class="math notranslate nohighlight">\((1+x)^{\alpha}=1+\alpha x+\frac{\alpha(\alpha-1)}{2}x^2+...+\frac{\alpha(\alpha-1)...(\alpha-n+1)}{n!}x^n+x^{n} \varepsilon(x)\)</span></p>
+<p><span class="math notranslate nohighlight">\((1+x)^{\alpha}=1+\alpha x+\frac{\alpha(\alpha-1)}{2}x^2+\ldots+\frac{\alpha(\alpha-1)\ldots(\alpha-n+1)}{n!}x^n+x^{n} \varepsilon(x)\)</span></p>
 <p>En particulier, pour <span class="math notranslate nohighlight">\(\alpha=\frac{1}{2},\)</span> on a:</p>
-<p><span class="math notranslate nohighlight">\(\sqrt{1+x}=1+\frac{x}{2}-\frac{1}{8}x^2+...+(-1)^n\frac{1.3.5....(2n-3)}{2^n n!}x^n+x^n \varepsilon(x)\)</span></p>
+<p><span class="math notranslate nohighlight">\(\sqrt{1+x}=1+\frac{x}{2}-\frac{1}{8}x^2+\ldots+(-1)^n\frac{1.3.5\ldots.(2n-3)}{2^n n!}x^n+x^n \varepsilon(x)\)</span></p>
 </div>
 <div class="section" id="dl-des-fonctions-en-un-point-quelconque">
 <h3><span class="math notranslate nohighlight">\(DL\)</span> des fonctions en un point quelconque<a class="headerlink" href="#dl-des-fonctions-en-un-point-quelconque" title="Lien permanent vers ce titre">¶</a></h3>
@@ -587,8 +615,8 @@ voisinage de <span class="math notranslate nohighlight">\(0.\)</span> Souvent on
 \begin{eqnarray*}
 \exp 
 &amp;=&amp;\mbox{exp(1+(x-1))}=\exp (1)\exp (x-1)=e\exp h\\
-&amp;=&amp; e(1+h+\frac{h^2}{2}+...+\frac{h^n}{n!}+h^n \varepsilon(h))\\
-&amp;=&amp; e(1+(x-1)+\frac{(x-1)^2}{2}+...+\frac{(x-1)^n}{n!}+(x-1)^n \varepsilon(x-1)))\\
+&amp;=&amp; e(1+h+\frac{h^2}{2}+\ldots+\frac{h^n}{n!}+h^n \varepsilon(h))\\
+&amp;=&amp; e(1+(x-1)+\frac{(x-1)^2}{2}+\ldots+\frac{(x-1)^n}{n!}+(x-1)^n \varepsilon(x-1)))\\
 \end{eqnarray*}
 \end{split}\]</div>
 <p>où <span class="math notranslate nohighlight">\(\lim\limits_{\substack{x \rightarrow 1}}\varepsilon(x-1)=0\)</span></p>
@@ -602,18 +630,18 @@ voisinage de <span class="math notranslate nohighlight">\(0.\)</span> Souvent on
 <p>On suppose que <span class="math notranslate nohighlight">\(f\)</span> et <span class="math notranslate nohighlight">\(g\)</span> sont deux fonctions qui admettent des <span class="math notranslate nohighlight">\(DL\)</span> en <span class="math notranslate nohighlight">\(0\)</span> à l’ordre <span class="math notranslate nohighlight">\(n:\)</span></p>
 <div class="math notranslate nohighlight">
 \[
-f(x)=c_0+c_1 x+...+c_n x^n +x^n \varepsilon_1 (x)\quad\mbox{et}\quad g(x)=d_0+d_1 x+...+d_n x^n +x^n \varepsilon_2 (x)
+f(x)=c_0+c_1 x+\ldots+c_n x^n +x^n \varepsilon_1 (x)\quad\mbox{et}\quad g(x)=d_0+d_1 x+\ldots+d_n x^n +x^n \varepsilon_2 (x)
 \]</div>
 <div class="admonition-proposition admonition">
 <p class="admonition-title">Proposition</p>
 <ul class="simple">
 <li><p><span class="math notranslate nohighlight">\(f+g\)</span> admet un <span class="math notranslate nohighlight">\(DL\)</span> en <span class="math notranslate nohighlight">\(0\)</span> l’ordre <span class="math notranslate nohighlight">\(n\)</span> qui est:</p></li>
 </ul>
-<p><span class="math notranslate nohighlight">\((f+g)(x)=f(x)+g(x)=(c_0+d_0)+(c_1+d_1)x+(c_0+d_0)x^2+...+(c_n+d_n) x^n +x^{n}\varepsilon(x)\)</span></p>
+<p><span class="math notranslate nohighlight">\((f+g)(x)=f(x)+g(x)=(c_0+d_0)+(c_1+d_1)x+(c_0+d_0)x^2+\ldots+(c_n+d_n) x^n +x^{n}\varepsilon(x)\)</span></p>
 <ul class="simple">
 <li><p><span class="math notranslate nohighlight">\(f\times g\)</span> admet un <span class="math notranslate nohighlight">\(DL\)</span> en <span class="math notranslate nohighlight">\(0\)</span> l’ordre <span class="math notranslate nohighlight">\(n\)</span> qui est:</p></li>
 </ul>
-<p><span class="math notranslate nohighlight">\((f\times g)(x)=f(x)\times g(x)=T_n(x)+x^n \varepsilon(x)\)</span> où <span class="math notranslate nohighlight">\(T_n(x)\)</span> est le polynôme <span class="math notranslate nohighlight">\((c_0+c_1 x+...+c_n x^n)\times (d_0+d_1 x+...+d_n x^n)\)</span> tronqué à l’ordre <span class="math notranslate nohighlight">\(n.\)</span></p>
+<p><span class="math notranslate nohighlight">\((f\times g)(x)=f(x)\times g(x)=T_n(x)+x^n \varepsilon(x)\)</span> où <span class="math notranslate nohighlight">\(T_n(x)\)</span> est le polynôme <span class="math notranslate nohighlight">\((c_0+c_1 x+\ldots+c_n x^n)\times (d_0+d_1 x+\ldots+d_n x^n)\)</span> tronqué à l’ordre <span class="math notranslate nohighlight">\(n.\)</span></p>
 </div>
 <div class="admonition-exercice admonition">
 <p class="admonition-title">Exercice</p>
@@ -632,7 +660,7 @@ f(x)=c_0+c_1 x+...+c_n x^n +x^n \varepsilon_1 (x)\quad\mbox{et}\quad g(x)=d_0+d_
 </div>
 <div class="section" id="composition">
 <h3>Composition<a class="headerlink" href="#composition" title="Lien permanent vers ce titre">¶</a></h3>
-<p>Soient <span class="math notranslate nohighlight">\(f(x)=C(x)+x^n \varepsilon_1 (x)=c_0+c_1 x+...+c_n x^n +x^n \varepsilon_1 (x)\)</span> et <span class="math notranslate nohighlight">\(g(x)=D(x)+x^n \varepsilon_2 (x)=d_0+d_1 x+...+d_n x^n +x^n \varepsilon_2 (x)\)</span></p>
+<p>Soient <span class="math notranslate nohighlight">\(f(x)=C(x)+x^n \varepsilon_1 (x)=c_0+c_1 x+\ldots+c_n x^n +x^n \varepsilon_1 (x)\)</span> et <span class="math notranslate nohighlight">\(g(x)=D(x)+x^n \varepsilon_2 (x)=d_0+d_1 x+\ldots+d_n x^n +x^n \varepsilon_2 (x)\)</span></p>
 <div class="admonition-proposition admonition">
 <p class="admonition-title">Proposition</p>
 <p>Si <span class="math notranslate nohighlight">\(g(0) = 0\)</span> (c’est-à-dire <span class="math notranslate nohighlight">\(d_0 = 0\)</span>) alors la fonction <span class="math notranslate nohighlight">\(f\circ g\)</span> admet un <span class="math notranslate nohighlight">\(DL\)</span> en <span class="math notranslate nohighlight">\(0\)</span> à l’ordre <span class="math notranslate nohighlight">\(n\)</span> dont la partie polynomiale est le
@@ -655,13 +683,13 @@ h(x)=f(u)=1+\frac{1}{2}u-\frac{1}{8}u^2+u^2\varepsilon (u)
 <div class="section" id="division">
 <h3>Division<a class="headerlink" href="#division" title="Lien permanent vers ce titre">¶</a></h3>
 <p>Soit à déterminer le DL de <span class="math notranslate nohighlight">\(f/g,\)</span> quitte à multiplier le DL de <span class="math notranslate nohighlight">\(f\)</span> par celui de <span class="math notranslate nohighlight">\(1/g,\)</span> il suffier de trouver le DL  de ce dernier,</p>
-<p>en posant <span class="math notranslate nohighlight">\(f(x)=c_0+c_1 x+...+c_n x^n +x^n \varepsilon_1 (x)\quad\mbox{et}\quad g(x)=d_0+d_1 x+...+d_n x^n +x^n \varepsilon_2 (x)\)</span></p>
+<p>en posant <span class="math notranslate nohighlight">\(f(x)=c_0+c_1 x+\ldots+c_n x^n +x^n \varepsilon_1 (x)\quad\mbox{et}\quad g(x)=d_0+d_1 x+\ldots+d_n x^n +x^n \varepsilon_2 (x)\)</span></p>
 <p>cherchons le DL de <span class="math notranslate nohighlight">\(1/g,\)</span> pour cela on utilise le DL de <span class="math notranslate nohighlight">\(\frac{1}{1+u},\)</span></p>
 <ol class="simple">
-<li><p>Si <span class="math notranslate nohighlight">\(d_0=1,\)</span> <span class="math notranslate nohighlight">\(u=d_1 x+...+d_n x^n +x^n \varepsilon(x),\)</span></p></li>
+<li><p>Si <span class="math notranslate nohighlight">\(d_0=1,\)</span> <span class="math notranslate nohighlight">\(u=d_1 x+\ldots+d_n x^n +x^n \varepsilon(x),\)</span></p></li>
 <li><p>Si <span class="math notranslate nohighlight">\(d_0\)</span> est quelconque avec <span class="math notranslate nohighlight">\(d_0 \neq0\)</span> alors on se ramène au cas précédent en écrivant</p></li>
 </ol>
-<p><span class="math notranslate nohighlight">\(\frac{1}{g(x)}=\frac{1}{d_0}\frac{1}{1+\frac{d_1}{d_0}x+...+\frac{d_n}{d_0}x^n+\frac{x^n \varepsilon_2 (x)}{d_0}}\)</span></p>
+<p><span class="math notranslate nohighlight">\(\frac{1}{g(x)}=\frac{1}{d_0}\frac{1}{1+\frac{d_1}{d_0}x+\ldots+\frac{d_n}{d_0}x^n+\frac{x^n \varepsilon_2 (x)}{d_0}}\)</span></p>
 <ol class="simple">
 <li><p>Si <span class="math notranslate nohighlight">\(d_0 = 0\)</span> alors on factorise par <span class="math notranslate nohighlight">\(x^k\)</span> (pour un certain <span class="math notranslate nohighlight">\(k\)</span>) afin de se ramener aux cas précédents.</p></li>
 </ol>
@@ -682,7 +710,7 @@ h(x)=f(u)=1+\frac{1}{2}u-\frac{1}{8}u^2+u^2\varepsilon (u)
 </div>
 <div class="section" id="applications-des-developpements-limites-calculs-de-limites">
 <h2>Applications des développements limités, Calculs de limites<a class="headerlink" href="#applications-des-developpements-limites-calculs-de-limites" title="Lien permanent vers ce titre">¶</a></h2>
-<p>Les DL sont très efficaces pour calculer des limites ayant des formes indéterminées ! Il suffit juste de remarquer que si <span class="math notranslate nohighlight">\(f(x)=c_0+c_1 (x-a)+...\)</span> alors <span class="math notranslate nohighlight">\(\lim\limits_{\substack{x \rightarrow a}}f(x)=c_0=0\)</span></p>
+<p>Les DL sont très efficaces pour calculer des limites ayant des formes indéterminées ! Il suffit juste de remarquer que si <span class="math notranslate nohighlight">\(f(x)=c_0+c_1 (x-a)+\ldots\)</span> alors <span class="math notranslate nohighlight">\(\lim\limits_{\substack{x \rightarrow a}}f(x)=c_0=0\)</span></p>
 <p>Limite en <span class="math notranslate nohighlight">\(0\)</span> de <span class="math notranslate nohighlight">\(\frac{\ln(1+x)-\tan x+\frac{1}{2}\sin^2 x}{3 x^2 \sin^2 x}\)</span></p>
 <p>Notons <span class="math notranslate nohighlight">\(\frac{f(x)}{g(x)}\)</span> cette fraction, en <span class="math notranslate nohighlight">\(0,\)</span> <span class="math notranslate nohighlight">\(f(x)=\ln(1+x)-\tan x+\frac{1}{2}\sin^2 x=(x-\frac{x^2}{2}+\frac{x^3}{3}-\frac{x^4}{4}+o(x^4))-(x+\frac{x^3}{3}+o(x^4))+\frac{1}{2}(x-\frac{x^3}{6}+o(x^3))^2=-\frac{5}{12}x^4+o(x^4)\)</span> et <span class="math notranslate nohighlight">\(g(x)=3x^2 \sin^2 x=3x^4+o(x^4).\)</span> Ainsi, <span class="math notranslate nohighlight">\(\frac{f(x)}{g(x)}=\frac{-\frac{5}{12}x^4+o(x^4)}{3x^4+o(x^4)}=\frac{-\frac{5}{12}+o(1)}{3+o(1)}.\)</span> D’où, <span class="math notranslate nohighlight">\(\lim\limits_{\substack{x \rightarrow a}}\frac{f(x)}{g(x)}=-\frac{5}{36}.\)</span></p>
 </div>

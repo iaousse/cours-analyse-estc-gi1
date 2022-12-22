@@ -6,7 +6,7 @@
 Soit $f : I\rightarrow\mathbb{R}$ une fonction de classe $\mathscr{C}^{n+1},\,(n\in\mathbb{N},$ et soit $a, x ∈\in I.$ Il existe un réel $c$ entre $a$ et $x$ tel que:
 
 $$
-f(x)=f(a)+f'(a)(x-a)+\frac{f''(a)}{2!}(x-a)^2+...+\frac{f^{(n)}(a)}{n!}(x-a)^n+\frac{f^{(n+1)}(c)}{(n+1)!}(x-a)^{n+1}
+f(x)=f(a)+f'(a)(x-a)+\frac{f''(a)}{2!}(x-a)^2+\ldots+\frac{f^{(n)}(a)}{n!}(x-a)^n+\frac{f^{(n+1)}(c)}{(n+1)!}(x-a)^{n+1}
 $$
 
 ```
@@ -14,7 +14,7 @@ $$
 On notera par $T_n$ la partie définie par 
 
 $$
-T_n(x):=f(a)+f'(a)(x-a)+\frac{f''(a)}{2!}(x-a)^2+...+\frac{f^{(n)}(a)}{n!}(x-a)^n
+T_n(x):=f(a)+f'(a)(x-a)+\frac{f''(a)}{2!}(x-a)^2+\ldots+\frac{f^{(n)}(a)}{n!}(x-a)^n
 $$
 
 ```{admonition} Exercice
@@ -37,13 +37,17 @@ $$
 ```{admonition} Exercice
 Approximation de $\sin(0,01)$
 
-Soit $f(x)=\sin(x),$ alors $f'(x)=\cos x,\,f''(x)=-\sin x,\,f^{(3)}(x)=-\cos x,\\
-\,f^{(4)}(x)=\sin x.$ On obtient donc $f(0)=0,\,f'(0)=1,\,f''(0)=0,\,f^{(3)}(x)=-1.$ La formule de Taylor ci-dessus en $a=0$ à l'ordre 3 devient $f(x)=0+1.x+0.\frac{x^2}{2!}-1.\frac{x^3}{3!}+f^{(4)}(c)\frac{x^4}{4!}$
+Soit $f(x)=\sin(x),$ alors $f'(x)=\cos x$, $f''(x)=-\sin x$ ,$f^{(3)}(x)=-\cos x$, $f^{(4)}(x)=\sin x$. 
+On obtient donc $f(0)=0$ ,$f'(0)=1$, $f''(0)=0$, $f^{(3)}(x)=-1.$ La formule de Taylor ci-dessus en $a=0$ à l'ordre 3 devient 
+
+$$
+f(x)=0+1.x+0.\frac{x^2}{2!}-1.\frac{x^3}{3!}+f^{(4)}(c)\frac{x^4}{4!}
+$$
 
 Pour $x=0,01,$ et en négligeant le reste (qui est assez petit), on obtient:
 
 $$
-\sin(0,01)\approx 0,01-\frac{(0,01)^3}{6}=0,00999983333...
+\sin(0,01)\approx 0,01-\frac{(0,01)^3}{6}=0,00999983333\ldots
 $$
 
 ```
@@ -59,15 +63,15 @@ $$
 Soit $f : I\rightarrow\mathbb{R}$ une fonction de classe $\mathscr{C}^{n},\,(n\in\mathbb{N},$ et soit $a\in I.$ Alors pour tout $x\in I$ on a:
 
 $$
-f(x)=f(a)+f'(a)(x-a)+\frac{f''(a)}{2!}(x-a)^2+...+\frac{f^{(n)}(a)}{n!}(x-a)^n+(x-a)^n \varepsilon(x)
+f(x)=f(a)+f'(a)(x-a)+\frac{f''(a)}{2!}(x-a)^2+\ldots+\frac{f^{(n)}(a)}{n!}(x-a)^n+(x-a)^n \varepsilon(x)
 $$
 
 avec $\varepsilon(x)\rightarrow0$ quand $x\rightarrow a.$
 ```
 ```{admonition} Exercice
-Soit $f :]-1,+\infty[\rightarrow \mathbb{R},\, x \mapsto\ln(1+x);$ $f$ est infiniment dérivable. Appliquons la formule de Taylor-Young à la fonction $f$ au voisinage de $0,$ soit $T_n$ la fonction polynômiale associée à chaque $n,$ pour cela on calcule d'abord $f^{(k)}(0)$ pour $k=0,1,...,n.$
+Soit $f :]-1,+\infty[\rightarrow \mathbb{R},\, x \mapsto\ln(1+x);$ $f$ est infiniment dérivable. Appliquons la formule de Taylor-Young à la fonction $f$ au voisinage de $0,$ soit $T_n$ la fonction polynômiale associée à chaque $n,$ pour cela on calcule d'abord $f^{(k)}(0)$ pour $k=0,1,\ldots,n.$
 
-$f(0)=0,\,f'(0)=1,\,f''(0)=-1,\,f^{(3)}(0)=2,...$ Montrer par récurrence que $f^{(n)}(x)=(-1)^{n-1}(n-1)!\frac{1}{(1+x)^n}$ et alors $f^{(n)}(0)=(-1)^{n-1}(n-1)!$
+$f(0)=0,\,f'(0)=1,\,f''(0)=-1,\,f^{(3)}(0)=2,\ldots$ Montrer par récurrence que $f^{(n)}(x)=(-1)^{n-1}(n-1)!\frac{1}{(1+x)^n}$ et alors $f^{(n)}(0)=(-1)^{n-1}(n-1)!$
 
 Voici donc les premiers polynômes de Taylor:
 
@@ -97,7 +101,7 @@ Approximation
 **Cas particulier : Formule de Taylor-Young au voisinage de 0.** On se ramène souvent au cas particulier où $a=0$
 
 $$
-f(x)=f(0)+f'(0)x+\frac{f''(0)}{2!}x^2+...+\frac{f^{(n)}(0)}{n!}x^n+x^n \varepsilon(x)
+f(x)=f(0)+f'(0)x+\frac{f''(0)}{2!}x^2+\ldots+\frac{f^{(n)}(0)}{n!}x^n+x^n \varepsilon(x)
 $$
 
 avec $\varepsilon(x)\rightarrow0$ quand $x\rightarrow .$
@@ -105,7 +109,7 @@ avec $\varepsilon(x)\rightarrow0$ quand $x\rightarrow .$
 On écrit souvent cette formule avec la notation dite "petit $o$"
 
 $$
-f(x)=f(0)+f'(0)x+\frac{f''(0)}{2!}x^2+...+\frac{f^{(n)}(0)}{n!}x^n+o(x^n)
+f(x)=f(0)+f'(0)x+\frac{f''(0)}{2!}x^2+\ldots+\frac{f^{(n)}(0)}{n!}x^n+o(x^n)
 $$
 
 ## Développements limités au voisinage d'un point
@@ -115,15 +119,15 @@ Soit $I$ un intervalle ouvert et $f :I\rightarrow\mathbb{R}$ une fonction quelco
 
 ```{admonition} Definition
 Pour $a\in  I$ et $n\in\mathbb{N},$ on dit que $f$ admet un **développement limité (DL)** au point $a$ et à l'ordre $n,$ s'il existe des
-réels $c_0,c_1,...,c_n$ et une fonction $\varepsilon:I\rightarrow\mathbb{R}$ telle que $\lim\limits_{\substack{x \rightarrow a}}\varepsilon(x)=0$ de sorte que pour tout $x\in I:$
+réels $c_0,c_1,\ldots,c_n$ et une fonction $\varepsilon:I\rightarrow\mathbb{R}$ telle que $\lim\limits_{\substack{x \rightarrow a}}\varepsilon(x)=0$ de sorte que pour tout $x\in I:$
 
 $$
-f(x)=c_0+c_1(x-a)+c_2(x-a)^2+...+c_n(x-a)^n+(x-a)^n \varepsilon(x)
+f(x)=c_0+c_1(x-a)+c_2(x-a)^2+\ldots+c_n(x-a)^n+(x-a)^n \varepsilon(x)
 $$
 
 - L'égalité précédente s'appelle un DL de $f$ au voisinage de $a$ à l'ordre $n.$
 
-- Le terme $c_0+c_1(x-a)+c_2(x-a)^2+...+c_n(x-a)^n$ est appelé **la partie polynomiale du DL**.
+- Le terme $c_0+c_1(x-a)+c_2(x-a)^2+\ldots+c_n(x-a)^n$ est appelé **la partie polynomiale du DL**.
 
 - Le terme  $(x-a)^n \varepsilon(x)$ est appelé **le reste du DL.**
 ```
@@ -136,13 +140,17 @@ La formule de Taylor-Young permet d'obtenir immédiatement des développements l
 1. Si $f$ est de classe $\mathscr{C}^{n}$ au voisinage d'un point $0,$ un DL en $0$ à l'ordre $n$ est l'expression:
 
     $$
-    f(x)=f(0)+f'(0)x+\frac{f''(0)}{2!}x^2+...+\frac{f^{(n)}(0)}{n!}x^n+x^n \varepsilon(x)
+    f(x)=f(0)+f'(0)x+\frac{f''(0)}{2!}x^2+\ldots+\frac{f^{(n)}(0)}{n!}x^n+x^n \varepsilon(x)
     $$
     
 2. Si $f$ admet un DL en un point $a$ à l'ordre $n$ alors elle en possède un pour tout $k\leq n.$ En effet
 
-    $f(x)=f(a)+f'(a)(x-a)+\frac{f''(a)}{2!}(x-a)^2+...+\frac{f^{(k)}(a)}{k!}(x-a)^k\\
-    +\frac{f^{(k+1)}(a)}{(k+1)!}(x-a)^{k+1}+...+\frac{f^{(n)}(a)}{n!}(x-a)^n+(x-a)^n \varepsilon(x)$
+$$
+\begin{eqnarray*}
+f(x)&=& f(a)+f'(a)(x-a)+\frac{f''(a)}{2!}(x-a)^2+\ldots+\frac{f^{(k)}(a)}{k!}(x-a)^k\\
+&& +\frac{f^{(k+1)}(a)}{(k+1)!}(x-a)^{k+1}+\ldots+\frac{f^{(n)}(a)}{n!}(x-a)^n+(x-a)^n \varepsilon(x)
+\end{eqnarray*}
+$$
 
 
 ```
@@ -166,29 +174,29 @@ conséquent $y = c_0 + c_1(x-a)$ est l'équation de la tangente au graphe de $f$
 ### DL des fonctions usuelles à l'origine
 Les DL suivants en $0$ proviennent de la formule de Taylor-Young.
 
-$\exp x=1+\frac{x}{1!}+\frac{x^2}{2!}+...+\frac{x^n}{n!}+x^n \varepsilon(x)$
+$\exp x=1+\frac{x}{1!}+\frac{x^2}{2!}+\ldots+\frac{x^n}{n!}+x^n \varepsilon(x)$
 
-$chx=1+\frac{x^2}{2!}+\frac{x^4}{4!}...+\frac{x^{2n}}{(2n)!}+x^{2n+1} \varepsilon(x)$
+$chx=1+\frac{x^2}{2!}+\frac{x^4}{4!}\ldots+\frac{x^{2n}}{(2n)!}+x^{2n+1} \varepsilon(x)$
 
-$shx=1+\frac{x}{1!}\frac{x^3}{3!}+\frac{x^5}{5!}...+\frac{x^{2n+1}}{(2n+1)!}+x^{2n+2} \varepsilon(x)$
+$shx=1+\frac{x}{1!}\frac{x^3}{3!}+\frac{x^5}{5!}\ldots+\frac{x^{2n+1}}{(2n+1)!}+x^{2n+2} \varepsilon(x)$
 
-$\cos x=1-\frac{x^2}{2!}+\frac{x^4}{4!}...+(-1)^n\frac{x^{2n}}{(2n)!}+x^{2n+1} \varepsilon(x)$
+$\cos x=1-\frac{x^2}{2!}+\frac{x^4}{4!}\ldots+(-1)^n\frac{x^{2n}}{(2n)!}+x^{2n+1} \varepsilon(x)$
 
-$shx=1+\frac{x}{1!}\frac{x^3}{3!}+\frac{x^5}{5!}...+(-1)^n\frac{x^{2n+1}}{(2n+1)!}+x^{2n+2} \varepsilon(x)$
+$shx=1+\frac{x}{1!}\frac{x^3}{3!}+\frac{x^5}{5!}\ldots+(-1)^n\frac{x^{2n+1}}{(2n+1)!}+x^{2n+2} \varepsilon(x)$
 
-$\frac{1}{1-x}=1+x+x^2+...+x^n+x^n \varepsilon(x)$
+$\frac{1}{1-x}=1+x+x^2+\ldots+x^n+x^n \varepsilon(x)$
 
-$\frac{1}{1+x}=1-x+x^2-x^3+...+(-1)^n x^n+x^n \varepsilon(x)$
+$\frac{1}{1+x}=1-x+x^2-x^3+\ldots+(-1)^n x^n+x^n \varepsilon(x)$
 
-$\ln(1+x)=x-\frac{x^2}{2}+\frac{x^3}{3}-...+(-1)^{n-1} \frac{x^n}{n}+x^n \varepsilon(x)$
+$\ln(1+x)=x-\frac{x^2}{2}+\frac{x^3}{3}-\ldots+(-1)^{n-1} \frac{x^n}{n}+x^n \varepsilon(x)$
 
 Généralement, pour $\alpha\neq -1,$ on a:
 
-$(1+x)^{\alpha}=1+\alpha x+\frac{\alpha(\alpha-1)}{2}x^2+...+\frac{\alpha(\alpha-1)...(\alpha-n+1)}{n!}x^n+x^{n} \varepsilon(x)$
+$(1+x)^{\alpha}=1+\alpha x+\frac{\alpha(\alpha-1)}{2}x^2+\ldots+\frac{\alpha(\alpha-1)\ldots(\alpha-n+1)}{n!}x^n+x^{n} \varepsilon(x)$
 
 En particulier, pour $\alpha=\frac{1}{2},$ on a:
 
-$\sqrt{1+x}=1+\frac{x}{2}-\frac{1}{8}x^2+...+(-1)^n\frac{1.3.5....(2n-3)}{2^n n!}x^n+x^n \varepsilon(x)$
+$\sqrt{1+x}=1+\frac{x}{2}-\frac{1}{8}x^2+\ldots+(-1)^n\frac{1.3.5\ldots.(2n-3)}{2^n n!}x^n+x^n \varepsilon(x)$
 
 ### $DL$ des fonctions en un point quelconque
 
@@ -205,8 +213,8 @@ $$
 \begin{eqnarray*}
 \exp 
 &=&\mbox{exp(1+(x-1))}=\exp (1)\exp (x-1)=e\exp h\\
-&=& e(1+h+\frac{h^2}{2}+...+\frac{h^n}{n!}+h^n \varepsilon(h))\\
-&=& e(1+(x-1)+\frac{(x-1)^2}{2}+...+\frac{(x-1)^n}{n!}+(x-1)^n \varepsilon(x-1)))\\
+&=& e(1+h+\frac{h^2}{2}+\ldots+\frac{h^n}{n!}+h^n \varepsilon(h))\\
+&=& e(1+(x-1)+\frac{(x-1)^2}{2}+\ldots+\frac{(x-1)^n}{n!}+(x-1)^n \varepsilon(x-1)))\\
 \end{eqnarray*}
 $$
 
@@ -219,18 +227,18 @@ où $\lim\limits_{\substack{x \rightarrow 1}}\varepsilon(x-1)=0$
 On suppose que $f$ et $g$ sont deux fonctions qui admettent des $DL$ en $0$ à l'ordre $n:$
 
 $$
-f(x)=c_0+c_1 x+...+c_n x^n +x^n \varepsilon_1 (x)\quad\mbox{et}\quad g(x)=d_0+d_1 x+...+d_n x^n +x^n \varepsilon_2 (x)
+f(x)=c_0+c_1 x+\ldots+c_n x^n +x^n \varepsilon_1 (x)\quad\mbox{et}\quad g(x)=d_0+d_1 x+\ldots+d_n x^n +x^n \varepsilon_2 (x)
 $$
 
 ```{admonition} Proposition
 
 - $f+g$ admet un $DL$ en $0$ l'ordre $n$ qui est:
 
-$(f+g)(x)=f(x)+g(x)=(c_0+d_0)+(c_1+d_1)x+(c_0+d_0)x^2+...+(c_n+d_n) x^n +x^{n}\varepsilon(x)$
+$(f+g)(x)=f(x)+g(x)=(c_0+d_0)+(c_1+d_1)x+(c_0+d_0)x^2+\ldots+(c_n+d_n) x^n +x^{n}\varepsilon(x)$
 
 - $f\times g$ admet un $DL$ en $0$ l'ordre $n$ qui est:
 
-$(f\times g)(x)=f(x)\times g(x)=T_n(x)+x^n \varepsilon(x)$ où $T_n(x)$ est le polynôme $(c_0+c_1 x+...+c_n x^n)\times (d_0+d_1 x+...+d_n x^n)$ tronqué à l'ordre $n.$
+$(f\times g)(x)=f(x)\times g(x)=T_n(x)+x^n \varepsilon(x)$ où $T_n(x)$ est le polynôme $(c_0+c_1 x+\ldots+c_n x^n)\times (d_0+d_1 x+\ldots+d_n x^n)$ tronqué à l'ordre $n.$
 ```
 ```{admonition} Exercice
 Calculer le $DL$ de $\cos x \times\sqrt{1+x}$ à l'ordre $2,$ 
@@ -250,7 +258,7 @@ $$
 ```
 ### Composition
 
-Soient $f(x)=C(x)+x^n \varepsilon_1 (x)=c_0+c_1 x+...+c_n x^n +x^n \varepsilon_1 (x)$ et $g(x)=D(x)+x^n \varepsilon_2 (x)=d_0+d_1 x+...+d_n x^n +x^n \varepsilon_2 (x)$
+Soient $f(x)=C(x)+x^n \varepsilon_1 (x)=c_0+c_1 x+\ldots+c_n x^n +x^n \varepsilon_1 (x)$ et $g(x)=D(x)+x^n \varepsilon_2 (x)=d_0+d_1 x+\ldots+d_n x^n +x^n \varepsilon_2 (x)$
 ```{admonition} Proposition
 Si $g(0) = 0$ (c'est-à-dire $d_0 = 0$) alors la fonction $f\circ g$ admet un $DL$ en $0$ à l'ordre $n$ dont la partie polynomiale est le
 polynôme tronqué à l'ordre $n$ de la composition $C(D(x)).$
@@ -273,15 +281,15 @@ $$
 
 Soit à déterminer le DL de $f/g,$ quitte à multiplier le DL de $f$ par celui de $1/g,$ il suffier de trouver le DL  de ce dernier,
 
-en posant $f(x)=c_0+c_1 x+...+c_n x^n +x^n \varepsilon_1 (x)\quad\mbox{et}\quad g(x)=d_0+d_1 x+...+d_n x^n +x^n \varepsilon_2 (x)$
+en posant $f(x)=c_0+c_1 x+\ldots+c_n x^n +x^n \varepsilon_1 (x)\quad\mbox{et}\quad g(x)=d_0+d_1 x+\ldots+d_n x^n +x^n \varepsilon_2 (x)$
 
 cherchons le DL de $1/g,$ pour cela on utilise le DL de $\frac{1}{1+u},$
 
-1. Si $d_0=1,$ $u=d_1 x+...+d_n x^n +x^n \varepsilon(x),$
+1. Si $d_0=1,$ $u=d_1 x+\ldots+d_n x^n +x^n \varepsilon(x),$
 
 2. Si $d_0$ est quelconque avec $d_0 \neq0$ alors on se ramène au cas précédent en écrivant
 
-$\frac{1}{g(x)}=\frac{1}{d_0}\frac{1}{1+\frac{d_1}{d_0}x+...+\frac{d_n}{d_0}x^n+\frac{x^n \varepsilon_2 (x)}{d_0}}$
+$\frac{1}{g(x)}=\frac{1}{d_0}\frac{1}{1+\frac{d_1}{d_0}x+\ldots+\frac{d_n}{d_0}x^n+\frac{x^n \varepsilon_2 (x)}{d_0}}$
 
 3. Si $d_0 = 0$ alors on factorise par $x^k$ (pour un certain $k$) afin de se ramener aux cas précédents.
 ```{admonition} Exercice
@@ -301,7 +309,7 @@ $$
 
 ## Applications des développements limités, Calculs de limites
 
-Les DL sont très efficaces pour calculer des limites ayant des formes indéterminées ! Il suffit juste de remarquer que si $f(x)=c_0+c_1 (x-a)+...$ alors $\lim\limits_{\substack{x \rightarrow a}}f(x)=c_0=0$
+Les DL sont très efficaces pour calculer des limites ayant des formes indéterminées ! Il suffit juste de remarquer que si $f(x)=c_0+c_1 (x-a)+\ldots$ alors $\lim\limits_{\substack{x \rightarrow a}}f(x)=c_0=0$
 
 Limite en $0$ de $\frac{\ln(1+x)-\tan x+\frac{1}{2}\sin^2 x}{3 x^2 \sin^2 x}$
 
