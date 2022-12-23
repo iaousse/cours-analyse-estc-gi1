@@ -1,63 +1,23 @@
 # Dévelopements limités
 
+
+Une méthode usuelle pour étudier des fonctions et de les approcher par des fonctions plus simples. Les fonctions polynômes forment une classe de fonctions élémentaires qui se manipulent facilement vis à vis des opérations usuelles (dérivation, somme, produit, intégration, dérivation,...). Ainsi, il est naturel d'essayer d'approcher les fonctions par des polynômes.
+
+Les développements limités correspondent à une mise en oeuvre locale de ce programme. Chercher un développement limité d'une fonction $f$ au voisinage d'un point $a$, c'est chercher un polynôme qui, au voisinage de $a$, se comporte comme $f$. [Voici un site](https://www.123calculus.com/developpement-limite-page-1-20-120.html) qui donne le dévelopement limité d'une fonction. [Voici un site](https://www.geogebra.org/m/UcxXmpYR) qui donne la courbe d'une fonction et la courbe du polynôme de son développement limité.
+
+
+```{admonition} Définition
+Soit $f : I \to \mathbb R$ une fonction et soit $a \in I$ . Soit $n \in \mathbb N$, on dit que $f$ admet un développement limité d'ordre n en a (ou un $DL_n(a)$) lorsqu'il existe un polynôme $T$ de degré au plus $n$ tel que : $f (x) = T(x − a)+ \underset{a}{o}((x − a)^n)$. Si c'est le cas, alors le polynôme $T(x − a)$ est appelé partie régulière et  la partie $\underset{a}{o}((x − a)^n)$ est appelé reste du $DL_n(a)$. 
+
+```
+
+```{admonition} Exemple
+
+On a $\sin x \underset{0}{\sim} x$ donc par définition $\sin x = x + \underset{0}{o}(x)$. C'est un $DL_1(0)$ de $\sin x$.
+```
+
 ## Formule de Taylor
 
-```{admonition} Théorème
-Soit $f : I\rightarrow\mathbb{R}$ une fonction de classe $\mathscr{C}^{n+1},\,(n\in\mathbb{N},$ et soit $a, x ∈\in I.$ Il existe un réel $c$ entre $a$ et $x$ tel que:
-
-$$
-f(x)=f(a)+f'(a)(x-a)+\frac{f''(a)}{2!}(x-a)^2+\ldots+\frac{f^{(n)}(a)}{n!}(x-a)^n+\frac{f^{(n+1)}(c)}{(n+1)!}(x-a)^{n+1}
-$$
-
-```
-
-On notera par $T_n$ la partie définie par 
-
-$$
-T_n(x):=f(a)+f'(a)(x-a)+\frac{f''(a)}{2!}(x-a)^2+\ldots+\frac{f^{(n)}(a)}{n!}(x-a)^n
-$$
-
-```{admonition} Exercice
-Soient $a, x \in\mathbb{R},\,(a<x).$ Pour tout entier $n > 0$ il existe $c\in]a,x[$  tel que 
-
-$$
-\exp x=\exp a+\exp (a).(x-a)+\frac{\exp (a)}{2!}.(x-a)^2+\ldots+\frac{\exp (a)}{n!}.(x-a)^n+\frac{\exp (c)}{(n+1)!}.(c-a)^{n+1}
-$$
-
-Dans la pratique, le nombre $c$ ne s'éstime qua approximativement (via un encadrement), la proposition suivante en donnera un.
-```
-```{admonition} Proposition
-Si en plus la fonction $|f^{(n+1)}|$ est majorée sur $I$ par un réel positif $M,$ alors pour tout $a,\,x \in I,$ on a:
-
-$$
-|f(x)-T_n(x)|\leq M\frac{|x-a|^{n+1}}{(n+1)!}
-$$
-
-```
-```{admonition} Exercice
-Approximation de $\sin(0,01)$
-
-Soit $f(x)=\sin(x),$ alors $f'(x)=\cos x$, $f''(x)=-\sin x$ ,$f^{(3)}(x)=-\cos x$, $f^{(4)}(x)=\sin x$. 
-On obtient donc $f(0)=0$ ,$f'(0)=1$, $f''(0)=0$, $f^{(3)}(x)=-1.$ La formule de Taylor ci-dessus en $a=0$ à l'ordre 3 devient 
-
-$$
-f(x)=0+1.x+0.\frac{x^2}{2!}-1.\frac{x^3}{3!}+f^{(4)}(c)\frac{x^4}{4!}
-$$
-
-Pour $x=0,01,$ et en négligeant le reste (qui est assez petit), on obtient:
-
-$$
-\sin(0,01)\approx 0,01-\frac{(0,01)^3}{6}=0,00999983333\ldots
-$$
-
-```
-```{admonition} Remarque
-- Dans ce théorème l'hypothèse $f$ de classe $\mathscr{C}^{n+1}$  peut-être affaiblie $f$ est "$n+1$ fois dérivable sur $I$" sans avoir besoin que $f^{(n+1)}$ soit continue.
-
-- Pour $n=0$ c'est exactement l'énoncé du théorème des accroissements finis : il existe $c\in ]a,b[$ tel que $f(b)=f(a)+f'(c)(b-a).$
-
-- Si $I$ est un intervalle fermé borné  et $f$ de classe $\mathscr{C}^{n+1},$ alors $f$ est continue sur $I$ donc il existe un $M$ tel que $|f^{(n+1)}(x)|\leq M$ pour tout $x\in I.$ . Ce qui permet toujours d'appliquer la proposition.
-```
 ```{admonition} Théorème(Théorème de Taylor-Young)
 
 Soit $f : I\rightarrow\mathbb{R}$ une fonction de classe $\mathscr{C}^{n},\,(n\in\mathbb{N},$ et soit $a\in I.$ Alors pour tout $x\in I$ on a:
@@ -67,11 +27,25 @@ f(x)=f(a)+f'(a)(x-a)+\frac{f''(a)}{2!}(x-a)^2+\ldots+\frac{f^{(n)}(a)}{n!}(x-a)^
 $$
 
 avec $\varepsilon(x)\rightarrow0$ quand $x\rightarrow a.$
+
+On peut aussi écrire:
+
+$$
+f(x)=f(a)+f'(a)(x-a)+\frac{f''(a)}{2!}(x-a)^2+\ldots+\frac{f^{(n)}(a)}{n!}(x-a)^n+\underset{a}{o}((x-a)^n)
+$$
+
 ```
 ```{admonition} Exercice
-Soit $f :]-1,+\infty[\rightarrow \mathbb{R},\, x \mapsto\ln(1+x);$ $f$ est infiniment dérivable. Appliquons la formule de Taylor-Young à la fonction $f$ au voisinage de $0,$ soit $T_n$ la fonction polynômiale associée à chaque $n,$ pour cela on calcule d'abord $f^{(k)}(0)$ pour $k=0,1,\ldots,n.$
+Soit $f :]-1,+\infty[\rightarrow \mathbb{R}$ définit par $f(x) = \ln(1+x)$. 
 
-$f(0)=0,\,f'(0)=1,\,f''(0)=-1,\,f^{(3)}(0)=2,\ldots$ Montrer par récurrence que $f^{(n)}(x)=(-1)^{n-1}(n-1)!\frac{1}{(1+x)^n}$ et alors $f^{(n)}(0)=(-1)^{n-1}(n-1)!$
+On a $f$ est infiniment dérivable. Appliquons la formule de Taylor-Young à la fonction $f$ au voisinage de $0,$ soit $T_n$ la fonction polynômiale associée à chaque $n,$ pour cela on calcule d'abord $f^{(k)}(0)$ pour $k=0,1,\ldots,n.$
+
+- $f(0)=0$
+- $f'(0)=1$
+- $f''(0)=-1$
+- $f^{(3)}(0)=2,\ldots$ 
+
+Montrer par récurrence que $f^{(n)}(x)=(-1)^{n-1}(n-1)!\frac{1}{(1+x)^n}$ et alors $f^{(n)}(0)=(-1)^{n-1}(n-1)!$
 
 Voici donc les premiers polynômes de Taylor:
 
@@ -80,7 +54,7 @@ T_0(x)=0,\quad T_1(x)=x
 $$
 
 $$
-T_2(x)=x-\frac{x^2}{n},\quad T_3(x)=x-\frac{x^2}{2}+\frac{x^3}{3}
+T_2(x)=x-\frac{x^2}{2},\quad T_3(x)=x-\frac{x^2}{2}+\frac{x^3}{3}
 $$
 
 Les formules de Taylor nous disent que les restes sont de plus en plus petits lorsque $n$ croît. Sur le dessins les graphes
@@ -90,7 +64,7 @@ des polynômes $T_0,\,T_1,\,T_2,\,T_3$ s'approchent de plus en plus du graphe de
 
 ```{figure} Approximation2.png
 ---
-height: 150px
+height: 180px
 name: directive-fig
 ---
 Approximation

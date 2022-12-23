@@ -663,14 +663,14 @@ Il s’agit ici de comparer les 2 fonctions au voisinage de <span class="math no
 </ol>
 <div class="math notranslate nohighlight">
 \[
-f  \underset{x\to a}{O}(g) \mbox{ ou } f  \underset{a}{O}(g) \mbox{ ou encore } f = O(g) \mbox{ au voisinage de } a
+f = \underset{x\to a}{O}(g) \mbox{ ou } f = \underset{a}{O}(g) \mbox{ ou encore } f = O(g) \mbox{ au voisinage de } a
 \]</div>
 <ol class="simple">
 <li><p>Si <span class="math notranslate nohighlight">\(\dfrac{f(x)}{g(x)}\)</span> tend vers <span class="math notranslate nohighlight">\(0\)</span> lorsque <span class="math notranslate nohighlight">\(x\)</span> tend vers <span class="math notranslate nohighlight">\(a\)</span> (<span class="math notranslate nohighlight">\(\underset{x\to a}{\lim} \dfrac{f(x)}{g(x)}= 0\)</span>), on dira que <span class="math notranslate nohighlight">\(f\)</span> est négligeable devant <span class="math notranslate nohighlight">\(g\)</span> au voisinage de <span class="math notranslate nohighlight">\(a\)</span> et on écrit:</p></li>
 </ol>
 <div class="math notranslate nohighlight">
 \[
-f  \underset{x\to a}{o}(g) \mbox{ ou } f  \underset{a}{o}(g) \mbox{ ou encore } f = o(g) \mbox{ au voisinage de } a
+f = \underset{x\to a}{o}(g) \mbox{ ou } f = \underset{a}{o}(g) \mbox{ ou encore } f = o(g) \mbox{ au voisinage de } a
 \]</div>
 <ol class="simple">
 <li><p>Si <span class="math notranslate nohighlight">\(\dfrac{f(x)}{g(x)}\)</span> tend vers <span class="math notranslate nohighlight">\(1\)</span> lorsque <span class="math notranslate nohighlight">\(x\)</span> tend vers <span class="math notranslate nohighlight">\(a\)</span> (<span class="math notranslate nohighlight">\(\underset{x\to a}{\lim} \dfrac{f(x)}{g(x)}= 1\)</span>), on dira que <span class="math notranslate nohighlight">\(f\)</span> et <span class="math notranslate nohighlight">\(g\)</span> sont équivalentes au voisinage de <span class="math notranslate nohighlight">\(a\)</span> et on écrit:</p></li>
@@ -757,15 +757,15 @@ plus simple.</p>
 <ul>
 <li><p>Opérations sur les relations de comparaisons</p>
 <ol class="simple">
-<li><p><span class="math notranslate nohighlight">\(f = o(g), g = o(h) \Leftarrow f = o(h)\)</span> cad (transitivité) la même chose avec <span class="math notranslate nohighlight">\(O\)</span></p></li>
-<li><p><span class="math notranslate nohighlight">\(f_1 = o(g), f_2 = o(g) \Leftarrow f_1 + f_2 = o(g)\)</span> cad <span class="math notranslate nohighlight">\(o(g) + o(g) = o(g)\)</span> la même chose avec <span class="math notranslate nohighlight">\(O\)</span></p></li>
-<li><p><span class="math notranslate nohighlight">\(f_1 = o(g_1), f_2 = o(g_2) \Leftarrow f_1f_2 = o(g_1g_2)\)</span> cad <span class="math notranslate nohighlight">\(o(g_1)o(g_2) = o(g_1g_2)\)</span> la même chose avec <span class="math notranslate nohighlight">\(O\)</span></p></li>
-<li><p><span class="math notranslate nohighlight">\(f = o(g) \Leftarrow hf = o(hg)\)</span> cad <span class="math notranslate nohighlight">\(ho(g) = o(hg)\)</span> la même chose avec <span class="math notranslate nohighlight">\(O\)</span></p></li>
-<li><p><span class="math notranslate nohighlight">\(f = o(\lambda g) (\lambda \in \mathbb{R}^{*}) \Leftarrow f = o(g)\)</span> cad <span class="math notranslate nohighlight">\( o(\lambda g) = o(g)\)</span> la même chose avec <span class="math notranslate nohighlight">\(O\)</span></p></li>
+<li><p><span class="math notranslate nohighlight">\(f = o(g), g = o(h) \Rightarrow f = o(h)\)</span> cad (transitivité) la même chose avec <span class="math notranslate nohighlight">\(O\)</span></p></li>
+<li><p><span class="math notranslate nohighlight">\(f_1 = o(g), f_2 = o(g) \Rightarrow f_1 + f_2 = o(g)\)</span> cad <span class="math notranslate nohighlight">\(o(g) + o(g) = o(g)\)</span> la même chose avec <span class="math notranslate nohighlight">\(O\)</span></p></li>
+<li><p><span class="math notranslate nohighlight">\(f_1 = o(g_1), f_2 = o(g_2) \Rightarrow f_1f_2 = o(g_1g_2)\)</span> cad <span class="math notranslate nohighlight">\(o(g_1)o(g_2) = o(g_1g_2)\)</span> la même chose avec <span class="math notranslate nohighlight">\(O\)</span></p></li>
+<li><p><span class="math notranslate nohighlight">\(f = o(g) \Rightarrow hf = o(hg)\)</span> cad <span class="math notranslate nohighlight">\(ho(g) = o(hg)\)</span> la même chose avec <span class="math notranslate nohighlight">\(O\)</span></p></li>
+<li><p><span class="math notranslate nohighlight">\(f = o(\lambda g) (\lambda \in \mathbb{R}^{*}) \Rightarrow f = o(g)\)</span> cad <span class="math notranslate nohighlight">\( o(\lambda g) = o(g)\)</span> la même chose avec <span class="math notranslate nohighlight">\(O\)</span></p></li>
 </ol>
 </li>
-<li><p>Caractérisation de l’équivalence de deux fonctions
-On a au voisinage d’un point <span class="math notranslate nohighlight">\(a\)</span> :</p>
+<li><p>Caractérisation de l’équivalence de deux fonctions</p>
+<p>On a au voisinage d’un point <span class="math notranslate nohighlight">\(a\)</span> :</p>
 <div class="math notranslate nohighlight">
 \[
     f(x) \sim g(x) \Leftrightarrow f(x) = g(x) + o(g(x))
@@ -774,10 +774,12 @@ On a au voisinage d’un point <span class="math notranslate nohighlight">\(a\)<
 </li>
 <li><p>Lien entre les relations de comparaison</p></li>
 </ul>
-<p>On se place au voisinage d’un point <span class="math notranslate nohighlight">\(a\)</span>.
-1. Si <span class="math notranslate nohighlight">\(f(x) \sim g(x)\)</span> alors <span class="math notranslate nohighlight">\(f(x) = O(g(x))\)</span>.
-2. Si <span class="math notranslate nohighlight">\(f(x) \sim g(x)\)</span> et <span class="math notranslate nohighlight">\(f(x) = o(h(x))\)</span> alors <span class="math notranslate nohighlight">\(g(x) = o(h(x))\)</span>.
-3. Si <span class="math notranslate nohighlight">\(f(x) \sim g(x)\)</span> et    <span class="math notranslate nohighlight">\(h(x) = o(f(x))\)</span> alors <span class="math notranslate nohighlight">\(h(x) = o(g(x))\)</span></p>
+<p>On se place au voisinage d’un point <span class="math notranslate nohighlight">\(a\)</span>.</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>1. Si $f(x) \sim g(x)$ alors $f(x) = O(g(x))$.
+2. Si $f(x) \sim g(x)$ et $f(x) = o(h(x))$ alors $g(x) = o(h(x))$.
+3. Si $f(x) \sim g(x)$ et    $h(x) = o(f(x))$ alors $h(x) = o(g(x))$
+</pre></div>
+</div>
 <ul class="simple">
 <li><p>Calculs avec des équivalents</p>
 <ol class="simple">

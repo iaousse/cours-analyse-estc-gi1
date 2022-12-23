@@ -431,61 +431,18 @@
                 
   <div class="section" id="developements-limites">
 <h1>Dévelopements limités<a class="headerlink" href="#developements-limites" title="Lien permanent vers ce titre">¶</a></h1>
+<p>Une méthode usuelle pour étudier des fonctions et de les approcher par des fonctions plus simples. Les fonctions polynômes forment une classe de fonctions élémentaires qui se manipulent facilement vis à vis des opérations usuelles (dérivation, somme, produit, intégration, dérivation,…). Ainsi, il est naturel d’essayer d’approcher les fonctions par des polynômes.</p>
+<p>Les développements limités correspondent à une mise en oeuvre locale de ce programme. Chercher un développement limité d’une fonction <span class="math notranslate nohighlight">\(f\)</span> au voisinage d’un point <span class="math notranslate nohighlight">\(a\)</span>, c’est chercher un polynôme qui, au voisinage de <span class="math notranslate nohighlight">\(a\)</span>, se comporte comme <span class="math notranslate nohighlight">\(f\)</span>. <a class="reference external" href="https://www.123calculus.com/developpement-limite-page-1-20-120.html">Voici un site</a> qui donne le dévelopement limité d’une fonction. <a class="reference external" href="https://www.geogebra.org/m/UcxXmpYR">Voici un site</a> qui donne la courbe d’une fonction et la courbe du polynôme de son développement limité.</p>
+<div class="admonition-definition admonition">
+<p class="admonition-title">Définition</p>
+<p>Soit <span class="math notranslate nohighlight">\(f : I \to \mathbb R\)</span> une fonction et soit <span class="math notranslate nohighlight">\(a \in I\)</span> . Soit <span class="math notranslate nohighlight">\(n \in \mathbb N\)</span>, on dit que <span class="math notranslate nohighlight">\(f\)</span> admet un développement limité d’ordre n en a (ou un <span class="math notranslate nohighlight">\(DL_n(a)\)</span>) lorsqu’il existe un polynôme <span class="math notranslate nohighlight">\(T\)</span> de degré au plus <span class="math notranslate nohighlight">\(n\)</span> tel que : <span class="math notranslate nohighlight">\(f (x) = T(x − a)+ \underset{a}{o}((x − a)^n)\)</span>. Si c’est le cas, alors le polynôme <span class="math notranslate nohighlight">\(T(x − a)\)</span> est appelé partie régulière et  la partie <span class="math notranslate nohighlight">\(\underset{a}{o}((x − a)^n)\)</span> est appelé reste du <span class="math notranslate nohighlight">\(DL_n(a)\)</span>.</p>
+</div>
+<div class="admonition-exemple admonition">
+<p class="admonition-title">Exemple</p>
+<p>On a <span class="math notranslate nohighlight">\(\sin x \underset{0}{\sim} x\)</span> donc par définition <span class="math notranslate nohighlight">\(\sin x = x + \underset{0}{o}(x)\)</span>. C’est un <span class="math notranslate nohighlight">\(DL_1(0)\)</span> de <span class="math notranslate nohighlight">\(\sin x\)</span>.</p>
+</div>
 <div class="section" id="formule-de-taylor">
 <h2>Formule de Taylor<a class="headerlink" href="#formule-de-taylor" title="Lien permanent vers ce titre">¶</a></h2>
-<div class="admonition-theoreme admonition">
-<p class="admonition-title">Théorème</p>
-<p>Soit <span class="math notranslate nohighlight">\(f : I\rightarrow\mathbb{R}\)</span> une fonction de classe <span class="math notranslate nohighlight">\(\mathscr{C}^{n+1},\,(n\in\mathbb{N},\)</span> et soit <span class="math notranslate nohighlight">\(a, x ∈\in I.\)</span> Il existe un réel <span class="math notranslate nohighlight">\(c\)</span> entre <span class="math notranslate nohighlight">\(a\)</span> et <span class="math notranslate nohighlight">\(x\)</span> tel que:</p>
-<div class="math notranslate nohighlight">
-\[
-f(x)=f(a)+f'(a)(x-a)+\frac{f''(a)}{2!}(x-a)^2+\ldots+\frac{f^{(n)}(a)}{n!}(x-a)^n+\frac{f^{(n+1)}(c)}{(n+1)!}(x-a)^{n+1}
-\]</div>
-</div>
-<p>On notera par <span class="math notranslate nohighlight">\(T_n\)</span> la partie définie par</p>
-<div class="math notranslate nohighlight">
-\[
-T_n(x):=f(a)+f'(a)(x-a)+\frac{f''(a)}{2!}(x-a)^2+\ldots+\frac{f^{(n)}(a)}{n!}(x-a)^n
-\]</div>
-<div class="admonition-exercice admonition">
-<p class="admonition-title">Exercice</p>
-<p>Soient <span class="math notranslate nohighlight">\(a, x \in\mathbb{R},\,(a&lt;x).\)</span> Pour tout entier <span class="math notranslate nohighlight">\(n &gt; 0\)</span> il existe <span class="math notranslate nohighlight">\(c\in]a,x[\)</span>  tel que</p>
-<div class="math notranslate nohighlight">
-\[
-\exp x=\exp a+\exp (a).(x-a)+\frac{\exp (a)}{2!}.(x-a)^2+\ldots+\frac{\exp (a)}{n!}.(x-a)^n+\frac{\exp (c)}{(n+1)!}.(c-a)^{n+1}
-\]</div>
-<p>Dans la pratique, le nombre <span class="math notranslate nohighlight">\(c\)</span> ne s’éstime qua approximativement (via un encadrement), la proposition suivante en donnera un.</p>
-</div>
-<div class="admonition-proposition admonition">
-<p class="admonition-title">Proposition</p>
-<p>Si en plus la fonction <span class="math notranslate nohighlight">\(|f^{(n+1)}|\)</span> est majorée sur <span class="math notranslate nohighlight">\(I\)</span> par un réel positif <span class="math notranslate nohighlight">\(M,\)</span> alors pour tout <span class="math notranslate nohighlight">\(a,\,x \in I,\)</span> on a:</p>
-<div class="math notranslate nohighlight">
-\[
-|f(x)-T_n(x)|\leq M\frac{|x-a|^{n+1}}{(n+1)!}
-\]</div>
-</div>
-<div class="admonition-exercice admonition">
-<p class="admonition-title">Exercice</p>
-<p>Approximation de <span class="math notranslate nohighlight">\(\sin(0,01)\)</span></p>
-<p>Soit <span class="math notranslate nohighlight">\(f(x)=\sin(x),\)</span> alors <span class="math notranslate nohighlight">\(f'(x)=\cos x\)</span>, <span class="math notranslate nohighlight">\(f''(x)=-\sin x\)</span> ,<span class="math notranslate nohighlight">\(f^{(3)}(x)=-\cos x\)</span>, <span class="math notranslate nohighlight">\(f^{(4)}(x)=\sin x\)</span>.
-On obtient donc <span class="math notranslate nohighlight">\(f(0)=0\)</span> ,<span class="math notranslate nohighlight">\(f'(0)=1\)</span>, <span class="math notranslate nohighlight">\(f''(0)=0\)</span>, <span class="math notranslate nohighlight">\(f^{(3)}(x)=-1.\)</span> La formule de Taylor ci-dessus en <span class="math notranslate nohighlight">\(a=0\)</span> à l’ordre 3 devient</p>
-<div class="math notranslate nohighlight">
-\[
-f(x)=0+1.x+0.\frac{x^2}{2!}-1.\frac{x^3}{3!}+f^{(4)}(c)\frac{x^4}{4!}
-\]</div>
-<p>Pour <span class="math notranslate nohighlight">\(x=0,01,\)</span> et en négligeant le reste (qui est assez petit), on obtient:</p>
-<div class="math notranslate nohighlight">
-\[
-\sin(0,01)\approx 0,01-\frac{(0,01)^3}{6}=0,00999983333\ldots
-\]</div>
-</div>
-<div class="admonition-remarque admonition">
-<p class="admonition-title">Remarque</p>
-<ul class="simple">
-<li><p>Dans ce théorème l’hypothèse <span class="math notranslate nohighlight">\(f\)</span> de classe <span class="math notranslate nohighlight">\(\mathscr{C}^{n+1}\)</span>  peut-être affaiblie <span class="math notranslate nohighlight">\(f\)</span> est « <span class="math notranslate nohighlight">\(n+1\)</span> fois dérivable sur <span class="math notranslate nohighlight">\(I\)</span> » sans avoir besoin que <span class="math notranslate nohighlight">\(f^{(n+1)}\)</span> soit continue.</p></li>
-<li><p>Pour <span class="math notranslate nohighlight">\(n=0\)</span> c’est exactement l’énoncé du théorème des accroissements finis : il existe <span class="math notranslate nohighlight">\(c\in ]a,b[\)</span> tel que <span class="math notranslate nohighlight">\(f(b)=f(a)+f'(c)(b-a).\)</span></p></li>
-<li><p>Si <span class="math notranslate nohighlight">\(I\)</span> est un intervalle fermé borné  et <span class="math notranslate nohighlight">\(f\)</span> de classe <span class="math notranslate nohighlight">\(\mathscr{C}^{n+1},\)</span> alors <span class="math notranslate nohighlight">\(f\)</span> est continue sur <span class="math notranslate nohighlight">\(I\)</span> donc il existe un <span class="math notranslate nohighlight">\(M\)</span> tel que <span class="math notranslate nohighlight">\(|f^{(n+1)}(x)|\leq M\)</span> pour tout <span class="math notranslate nohighlight">\(x\in I.\)</span> . Ce qui permet toujours d’appliquer la proposition.</p></li>
-</ul>
-</div>
 <div class="admonition-theoreme-theoreme-de-taylor-young admonition">
 <p class="admonition-title">Théorème(Théorème de Taylor-Young)</p>
 <p>Soit <span class="math notranslate nohighlight">\(f : I\rightarrow\mathbb{R}\)</span> une fonction de classe <span class="math notranslate nohighlight">\(\mathscr{C}^{n},\,(n\in\mathbb{N},\)</span> et soit <span class="math notranslate nohighlight">\(a\in I.\)</span> Alors pour tout <span class="math notranslate nohighlight">\(x\in I\)</span> on a:</p>
@@ -494,11 +451,23 @@ f(x)=0+1.x+0.\frac{x^2}{2!}-1.\frac{x^3}{3!}+f^{(4)}(c)\frac{x^4}{4!}
 f(x)=f(a)+f'(a)(x-a)+\frac{f''(a)}{2!}(x-a)^2+\ldots+\frac{f^{(n)}(a)}{n!}(x-a)^n+(x-a)^n \varepsilon(x)
 \]</div>
 <p>avec <span class="math notranslate nohighlight">\(\varepsilon(x)\rightarrow0\)</span> quand <span class="math notranslate nohighlight">\(x\rightarrow a.\)</span></p>
+<p>On peut aussi écrire:</p>
+<div class="math notranslate nohighlight">
+\[
+f(x)=f(a)+f'(a)(x-a)+\frac{f''(a)}{2!}(x-a)^2+\ldots+\frac{f^{(n)}(a)}{n!}(x-a)^n+\underset{a}{o}((x-a)^n)
+\]</div>
 </div>
 <div class="admonition-exercice admonition">
 <p class="admonition-title">Exercice</p>
-<p>Soit <span class="math notranslate nohighlight">\(f :]-1,+\infty[\rightarrow \mathbb{R},\, x \mapsto\ln(1+x);\)</span> <span class="math notranslate nohighlight">\(f\)</span> est infiniment dérivable. Appliquons la formule de Taylor-Young à la fonction <span class="math notranslate nohighlight">\(f\)</span> au voisinage de <span class="math notranslate nohighlight">\(0,\)</span> soit <span class="math notranslate nohighlight">\(T_n\)</span> la fonction polynômiale associée à chaque <span class="math notranslate nohighlight">\(n,\)</span> pour cela on calcule d’abord <span class="math notranslate nohighlight">\(f^{(k)}(0)\)</span> pour <span class="math notranslate nohighlight">\(k=0,1,\ldots,n.\)</span></p>
-<p><span class="math notranslate nohighlight">\(f(0)=0,\,f'(0)=1,\,f''(0)=-1,\,f^{(3)}(0)=2,\ldots\)</span> Montrer par récurrence que <span class="math notranslate nohighlight">\(f^{(n)}(x)=(-1)^{n-1}(n-1)!\frac{1}{(1+x)^n}\)</span> et alors <span class="math notranslate nohighlight">\(f^{(n)}(0)=(-1)^{n-1}(n-1)!\)</span></p>
+<p>Soit <span class="math notranslate nohighlight">\(f :]-1,+\infty[\rightarrow \mathbb{R}\)</span> définit par <span class="math notranslate nohighlight">\(f(x) = \ln(1+x)\)</span>.</p>
+<p>On a <span class="math notranslate nohighlight">\(f\)</span> est infiniment dérivable. Appliquons la formule de Taylor-Young à la fonction <span class="math notranslate nohighlight">\(f\)</span> au voisinage de <span class="math notranslate nohighlight">\(0,\)</span> soit <span class="math notranslate nohighlight">\(T_n\)</span> la fonction polynômiale associée à chaque <span class="math notranslate nohighlight">\(n,\)</span> pour cela on calcule d’abord <span class="math notranslate nohighlight">\(f^{(k)}(0)\)</span> pour <span class="math notranslate nohighlight">\(k=0,1,\ldots,n.\)</span></p>
+<ul class="simple">
+<li><p><span class="math notranslate nohighlight">\(f(0)=0\)</span></p></li>
+<li><p><span class="math notranslate nohighlight">\(f'(0)=1\)</span></p></li>
+<li><p><span class="math notranslate nohighlight">\(f''(0)=-1\)</span></p></li>
+<li><p><span class="math notranslate nohighlight">\(f^{(3)}(0)=2,\ldots\)</span></p></li>
+</ul>
+<p>Montrer par récurrence que <span class="math notranslate nohighlight">\(f^{(n)}(x)=(-1)^{n-1}(n-1)!\frac{1}{(1+x)^n}\)</span> et alors <span class="math notranslate nohighlight">\(f^{(n)}(0)=(-1)^{n-1}(n-1)!\)</span></p>
 <p>Voici donc les premiers polynômes de Taylor:</p>
 <div class="math notranslate nohighlight">
 \[
@@ -506,13 +475,13 @@ T_0(x)=0,\quad T_1(x)=x
 \]</div>
 <div class="math notranslate nohighlight">
 \[
-T_2(x)=x-\frac{x^2}{n},\quad T_3(x)=x-\frac{x^2}{2}+\frac{x^3}{3}
+T_2(x)=x-\frac{x^2}{2},\quad T_3(x)=x-\frac{x^2}{2}+\frac{x^3}{3}
 \]</div>
 <p>Les formules de Taylor nous disent que les restes sont de plus en plus petits lorsque <span class="math notranslate nohighlight">\(n\)</span> croît. Sur le dessins les graphes
 des polynômes <span class="math notranslate nohighlight">\(T_0,\,T_1,\,T_2,\,T_3\)</span> s’approchent de plus en plus du graphe de <span class="math notranslate nohighlight">\(f.\)</span> Attention ceci n’est vrai qu’autour de <span class="math notranslate nohighlight">\(0.\)</span></p>
 </div>
 <div class="figure align-default" id="directive-fig">
-<a class="reference internal image-reference" href="_images/Approximation2.png"><img alt="_images/Approximation2.png" src="_images/Approximation2.png" style="height: 150px;" /></a>
+<a class="reference internal image-reference" href="_images/Approximation2.png"><img alt="_images/Approximation2.png" src="_images/Approximation2.png" style="height: 180px;" /></a>
 <p class="caption"><span class="caption-number">Fig. 4 </span><span class="caption-text">Approximation</span><a class="headerlink" href="#directive-fig" title="Lien permanent vers cette image">¶</a></p>
 </div>
 <p><strong>Cas particulier : Formule de Taylor-Young au voisinage de 0.</strong> On se ramène souvent au cas particulier où <span class="math notranslate nohighlight">\(a=0\)</span></p>

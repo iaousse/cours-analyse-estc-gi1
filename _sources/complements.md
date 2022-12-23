@@ -233,14 +233,14 @@ Il s'agit ici de comparer les 2 fonctions au voisinage de $a$.  Pour cela, formo
 1. Si $\dfrac{f(x)}{g(x)}$ est bornée au voisinage de $a$, on dira que $f$ est dominée par $g$ au voisinage de $a$ et on écrit: 
 
 $$
-f  \underset{x\to a}{O}(g) \mbox{ ou } f  \underset{a}{O}(g) \mbox{ ou encore } f = O(g) \mbox{ au voisinage de } a
+f = \underset{x\to a}{O}(g) \mbox{ ou } f = \underset{a}{O}(g) \mbox{ ou encore } f = O(g) \mbox{ au voisinage de } a
 $$
 
 1. Si $\dfrac{f(x)}{g(x)}$ tend vers $0$ lorsque $x$ tend vers $a$ ($\underset{x\to a}{\lim} \dfrac{f(x)}{g(x)}= 0$), on dira que $f$ est négligeable devant $g$ au voisinage de $a$ et on écrit: 
 
 
 $$
-f  \underset{x\to a}{o}(g) \mbox{ ou } f  \underset{a}{o}(g) \mbox{ ou encore } f = o(g) \mbox{ au voisinage de } a
+f = \underset{x\to a}{o}(g) \mbox{ ou } f = \underset{a}{o}(g) \mbox{ ou encore } f = o(g) \mbox{ au voisinage de } a
 $$
 
 1. Si $\dfrac{f(x)}{g(x)}$ tend vers $1$ lorsque $x$ tend vers $a$ ($\underset{x\to a}{\lim} \dfrac{f(x)}{g(x)}= 1$), on dira que $f$ et $g$ sont équivalentes au voisinage de $a$ et on écrit: 
@@ -311,13 +311,14 @@ Seul le premier équivalent a un intérêt!!
 
 - Opérations sur les relations de comparaisons
 
-    1. $f = o(g), g = o(h) \Leftarrow f = o(h)$ cad (transitivité) la même chose avec $O$
-    2. $f_1 = o(g), f_2 = o(g) \Leftarrow f_1 + f_2 = o(g)$ cad $o(g) + o(g) = o(g)$ la même chose avec $O$
-    3. $f_1 = o(g_1), f_2 = o(g_2) \Leftarrow f_1f_2 = o(g_1g_2)$ cad $o(g_1)o(g_2) = o(g_1g_2)$ la même chose avec $O$
-    4. $f = o(g) \Leftarrow hf = o(hg)$ cad $ho(g) = o(hg)$ la même chose avec $O$
-    5. $f = o(\lambda g) (\lambda \in \mathbb{R}^{*}) \Leftarrow f = o(g)$ cad $ o(\lambda g) = o(g)$ la même chose avec $O$
+    1. $f = o(g), g = o(h) \Rightarrow f = o(h)$ cad (transitivité) la même chose avec $O$
+    2. $f_1 = o(g), f_2 = o(g) \Rightarrow f_1 + f_2 = o(g)$ cad $o(g) + o(g) = o(g)$ la même chose avec $O$
+    3. $f_1 = o(g_1), f_2 = o(g_2) \Rightarrow f_1f_2 = o(g_1g_2)$ cad $o(g_1)o(g_2) = o(g_1g_2)$ la même chose avec $O$
+    4. $f = o(g) \Rightarrow hf = o(hg)$ cad $ho(g) = o(hg)$ la même chose avec $O$
+    5. $f = o(\lambda g) (\lambda \in \mathbb{R}^{*}) \Rightarrow f = o(g)$ cad $ o(\lambda g) = o(g)$ la même chose avec $O$
 
 - Caractérisation de l'équivalence de deux fonctions
+    
     On a au voisinage d’un point $a$ :  
     
     $$
@@ -330,6 +331,7 @@ Seul le premier équivalent a un intérêt!!
 - Lien entre les relations de comparaison
 
 On se place au voisinage d’un point $a$.
+    
     1. Si $f(x) \sim g(x)$ alors $f(x) = O(g(x))$.
     2. Si $f(x) \sim g(x)$ et $f(x) = o(h(x))$ alors $g(x) = o(h(x))$.
     3. Si $f(x) \sim g(x)$ et    $h(x) = o(f(x))$ alors $h(x) = o(g(x))$
