@@ -1,406 +1,423 @@
 
+
 <!DOCTYPE html>
 
-<html lang="fr">
+
+<html lang="fr" >
+
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Suites réelles: Définitions générales &#8212; Cours Analyse</title>
-    
-  <link href="_static/css/theme.css" rel="stylesheet" />
-  <link href="_static/css/index.c5995385ac14fb8791e8eb36b4908be2.css" rel="stylesheet" />
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "light";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="_static/styles/theme.css?digest=e353d410970836974a52" rel="stylesheet" />
+<link href="_static/styles/bootstrap.css?digest=e353d410970836974a52" rel="stylesheet" />
+<link href="_static/styles/pydata-sphinx-theme.css?digest=e353d410970836974a52" rel="stylesheet" />
 
-    
-  <link rel="stylesheet"
-    href="_static/vendor/fontawesome/5.13.0/css/all.min.css">
-  <link rel="preload" as="font" type="font/woff2" crossorigin
-    href="_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
-  <link rel="preload" as="font" type="font/woff2" crossorigin
-    href="_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+  
+  <link href="_static/vendor/fontawesome/6.1.2/css/all.min.css?digest=e353d410970836974a52" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.1.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.1.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.1.2/webfonts/fa-regular-400.woff2" />
 
-    
-      
-
-    
-    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
-    <link rel="stylesheet" href="_static/sphinx-book-theme.e8e5499552300ddf5d7adccae7cc3b70.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
+    <link rel="stylesheet" href="_static/styles/sphinx-book-theme.css?digest=14f4ca6b54d191a8c7657f6c759bf11a5fb86285" type="text/css" />
     <link rel="stylesheet" type="text/css" href="_static/togglebutton.css" />
     <link rel="stylesheet" type="text/css" href="_static/copybutton.css" />
-    <link rel="stylesheet" type="text/css" href="_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
     <link rel="stylesheet" type="text/css" href="_static/sphinx-thebe.css" />
     <link rel="stylesheet" type="text/css" href="_static/proof.css" />
-    <link rel="stylesheet" type="text/css" href="_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
-    <link rel="stylesheet" type="text/css" href="_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
-    
-  <link rel="preload" as="script" href="_static/js/index.1c5a1a01449ed65a7b51.js">
+    <link rel="stylesheet" type="text/css" href="_static/design-style.4045f2051d55cab465a707391d5b2007.min.css" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="_static/scripts/bootstrap.js?digest=e353d410970836974a52" />
+<link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=e353d410970836974a52" />
 
-    <script id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+    <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
     <script src="_static/jquery.js"></script>
     <script src="_static/underscore.js"></script>
+    <script src="_static/_sphinx_javascript_frameworks_compat.js"></script>
     <script src="_static/doctools.js"></script>
     <script src="_static/togglebutton.js"></script>
     <script src="_static/clipboard.min.js"></script>
     <script src="_static/copybutton.js"></script>
+    <script src="_static/scripts/sphinx-book-theme.js?digest=5a5c038af52cf7bc1a1ec88eea08e6366ee68824"></script>
     <script src="_static/translations.js"></script>
-    <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
-    <script src="_static/sphinx-book-theme.12a9622fbb08dcb3a2a40b2c02b83a57.js"></script>
-    <script async="async" src="https://unpkg.com/thebelab@latest/lib/index.js"></script>
-    <script >
-        const thebe_selector = ".thebe"
-        const thebe_selector_input = "pre"
-        const thebe_selector_output = ".output"
-    </script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="_static/design-tabs.js"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
+const thebe_selector = ".thebe,.cell"
+const thebe_selector_input = "pre"
+const thebe_selector_output = ".output, .cell_output"
+</script>
     <script async="async" src="_static/sphinx-thebe.js"></script>
-    <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
-    <script type="text/x-mathjax-config">MathJax.Hub.Config({"TeX": {"Macros": {"Z": "\\mathbb{Z}", "V": "V", "N": "\\mathbb{N}", "C": "\\mathbb{C}", "Q": "\\mathbb{Q}", "K": "\\mathbb{K}", "floor": ["\\lfloor#1\\rfloor", 1], "bmat": ["\\left[\\begin{array}"], "emat": ["\\end{array}\\right]"], "R": ["\\mathbb{R}"], "B": ["\\mathcal{B}"], "norm": ["{\\Vert#1\\Vert}", 1], "abs": ["{\\left|#1\\right|}", 1], "coloneqq": ["{:=}"], "eqqcolon": ["{=:}"], "emph": ["\\pmb#1", 1], "tr": "\\operatorname{Spur}", "lin": "\\operatorname{lin}", "dv": "\\mathrm{div}~", "rot": "\\mathrm{rot}~", "Dim": "\\operatorname{dim}", "diag": "\\operatorname{diag}", "Kern": "\\operatorname{Kern}", "Bild": "\\operatorname{Bild}", "Im": "\\operatorname{Im}", "Rang": "\\operatorname{Rang}", "GL": "\\operatorname{GL}", "Eig": "\\operatorname{Eig}", "End": "\\operatorname{End}", "Hau": "\\operatorname{Haupt}", "mymathbb": ["\\boldsymbol{#1}", 1], "idx": "\\mathrm{d}x", "d": "\\mathrm{d}", "i": "\\mathrm{i}", "x": "\\mathbf{x}", "sign": "\\mathrm{sign}", "vec": ["\\mathbf{#1}", 1], "veczwei": ["\\begin{pmatrix} #1 \\\\ #2 \\end{pmatrix}", 2], "M": "\\mathcal{M}", "S": "\\mathbb{S}", "bone": "\\unicode{x1D7D9}", "Re": "\\mathrm{Re}", "Um": "\\operatorname{Um}", "Res": "\\operatorname{Res}"}}, "tex2jax": {"inlineMath": [["\\(", "\\)"]], "displayMath": [["\\[", "\\]"]], "processRefs": false, "processEnvironments": false}})</script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'suites';</script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Recherche" href="search.html" />
     <link rel="next" title="Exercices" href="exo2.html" />
     <link rel="prev" title="Les suites des nombres réels" href="suite.html" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="docsearch:language" content="en" />
-    
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="fr"/>
   </head>
-  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
-    
-    <div class="container-fluid" id="banner"></div>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
 
-    
+  
+  
+  <a class="skip-link" href="#main-content">Passer au contenu principal</a>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__primary"
+          id="__primary"/>
+  <label class="overlay overlay-primary" for="__primary"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__secondary"
+          id="__secondary"/>
+  <label class="overlay overlay-secondary" for="__secondary"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search this book..."
+         aria-label="Search this book..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+  
+    <nav class="bd-header navbar navbar-expand-lg bd-navbar">
+    </nav>
+  
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
 
-    <div class="container-xl">
-      <div class="row">
-          
-<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
+  
+  <div class="sidebar-header-items sidebar-primary__section">
     
-        <div class="navbar-brand-box">
-    <a class="navbar-brand text-wrap" href="index.html">
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+  
+
+<a class="navbar-brand logo" href="intro.html">
+  
+  
+  
+  
+    
+    
       
-      <img src="_static/logo.png" class="logo" alt="logo">
-      
-      
-      <h1 class="site-logo" id="site-title">Cours Analyse</h1>
-      
-    </a>
-</div><form class="bd-search d-flex align-items-center" action="search.html" method="get">
-  <i class="icon fas fa-search"></i>
-  <input type="search" class="form-control" name="q" id="search-input" placeholder="Rechercher dans ce livre ..." aria-label="Rechercher dans ce livre ..." autocomplete="off" >
-</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
-    <div class="bd-toc-item active">
-        <ul class="nav bd-sidenav">
- <li class="toctree-l1">
-  <a class="reference internal" href="intro.html">
-   Introduction
-  </a>
- </li>
+    
+    
+    <img src="_static/logo.png" class="logo__image only-light" alt="Logo image"/>
+    <script>document.write(`<img src="_static/logo.png" class="logo__image only-dark" alt="Logo image"/>`);</script>
+  
+  
+</a></div>
+        <div class="sidebar-primary-item"><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        <ul class="current nav bd-sidenav">
+<li class="toctree-l1 has-children"><a class="reference internal" href="R.html">Les nombres réels</a><input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-1"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="rationnels.html">Les nombres rationnels</a></li>
+<li class="toctree-l2"><a class="reference internal" href="proprties.html">Propriétés de <span class="math notranslate nohighlight">\(\mathbb{R}\)</span></a></li>
+
+
+<li class="toctree-l2"><a class="reference internal" href="exo1.html">Exercices</a></li>
 </ul>
-<ul class="current nav bd-sidenav">
- <li class="toctree-l1 has-children">
-  <a class="reference internal" href="R.html">
-   Les nombres réels
-  </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/>
-  <label for="toctree-checkbox-1">
-   <i class="fas fa-chevron-down">
-   </i>
-  </label>
-  <ul>
-   <li class="toctree-l2">
-    <a class="reference internal" href="rationnels.html">
-     Les nombres rationnels
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="proprties.html">
-     Propriétés de
-     <span class="math notranslate nohighlight">
-      \(\mathbb{R}\)
-     </span>
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="exo1.html">
-     Exercices
-    </a>
-   </li>
-  </ul>
- </li>
- <li class="toctree-l1 current active has-children">
-  <a class="reference internal" href="suite.html">
-   Les suites des nombres réels
-  </a>
-  <input checked="" class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/>
-  <label for="toctree-checkbox-2">
-   <i class="fas fa-chevron-down">
-   </i>
-  </label>
-  <ul class="current">
-   <li class="toctree-l2 current active">
-    <a class="current reference internal" href="#">
-     Suites réelles: Définitions générales
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="exo2.html">
-     Exercices
-    </a>
-   </li>
-  </ul>
- </li>
- <li class="toctree-l1 has-children">
-  <a class="reference internal" href="limitefct.html">
-   Fonctions numériques, limite et continuité
-  </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/>
-  <label for="toctree-checkbox-3">
-   <i class="fas fa-chevron-down">
-   </i>
-  </label>
-  <ul>
-   <li class="toctree-l2">
-    <a class="reference internal" href="limitefcts.html">
-     Fonctions numérique: Définitions générales
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="exo3.html">
-     Exercices
-    </a>
-   </li>
-  </ul>
- </li>
- <li class="toctree-l1 has-children">
-  <a class="reference internal" href="dirivf.html">
-   Dérivée d’une fonction numérique- fonctions usuelles
-  </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/>
-  <label for="toctree-checkbox-4">
-   <i class="fas fa-chevron-down">
-   </i>
-  </label>
-  <ul>
-   <li class="toctree-l2">
-    <a class="reference internal" href="dirivfs.html">
-     Dérivabilité d’une fonction numérique
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="fcthycerinvs.html">
-     Fonctions circulaires inverses
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="exo5.html">
-     Exercices
-    </a>
-   </li>
-  </ul>
- </li>
- <li class="toctree-l1 has-children">
-  <a class="reference internal" href="complement.html">
-   Complement sur les suites et les fonctions numériques
-  </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/>
-  <label for="toctree-checkbox-5">
-   <i class="fas fa-chevron-down">
-   </i>
-  </label>
-  <ul>
-   <li class="toctree-l2">
-    <a class="reference internal" href="complements.html">
-     Complément sur les suites et les fonctions numériques
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="dl.html">
-     Dévelopements limités
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="exo6.html">
-     Exercices
-    </a>
-   </li>
-  </ul>
- </li>
- <li class="toctree-l1 has-children">
-  <a class="reference internal" href="integrationd.html">
-   Intégration
-  </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" type="checkbox"/>
-  <label for="toctree-checkbox-6">
-   <i class="fas fa-chevron-down">
-   </i>
-  </label>
-  <ul>
-   <li class="toctree-l2">
-    <a class="reference internal" href="fe.html">
-     Intégrale des fonctions en escalier
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="fcm.html">
-     Fonctions continues par morceaux
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="pptint.html">
-     Propriétés de l’intégrale
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="fcmint.html">
-     Fonctions continue par morceaux sur un intervalle
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="pintfc.html">
-     Primitive et intégrale des fonctions continues
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="methodcalp.html">
-     Méthodes de calcul des primitives
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="exoint.html">
-     Exercices
-    </a>
-   </li>
-  </ul>
- </li>
+</li>
+<li class="toctree-l1 current active has-children"><a class="reference internal" href="suite.html">Les suites des nombres réels</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-2"><i class="fa-solid fa-chevron-down"></i></label><ul class="current">
+<li class="toctree-l2 current active"><a class="current reference internal" href="#">Suites réelles: Définitions générales</a></li>
+
+
+
+<li class="toctree-l2"><a class="reference internal" href="exo2.html">Exercices</a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="limitefct.html">Fonctions numériques, limite et continuité</a><input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-3"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="limitefcts.html">Fonctions numérique: Définitions générales</a></li>
+
+
+
+
+
+
+<li class="toctree-l2"><a class="reference internal" href="exo3.html">Exercices</a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="dirivf.html">Dérivée d’une fonction numérique- fonctions usuelles</a><input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-4"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="dirivfs.html">Dérivabilité d’une fonction numérique</a></li>
+
+
+
+<li class="toctree-l2"><a class="reference internal" href="fcthycerinvs.html">Fonctions circulaires inverses</a></li>
+
+
+<li class="toctree-l2"><a class="reference internal" href="exo5.html">Exercices</a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="complement.html">Complement sur les suites et les fonctions numériques</a><input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-5"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="complements.html">Complément sur les suites et les fonctions numériques</a></li>
+<li class="toctree-l2"><a class="reference internal" href="dl.html">Dévelopements limités</a></li>
+<li class="toctree-l2"><a class="reference internal" href="exo6.html">Exercices</a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="integrationd.html">Intégration</a><input class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-6"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="fe.html">Intégrale des fonctions en escalier</a></li>
+<li class="toctree-l2"><a class="reference internal" href="fcm.html">Fonctions continues par morceaux</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pptint.html">Propriétés de l’intégrale</a></li>
+<li class="toctree-l2"><a class="reference internal" href="fcmint.html">Fonctions continue par morceaux sur un intervalle</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pintfc.html">Primitive et intégrale des fonctions continues</a></li>
+<li class="toctree-l2"><a class="reference internal" href="methodcalp.html">Méthodes de calcul des primitives</a></li>
+<li class="toctree-l2"><a class="reference internal" href="exoint.html">Exercices</a></li>
+</ul>
+</li>
 </ul>
 
     </div>
-</nav> <!-- To handle the deprecated key -->
-
-<div class="navbar_extra_footer">
-  Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
-</div>
-
-</div>
-
-
-          
-
-
-          
-<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
-    
-    <div class="topbar container-xl fixed-top">
-    <div class="topbar-contents row">
-        <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show"></div>
-        <div class="col pl-md-4 topbar-main">
-            
-            <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
-                data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
-                aria-expanded="true" aria-label="Basculer la navigation" aria-controls="site-navigation"
-                title="Basculer la navigation" data-toggle="tooltip" data-placement="left">
-                <i class="fas fa-bars"></i>
-                <i class="fas fa-arrow-left"></i>
-                <i class="fas fa-arrow-up"></i>
-            </button>
-            
-            
-<div class="dropdown-buttons-trigger">
-    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Téléchargez cette page"><i
-            class="fas fa-download"></i></button>
-
-    <div class="dropdown-buttons">
-        <!-- ipynb file if we had a myst markdown file -->
-        
-        <!-- Download raw file -->
-        <a class="dropdown-buttons" href="_sources/suites.md"><button type="button"
-                class="btn btn-secondary topbarbtn" title="Télécharger le fichier source" data-toggle="tooltip"
-                data-placement="left">.md</button></a>
-        <!-- Download PDF via print -->
-        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Imprimer au format PDF"
-            onClick="window.print()" data-toggle="tooltip" data-placement="left">.pdf</button>
+</nav></div>
     </div>
-</div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
 
-            <!-- Source interaction buttons -->
 
-<div class="dropdown-buttons-trigger">
-    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
-        aria-label="Connect with source repository"><i class="fab fa-github"></i></button>
-    <div class="dropdown-buttons sourcebuttons">
-        <a class="repository-button"
-            href="https://github.com/executablebooks/jupyter-book"><button type="button" class="btn btn-secondary topbarbtn"
-                data-toggle="tooltip" data-placement="left" title="Dépôt source"><i
-                    class="fab fa-github"></i>dépôt</button></a>
-        <a class="issues-button"
-            href="https://github.com/executablebooks/jupyter-book/issues/new?title=Issue%20on%20page%20%2Fsuites.html&body=Your%20issue%20content%20here."><button
-                type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
-                title="Ouvrez un problème"><i class="fas fa-lightbulb"></i>signaler un problème</button></a>
+      </div>
+      
+      <main id="main-content" class="bd-main">
         
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><label class="sidebar-toggle primary-toggle btn btn-sm" for="__primary" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</label></div>
+      
     </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-source-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Source repositories">
+    <i class="fab fa-github"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://github.com/executablebooks/jupyter-book" target="_blank"
+   class="btn btn-sm btn-source-repository-button dropdown-item"
+   title="Dépôt source"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+<span class="btn__text-container">Repository</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://github.com/executablebooks/jupyter-book/issues/new?title=Issue%20on%20page%20%2Fsuites.html&body=Your%20issue%20content%20here." target="_blank"
+   class="btn btn-sm btn-source-issues-button dropdown-item"
+   title="Ouvrez un problème"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-lightbulb"></i>
+  </span>
+<span class="btn__text-container">Open issue</span>
+</a>
+</li>
+      
+  </ul>
 </div>
 
-            <!-- Full screen (wrap in <a> to have style consistency -->
 
-<a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
-        data-placement="bottom" onclick="toggleFullScreen()" aria-label="Mode plein écran"
-        title="Mode plein écran"><i
-            class="fas fa-expand"></i></button></a>
 
-            <!-- Launch buttons -->
 
-        </div>
 
-        <!-- Table of contents -->
-        <div class="d-none d-md-block col-md-2 bd-toc show">
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Téléchargez cette page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="_sources/suites.md" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Télécharger le fichier source"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.md</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Imprimer au format PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Mode plein écran"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+<script>
+document.write(`
+  <button class="theme-switch-button btn btn-sm btn-outline-primary navbar-btn rounded-circle" title="clair/sombre" aria-label="clair/sombre" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="theme-switch" data-mode="light"><i class="fa-solid fa-sun"></i></span>
+    <span class="theme-switch" data-mode="dark"><i class="fa-solid fa-moon"></i></span>
+    <span class="theme-switch" data-mode="auto"><i class="fa-solid fa-circle-half-stroke"></i></span>
+  </button>
+`);
+</script>
+
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn search-button search-button__button" title="Recherche" aria-label="Recherche" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+  </button>
+`);
+</script>
+<label class="sidebar-toggle secondary-toggle btn btn-sm" for="__secondary"title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</label>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>Suites réelles: Définitions générales</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
             
-            <div class="tocsection onthispage pt-5 pb-3">
-                <i class="fas fa-list"></i> Contenu
+            <div>
+                <h2> Contenu </h2>
             </div>
-            <nav id="bd-toc-nav">
+            <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
- <li class="toc-h1 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#">
-   Suites réelles: Définitions générales
-  </a>
- </li>
- <li class="toc-h1 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#convergence-d-une-suite-reelle">
-   Convergence d’une suite réelle
-  </a>
- </li>
- <li class="toc-h1 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#suites-adjacentes">
-   Suites adjacentes
-  </a>
- </li>
- <li class="toc-h1 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#suites-recurrentes">
-   Suites récurrentes
-  </a>
-  <ul class="visible nav section-nav flex-column">
-   <li class="toc-h2 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#exemples-remarquables-de-suites-recurrentes">
-     Exemples remarquables de suites récurrentes
-    </a>
-   </li>
-   <li class="toc-h2 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#convergence-d-une-suite-recurrente">
-     Convergence d’une suite récurrente
-    </a>
-   </li>
-  </ul>
- </li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#">Suites réelles: Définitions générales</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#convergence-dune-suite-reelle">Convergence d’une suite réelle</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#suites-adjacentes">Suites adjacentes</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#suites-recurrentes">Suites récurrentes</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exemples-remarquables-de-suites-recurrentes">Exemples remarquables de suites récurrentes</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#convergence-dune-suite-recurrente">Convergence d’une suite récurrente</a></li>
+</ul>
+</li>
 </ul>
 
             </nav>
         </div>
     </div>
 </div>
-    <div id="main-content" class="row">
-        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
-        
-              <div>
+
+              
                 
-  <div class="section" id="suites-reelles-definitions-generales">
-<h1>Suites réelles: Définitions générales<a class="headerlink" href="#suites-reelles-definitions-generales" title="Lien permanent vers ce titre">¶</a></h1>
+<div id="searchbox"></div>
+                <article class="bd-article" role="main">
+                  
+  <div class="tex2jax_ignore mathjax_ignore section" id="suites-reelles-definitions-generales">
+<h1>Suites réelles: Définitions générales<a class="headerlink" href="#suites-reelles-definitions-generales" title="Lien permanent vers cette rubrique">#</a></h1>
 <div class="admonition-definition admonition">
 <p class="admonition-title">Définition</p>
 <p>Une suite est une application <span class="math notranslate nohighlight">\(u:\mathbb{N}\rightarrow\mathbb{R}.\)</span></p>
@@ -410,7 +427,7 @@
 <p>Si une suite <span class="math notranslate nohighlight">\(u\)</span> est définie à partir d’un certain entier naturel <span class="math notranslate nohighlight">\(n_0&gt;0,\)</span> alors dans ce cas on note cette suite par <span class="math notranslate nohighlight">\((u_n)_{n\geq n_0}.\)</span></p>
 <div class="warning admonition">
 <p class="admonition-title">Exemple</p>
-<ol class="simple">
+<ol class="arabic simple">
 <li><p>Soit <span class="math notranslate nohighlight">\((u_n)\)</span> la suite définie par <span class="math notranslate nohighlight">\(u_n=\sqrt{n}-1.\)</span> Les cinq premiers termes de cette suite sont <span class="math notranslate nohighlight">\(-1,0,\sqrt{2}-1,\sqrt{3}-1,1.\)</span></p></li>
 <li><p>Soit <span class="math notranslate nohighlight">\((v_n)_{n\geq1}\)</span> la suite définie par <span class="math notranslate nohighlight">\(v_n=\dfrac{1}{n(n+1)}.\)</span> Les trois premiers termes de cette suite sont <span class="math notranslate nohighlight">\(\dfrac{1}{2},\dfrac{1}{6},\dfrac{1}{12}\)</span></p></li>
 <li><p><span class="math notranslate nohighlight">\(((-1)^n)\)</span> est une suite qui prends deux valeurs: 1 et <span class="math notranslate nohighlight">\(-1.\)</span></p></li>
@@ -419,14 +436,14 @@
 <div class="admonition-definition admonition">
 <p class="admonition-title">Définition</p>
 <p>Soit <span class="math notranslate nohighlight">\((u_n)_{n\geq n_0}\)</span> une suite.</p>
-<ol class="simple">
+<ol class="arabic simple">
 <li><p><span class="math notranslate nohighlight">\((u_n)_{n\geq n_0}\)</span> est dite une suite croissante (resp. strictement croissante) si <span class="math notranslate nohighlight">\(u_{n+1}\geq u_n\)</span> (resp. <span class="math notranslate nohighlight">\(u_{n+1}&gt;u_n\)</span>), <span class="math notranslate nohighlight">\(\forall n\geq n_0.\)</span></p></li>
 <li><p><span class="math notranslate nohighlight">\((u_n)_{n\geq n_0}\)</span> est dite une suite décroissante (resp. strictement décroissante) si <span class="math notranslate nohighlight">\(u_{n+1}\leq u_n\)</span> (resp. <span class="math notranslate nohighlight">\(u_{n+1}&lt;u_n\)</span>), <span class="math notranslate nohighlight">\(\forall n\geq n_0.\)</span></p></li>
 </ol>
 </div>
 <div class="warning admonition">
 <p class="admonition-title">Exemple</p>
-<ol class="simple">
+<ol class="arabic simple">
 <li><p>La suite <span class="math notranslate nohighlight">\((u_n)_{n\geq1}\)</span> définie par <span class="math notranslate nohighlight">\(u_n=\dfrac{1}{n^2},\;\forall n\in \mathbb{N}^{*},\)</span> est strictement décroissante. En effet, on a</p></li>
 </ol>
 <div class="amsmath math notranslate nohighlight">
@@ -438,14 +455,14 @@ u_{n+1}-u_n
 &amp;=&amp; -\dfrac{2n+1}{n^2(n+1)^2}\\
 &amp; &amp; &lt;0
 \end{eqnarray*}\]</div>
-<ol class="simple">
+<ol class="arabic simple" start="2">
 <li><p>La suite <span class="math notranslate nohighlight">\((v_n)\)</span> définie par <span class="math notranslate nohighlight">\(v_n=e^n,\;e^{n+1}-e^n=e^n e-e^n=e^n (e-1)&gt;0.\)</span></p></li>
 </ol>
 </div>
 <div class="tip admonition">
 <p class="admonition-title">Remarque</p>
 <p>Si <span class="math notranslate nohighlight">\((u_n)_{n\geq n_0}\)</span> est une suite à termes strictement positifs, alors</p>
-<ol class="simple">
+<ol class="arabic simple">
 <li><p><span class="math notranslate nohighlight">\((u_n)_{n\geq n_0}\)</span> est croissante si, et seulement si <span class="math notranslate nohighlight">\(\dfrac{u_{n+1}}{u_n}\geq1,\;\forall n\geq n_0.\)</span></p></li>
 <li><p><span class="math notranslate nohighlight">\((u_n)_{n\geq n_0}\)</span> est décroissante si, et seulement si <span class="math notranslate nohighlight">\(\dfrac{u_{n+1}}{u_n}\leq 1,\;\forall n\geq n_0.\)</span></p></li>
 </ol>
@@ -459,7 +476,7 @@ u_{n+1}-u_n
 <div class="tip admonition">
 <p class="admonition-title">Remarque</p>
 <p>Il se peut qu’une suite ne soit ni croissante ni décroissante. Voilà deux exemples:</p>
-<ol class="simple">
+<ol class="arabic simple">
 <li><p>La suite <span class="math notranslate nohighlight">\((u_n)\)</span> telle que <span class="math notranslate nohighlight">\(u_n=(-1)^n\)</span> est une suite ni croissante ni décroissante.</p></li>
 <li><p>Considérons la suite <span class="math notranslate nohighlight">\((v_n)\)</span> définie par <span class="math notranslate nohighlight">\(v_n=\sin(n\dfrac{\pi}{2}),\;n\in\mathbb{N}.\)</span> Ces premiers termes sont:</p></li>
 </ol>
@@ -472,7 +489,7 @@ u_{n+1}-u_n
 <div class="admonition-definition admonition">
 <p class="admonition-title">Définition</p>
 <p>Soit <span class="math notranslate nohighlight">\((u_n)_{n\geq n_0}\)</span> une suite.</p>
-<ol class="simple">
+<ol class="arabic simple">
 <li><p><span class="math notranslate nohighlight">\((u_n)_{n\geq n_0}\)</span> est dite majorée si <span class="math notranslate nohighlight">\(\exists M\in \mathbb{R}\)</span> tel que <span class="math notranslate nohighlight">\(u_n\leq M,\;\forall n\geq n_0.\)</span></p></li>
 <li><p><span class="math notranslate nohighlight">\((u_n)_{n\geq n_0}\)</span> est dite minorée si <span class="math notranslate nohighlight">\(\exists m\in \mathbb{R}\)</span> tel que <span class="math notranslate nohighlight">\(u_n\geq M,\;\forall n\geq n_0.\)</span></p></li>
 <li><p><span class="math notranslate nohighlight">\((u_n)_{n\geq n_0}\)</span> est dite bornée si <span class="math notranslate nohighlight">\((u_n)_{n\geq n_0}\)</span> est minorée et majorée.</p></li>
@@ -494,7 +511,7 @@ u_n=1+n^2,\quad v_n=5-n(n+1),\quad w_n=2+\dfrac{1}{n+1},\quad n\in \mathbb{N}
 <div class="tip admonition">
 <p class="admonition-title">Remarque</p>
 <p>Soit <span class="math notranslate nohighlight">\((u_n)_{n\geq n_0}\)</span> une suite réelle.</p>
-<ol class="simple">
+<ol class="arabic simple">
 <li><p>Si <span class="math notranslate nohighlight">\((u_n)_{n\geq n_0}\)</span> est croissante, alors <span class="math notranslate nohighlight">\((u_n)_{n\geq n_0}\)</span> est minorée par son premier terme.</p></li>
 <li><p>Si <span class="math notranslate nohighlight">\((u_n)_{n\geq n_0}\)</span> est décroissante, alors <span class="math notranslate nohighlight">\((u_n)_{n\geq n_0}\)</span> est majorée par son premier terme.</p></li>
 </ol>
@@ -508,8 +525,8 @@ u_n=1+n^2,\quad v_n=5-n(n+1),\quad w_n=2+\dfrac{1}{n+1},\quad n\in \mathbb{N}
 \]</div>
 </div>
 </div>
-<div class="section" id="convergence-d-une-suite-reelle">
-<h1>Convergence d’une suite réelle<a class="headerlink" href="#convergence-d-une-suite-reelle" title="Lien permanent vers ce titre">¶</a></h1>
+<div class="tex2jax_ignore mathjax_ignore section" id="convergence-dune-suite-reelle">
+<h1>Convergence d’une suite réelle<a class="headerlink" href="#convergence-dune-suite-reelle" title="Lien permanent vers cette rubrique">#</a></h1>
 <div class="admonition-definition admonition">
 <p class="admonition-title">Définition</p>
 <p>On dit qu’une suite réelle <span class="math notranslate nohighlight">\((u_n)\)</span> converge vers un réel <span class="math notranslate nohighlight">\(\ell\)</span> lorsque pour tout <span class="math notranslate nohighlight">\(\varepsilon&gt;0,\)</span> il existe <span class="math notranslate nohighlight">\(N\in \mathbb{N}\)</span> tel que pour tout entier <span class="math notranslate nohighlight">\(n&gt;N,\)</span> on a <span class="math notranslate nohighlight">\(|u_n-\ell|&lt;\varepsilon.\)</span></p>
@@ -524,14 +541,14 @@ u_n=1+n^2,\quad v_n=5-n(n+1),\quad w_n=2+\dfrac{1}{n+1},\quad n\in \mathbb{N}
 <div class="admonition-definition admonition">
 <p class="admonition-title">Définition</p>
 <p>Soit <span class="math notranslate nohighlight">\(u_n\)</span> une suite réelle.</p>
-<ol class="simple">
+<ol class="arabic simple">
 <li><p>On dit que <span class="math notranslate nohighlight">\((u_n)\)</span> tend vers <span class="math notranslate nohighlight">\(+\infty\)</span> (et on écrit <span class="math notranslate nohighlight">\(\lim_{n \rightarrow +\infty}u_n =+\infty\)</span>) lorsque pour tout <span class="math notranslate nohighlight">\(A&gt;0,\)</span> il existe <span class="math notranslate nohighlight">\(N\in \mathbb{N}\)</span> tel que pour tout entier <span class="math notranslate nohighlight">\(n&gt;N,\)</span> on a</p></li>
 </ol>
 <div class="math notranslate nohighlight">
 \[
 u_n&gt;A
 \]</div>
-<ol class="simple">
+<ol class="arabic simple" start="2">
 <li><p>On dit que <span class="math notranslate nohighlight">\((u_n)\)</span> tend vers <span class="math notranslate nohighlight">\(-\infty\)</span> (et on écrit <span class="math notranslate nohighlight">\(\lim_{n \rightarrow +\infty}u_n =-\infty\)</span>) lorsque pour tout <span class="math notranslate nohighlight">\(A&lt;0,\)</span> il existe <span class="math notranslate nohighlight">\(N\in \mathbb{N}\)</span> tel que pour tout entier <span class="math notranslate nohighlight">\(n&gt;N,\)</span> on a</p></li>
 </ol>
 <div class="math notranslate nohighlight">
@@ -561,7 +578,7 @@ u_n&lt;A
 </div>
 <div class="warning admonition">
 <p class="admonition-title">Exemple</p>
-<ol>
+<ol class="arabic">
 <li><p>On a</p>
 <div class="math notranslate nohighlight">
 \[
@@ -581,7 +598,7 @@ u_n&lt;A
 <div class="important admonition">
 <p class="admonition-title">Proposition</p>
 <p>Soit <span class="math notranslate nohighlight">\(q\in \mathbb{R}^{*}.\)</span> On considère la suite <span class="math notranslate nohighlight">\(u_n=q^n,\:n\in \mathbb{N}.\)</span> On a:</p>
-<ol class="simple">
+<ol class="arabic simple">
 <li><p>Si <span class="math notranslate nohighlight">\(q\leq-1:\)</span> La suite <span class="math notranslate nohighlight">\((u_n)\)</span> est divergente et n’admet pas de limite, ni finie ni infinie.</p></li>
 <li><p>Si <span class="math notranslate nohighlight">\(-1&lt;q&lt;1:\)</span> La suite <span class="math notranslate nohighlight">\((u_n)_n\)</span> est convergente et <span class="math notranslate nohighlight">\(\lim_{n \rightarrow +\infty}u_n=0\)</span></p></li>
 <li><p>Si <span class="math notranslate nohighlight">\(q&gt;1:\)</span> La suite <span class="math notranslate nohighlight">\((u_n)_n\)</span> est divergente et <span class="math notranslate nohighlight">\(\lim_{n \rightarrow +\infty}u_n=+\infty\)</span></p></li>
@@ -605,9 +622,9 @@ u_n&lt;A
 <p>En on déduit que <span class="math notranslate nohighlight">\(\lim_{n \rightarrow +\infty}v_n=2.\)</span></p>
 </div>
 <div class="important admonition">
-<p class="admonition-title">Proposition (Opérations sur les limites des suites)</p>
+<p class="admonition-title">Proposition (Opérations sur les limites des suites) </p>
 <p>Soient <span class="math notranslate nohighlight">\((u_n)\)</span> et <span class="math notranslate nohighlight">\((v_n)\)</span> deux suites et soient <span class="math notranslate nohighlight">\(\alpha\)</span> et <span class="math notranslate nohighlight">\(\beta\)</span> dans <span class="math notranslate nohighlight">\(\mathbb{R},\)</span></p>
-<ol>
+<ol class="arabic">
 <li><p>Si <span class="math notranslate nohighlight">\(\lim_{n \rightarrow +\infty} u_n=\alpha\)</span> et <span class="math notranslate nohighlight">\(\lim_{n \rightarrow +\infty} v_n=\beta,\)</span> alors</p>
 <div class="math notranslate nohighlight">
 \[
@@ -631,12 +648,12 @@ u_n&lt;A
 </div>
 <div class="warning admonition">
 <p class="admonition-title">Exemple</p>
-<ol class="simple">
+<ol class="arabic simple">
 <li><p>On a <span class="math notranslate nohighlight">\(\lim_{n \rightarrow +\infty}(\dfrac{-2}{\sqrt{n}-3}+3n+1)=+\infty,\)</span> puisque <span class="math notranslate nohighlight">\(\lim_{n \rightarrow +\infty}(\dfrac{-2}{\sqrt{n}-3}) =0\)</span> et <span class="math notranslate nohighlight">\(\lim_{n \rightarrow +\infty}(3n+1)=+\infty.\)</span></p></li>
 <li><p>On a <span class="math notranslate nohighlight">\(\lim_{n \rightarrow +\infty}\dfrac{\dfrac{2}{3n}-5}{1+n+e^n}=0,\)</span> puisque <span class="math notranslate nohighlight">\(\lim_{n \rightarrow +\infty}\dfrac{2}{3n}-5=-5\)</span> et <span class="math notranslate nohighlight">\(\lim_{n \rightarrow +\infty}1+n+e^n=+\infty.\)</span></p></li>
 </ol>
 </div>
-<p>Parfois on tombe sur l’une des quatres « <strong>formes indéterminées</strong> » suivantes <span class="math notranslate nohighlight">\(+\infty-\infty,\;0\times \pm\infty,\;\dfrac{\pm\infty}{\pm\infty},\;\dfrac{0}{0}.\)</span></p>
+<p>Parfois on tombe sur l’une des quatres “<strong>formes indéterminées</strong>” suivantes <span class="math notranslate nohighlight">\(+\infty-\infty,\;0\times \pm\infty,\;\dfrac{\pm\infty}{\pm\infty},\;\dfrac{0}{0}.\)</span></p>
 <p><strong>Limites usuelles utiles</strong></p>
 <ul class="simple">
 <li><p><span class="math notranslate nohighlight">\(\lim_{n \rightarrow +\infty} n\sin(\dfrac{1}{n})=\lim_{n \rightarrow +\infty}\dfrac{\sin(\dfrac{1}{n})}{\dfrac{1}{n}}=1,\)</span></p></li>
@@ -648,7 +665,7 @@ u_n&lt;A
 </ul>
 <div class="important admonition">
 <p class="admonition-title">Proposition</p>
-<ol>
+<ol class="arabic">
 <li><p>Soient <span class="math notranslate nohighlight">\((u_n)\)</span> et <span class="math notranslate nohighlight">\((v_n)\)</span> deux suites convergentes telles que <span class="math notranslate nohighlight">\(\forall n\in \mathbb{N}:\, u_n \leq v_n\)</span> (ou <span class="math notranslate nohighlight">\(u_n &lt; v_n\)</span>). Alors</p>
 <div class="math notranslate nohighlight">
 \[
@@ -670,7 +687,7 @@ u_n&lt;A
 </ol>
 </div>
 <div class="important admonition">
-<p class="admonition-title">Théorème (Théorème des « gendarmes »)</p>
+<p class="admonition-title">Théorème (Théorème des “gendarmes”)</p>
 <p>Si <span class="math notranslate nohighlight">\((u_n),\)</span> <span class="math notranslate nohighlight">\((v_n)\)</span> et <span class="math notranslate nohighlight">\((w_n)\)</span> sont trois suites telles que</p>
 <div class="math notranslate nohighlight">
 \[
@@ -684,7 +701,7 @@ u_n&lt;A
 </div>
 <div class="warning admonition">
 <p class="admonition-title">Exemple</p>
-<p>Calculer, à l’aide de Théorème des « gendarmes », la limite suivante</p>
+<p>Calculer, à l’aide de Théorème des “gendarmes”, la limite suivante</p>
 <div class="math notranslate nohighlight">
 \[
 \lim_{n \rightarrow +\infty}(1+\dfrac{\sin (n)}{n})
@@ -693,14 +710,14 @@ u_n&lt;A
 <p>Toute suite convergente est bornée. La réciproque est fausse: la suite <span class="math notranslate nohighlight">\(((-1)^n)\)</span> est bornée mais elle diverge (elle n’admet pas de limite).En revanche, on a le résultat suivant.</p>
 <div class="important admonition">
 <p class="admonition-title">Théorème</p>
-<ol class="simple">
+<ol class="arabic simple">
 <li><p>Toute suite croissante et majorée est convergente.</p></li>
 <li><p>Toute suite décroissante et minorée est convergente.</p></li>
 </ol>
 </div>
 <div class="seealso dropdown admonition">
 <p class="admonition-title">Preuve</p>
-<p>On montrera l’assertion « Toute suite convergente est bornée. » En effet, soit <span class="math notranslate nohighlight">\((u_n)_{n\in \mathbb{N}}\)</span> une suite convergeant vers le réel <span class="math notranslate nohighlight">\(\ell.\)</span> En appliquant la définition de limite avec <span class="math notranslate nohighlight">\(\varepsilon=1,\)</span>  on obtient qu’il existe un entier naturel <span class="math notranslate nohighlight">\(N\)</span> tel que pour <span class="math notranslate nohighlight">\(n\geq N\)</span> on ait, <span class="math notranslate nohighlight">\(|u_n-\ell|\leq1,\)</span> et donc pour <span class="math notranslate nohighlight">\(n\geq N\)</span> on a</p>
+<p>On montrera l’assertion “Toute suite convergente est bornée.” En effet, soit <span class="math notranslate nohighlight">\((u_n)_{n\in \mathbb{N}}\)</span> une suite convergeant vers le réel <span class="math notranslate nohighlight">\(\ell.\)</span> En appliquant la définition de limite avec <span class="math notranslate nohighlight">\(\varepsilon=1,\)</span>  on obtient qu’il existe un entier naturel <span class="math notranslate nohighlight">\(N\)</span> tel que pour <span class="math notranslate nohighlight">\(n\geq N\)</span> on ait, <span class="math notranslate nohighlight">\(|u_n-\ell|\leq1,\)</span> et donc pour <span class="math notranslate nohighlight">\(n\geq N\)</span> on a</p>
 <div class="math notranslate nohighlight">
 \[
 |u_n|=|\ell+(u_n-\ell)|\leq |\ell|+|u_n-\ell|\leq |\ell|+1
@@ -709,8 +726,8 @@ u_n&lt;A
 <p>on a alors <span class="math notranslate nohighlight">\(\forall n\in \mathbb{N},\,|u_n|\leq M.\)</span></p>
 </div>
 </div>
-<div class="section" id="suites-adjacentes">
-<h1>Suites adjacentes<a class="headerlink" href="#suites-adjacentes" title="Lien permanent vers ce titre">¶</a></h1>
+<div class="tex2jax_ignore mathjax_ignore section" id="suites-adjacentes">
+<h1>Suites adjacentes<a class="headerlink" href="#suites-adjacentes" title="Lien permanent vers cette rubrique">#</a></h1>
 <div class="admonition-definition admonition">
 <p class="admonition-title">Définition</p>
 <p>Deux suites <span class="math notranslate nohighlight">\((u_n)\)</span> et <span class="math notranslate nohighlight">\((v_n)\)</span> sont dites adjacentes si <span class="math notranslate nohighlight">\((u_n)\)</span> est celle qui est croissante, l’autre est décroissante et leur différente et leur différence tend vers 0.</p>
@@ -756,8 +773,8 @@ v_{n+1}-v_n
 <p>En on déduit les deux suites <span class="math notranslate nohighlight">\((u_n)_{n\geq1}\)</span> <span class="math notranslate nohighlight">\((v_n)_{n\geq1}\)</span> sont adjacentes. Donc <span class="math notranslate nohighlight">\((u_n)_{n\geq1}\)</span> et <span class="math notranslate nohighlight">\((v_n)_{n\geq1}\)</span> convergent vers la même limite. En particulier, la suite <span class="math notranslate nohighlight">\((u_n)_{n\geq1}\)</span> est convergente.</p>
 </div>
 </div>
-<div class="section" id="suites-recurrentes">
-<h1>Suites récurrentes<a class="headerlink" href="#suites-recurrentes" title="Lien permanent vers ce titre">¶</a></h1>
+<div class="tex2jax_ignore mathjax_ignore section" id="suites-recurrentes">
+<h1>Suites récurrentes<a class="headerlink" href="#suites-recurrentes" title="Lien permanent vers cette rubrique">#</a></h1>
 <div class="admonition-definition admonition">
 <p class="admonition-title">Définition</p>
 <p>Une suite <span class="math notranslate nohighlight">\((u_n)_{n\geq n_0}\)</span> est dite récurrente si elle est définie par son premier terme <span class="math notranslate nohighlight">\(u_{n_0}\)</span> et une relation de récurrence de forme</p>
@@ -768,7 +785,7 @@ u_{n+1}=f(u_n),\quad\forall n\geq n_0
 <p>où <span class="math notranslate nohighlight">\(f\)</span> est une fonction définie sur un intervalle <span class="math notranslate nohighlight">\(I\)</span> de <span class="math notranslate nohighlight">\(\mathbb{R}.\)</span></p>
 </div>
 <div class="section" id="exemples-remarquables-de-suites-recurrentes">
-<h2>Exemples remarquables de suites récurrentes<a class="headerlink" href="#exemples-remarquables-de-suites-recurrentes" title="Lien permanent vers ce titre">¶</a></h2>
+<h2>Exemples remarquables de suites récurrentes<a class="headerlink" href="#exemples-remarquables-de-suites-recurrentes" title="Lien permanent vers cette rubrique">#</a></h2>
 <p><strong>Suites arithmétiques:</strong></p>
 <div class="admonition-definition admonition">
 <p class="admonition-title">Définition</p>
@@ -824,14 +841,14 @@ u_p+u_{p+1}+...+u_n=(n-p+1)\dfrac{u_p+u_n}{2}=(n-p+1)\dfrac{2u_p+(n-p)r}{2}\;n_0
 <div class="important admonition">
 <p class="admonition-title">Proposition</p>
 <p>Si <span class="math notranslate nohighlight">\((u_n)_{n\geq n_0}\)</span> est une suite géométrique non nulle de raison <span class="math notranslate nohighlight">\(q(q\neq0),\)</span> alors <span class="math notranslate nohighlight">\(u_n=u_{n_0}q^{n-n_0},\;\forall n\geq n_0.\)</span> Et en particulier, on a</p>
-<ol class="simple">
+<ol class="arabic simple">
 <li><p>Si <span class="math notranslate nohighlight">\(q&gt;1,\)</span> alors <span class="math notranslate nohighlight">\(\lim_{n \rightarrow +\infty}u_n=\pm\infty,\)</span></p></li>
 <li><p>Si <span class="math notranslate nohighlight">\(-1&lt;q&lt;1,\)</span> alors <span class="math notranslate nohighlight">\(\lim_{n \rightarrow +\infty}u_n=0,\)</span></p></li>
 <li><p>Si <span class="math notranslate nohighlight">\(q\leq-1,\)</span> la suite <span class="math notranslate nohighlight">\((u_n)_{n\geq n_0}\)</span> diverge.</p></li>
 </ol>
 </div>
 <div class="important admonition">
-<p class="admonition-title">Proposition(Série géométrique)</p>
+<p class="admonition-title">Proposition(Série géométrique)  </p>
 <p>Si <span class="math notranslate nohighlight">\((u_n)_{n\geq n_0}\)</span> est une suite géométrique de raison <span class="math notranslate nohighlight">\(q(q\neq1),\)</span> alors</p>
 <div class="math notranslate nohighlight">
 \[
@@ -855,8 +872,8 @@ S_n=\dfrac{1-\dfrac{1}{2^{n+1}}}{1-\dfrac{1}{2}}=2(1-\dfrac{1}{2^{n+1}})
 <p>On écrit alors <span class="math notranslate nohighlight">\(\sum_{k=0}^{+\infty}u_k=2\)</span></p>
 </div>
 </div>
-<div class="section" id="convergence-d-une-suite-recurrente">
-<h2>Convergence d’une suite récurrente<a class="headerlink" href="#convergence-d-une-suite-recurrente" title="Lien permanent vers ce titre">¶</a></h2>
+<div class="section" id="convergence-dune-suite-recurrente">
+<h2>Convergence d’une suite récurrente<a class="headerlink" href="#convergence-dune-suite-recurrente" title="Lien permanent vers cette rubrique">#</a></h2>
 <p>Dans toute la suite, soit <span class="math notranslate nohighlight">\((u_n)_{n\geq n_0}\)</span> une suite récurrente définie par son premier terme et par la relation <span class="math notranslate nohighlight">\(u_{n+1}=f(u_n),\,n\geq n_0,\)</span> où <span class="math notranslate nohighlight">\(f\)</span> est une fonction numérique donnée.</p>
 <div class="important admonition">
 <p class="admonition-title">Théorème</p>
@@ -897,7 +914,7 @@ S_n=\dfrac{1-\dfrac{1}{2^{n+1}}}{1-\dfrac{1}{2}}=2(1-\dfrac{1}{2^{n+1}})
             mode: "python"
         },
         kernelOptions: {
-            kernelName: "python3",
+            name: "python3",
             path: "./."
         },
         predefinedOutput: true
@@ -905,35 +922,116 @@ S_n=\dfrac{1-\dfrac{1}{2^{n+1}}}{1-\dfrac{1}{2}}=2(1-\dfrac{1}{2^{n+1}})
     </script>
     <script>kernelName = 'python3'</script>
 
-              </div>
+                </article>
               
-        
-        <div class='prev-next-bottom'>
-            
-    <a class='left-prev' id="prev-link" href="suite.html" title="previous page">Les suites des nombres réels</a>
-    <a class='right-next' id="next-link" href="exo2.html" title="next page">Exercices</a>
 
-        </div>
-        
-        </div>
-    </div>
-    <footer class="footer mt-5 mt-md-0">
-    <div class="container">
-      <p>
-        
-          Par Iaousse M'barek<br/>
-        
-      </p>
-    </div>
-  </footer>
-</main>
-
-
+              
+              
+                <footer class="bd-footer-article">
+                  
+<div class="footer-article-items footer-article__inner">
+  
+    <div class="footer-article-item"><!-- Previous / next buttons -->
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="suite.html"
+       title="page précédente">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">précédent</p>
+        <p class="prev-next-title">Les suites des nombres réels</p>
       </div>
-    </div>
+    </a>
+    <a class="right-next"
+       href="exo2.html"
+       title="page suivante">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">suivant</p>
+        <p class="prev-next-title">Exercices</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
+</div></div>
   
-  <script src="_static/js/index.1c5a1a01449ed65a7b51.js"></script>
+</div>
 
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contenu
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#">Suites réelles: Définitions générales</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#convergence-dune-suite-reelle">Convergence d’une suite réelle</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#suites-adjacentes">Suites adjacentes</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#suites-recurrentes">Suites récurrentes</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exemples-remarquables-de-suites-recurrentes">Exemples remarquables de suites récurrentes</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#convergence-dune-suite-recurrente">Convergence d’une suite récurrente</a></li>
+</ul>
+</li>
+</ul>
+
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
   
+  <div class="footer-item">
+    
+<p class="component-author">
+Par Pr. Iaousse Mbarek
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+<div class="extra_footer">
+  <p>
+Ce manuel est mis à disposition selon les termes de la Licence
+<a href="https://creativecommons.org/licenses/by/4.0/">Creative
+Commons Attribution 4.0 International</a>.
+L'utilisation de ce travail est autorisée à condition d'en
+attribuer la paternité.
+</p>
+
+</div>
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="_static/scripts/bootstrap.js?digest=e353d410970836974a52"></script>
+<script src="_static/scripts/pydata-sphinx-theme.js?digest=e353d410970836974a52"></script>
+
+  <footer class="bd-footer">
+  </footer>
   </body>
 </html>

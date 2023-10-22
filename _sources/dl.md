@@ -7,7 +7,13 @@ Les développements limités correspondent à une mise en oeuvre locale de ce pr
 
 
 ```{admonition} Définition
-Soit $f : I \to \mathbb R$ une fonction et soit $a \in I$ . Soit $n \in \mathbb N$, on dit que $f$ admet un développement limité d'ordre n en a (ou un $DL_n(a)$) lorsqu'il existe un polynôme $T$ de degré au plus $n$ tel que : $f (x) = T(x − a)+ \underset{a}{o}((x − a)^n)$. Si c'est le cas, alors le polynôme $T(x − a)$ est appelé partie régulière et  la partie $\underset{a}{o}((x − a)^n)$ est appelé reste du $DL_n(a)$. 
+Soit $f : I \to \mathbb R$ une fonction et soit $a \in I$ . Soit $n \in \mathbb N$, on dit que $f$ admet un développement limité d'ordre n en a (ou un $DL_n(a)$) lorsqu'il existe un polynôme $T$ de degré au plus $n$ tel que : 
+
+$$
+f (x) = T(x − a)+ \underset{a}{o}((x − a)^n)
+$$
+
+Si c'est le cas, alors le polynôme $T(x − a)$ est appelé partie régulière et  la partie $\underset{a}{o}((x − a)^n)$ est appelé reste du $DL_n(a)$. 
 
 ```
 
@@ -177,14 +183,14 @@ La fonction $f$ admet un $DL$ au voisinage d'un point $a$ si et seulement si la 
 voisinage de $0.$ Souvent on ramène donc le problème en $0$ en faisant le changement de variables $h=x-a.$
 
 ```{admonition} Exercice
-$DL$ de $f(x)=exp x$ en $1.$
+$DL$ de $f(x)=\exp x$ en $1.$
 
 On pose $h=x-1.$ Si $x$ est proche de $1$ alors $h$ est proche de $0.$ Nous allons nous ramener à un $DL$ de $\exp h$ en
-$h = 0.$ On note $e = exp 1.$
+$h = 0.$ On note $e = \exp 1.$
 
 
 \begin{eqnarray*}
-\exp 
+\exp x
 &=&\mbox{exp(1+(x-1))}=\exp (1)\exp (x-1)=e\exp h\\
 &=& e(1+h+\frac{h^2}{2}+\ldots+\frac{h^n}{n!}+h^n \varepsilon(h))\\
 &=& e(1+(x-1)+\frac{(x-1)^2}{2}+\ldots+\frac{(x-1)^n}{n!}+(x-1)^n \varepsilon(x-1)))\\

@@ -331,15 +331,10 @@ Seul le premier équivalent a un intérêt!!
 - Lien entre les relations de comparaison
 
 On se place au voisinage d’un point $a$.
-    
-    1. Si $f(x) \sim g(x)$ alors $f(x) = O(g(x))$.
-    2. Si $f(x) \sim g(x)$ et $f(x) = o(h(x))$ alors $g(x) = o(h(x))$.
-    3. Si $f(x) \sim g(x)$ et    $h(x) = o(f(x))$ alors $h(x) = o(g(x))$
-
-
+    - Si $f(x) \sim g(x)$ alors $f(x) = O(g(x))$.
+    - Si $f(x) \sim g(x)$ et $f(x) = o(h(x))$ alors $g(x) = o(h(x))$.
+    - Si $f(x) \sim g(x)$ et    $h(x) = o(f(x))$ alors $h(x) = o(g(x))$
 - Calculs avec des équivalents
-
-
     1. si $f(x) \underset{x\to a}{\to} l$ et $l\neq 0$ alors $f \underset{a}{\sim} l$
     2. si $f_1 \underset{a}{\sim} g_1$ et $f_2 \underset{a}{\sim} g_2$ alors $f_1f_2 \underset{a}{\sim} g_1g_2$ et $\dfrac{f_1}{f_2} \underset{a}{\sim} \dfrac{g_1}{g_2}$
     2. si $f \underset{a}{\sim} g$ et $f$ et $g$ sont positive alors $f^\alpha \underset{a}{\sim} g^\alpha$ pour tout $\alpha \in \mathbb{R}$.

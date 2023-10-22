@@ -1,0 +1,1003 @@
+
+
+<!DOCTYPE html>
+
+
+<html lang="fr" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Solutions Exercices &#8212; Cours Analyse</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "light";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="_static/styles/theme.css?digest=e353d410970836974a52" rel="stylesheet" />
+<link href="_static/styles/bootstrap.css?digest=e353d410970836974a52" rel="stylesheet" />
+<link href="_static/styles/pydata-sphinx-theme.css?digest=e353d410970836974a52" rel="stylesheet" />
+
+  
+  <link href="_static/vendor/fontawesome/6.1.2/css/all.min.css?digest=e353d410970836974a52" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.1.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.1.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.1.2/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
+    <link rel="stylesheet" href="_static/styles/sphinx-book-theme.css?digest=14f4ca6b54d191a8c7657f6c759bf11a5fb86285" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="_static/proof.css" />
+    <link rel="stylesheet" type="text/css" href="_static/design-style.4045f2051d55cab465a707391d5b2007.min.css" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="_static/scripts/bootstrap.js?digest=e353d410970836974a52" />
+<link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=e353d410970836974a52" />
+
+    <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+    <script src="_static/jquery.js"></script>
+    <script src="_static/underscore.js"></script>
+    <script src="_static/_sphinx_javascript_frameworks_compat.js"></script>
+    <script src="_static/doctools.js"></script>
+    <script src="_static/togglebutton.js"></script>
+    <script src="_static/clipboard.min.js"></script>
+    <script src="_static/copybutton.js"></script>
+    <script src="_static/scripts/sphinx-book-theme.js?digest=5a5c038af52cf7bc1a1ec88eea08e6366ee68824"></script>
+    <script src="_static/translations.js"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="_static/design-tabs.js"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
+const thebe_selector = ".thebe,.cell"
+const thebe_selector_input = "pre"
+const thebe_selector_output = ".output, .cell_output"
+</script>
+    <script async="async" src="_static/sphinx-thebe.js"></script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'solution td1';</script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Recherche" href="search.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="fr"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <a class="skip-link" href="#main-content">Passer au contenu principal</a>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__primary"
+          id="__primary"/>
+  <label class="overlay overlay-primary" for="__primary"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__secondary"
+          id="__secondary"/>
+  <label class="overlay overlay-secondary" for="__secondary"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search this book..."
+         aria-label="Search this book..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+  
+    <nav class="bd-header navbar navbar-expand-lg bd-navbar">
+    </nav>
+  
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+  
+
+<a class="navbar-brand logo" href="intro.html">
+  
+  
+  
+  
+    
+    
+      
+    
+    
+    <img src="_static/logo.png" class="logo__image only-light" alt="Logo image"/>
+    <script>document.write(`<img src="_static/logo.png" class="logo__image only-dark" alt="Logo image"/>`);</script>
+  
+  
+</a></div>
+        <div class="sidebar-primary-item"><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        <ul class="nav bd-sidenav">
+<li class="toctree-l1 has-children"><a class="reference internal" href="R.html">Les nombres réels</a><input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-1"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="rationnels.html">Les nombres rationnels</a></li>
+<li class="toctree-l2"><a class="reference internal" href="proprties.html">Propriétés de <span class="math notranslate nohighlight">\(\mathbb{R}\)</span></a></li>
+
+
+<li class="toctree-l2"><a class="reference internal" href="exo1.html">Exercices</a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="suite.html">Les suites des nombres réels</a><input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-2"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="suites.html">Suites réelles: Définitions générales</a></li>
+
+
+
+<li class="toctree-l2"><a class="reference internal" href="exo2.html">Exercices</a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="limitefct.html">Fonctions numériques, limite et continuité</a><input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-3"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="limitefcts.html">Fonctions numérique: Définitions générales</a></li>
+
+
+
+
+
+
+<li class="toctree-l2"><a class="reference internal" href="exo3.html">Exercices</a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="dirivf.html">Dérivée d’une fonction numérique- fonctions usuelles</a><input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-4"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="dirivfs.html">Dérivabilité d’une fonction numérique</a></li>
+
+
+
+<li class="toctree-l2"><a class="reference internal" href="fcthycerinvs.html">Fonctions circulaires inverses</a></li>
+
+
+<li class="toctree-l2"><a class="reference internal" href="exo5.html">Exercices</a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="complement.html">Complement sur les suites et les fonctions numériques</a><input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-5"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="complements.html">Complément sur les suites et les fonctions numériques</a></li>
+<li class="toctree-l2"><a class="reference internal" href="dl.html">Dévelopements limités</a></li>
+<li class="toctree-l2"><a class="reference internal" href="exo6.html">Exercices</a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="integrationd.html">Intégration</a><input class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-6"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="fe.html">Intégrale des fonctions en escalier</a></li>
+<li class="toctree-l2"><a class="reference internal" href="fcm.html">Fonctions continues par morceaux</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pptint.html">Propriétés de l’intégrale</a></li>
+<li class="toctree-l2"><a class="reference internal" href="fcmint.html">Fonctions continue par morceaux sur un intervalle</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pintfc.html">Primitive et intégrale des fonctions continues</a></li>
+<li class="toctree-l2"><a class="reference internal" href="methodcalp.html">Méthodes de calcul des primitives</a></li>
+<li class="toctree-l2"><a class="reference internal" href="exoint.html">Exercices</a></li>
+</ul>
+</li>
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><label class="sidebar-toggle primary-toggle btn btn-sm" for="__primary" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</label></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-source-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Source repositories">
+    <i class="fab fa-github"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://github.com/executablebooks/jupyter-book" target="_blank"
+   class="btn btn-sm btn-source-repository-button dropdown-item"
+   title="Dépôt source"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+<span class="btn__text-container">Repository</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://github.com/executablebooks/jupyter-book/issues/new?title=Issue%20on%20page%20%2Fsolution td1.html&body=Your%20issue%20content%20here." target="_blank"
+   class="btn btn-sm btn-source-issues-button dropdown-item"
+   title="Ouvrez un problème"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-lightbulb"></i>
+  </span>
+<span class="btn__text-container">Open issue</span>
+</a>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Téléchargez cette page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="_sources/solution td1.ipynb" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Télécharger le fichier source"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.ipynb</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Imprimer au format PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Mode plein écran"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+<script>
+document.write(`
+  <button class="theme-switch-button btn btn-sm btn-outline-primary navbar-btn rounded-circle" title="clair/sombre" aria-label="clair/sombre" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="theme-switch" data-mode="light"><i class="fa-solid fa-sun"></i></span>
+    <span class="theme-switch" data-mode="dark"><i class="fa-solid fa-moon"></i></span>
+    <span class="theme-switch" data-mode="auto"><i class="fa-solid fa-circle-half-stroke"></i></span>
+  </button>
+`);
+</script>
+
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn search-button search-button__button" title="Recherche" aria-label="Recherche" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+  </button>
+`);
+</script>
+<label class="sidebar-toggle secondary-toggle btn btn-sm" for="__secondary"title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</label>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>Solutions Exercices</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contenu </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exercice-1">Exercice 1</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#remarques">Remarques:</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exercice-2">Exercice 2 :</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id1">1</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id2">2</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id3">3</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exercice-3">Exercice 3</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exercice-4">Exercice 4</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exercice-5">Exercice 5</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exercice-6">Exercice 6</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exercice-7">Exercice 7</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exercice-8">Exercice 8</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exercice-9">Exercice 9</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exercice-10">Exercice 10</a></li>
+</ul>
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article" role="main">
+                  
+  <div class="tex2jax_ignore mathjax_ignore section" id="solutions-exercices">
+<h1>Solutions Exercices<a class="headerlink" href="#solutions-exercices" title="Lien permanent vers cette rubrique">#</a></h1>
+<div class="section" id="exercice-1">
+<h2>Exercice 1<a class="headerlink" href="#exercice-1" title="Lien permanent vers cette rubrique">#</a></h2>
+<ol class="arabic">
+<li><p><strong>max(a, b, c)</strong></p>
+<div class="math notranslate nohighlight">
+\[
+    max(a, b, c) = max(max(a,b), c)
+    \]</div>
+</li>
+<li><p><strong>max(a_1, a_2, \ldots, a_n)</strong></p></li>
+</ol>
+<div class="math notranslate nohighlight">
+\[
+max(max(a_1, a_2, \ldots, a_{n-1}), a_n)
+\]</div>
+<ol class="arabic simple" start="2">
+<li><p><strong>min(a, b)</strong></p></li>
+</ol>
+<div class="math notranslate nohighlight">
+\[
+min(a, b) = - max(-a, -b)
+\]</div>
+<div class="section" id="remarques">
+<h3>Remarques:<a class="headerlink" href="#remarques" title="Lien permanent vers cette rubrique">#</a></h3>
+<ol class="arabic simple">
+<li><p><strong>max(a, b)</strong>:
+Pour déterminer le maximum entre deux nombres <code class="docutils literal notranslate"><span class="pre">a</span></code> et <code class="docutils literal notranslate"><span class="pre">b</span></code> en utilisant leur valeur absolue, on peut utiliser la formule :
+$<span class="math notranslate nohighlight">\(
+\text{max}(a, b) = \frac{a + b + |a - b|}{2}
+\)</span>$</p></li>
+<li><p><strong>min(a, b)</strong>:
+De manière similaire, pour déterminer le minimum entre <code class="docutils literal notranslate"><span class="pre">a</span></code> et <code class="docutils literal notranslate"><span class="pre">b</span></code>, vous pouvez utiliser la formule :
+$<span class="math notranslate nohighlight">\(
+\text{min}(a, b) = \frac{a + b - |a - b|}{2}
+\)</span>$</p></li>
+</ol>
+</div>
+</div>
+<div class="section" id="exercice-2">
+<h2>Exercice 2 :<a class="headerlink" href="#exercice-2" title="Lien permanent vers cette rubrique">#</a></h2>
+<div class="section" id="id1">
+<h3>1<a class="headerlink" href="#id1" title="Lien permanent vers cette rubrique">#</a></h3>
+<ol class="arabic">
+<li><p><strong>0,1212</strong> :
+Ce nombre est déjà sous une forme finie :</p>
+<div class="math notranslate nohighlight">
+\[
+   0,1212 = \frac{1212}{10000}
+   \]</div>
+<p>Et cette fraction peut être simplifiée davantage si nécessaire.</p>
+</li>
+<li><p><strong>0,1212…</strong> :
+Soit <span class="math notranslate nohighlight">\( x = 0,1212...\)</span>.
+Multiplions chaque côté par 100 pour décaler la virgule :</p>
+<div class="math notranslate nohighlight">
+\[
+   100x = 12,1212...
+   \]</div>
+<p>Soustrayons la première équation de la seconde (<span class="math notranslate nohighlight">\(100x-x\)</span>) pour éliminer la partie décimale répétée :</p>
+<div class="math notranslate nohighlight">
+\[
+   99x = 12
+   \]</div>
+<p>D’où,</p>
+<div class="math notranslate nohighlight">
+\[
+   x = \frac{12}{99} = \frac{4}{33}
+   \]</div>
+</li>
+<li><p><strong>78,33454545…</strong> :
+Soit <span class="math notranslate nohighlight">\( y = 78,33454545...\)</span>.
+Pour isoler la partie répétitive, multiplions chaque côté par 1000 :</p>
+<div class="math notranslate nohighlight">
+\[
+   1000y = 78334,54545...
+   \]</div>
+<p>Et encore par 100 pour décaler davantage la virgule :</p>
+<div class="math notranslate nohighlight">
+\[
+   100y = 7833,454545...
+   \]</div>
+<p>Soustrayons la seconde équation de la première (<span class="math notranslate nohighlight">\(1000y-100y\)</span>) pour éliminer la partie décimale répétée :</p>
+<div class="math notranslate nohighlight">
+\[
+   900y = 501
+   \]</div>
+<p>D’où,</p>
+<div class="math notranslate nohighlight">
+\[
+   y = \frac{501}{900} = \frac{167}{300}
+   \]</div>
+</li>
+</ol>
+</div>
+<div class="section" id="id2">
+<h3>2<a class="headerlink" href="#id2" title="Lien permanent vers cette rubrique">#</a></h3>
+<ol class="arabic simple">
+<li><p><strong>Montrer que <span class="math notranslate nohighlight">\(2-3\sqrt{2} \notin \mathbb{Q}\)</span></strong></p></li>
+</ol>
+<p>Supposons par l’absurde que <span class="math notranslate nohighlight">\(2-3\sqrt{2}\)</span> est rationnel. Alors il pourrait être écrit sous la forme:
+$<span class="math notranslate nohighlight">\(2-3\sqrt{2} = \frac{p}{q}\)</span><span class="math notranslate nohighlight">\(
+où \)</span>p<span class="math notranslate nohighlight">\( et \)</span>q<span class="math notranslate nohighlight">\( sont des entiers sans facteurs communs et \)</span>q \neq 0$.</p>
+<p>En réarrangeant, nous obtenons:
+$<span class="math notranslate nohighlight">\(3\sqrt{2} = 2 - \frac{p}{q} = \frac{2q-p}{q}\)</span>$</p>
+<p>En multipliant chaque côté par <span class="math notranslate nohighlight">\(q\)</span>:
+$<span class="math notranslate nohighlight">\(3q\sqrt{2} = 2q-p\)</span>$</p>
+<p>Maintenant, divisons chaque côté par 3 :
+$<span class="math notranslate nohighlight">\(q\sqrt{2} = \frac{2q-p}{3}\)</span>$</p>
+<p>Cela signifie que <span class="math notranslate nohighlight">\(\sqrt{2}\)</span> serait rationnel (car le ratio de deux nombres entiers est rationnel). Cependant, nous savons que <span class="math notranslate nohighlight">\(\sqrt{2}\notin \mathbb{Q}\)</span>. Par conséquent, notre hypothèse de départ était fausse et <span class="math notranslate nohighlight">\(2-3\sqrt{2} \notin \mathbb{Q}\)</span>.</p>
+<ol class="arabic simple" start="2">
+<li><p><strong>Montrer que <span class="math notranslate nohighlight">\(1-\dfrac{1}{\sqrt{2}} \notin \mathbb{Q}\)</span></strong></p></li>
+</ol>
+<p>Supposons par l’absurde que <span class="math notranslate nohighlight">\(1-\dfrac{1}{\sqrt{2}}\)</span> est rationnel. Alors, il pourrait être écrit sous la forme:
+$<span class="math notranslate nohighlight">\(1-\dfrac{1}{\sqrt{2}} = \frac{m}{n}\)</span><span class="math notranslate nohighlight">\(
+où \)</span>m<span class="math notranslate nohighlight">\( et \)</span>n<span class="math notranslate nohighlight">\( sont des entiers sans facteurs communs et \)</span>n \neq 0$.</p>
+<p>En réarrangeant, nous obtenons:
+$<span class="math notranslate nohighlight">\(\dfrac{1}{\sqrt{2}} = 1 - \frac{m}{n} = \frac{n-m}{n}\)</span>$</p>
+<p>En multipliant chaque côté par <span class="math notranslate nohighlight">\(2\)</span>, nous obtenons:
+$<span class="math notranslate nohighlight">\(\sqrt{2}= 2\frac{n-m}{n} = \frac{2(n-m)}{n}\)</span>$</p>
+<p>Encore une fois, cela impliquerait que <span class="math notranslate nohighlight">\(\sqrt{2}\)</span> serait rationnel. Cependant, nous savons que <span class="math notranslate nohighlight">\(\sqrt{2}\notin \mathbb{Q}\)</span>. Par conséquent, notre hypothèse de départ était fausse et <span class="math notranslate nohighlight">\(1-\dfrac{1}{\sqrt{2}} \notin \mathbb{Q}\)</span>.</p>
+</div>
+<div class="section" id="id3">
+<h3>3<a class="headerlink" href="#id3" title="Lien permanent vers cette rubrique">#</a></h3>
+<ol class="arabic simple">
+<li><p><strong>Montrer que <span class="math notranslate nohighlight">\(\frac{1}{3} \notin D\)</span></strong></p></li>
+</ol>
+<p>Pour qu’un nombre soit dans <span class="math notranslate nohighlight">\(D\)</span>, il doit pouvoir être exprimé sous la forme <span class="math notranslate nohighlight">\(\frac{a}{2^n}\)</span>, où <span class="math notranslate nohighlight">\(a\)</span> est un entier et <span class="math notranslate nohighlight">\(n\)</span> est un nombre naturel. Si <span class="math notranslate nohighlight">\(\frac{1}{3}\)</span> était dans <span class="math notranslate nohighlight">\(D\)</span>, alors il existerait des valeurs de <span class="math notranslate nohighlight">\(a\)</span> et <span class="math notranslate nohighlight">\(n\)</span> telles que :
+$<span class="math notranslate nohighlight">\(
+\frac{1}{3} = \frac{a}{2^n}
+\)</span><span class="math notranslate nohighlight">\(
+En multipliant chaque côté par \)</span>3<span class="math notranslate nohighlight">\(:
+\)</span><span class="math notranslate nohighlight">\(
+1 = \frac{3a}{2^n}
+\)</span><span class="math notranslate nohighlight">\(
+Ceci implique que \)</span>3a<span class="math notranslate nohighlight">\( est une puissance de 2, ce qui est impossible car \)</span>3a<span class="math notranslate nohighlight">\( est forcément un multiple de 3. Ainsi, nous pouvons conclure que \)</span>\frac{1}{3} \notin D$.</p>
+<ol class="arabic simple">
+<li><p>Trouver <span class="math notranslate nohighlight">\(x \in D\)</span> tel que <span class="math notranslate nohighlight">\(1234 &lt; x &lt; 1234.001\)</span></p></li>
+</ol>
+<p>Nous cherchons un nombre <span class="math notranslate nohighlight">\(x\)</span> dans l’ensemble <span class="math notranslate nohighlight">\(D\)</span> tel que <span class="math notranslate nohighlight">\(1234 &lt; x &lt; 1234.001\)</span>.</p>
+<p>Puisque <span class="math notranslate nohighlight">\(x\in D\)</span> alors: <span class="math notranslate nohighlight">\(x=\dfrac{a}{2^n}\)</span> pour un certain <span class="math notranslate nohighlight">\(a\in\mathbb{Z}\)</span> et <span class="math notranslate nohighlight">\(n\in \mathbb{N}\)</span>.</p>
+<p>Donc on doit trouver <span class="math notranslate nohighlight">\(a\)</span> et <span class="math notranslate nohighlight">\(n\)</span> tels que: <span class="math notranslate nohighlight">\(1234 &lt; \dfrac{a}{2^n} &lt; 1234+0.001\)</span></p>
+<p>ou encore: <span class="math notranslate nohighlight">\(2^n\times1234 &lt; a &lt; 2^n\times(1234+ 0.001)\)</span></p>
+<p>ou encore: <span class="math notranslate nohighlight">\(2^n\times1234 &lt; a &lt; 2^n\times1234+ \dfrac{2^n}{1000}\)</span></p>
+<p>Puisque <span class="math notranslate nohighlight">\(a\)</span> est entier relative, on peut deduire que <span class="math notranslate nohighlight">\(a\)</span> est positif et que <span class="math notranslate nohighlight">\(\dfrac{2^n}{1000}\)</span> doit etre superieur à 1.</p>
+<p>cherchons <span class="math notranslate nohighlight">\(n\)</span> tel que <span class="math notranslate nohighlight">\(\dfrac{2^n}{1000}&gt;1\)</span></p>
+<table class="colwidths-auto table">
+<thead>
+<tr class="row-odd"><th class="text-center head"><p><span class="math notranslate nohighlight">\(n\)</span></p></th>
+<th class="text-center head"><p><span class="math notranslate nohighlight">\(2^n\)</span></p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td class="text-center"><p>1</p></td>
+<td class="text-center"><p>2</p></td>
+</tr>
+<tr class="row-odd"><td class="text-center"><p>2</p></td>
+<td class="text-center"><p>4</p></td>
+</tr>
+<tr class="row-even"><td class="text-center"><p>3</p></td>
+<td class="text-center"><p>8</p></td>
+</tr>
+<tr class="row-odd"><td class="text-center"><p>4</p></td>
+<td class="text-center"><p>16</p></td>
+</tr>
+<tr class="row-even"><td class="text-center"><p>5</p></td>
+<td class="text-center"><p>32</p></td>
+</tr>
+<tr class="row-odd"><td class="text-center"><p>6</p></td>
+<td class="text-center"><p>64</p></td>
+</tr>
+<tr class="row-even"><td class="text-center"><p>7</p></td>
+<td class="text-center"><p>128</p></td>
+</tr>
+<tr class="row-odd"><td class="text-center"><p>8</p></td>
+<td class="text-center"><p>256</p></td>
+</tr>
+<tr class="row-even"><td class="text-center"><p>9</p></td>
+<td class="text-center"><p>512</p></td>
+</tr>
+<tr class="row-odd"><td class="text-center"><p>10</p></td>
+<td class="text-center"><p>1024</p></td>
+</tr>
+</tbody>
+</table>
+<p>Donc pour <span class="math notranslate nohighlight">\(n=10\)</span> on aura: <span class="math notranslate nohighlight">\(2^{10}\times1234 &lt; a &lt; 2^{10}\times1234+ \dfrac{2^{10}}{1000}\)</span></p>
+<p>Donc, <span class="math notranslate nohighlight">\(1263616 &lt; a &lt; 1263616+ 1,024\)</span></p>
+<p>En fin pour <span class="math notranslate nohighlight">\(a=1263617\)</span> et <span class="math notranslate nohighlight">\(n=10\)</span> on a <span class="math notranslate nohighlight">\(x =\dfrac{a}{2^n}=\dfrac{1263617}{1024} = 1234,0009765625\)</span> qui bien entre 1234 et 1234,001.</p>
+</div>
+</div>
+<div class="section" id="exercice-3">
+<h2>Exercice 3<a class="headerlink" href="#exercice-3" title="Lien permanent vers cette rubrique">#</a></h2>
+<p><strong>1. Démontrer que si <span class="math notranslate nohighlight">\(r \in \mathbb{Q}\)</span> et <span class="math notranslate nohighlight">\(x \notin \mathbb{Q}\)</span> alors <span class="math notranslate nohighlight">\(r + x \notin \mathbb{Q}\)</span> et si <span class="math notranslate nohighlight">\(r \neq 0\)</span> alors <span class="math notranslate nohighlight">\(rx \notin \mathbb{Q}\)</span></strong></p>
+<p>(a) Supposons par l’absurde que <span class="math notranslate nohighlight">\(r + x \in \mathbb{Q}\)</span>. Alors <span class="math notranslate nohighlight">\((r+x) - r = x \in \mathbb{Q}\)</span>, ce qui est une contradiction avec notre hypothèse que <span class="math notranslate nohighlight">\(x \notin \mathbb{Q}\)</span>.</p>
+<p>(b) Supposons que <span class="math notranslate nohighlight">\(rx \in \mathbb{Q}\)</span> et <span class="math notranslate nohighlight">\(r \neq 0\)</span>. Alors, <span class="math notranslate nohighlight">\(\frac{rx}{r} = x \in \mathbb{Q}\)</span>, ce qui est aussi une contradiction.</p>
+<p>Remarque: Si <span class="math notranslate nohighlight">\(r=0\)</span>, alors <span class="math notranslate nohighlight">\(rx=0\)</span> est rationnel, mais nous avons exclu ce cas.</p>
+<hr class="docutils" />
+<p><strong>2. Montrer que <span class="math notranslate nohighlight">\(\sqrt{2} \notin \mathbb{Q}\)</span></strong></p>
+<p>Voir cours</p>
+<hr class="docutils" />
+<p><strong>3. En déduire que : entre deux nombres rationnels il y a toujours un nombre irrationnel</strong></p>
+<p>Soit <span class="math notranslate nohighlight">\(r_1\)</span> et <span class="math notranslate nohighlight">\(r_2\)</span> deux rationnels distincts.</p>
+<p>Sans perte de généralité, supposons que <span class="math notranslate nohighlight">\(r_1 &lt; r_2\)</span>. Considérons le nombre <span class="math notranslate nohighlight">\(\sqrt{2} \times (r_2 - r_1) + r_1\)</span>. Ce nombre est compris entre <span class="math notranslate nohighlight">\(r_1\)</span> et <span class="math notranslate nohighlight">\(r_2\)</span> (Pourquoi?).</p>
+<p>D’autre part, comme nous l’avons prouvé plus haut, <span class="math notranslate nohighlight">\(\sqrt{2} \times (r_2 - r_1)\)</span> est irrationnel. L’addition d’un nombre rationnel et d’un nombre irrationnel donne un nombre irrationnel. Donc, <span class="math notranslate nohighlight">\(\sqrt{2} \times (r_2 - r_1) + r_1\)</span> est irrationnel.</p>
+<p>Par conséquent, entre deux nombres rationnels, il existe toujours au moins un nombre irrationnel.</p>
+</div>
+<div class="section" id="exercice-4">
+<h2>Exercice 4<a class="headerlink" href="#exercice-4" title="Lien permanent vers cette rubrique">#</a></h2>
+<p>Pour prouver que <span class="math notranslate nohighlight">\(\frac{\ln(3)}{\ln(2)}\)</span> est irrationnel, nous allons utiliser une méthode par contradiction.</p>
+<p>Supposons que <span class="math notranslate nohighlight">\(\frac{\ln(3)}{\ln(2)}\)</span> soit rationnel. Cela signifie qu’il peut être exprimé comme un rapport de deux nombres entiers, c’est-à-dire:
+$<span class="math notranslate nohighlight">\(
+\frac{\ln(3)}{\ln(2)} = \frac{p}{q}
+\)</span><span class="math notranslate nohighlight">\(
+où \)</span>p<span class="math notranslate nohighlight">\( et \)</span>q<span class="math notranslate nohighlight">\( sont des entiers sans facteurs communs (c'est-à-dire, ils sont copremiers) et \)</span>q \neq 0$.</p>
+<p>En réarrangeant cette équation, nous obtenons:
+$<span class="math notranslate nohighlight">\(
+\ln(3) = \frac{p}{q} \ln(2)
+\)</span>$</p>
+<p>En utilisant les propriétés des logarithmes, cela donne:
+$<span class="math notranslate nohighlight">\(
+3 = 2^{\frac{p}{q}}
+\)</span>$</p>
+<p>En élevant chaque côté à la puissance <span class="math notranslate nohighlight">\(q\)</span>, nous obtenons:
+$<span class="math notranslate nohighlight">\(
+3^q = 2^p
+\)</span>$</p>
+<p>Ceci est une contradiction car:</p>
+<ul class="simple">
+<li><p><span class="math notranslate nohighlight">\(3^q\)</span> est un entier impair (toute puissance de 3 est impaire).</p></li>
+<li><p><span class="math notranslate nohighlight">\(2^p\)</span> est un entier pair (toute puissance de 2 est paire).</p></li>
+</ul>
+<p>Donc,
+<span class="math notranslate nohighlight">\(\frac{\ln(3)}{\ln(2)}\)</span> est irrationnel.</p>
+</div>
+<div class="section" id="exercice-5">
+<h2>Exercice 5<a class="headerlink" href="#exercice-5" title="Lien permanent vers cette rubrique">#</a></h2>
+<ol class="arabic simple">
+<li><p><strong>Pour max(x,y)</strong></p></li>
+</ol>
+<p>Si <span class="math notranslate nohighlight">\(x \geq y\)</span>.</p>
+<p>Alors <span class="math notranslate nohighlight">\(|x - y| = x - y\)</span>.</p>
+<p>Insérons cette valeur dans la formule proposée:
+$<span class="math notranslate nohighlight">\(
+\frac{x + y + |x - y|}{2} = \frac{x + y + x - y}{2} = x=\text{max}(x,y)
+\)</span>$</p>
+<p>Si <span class="math notranslate nohighlight">\(y \geq x\)</span>, alors <span class="math notranslate nohighlight">\(|x - y| = y - x\)</span> et nous trouvons de la même manière que le maximum est <span class="math notranslate nohighlight">\(y\)</span>.</p>
+<ol class="arabic simple" start="2">
+<li><p><strong>Pour min(x,y)</strong></p></li>
+</ol>
+<p>En utilisant le même raisonnement que ci-dessus:
+$<span class="math notranslate nohighlight">\(
+\text{min}(x,y) = \frac{x + y - |x - y|}{2}
+\)</span><span class="math notranslate nohighlight">\(
+Si \)</span>x \geq y<span class="math notranslate nohighlight">\(, alors \)</span>|x - y| = x - y<span class="math notranslate nohighlight">\( et nous trouvons que le minimum est \)</span>y<span class="math notranslate nohighlight">\(.
+Si \)</span>y \geq x<span class="math notranslate nohighlight">\(, alors \)</span>|x - y| = y - x<span class="math notranslate nohighlight">\( et le minimum est \)</span>x$.</p>
+<ol class="arabic simple" start="3">
+<li><p><strong>Une formule pour max(x,y,z)</strong></p></li>
+</ol>
+<p>Pour trois nombres, <span class="math notranslate nohighlight">\(x\)</span>, <span class="math notranslate nohighlight">\(y\)</span>, et <span class="math notranslate nohighlight">\(z\)</span>, on peut exprimer le maximum comme:
+$<span class="math notranslate nohighlight">\(
+\text{max}(x,y,z) = \text{max}(\text{max}(x,y), z)
+\)</span><span class="math notranslate nohighlight">\(
+En utilisant la formule précédente pour max, cela devient:
+\)</span><span class="math notranslate nohighlight">\(
+\text{max}(x,y,z) = \frac{\text{max}(x,y) + z + |\text{max}(x,y) - z|}{2}=\frac{\frac{x + y + |x - y|}{2} + z + |\frac{x + y + |x - y|}{2} - z|}{2}
+\)</span>$</p>
+</div>
+<div class="section" id="exercice-6">
+<h2>Exercice 6<a class="headerlink" href="#exercice-6" title="Lien permanent vers cette rubrique">#</a></h2>
+<p>Soit l’ensemble <span class="math notranslate nohighlight">\(A = \{u_n | n \in \mathbb{N}\}\)</span> où
+$<span class="math notranslate nohighlight">\(
+u_n = \begin{cases} 
+2^n &amp; \text{si } n \text{ est pair} \\
+2^{-n} &amp; \text{sinon}
+\end{cases}
+\)</span>$</p>
+<p><strong>1. Pour <span class="math notranslate nohighlight">\(n\)</span> pair</strong>:
+La suite est donnée par <span class="math notranslate nohighlight">\(u_n = 4^k\)</span> (où <span class="math notranslate nohighlight">\(n = 2k\)</span>). Cette suite est strictement croissante et donc n’a pas de borne supérieure.</p>
+<p><strong>2. Pour <span class="math notranslate nohighlight">\(n\)</span> impair</strong>:
+La suite est donnée par <span class="math notranslate nohighlight">\(u_n = 2^{-(2k+1)}\)</span> (où <span class="math notranslate nohighlight">\(n = 2k + 1\)</span>). Cette suite est strictement décroissante et tend vers 0. Sa borne supérieure est 0 et sa borne inférieure est également 0 puisqu’elle ne devient jamais négative.</p>
+<p>Donc</p>
+<ul class="simple">
+<li><p>L’ensemble A n’a pas de borne supérieure.</p></li>
+<li><p>La borne inférieure de A est 0.</p></li>
+</ul>
+</div>
+<div class="section" id="exercice-7">
+<h2>Exercice 7<a class="headerlink" href="#exercice-7" title="Lien permanent vers cette rubrique">#</a></h2>
+<p><strong>1. <span class="math notranslate nohighlight">\([0,1] \cap \mathbb{Q}\)</span></strong> :</p>
+<p><strong>Majorants</strong> :
+Tout nombre <span class="math notranslate nohighlight">\(M \geq 1\)</span> est un majorant.</p>
+<p>Soit <span class="math notranslate nohighlight">\(x \in [0,1] \cap \mathbb{Q}\)</span>. Alors, par définition, <span class="math notranslate nohighlight">\(0 \leq x \leq 1\)</span>. Donc, pour tout <span class="math notranslate nohighlight">\(M \geq 1\)</span>, on a <span class="math notranslate nohighlight">\(x \leq M\)</span>.</p>
+<p><strong>Minorants</strong> :
+Tout nombre <span class="math notranslate nohighlight">\(m \leq 0\)</span> est un minorant.</p>
+<p>Soit <span class="math notranslate nohighlight">\(x \in [0,1] \cap \mathbb{Q}\)</span>. Alors <span class="math notranslate nohighlight">\(0 \leq x\)</span>, donc pour tout <span class="math notranslate nohighlight">\(m \leq 0\)</span>, <span class="math notranslate nohighlight">\(m \leq x\)</span>.</p>
+<p><strong>Borne supérieure</strong> :
+La borne supérieure est 1.</p>
+<p>Comme montré précédemment, tout nombre dans <span class="math notranslate nohighlight">\([0,1] \cap \mathbb{Q}\)</span> est inférieur ou égal à 1. De plus, 1 appartient à cet ensemble, ce qui en fait le plus petit des majorants.</p>
+<p><strong>Borne inférieure</strong> :
+La borne inférieure est 0.</p>
+<p>0 appartient à l’ensemble et est inférieur à tout autre élément de l’ensemble, ce qui en fait le plus grand des minorants.</p>
+<p><strong>Plus grand élément</strong> : 1.</p>
+<p><strong>Plus petit élément</strong> : 0.</p>
+<hr class="docutils" />
+<p><strong>2. <span class="math notranslate nohighlight">\(]0,1[ \cap \mathbb{Q}\)</span></strong> :</p>
+<p><strong>Majorants</strong> :
+Tout nombre <span class="math notranslate nohighlight">\(M \geq 1\)</span> est un majorant.</p>
+<p>Tout élément de l’ensemble est strictement inférieur à 1. Donc, pour tout <span class="math notranslate nohighlight">\(M \geq 1\)</span>, <span class="math notranslate nohighlight">\(x \leq M\)</span>.</p>
+<p><strong>Minorants</strong> :
+Tout nombre <span class="math notranslate nohighlight">\(m &lt; 0\)</span> est un minorant.</p>
+<p>Pour tout élément <span class="math notranslate nohighlight">\(x\)</span> de l’ensemble, <span class="math notranslate nohighlight">\(x &gt; 0\)</span>. Ainsi, pour tout <span class="math notranslate nohighlight">\(m &lt; 0\)</span>, <span class="math notranslate nohighlight">\(m &lt; x\)</span>.</p>
+<p><strong>Borne supérieure</strong> :
+La borne supérieure est 1.</p>
+<p>Bien que 1 n’appartienne pas à l’ensemble, aucun autre nombre rationnel n’est plus proche de 1 par la gauche que 1 lui-même.</p>
+<p><strong>Borne inférieure</strong> :
+La borne inférieure est 0.</p>
+<p>Aucun nombre dans l’ensemble n’est inférieur ou égal à 0.</p>
+<p><strong>Plus grand élément</strong> : N’existe pas.</p>
+<p><strong>Plus petit élément</strong> : N’existe pas.</p>
+<hr class="docutils" />
+<p><strong>3. <span class="math notranslate nohighlight">\(\mathbb{N}\)</span></strong> :</p>
+<p><strong>Majorants</strong> :
+N’existent pas.</p>
+<p>Par définition, les entiers naturels ne sont pas bornés supérieurement.</p>
+<p><strong>Minorants</strong> :
+L’ensemble des minorants est <span class="math notranslate nohighlight">\(]-\infty,0]\)</span>.</p>
+<p>Le plus petit entier naturel est 0. Donc, tout nombre inférieur à 0 est un minorant.</p>
+<p><strong>Borne supérieure</strong> :
+N’existe pas.</p>
+<p><strong>Borne inférieure</strong> :
+Le plus grand minorant est 0.</p>
+<p>0 est l’entier naturel le plus bas, donc il est le plus grand des minorants.</p>
+<p><strong>Plus grand élément</strong> : N’existe pas.</p>
+<p><strong>Plus petit élément</strong> : 0.</p>
+<hr class="docutils" />
+<p><strong>4. <span class="math notranslate nohighlight">\({(−1)^n + \frac{1}{n^2} | n \in \mathbb{N^*}}\)</span></strong> :</p>
+<p><strong>Majorants</strong> :
+Tout nombre <span class="math notranslate nohighlight">\(M \geq 2\)</span> est un majorant.</p>
+<p>Le terme <span class="math notranslate nohighlight">\((−1)^n\)</span> oscille entre -1 et 1. Le terme <span class="math notranslate nohighlight">\(\frac{1}{n^2}\)</span> décroît et tend vers 0 quand <span class="math notranslate nohighlight">\(n\)</span> tend vers l’infini. Le terme le plus grand de l’ensemble est 2 quand <span class="math notranslate nohighlight">\(n=1\)</span>.</p>
+<p><strong>Minorants</strong> :
+Tout nombre <span class="math notranslate nohighlight">\(m \leq -1\)</span> est un minorant.</p>
+<p>Le terme le plus bas de l’ensemble est -1 quand <span class="math notranslate nohighlight">\(n\)</span> tend vers l’infini.</p>
+<p><strong>Borne supérieure</strong> :
+La borne supérieure est 2.</p>
+<p>C’est le plus grand élément de l’ensemble.</p>
+<p><strong>Borne inférieure</strong> :
+La borne inférieure est -1.</p>
+<p>Bien que -1 n’appartienne pas à l’ensemble (en raison du terme <span class="math notranslate nohighlight">\(\frac{1}{n^2}\)</span>), aucun autre élément de l’ensemble n’est inférieur à -1.</p>
+<p><strong>Plus grand élément</strong> : 2.</p>
+<p><strong>Plus petit élément</strong> : N’existe pas.</p>
+</div>
+<div class="section" id="exercice-8">
+<h2>Exercice 8<a class="headerlink" href="#exercice-8" title="Lien permanent vers cette rubrique">#</a></h2>
+<p><strong>1. <span class="math notranslate nohighlight">\(supA + supB\)</span> est un majorant de <span class="math notranslate nohighlight">\(A+B\)</span></strong></p>
+<p>Soient <span class="math notranslate nohighlight">\(a \in A\)</span> et <span class="math notranslate nohighlight">\(b \in B\)</span>.
+Par définition du sup (borne supérieure),
+$<span class="math notranslate nohighlight">\(
+a \leq supA \quad \text{et} \quad b \leq supB
+\)</span><span class="math notranslate nohighlight">\(
+En ajoutant les deux inégalités, on obtient :
+\)</span><span class="math notranslate nohighlight">\(
+a + b \leq supA + supB
+\)</span><span class="math notranslate nohighlight">\(
+Comme cela est valable pour tous les éléments \)</span>(a,b) \in A \times B<span class="math notranslate nohighlight">\(, cela signifie que \)</span>supA + supB<span class="math notranslate nohighlight">\( est bien un majorant de l'ensemble \)</span>A+B$.</p>
+<hr class="docutils" />
+<p><strong>2. <span class="math notranslate nohighlight">\(sup(A+B) = supA + supB\)</span></strong></p>
+<p>Nous avons déjà montré que <span class="math notranslate nohighlight">\(supA + supB\)</span> est un majorant de <span class="math notranslate nohighlight">\(A+B\)</span>, donc il est certain que :
+$<span class="math notranslate nohighlight">\(
+sup(A+B) \leq supA + supB
+\)</span>$</p>
+<p>Pour montrer l’égalité, nous devons montrer que pour tout <span class="math notranslate nohighlight">\(\epsilon &gt; 0\)</span>, il existe des éléments <span class="math notranslate nohighlight">\(a \in A\)</span> et <span class="math notranslate nohighlight">\(b \in B\)</span> tels que :
+$<span class="math notranslate nohighlight">\(
+supA + supB - \epsilon &lt; a + b
+\)</span>$</p>
+<p>Soit <span class="math notranslate nohighlight">\(\epsilon &gt; 0\)</span>. Comme <span class="math notranslate nohighlight">\(supA\)</span> est la borne supérieure de <span class="math notranslate nohighlight">\(A\)</span>, il existe un élément <span class="math notranslate nohighlight">\(a' \in A\)</span> tel que :
+$<span class="math notranslate nohighlight">\(
+supA - \frac{\epsilon}{2} &lt; a'
+\)</span>$</p>
+<p>De manière similaire, comme <span class="math notranslate nohighlight">\(supB\)</span> est la borne supérieure de <span class="math notranslate nohighlight">\(B\)</span>, il existe un élément <span class="math notranslate nohighlight">\(b' \in B\)</span> tel que :
+$<span class="math notranslate nohighlight">\(
+supB - \frac{\epsilon}{2} &lt; b'
+\)</span>$</p>
+<p>En additionnant ces deux inégalités, nous obtenons :
+$<span class="math notranslate nohighlight">\(
+supA + supB - \epsilon &lt; a' + b'
+\)</span>$</p>
+<p>Cela signifie que pour tout <span class="math notranslate nohighlight">\(\epsilon &gt; 0\)</span>, il y a toujours un élément dans <span class="math notranslate nohighlight">\(A+B\)</span> qui est à moins de <span class="math notranslate nohighlight">\(\epsilon\)</span> de la valeur <span class="math notranslate nohighlight">\(supA + supB\)</span>. Ainsi, <span class="math notranslate nohighlight">\(supA + supB\)</span> est la borne supérieure de <span class="math notranslate nohighlight">\(A+B\)</span> :
+$<span class="math notranslate nohighlight">\(
+sup(A+B) = supA + supB
+\)</span>$</p>
+</div>
+<div class="section" id="exercice-9">
+<h2>Exercice 9<a class="headerlink" href="#exercice-9" title="Lien permanent vers cette rubrique">#</a></h2>
+<p><strong>1. <span class="math notranslate nohighlight">\(A \subset B \implies supA \leq supB\)</span></strong></p>
+<p><em>Vrai.</em> Si <span class="math notranslate nohighlight">\(A\)</span> est un sous-ensemble de <span class="math notranslate nohighlight">\(B\)</span>, alors chaque élément de <span class="math notranslate nohighlight">\(A\)</span> est également un élément de <span class="math notranslate nohighlight">\(B\)</span>. Par conséquent, la borne supérieure de <span class="math notranslate nohighlight">\(A\)</span> ne peut pas être plus grande que la borne supérieure de <span class="math notranslate nohighlight">\(B\)</span>.</p>
+<hr class="docutils" />
+<p><strong>2. <span class="math notranslate nohighlight">\(A \subset B \implies infA \leq infB\)</span></strong></p>
+<p><em>Vrai.</em> Si <span class="math notranslate nohighlight">\(A\)</span> est un sous-ensemble de <span class="math notranslate nohighlight">\(B\)</span>, chaque élément de <span class="math notranslate nohighlight">\(A\)</span> est aussi un élément de <span class="math notranslate nohighlight">\(B\)</span>. Donc, le plus petit élément (ou la borne inférieure) de <span class="math notranslate nohighlight">\(A\)</span> ne peut pas être plus grand que celui de <span class="math notranslate nohighlight">\(B\)</span>.</p>
+<hr class="docutils" />
+<p><strong>3. <span class="math notranslate nohighlight">\(sup(A \cup B) = \max(supA, supB)\)</span></strong></p>
+<p><em>Vrai.</em> Les éléments de <span class="math notranslate nohighlight">\(A \cup B\)</span> sont ceux de <span class="math notranslate nohighlight">\(A\)</span> ou de <span class="math notranslate nohighlight">\(B\)</span>. Le plus grand élément de <span class="math notranslate nohighlight">\(A \cup B\)</span> sera donc le plus grand parmi les plus grands éléments de <span class="math notranslate nohighlight">\(A\)</span> et de <span class="math notranslate nohighlight">\(B\)</span>.</p>
+<hr class="docutils" />
+<p><strong>4. <span class="math notranslate nohighlight">\(sup(A+B) &lt; supA + supB\)</span></strong></p>
+<p><em>Faux en général.</em> En fait, comme démontré précédemment, <span class="math notranslate nohighlight">\(sup(A+B) = supA + supB\)</span>. Cependant, il est vrai que <span class="math notranslate nohighlight">\(sup(A+B)\)</span> peut être <em>inférieur ou égal</em> à <span class="math notranslate nohighlight">\(supA + supB\)</span>.</p>
+<hr class="docutils" />
+<p><strong>5. <span class="math notranslate nohighlight">\(sup(-A) = -infA\)</span></strong></p>
+<p><em>Vrai.</em> Pour chaque élément <span class="math notranslate nohighlight">\(a \in A\)</span>, son opposé est <span class="math notranslate nohighlight">\(-a\)</span> et se trouve dans <span class="math notranslate nohighlight">\(-A\)</span>. Si <span class="math notranslate nohighlight">\(infA\)</span> est le plus petit élément de <span class="math notranslate nohighlight">\(A\)</span>, alors <span class="math notranslate nohighlight">\(-infA\)</span> est le plus grand élément négatif de <span class="math notranslate nohighlight">\(-A\)</span>. Par conséquent, <span class="math notranslate nohighlight">\(sup(-A) = -infA\)</span>.</p>
+<hr class="docutils" />
+<p><strong>6. <span class="math notranslate nohighlight">\(supA + infB \leq sup(A+B)\)</span></strong></p>
+<p><em>Vrai.</em> Pour tout élément <span class="math notranslate nohighlight">\(a \in A\)</span> et tout élément <span class="math notranslate nohighlight">\(b \in B\)</span>, <span class="math notranslate nohighlight">\(a+b\)</span> est un élément de <span class="math notranslate nohighlight">\(A+B\)</span>. Comme <span class="math notranslate nohighlight">\(supA\)</span> est le plus grand élément de <span class="math notranslate nohighlight">\(A\)</span> et <span class="math notranslate nohighlight">\(infB\)</span> est le plus petit élément de <span class="math notranslate nohighlight">\(B\)</span>, alors leur somme <span class="math notranslate nohighlight">\(supA + infB\)</span> sera toujours un élément inférieur ou égal à n’importe quel autre élément de <span class="math notranslate nohighlight">\(A+B\)</span>. Donc, <span class="math notranslate nohighlight">\(supA + infB \leq sup(A+B)\)</span>.</p>
+</div>
+<div class="section" id="exercice-10">
+<h2>Exercice 10<a class="headerlink" href="#exercice-10" title="Lien permanent vers cette rubrique">#</a></h2>
+<p><strong>1. Pour deux réels <span class="math notranslate nohighlight">\(x\)</span> et <span class="math notranslate nohighlight">\(y\)</span>, montrer que <span class="math notranslate nohighlight">\(|x| \geq ||x+y| - |y||\)</span></strong></p>
+<p>Utilisons le fait que <span class="math notranslate nohighlight">\(|a| \geq 0\)</span> pour tout réel <span class="math notranslate nohighlight">\(a\)</span> et que <span class="math notranslate nohighlight">\(|a| = a\)</span> ou <span class="math notranslate nohighlight">\(-a\)</span> selon le signe de <span class="math notranslate nohighlight">\(a\)</span>.</p>
+<p>(a) Si <span class="math notranslate nohighlight">\(x+y \geq y\)</span>, alors <span class="math notranslate nohighlight">\(|x+y-y| = x\)</span>, donc <span class="math notranslate nohighlight">\(|x| = x\)</span>.
+(b) Si <span class="math notranslate nohighlight">\(x+y &lt; y\)</span>, alors <span class="math notranslate nohighlight">\(|x+y-y| = -x\)</span>, donc <span class="math notranslate nohighlight">\(|x| = -x\)</span>.</p>
+<p>Dans les deux cas, on a:
+$<span class="math notranslate nohighlight">\(
+|x+y| - |y| \leq |x|
+\)</span><span class="math notranslate nohighlight">\(
+et 
+\)</span><span class="math notranslate nohighlight">\(
+-|x+y| + |y| \geq -|x|
+\)</span>$</p>
+<p>Cela donne
+$<span class="math notranslate nohighlight">\(
+||x+y| - |y|| \leq |x|
+\)</span>$
+Ce qui est équivalent à l’inégalité demandée.</p>
+<hr class="docutils" />
+<p><strong>2. Montrer que pour des réels <span class="math notranslate nohighlight">\(x_1, \ldots, x_n\)</span>: <span class="math notranslate nohighlight">\(|x_1 + \ldots + x_n| \leq |x_1| + \ldots + |x_n|\)</span></strong></p>
+<p><em>Preuve par récurrence</em>:</p>
+<p><em>Base</em> : Pour <span class="math notranslate nohighlight">\(n=1\)</span>, l’inégalité se réduit à <span class="math notranslate nohighlight">\(|x_1| \leq |x_1|\)</span>, ce qui est évidemment vrai.</p>
+<p><em>Hypothèse de récurrence</em> : Supposons que l’inégalité soit vraie pour <span class="math notranslate nohighlight">\(n=k\)</span>. Alors :
+$<span class="math notranslate nohighlight">\(
+|x_1 + \ldots + x_k| \leq |x_1| + \ldots + |x_k|
+\)</span>$</p>
+<p><em>Étape de récurrence</em> : Pour <span class="math notranslate nohighlight">\(n=k+1\)</span> :
+$<span class="math notranslate nohighlight">\(
+|x_1 + \ldots + x_{k+1}| = |(x_1 + \ldots + x_k) + x_{k+1}| \leq |x_1 + \ldots + x_k| + |x_{k+1}| \leq |x_1| + \ldots + |x_{k+1}|
+\)</span>$</p>
+<p>L’égalité est atteinte si et seulement si tous les <span class="math notranslate nohighlight">\(x_i\)</span> sont du même signe.</p>
+<hr class="docutils" />
+<p><strong>3. Comparaisons pour <span class="math notranslate nohighlight">\(E(x)\)</span>, la partie entière de <span class="math notranslate nohighlight">\(x\)</span></strong>:</p>
+<p>(a) Comparer <span class="math notranslate nohighlight">\(E(x+y)\)</span> avec <span class="math notranslate nohighlight">\(E(x)+E(y)\)</span>:</p>
+<p>En général, <span class="math notranslate nohighlight">\(E(x+y) \leq E(x) + E(y) + 1\)</span>. Si la somme des parties fractionnaires de <span class="math notranslate nohighlight">\(x\)</span> et <span class="math notranslate nohighlight">\(y\)</span> est inférieure à 1, alors <span class="math notranslate nohighlight">\(E(x+y) = E(x) + E(y)\)</span>. Sinon, il y a un dépassement de 1, donc <span class="math notranslate nohighlight">\(E(x+y) = E(x) + E(y) + 1\)</span>.</p>
+<p>(b) Comparer <span class="math notranslate nohighlight">\(E(xy)\)</span> à <span class="math notranslate nohighlight">\(E(x)E(y)\)</span>:</p>
+<p>Si <span class="math notranslate nohighlight">\(x\)</span> et <span class="math notranslate nohighlight">\(y\)</span> sont des entiers, alors <span class="math notranslate nohighlight">\(E(xy) = E(x)E(y)\)</span>.</p>
+<p>Cependant, si l’un d’eux n’est pas un entier, il n’y a pas de garantie générale. Par exemple, si <span class="math notranslate nohighlight">\(x=1.5\)</span> et <span class="math notranslate nohighlight">\(y=2.5\)</span>, alors <span class="math notranslate nohighlight">\(xy = 3.75\)</span> et <span class="math notranslate nohighlight">\(E(xy) = 3\)</span>, mais <span class="math notranslate nohighlight">\(E(x)E(y) = 1 \times 2 = 2\)</span>. La relation exacte dépend des valeurs spécifiques de <span class="math notranslate nohighlight">\(x\)</span> et <span class="math notranslate nohighlight">\(y\)</span>.</p>
+</div>
+</div>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            name: "python3",
+            path: "./."
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+                </article>
+              
+
+              
+              
+                <footer class="bd-footer-article">
+                  
+<div class="footer-article-items footer-article__inner">
+  
+    <div class="footer-article-item"><!-- Previous / next buttons -->
+<div class="prev-next-area">
+</div></div>
+  
+</div>
+
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contenu
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exercice-1">Exercice 1</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#remarques">Remarques:</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exercice-2">Exercice 2 :</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id1">1</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id2">2</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id3">3</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exercice-3">Exercice 3</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exercice-4">Exercice 4</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exercice-5">Exercice 5</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exercice-6">Exercice 6</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exercice-7">Exercice 7</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exercice-8">Exercice 8</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exercice-9">Exercice 9</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exercice-10">Exercice 10</a></li>
+</ul>
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+Par Pr. Iaousse Mbarek
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+<div class="extra_footer">
+  <p>
+Ce manuel est mis à disposition selon les termes de la Licence
+<a href="https://creativecommons.org/licenses/by/4.0/">Creative
+Commons Attribution 4.0 International</a>.
+L'utilisation de ce travail est autorisée à condition d'en
+attribuer la paternité.
+</p>
+
+</div>
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="_static/scripts/bootstrap.js?digest=e353d410970836974a52"></script>
+<script src="_static/scripts/pydata-sphinx-theme.js?digest=e353d410970836974a52"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>
