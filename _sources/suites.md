@@ -6,7 +6,7 @@
 ```{admonition} Définition
 Une suite est une application $u:\mathbb{N}\rightarrow\mathbb{R}.$
 
-Pour $n\in \mathbb{N},$ on note $u(n)$ par $u_n$ et on l'appelle $n^{ième}$ terme ou terme général de la suite $u.$
+Pour $n\in \mathbb{N},$ on note $u(n)$ par $u_n$ et on l'appelle $n^{ieme}$ terme ou terme général de la suite $u.$
 
 ```
 
