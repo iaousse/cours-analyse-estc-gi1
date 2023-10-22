@@ -127,7 +127,7 @@ $$
 ```
 
 
-Pour la démonstration de la proposition de la [partie entière](partent) il y a deux choses à établir: d'abord qu'un tel entier $E(x)$ existe et ensuite
+Pour la démonstration de la proposition de la partie entière il y a deux choses à établir: d'abord qu'un tel entier $E(x)$ existe et ensuite
 qu'il est unique:
 
 ```{admonition} Preuve
