@@ -3,7 +3,7 @@ Introduction
 
 ---
 
-Année universitaire 2023-2024
+Année universitaire 2023-2026
 
 ---
 
