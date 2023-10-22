@@ -162,7 +162,7 @@ Si une suite est convergente alors sa limite est unique.
 ```
 ```{admonition} Preuve
 :class: seealso, dropdown
-On procède par l’absurde. Soit $(u_n)_{n\in \mathbb{N}}$ une suite convergente ayant deux limites $\ell$ et $\ell',$ $\ell\neq \ell'.$  Choisissons $\varepsilon>0$ tel que $\varepsilon<\dfrac{|\ell-\ell'|}{2}$
+On procède par l'absurde. Soit $(u_n)_{n\in \mathbb{N}}$ une suite convergente ayant deux limites $\ell$ et $\ell',$ $\ell\neq \ell'.$  Choisissons $\varepsilon>0$ tel que $\varepsilon<\dfrac{|\ell-\ell'|}{2}$
 
 Comme $\lim_{n \rightarrow +\infty}u_n=\ell,$ il existe $N_1$ tel que $n\geq N_1$ implique $|u_n-\ell|<\varepsilon.$
 
@@ -174,7 +174,7 @@ $$
 |u_N-\ell|<\varepsilon\qquad\mbox{et}\qquad|u_N-\ell'|<\varepsilon
 $$
 
-Donc $|\ell-\ell'|=|\ell-u_N+u_N-\ell'|\leqslant |\ell-u_N|+|u_N-\ell'|$  d’après l’inégalité triangulaire. On en tire $|\ell-\ell'|\leqslant\varepsilon+\varepsilon=2\varepsilon<|\ell-\ell'|,$ ce qui est impossible, d'où la contradiction.
+Donc $|\ell-\ell'|=|\ell-u_N+u_N-\ell'|\leqslant |\ell-u_N|+|u_N-\ell'|$  d'après l'inégalité triangulaire. On en tire $|\ell-\ell'|\leqslant\varepsilon+\varepsilon=2\varepsilon<|\ell-\ell'|,$ ce qui est impossible, d'où la contradiction.
 ```
 ```{admonition} Exemple
 :class: seealso
@@ -341,7 +341,7 @@ Toute suite convergente est bornée. La réciproque est fausse: la suite $((-1)^
 ```
 ```{admonition} Preuve
 :class: seealso, dropdown
-On montrera l'assertion "Toute suite convergente est bornée." En effet, soit $(u_n)_{n\in \mathbb{N}}$ une suite convergeant vers le réel $\ell.$ En appliquant la définition de limite avec $\varepsilon=1,$  on obtient qu’il existe un entier naturel $N$ tel que pour $n\geq N$ on ait, $|u_n-\ell|\leq1,$ et donc pour $n\geq N$ on a
+On montrera l'assertion "Toute suite convergente est bornée." En effet, soit $(u_n)_{n\in \mathbb{N}}$ une suite convergeant vers le réel $\ell.$ En appliquant la définition de limite avec $\varepsilon=1,$  on obtient qu'il existe un entier naturel $N$ tel que pour $n\geq N$ on ait, $|u_n-\ell|\leq1,$ et donc pour $n\geq N$ on a
 
 $$
 |u_n|=|\ell+(u_n-\ell)|\leq |\ell|+|u_n-\ell|\leq |\ell|+1
@@ -430,12 +430,15 @@ Deux suites adjacentes sont convergentes et convergent vers la même limite.
 ```{admonition} Preuve
 :class: seealso, dropdown
 On montre que les suites $(u_n)$ et $(v_n)$ convergent :
-$0 \leq u_n < v_n$ car la suite $(v_n)$ est décroissante
-donc $(u_n)$ est croissante majorée par $v_0$ donc converge.
+
+$u_n < v_n <v_0$ car la suite $(v_n)$ est décroissante.
+
+Donc $(u_n)$ est croissante majorée par $v_0$ donc converge.
+
 De même, 
 $u_0 < u_n < v_n$ car $(u_n)$ est croissante donc $(v_n)$ est décroissante minorée et convergente.
 
-Montrons qu’elles ont même limite :
+Montrons qu'elles ont même limite :
 On pose $\lim_{n \to +\infty} u_n = L$ et $\lim_{n \to +\infty} v_n = L'$.
 On a : $\lim_{n \to +\infty} (v_n - u_n) = 0$ donc $L - L' = 0$ et $L = L'$.
 
