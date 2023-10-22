@@ -380,13 +380,11 @@ Etudions le sens de variation de $ (w_n) $:
 
 Pour cela, calculons la différence $ w_{n+1} - w_n $:
 
-$$
-\begin{align}
+\begin{eqnarray*}
 w_{n+1} - w_n &= (v_{n+1} - u_{n+1}) - (v_n - u_n) \\
 &= v_{n+1} - u_{n+1} - v_n + u_n \\
 &= (v_{n+1} - v_n) + (u_n - u_{n+1})
-\end{align}
-$$
+\end{eqnarray*}
 
 Comme $ (v_n) $ est décroissante, alors :
 
