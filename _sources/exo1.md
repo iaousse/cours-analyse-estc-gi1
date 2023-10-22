@@ -50,8 +50,8 @@ Soient $A$ et $B$ deux parties bornées de $\mathbb{R}$. On note $A+B = \{a+b | 
 
 ## Exercice 9
 Soit $A$ et $B$ deux parties bornées de $\mathbb{R}$. Vrai ou faux?
-1. $A \subset B \rightarrow \sup A \leq \sup B$,
-2. $A \subset B \rightarrow \inf A \leq \inf B$,
+1. $A \subset B \Rightarrow \sup A \leq \sup B$,
+2. $A \subset B \Rightarrow \inf A \leq \inf B$,
 3. $\sup(A\cup B) = \max(\sup A,\sup B)$,
 4. $\sup(A+B) < \sup A+\sup B$,
 5. $\sup(−A) = −\inf A$,

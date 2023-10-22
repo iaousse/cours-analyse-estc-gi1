@@ -44,7 +44,7 @@ u_{n+1}-u_n
 & & <0
 \end{eqnarray*}
 
-2. La suite $(v_n)$ définie par $v_n=e^n,\;e^{n+1}-e^n=e^n e-e^n=e^n (e-1)>0.$
+2. La suite $(v_n)$ définie par $v_n=e^n,\;e^{n+1}-e^n=e^n e-e^n=e^n (e-1)>0. Donc elle est strictment croissante.$
 ```
 
 ```{admonition} Remarque
@@ -114,7 +114,7 @@ Soit $(u_n)_{n\geq n_0}$ une suite réelle.
 
 ```{admonition} Proposition
 :class: seealso
-Soit $(u_n)_{n\geq n_0}$ une suite réelle. Alors $(u_n)_{n\geq n_0}$ est bormée si et seulement si
+Soit $(u_n)_{n\geq n_0}$ une suite réelle. Alors $(u_n)_{n\geq n_0}$ est bornée si et seulement si
 
 $$
 \exists M\geq0\;\mbox{tel que}\;\forall n\geq n_0:\quad |u_n|\leq M
