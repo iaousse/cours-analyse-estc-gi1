@@ -367,6 +367,36 @@ $$
 
 ```
 
+```{admonition} Preuve
+:class: seealso, dropdown
+
+On pose :
+$$ w_n = v_n - u_n $$
+Etudions le sens de variation de $ (w_n) $:
+
+Pour cela, calculons la différence $ w_{n+1} - w_n $:
+$$ w_{n+1} - w_n = (v_{n+1} - u_{n+1}) - (v_n - u_n) $$
+$$ = v_{n+1} - u_{n+1} - v_n + u_n $$
+$$ = (v_{n+1} - v_n) + (u_n - u_{n+1}) $$
+
+Comme $ (v_n) $ est décroissante, alors :
+$$ v_{n+1} - v_n \leq 0 $$
+
+Et comme $ (u_n) $ est croissante, alors :
+$$ u_{n+1} - u_n \geq 0 $$
+
+Donc, $ u_n - u_{n+1} \leq 0 $.
+
+En combinant ces deux inégalités, on a :
+$$ w_{n+1} - w_n \leq 0 $$
+
+On en conclut que la suite $ (w_n) $ est décroissante.
+
+De plus, comme $ (w_n) $ converge vers 0 (par définition des suites adjacentes), la suite $ (w_n) $ est positive pour tout $ n \in \mathbb{N} $.
+
+```
+
+
 Pratiquement, pour montrer que deux suites $(u_n)$ et $(v_n)$ sont adjacentes, on commence par chercher celle qui est plus grande que l'autre. On montre alors que la plus grande est décroissante et que l'autre (la plus petite) est croissante puis on montre que la différence des deux suites converge vers 0.
 
 ```{admonition} Exemple
@@ -378,6 +408,22 @@ Les deux suites $(1+\dfrac{1}{n})_{n>0}$ et $(1-\dfrac{1}{n})_{n>0}$ sont adjace
 :class: seealso
 Deux suites adjacentes sont convergentes et convergent vers la même limite.
 ```
+
+```{admonition} Preuve
+:class: seealso, dropdown
+On montre que les suites $(u_n)$ et $(v_n)$ convergent :
+$0 \leq u_n < v_n$ car la suite $(v_n)$ est décroissante
+donc $(u_n)$ est croissante majorée par $v_0$ donc converge.
+De même, 
+$u_0 < u_n < v_n$ car $(u_n)$ est croissante donc $(v_n)$ est décroissante minorée et convergente.
+
+Montrons qu’elles ont même limite :
+On pose $\lim_{n \to +\infty} u_n = L$ et $\lim_{n \to +\infty} v_n = L'$.
+On a : $\lim_{n \to +\infty} (v_n - u_n) = 0$ donc $L - L' = 0$ et $L = L'$.
+
+
+```
+
 
 ```{admonition} Exemple
 :class: seealso
