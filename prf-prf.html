@@ -8,7 +8,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Introduction &#8212; Cours Analyse</title>
+    <title>Proof Index &#8212; Cours Analyse</title>
   
   
   
@@ -59,12 +59,18 @@ const thebe_selector_input = "pre"
 const thebe_selector_output = ".output, .cell_output"
 </script>
     <script async="async" src="_static/sphinx-thebe.js"></script>
-    <script>DOCUMENTATION_OPTIONS.pagename = 'intro';</script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'prf-prf';</script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Recherche" href="search.html" />
-    <link rel="next" title="Les nombres réels" href="R.html" />
+
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="fr"/>
+
+    <script>
+      DOCUMENTATION_OPTIONS.COLLAPSE_INDEX = true;
+    </script>
+
+
   </head>
   
   
@@ -128,7 +134,7 @@ const thebe_selector_output = ".output, .cell_output"
         <div class="sidebar-primary-item">
   
 
-<a class="navbar-brand logo" href="#">
+<a class="navbar-brand logo" href="intro.html">
   
   
   
@@ -271,7 +277,7 @@ const thebe_selector_output = ".output, .cell_output"
       
       
       
-      <li><a href="https://github.com/executablebooks/jupyter-book/issues/new?title=Issue%20on%20page%20%2Fintro.html&body=Your%20issue%20content%20here." target="_blank"
+      <li><a href="https://github.com/executablebooks/jupyter-book/issues/new?title=Issue%20on%20page%20%2Fprf-prf.html&body=Your%20issue%20content%20here." target="_blank"
    class="btn btn-sm btn-source-issues-button dropdown-item"
    title="Ouvrez un problème"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -283,54 +289,6 @@ const thebe_selector_output = ".output, .cell_output"
   </span>
 <span class="btn__text-container">Open issue</span>
 </a>
-</li>
-      
-  </ul>
-</div>
-
-
-
-
-
-
-<div class="dropdown dropdown-download-buttons">
-  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Téléchargez cette page">
-    <i class="fas fa-download"></i>
-  </button>
-  <ul class="dropdown-menu">
-      
-      
-      
-      <li><a href="_sources/intro.md" target="_blank"
-   class="btn btn-sm btn-download-source-button dropdown-item"
-   title="Télécharger le fichier source"
-   data-bs-placement="left" data-bs-toggle="tooltip"
->
-  
-
-<span class="btn__icon-container">
-  <i class="fas fa-file"></i>
-  </span>
-<span class="btn__text-container">.md</span>
-</a>
-</li>
-      
-      
-      
-      
-      <li>
-<button onclick="window.print()"
-  class="btn btn-sm btn-download-pdf-button dropdown-item"
-  title="Imprimer au format PDF"
-  data-bs-placement="left" data-bs-toggle="tooltip"
->
-  
-
-<span class="btn__icon-container">
-  <i class="fas fa-file-pdf"></i>
-  </span>
-<span class="btn__text-container">.pdf</span>
-</button>
 </li>
       
   </ul>
@@ -381,7 +339,7 @@ document.write(`
               
 
 <div id="jb-print-docs-body" class="onlyprint">
-    <h1>Introduction</h1>
+    <h1></h1>
     <!-- Table of contents -->
     <div id="print-main-content">
         <div id="jb-print-toc">
@@ -395,54 +353,24 @@ document.write(`
 <div id="searchbox"></div>
                 <article class="bd-article" role="main">
                   
-  <div class="tex2jax_ignore mathjax_ignore section" id="introduction">
-<h1>Introduction<a class="headerlink" href="#introduction" title="Lien permanent vers cette rubrique">#</a></h1>
-<hr class="docutils" />
-<p>Année universitaire 2023-2024</p>
-<hr class="docutils" />
-<p>Les mathématiques que vous avez étudiées au lycée étaient souvent présentées de manière pratique, axée sur l’application et la résolution de problèmes concrets. Mais après le baccalauréat, la manière d’aborder les mathématiques évolue : on se penche davantage sur la rigueur, la structure, et la théorie sous-jacente.</p>
-<p>Au cours de vos études supérieures, vous allez découvrir que les mathématiques ne sont pas simplement une collection de formules ou d’équations à mémoriser. Elles constituent un langage, un moyen d’exprimer des idées et de décrire les phénomènes du monde qui nous entoure. Dans ce cadre, la construction et la compréhension des objets mathématiques sont essentielles.</p>
-<p>Ce cours d’Analyse est conçu pour jeter les bases solides nécessaires à votre parcours académique et professionnel. Il vise à introduire, de manière rigoureuse et approfondie, les outils et concepts fondamentaux qui vous accompagneront tout au long de vos études. Au programme :</p>
-<ol class="arabic simple">
-<li><p><strong>L’ensemble des réels</strong> : la fondation sur laquelle repose la plupart des mathématiques que vous étudierez ;</p></li>
-<li><p><strong>Les suites des nombres réels</strong> : une première approche des séquences et de leur comportement à l’infini ;</p></li>
-<li><p><strong>Limites et continuité d’une fonction numérique</strong> : comprendre le comportement des fonctions dans divers contextes ;</p></li>
-<li><p><strong>Dérivabilité d’une fonction numérique</strong> : étude des variations et des comportements locaux d’une fonction ;</p></li>
-<li><p><strong>Fonctions usuelles</strong> : exploration approfondie des fonctions courantes et de leurs propriétés ;</p></li>
-<li><p><strong>Développements limités</strong> : techniques permettant d’approximer les fonctions pour en faciliter l’étude ;</p></li>
-<li><p><strong>Calcul Intégral</strong> : méthodes et concepts associés au calcul d’intégrales.</p></li>
-</ol>
-<p>Le contenu de ce cours s’inspire de plusieurs références clés que les étudiants sont encouragés à consulter pour approfondir leur compréhension. Ces références, dont certaines ont été utilisées pour élaborer des sections spécifiques et d’autres pour concevoir certains exercices, incluent :</p>
-<ul class="simple">
-<li><p><a class="reference external" href="http://exo7.emath.fr/cours/livre-analyse-1.pdf">Analyse</a></p></li>
-<li><p><a class="reference external" href="https://www.bibmath.net/">Bibm&#64;th</a></p></li>
-<li><p><a class="reference external" href="https://www.alloschool.com/section/4736">AlloSchool</a></p></li>
-<li><p><a class="reference external" href="https://www.google.co.ma/books/edition/Math%C3%A9matiques_tout_en_un/8wFoHAAACAAJ?hl=en">Mathématiques tout-en-un 1ère année : cours et exercices corrigés : MPSI, PCSI</a></p></li>
-</ul>
-<p>Ce cours a pour objectif d’offrir aux étudiants une formation approfondie en Analyse, tout en tenant compte des besoins spécifiques et des applications pertinentes à l’informatique. L’analyse est en effet un pilier essentiel dans de nombreux domaines de l’informatique, de l’algorithmique à l’optimisation en passant par la modélisation. Nous espérons que ce cours éclairera votre chemin vers une maîtrise approfondie des mathématiques et de leurs nombreuses applications en informatique.</p>
-<div class="toctree-wrapper compound">
-</div>
-</div>
 
-    <script type="text/x-thebe-config">
-    {
-        requestKernel: true,
-        binderOptions: {
-            repo: "binder-examples/jupyter-stacks-datascience",
-            ref: "master",
-        },
-        codeMirrorConfig: {
-            theme: "abcdef",
-            mode: "python"
-        },
-        kernelOptions: {
-            name: "python3",
-            path: "./."
-        },
-        predefinedOutput: true
-    }
-    </script>
-    <script>kernelName = 'python3'</script>
+   <h1>Proof Index</h1>
+
+   <div class="modindex-jumpbox">
+   <a href="#cap-my-definition"><strong>my-definition</strong></a>
+   </div>
+
+   <table class="indextable modindextable">
+     <tr class="pcap"><td></td><td>&#160;</td><td></td></tr>
+     <tr class="cap" id="cap-my-definition"><td></td><td>
+       <strong>my-definition</strong></td><td></td></tr>
+     <tr>
+       <td></td>
+       <td>
+       <a href="rationnels.html#my-definition"><code class="xref">my-definition</code></a> <em>(rationnels)</em></td><td>
+       <em>corollary</em></td></tr>
+   </table>
+
 
                 </article>
               
@@ -455,15 +383,6 @@ document.write(`
   
     <div class="footer-article-item"><!-- Previous / next buttons -->
 <div class="prev-next-area">
-    <a class="right-next"
-       href="R.html"
-       title="page suivante">
-      <div class="prev-next-info">
-        <p class="prev-next-subtitle">suivant</p>
-        <p class="prev-next-title">Les nombres réels</p>
-      </div>
-      <i class="fa-solid fa-angle-right"></i>
-    </a>
 </div></div>
   
 </div>

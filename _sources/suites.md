@@ -15,7 +15,7 @@ Une suite $u:\mathbb{N}\rightarrow\mathbb{R}$ est plus souvent notée par $(u_n)
 Si une suite $u$ est définie à partir d'un certain entier naturel $n_0>0,$ alors dans ce cas on note cette suite par $(u_n)_{n\geq n_0}.$
 
 ```{admonition} Exemple
-:class: warning
+:class: seealso
 1. Soit $(u_n)$ la suite définie par $u_n=\sqrt{n}-1.$ Les cinq premiers termes de cette suite sont $-1,0,\sqrt{2}-1,\sqrt{3}-1,1.$
 
 2. Soit $(v_n)_{n\geq1}$ la suite définie par $v_n=\dfrac{1}{n(n+1)}.$ Les trois premiers termes de cette suite sont $\dfrac{1}{2},\dfrac{1}{6},\dfrac{1}{12}$
@@ -32,7 +32,7 @@ Soit $(u_n)_{n\geq n_0}$ une suite.
 ```
 
 ```{admonition} Exemple
-:class: warning
+:class: seealso
 1. La suite $(u_n)_{n\geq1}$ définie par $u_n=\dfrac{1}{n^2},\;\forall n\in \mathbb{N}^{*},$ est strictement décroissante. En effet, on a
 
 \begin{eqnarray*}
@@ -90,7 +90,7 @@ Soit $(u_n)_{n\geq n_0}$ une suite.
 ```
 
 ```{admonition} Exemple
-:class: warning
+:class: seealso
 On considère les trois suites $(u_n),\;(v_n)$ et $(w_n)$ définies par leurs termes généraux
 
 $$
@@ -113,7 +113,7 @@ Soit $(u_n)_{n\geq n_0}$ une suite réelle.
 ```
 
 ```{admonition} Proposition
-:class: important
+:class: seealso
 Soit $(u_n)_{n\geq n_0}$ une suite réelle. Alors $(u_n)_{n\geq n_0}$ est bormée si et seulement si
 
 $$
@@ -157,7 +157,7 @@ Une suite $(u_n)$ est dite convergente si elle admet une limite finie. Dans le c
 ```
 
 ```{admonition} Proposition
-:class: important
+:class: seealso
 Si une suite est convergente alors sa limite est unique.
 ```
 ```{admonition} Preuve
@@ -177,7 +177,7 @@ $$
 Donc $|\ell-\ell'|=|\ell-u_N+u_N-\ell'|\leqslant |\ell-u_N|+|u_N-\ell'|$  d’après l’inégalité triangulaire. On en tire $|\ell-\ell'|\leqslant\varepsilon+\varepsilon=2\varepsilon<|\ell-\ell'|,$ ce qui est impossible, d'où la contradiction.
 ```
 ```{admonition} Exemple
-:class: warning
+:class: seealso
 1. On a 
 
     $$
@@ -196,7 +196,7 @@ Donc $|\ell-\ell'|=|\ell-u_N+u_N-\ell'|\leqslant |\ell-u_N|+|u_N-\ell'|$  d’ap
 ```
 
 ```{admonition} Proposition
-:class: important
+:class: seealso
 Soit $q\in \mathbb{R}^{*}.$ On considère la suite $u_n=q^n,\:n\in \mathbb{N}.$ On a:
 
 1. Si $q\leq-1:$ La suite $(u_n)$ est divergente et n'admet pas de limite, ni finie ni infinie.
@@ -207,7 +207,7 @@ Soit $q\in \mathbb{R}^{*}.$ On considère la suite $u_n=q^n,\:n\in \mathbb{N}.$ 
 ```
 
 ```{admonition} Proposition
-:class: important
+:class: seealso
 Soit $(u_n)$ une suite réelle et soit $\ell\in \mathbb{R}.$ On a
 
 $$
@@ -217,7 +217,7 @@ $$
 ```
 
 ```{admonition} Exemple
-:class: warning
+:class: seealso
 Soit $(v_n)_{\geq1}$ la suite définie par $v_n=\dfrac{2n-1}{n}.$ On a
 
 $$
@@ -227,7 +227,7 @@ $$
 En on déduit que $\lim_{n \rightarrow +\infty}v_n=2.$
 ```
 ```{admonition} Proposition (Opérations sur les limites des suites) 
-:class: important
+:class: seealso
 Soient $(u_n)$ et $(v_n)$ deux suites et soient $\alpha$ et $\beta$ dans $\mathbb{R},$
 
 1. Si $\lim_{n \rightarrow +\infty} u_n=\alpha$ et $\lim_{n \rightarrow +\infty} v_n=\beta,$ alors
@@ -246,9 +246,9 @@ Soient $(u_n)$ et $(v_n)$ deux suites et soient $\alpha$ et $\beta$ dans $\mathb
 
 4. Si $\lim_{n \rightarrow +\infty} u_n=\pm\infty$ alors on a $\lim_{n \rightarrow +\infty}\dfrac{1}{u_n}=0,$
 
-5. Si $\lim_{n \rightarrow +\infty} u_n=\pm\infty$ et $\lim_{n \rightarrow +\infty} v_n=\alpha,$ avec $\alpha\in \mathbb{R}$ alors $\lim_{n \rightarrow +\infty} (u_n+v_n)=\lim_{n \rightarrow +\infty} u_n.$
+5. Si $\lim_{n \rightarrow +\infty} u_n=\pm\infty$ et $\lim_{n \rightarrow +\infty} v_n=\alpha,$ avec $\alpha\in \mathbb{R}$ alors $\lim_{n \rightarrow +\infty} (u_n+v_n)=\lim_{n \rightarrow +\infty} u_n$
 
-6. Si $\lim_{n \rightarrow +\infty} u_n=\pm\infty$ et $\lim_{n \rightarrow +\infty} v_n=\alpha,$ avec $\alpha\in \mathbb{R}^{+}$ alors $\lim_{n \rightarrow +\infty} (u_n \times v_n)=$\lim_{n \rightarrow +\infty} u_n.$
+6. Si $\lim_{n \rightarrow +\infty} u_n=\pm\infty$ et $\lim_{n \rightarrow +\infty} v_n=\alpha,$ avec $\alpha\in \mathbb{R}^{+}$ alors $\lim_{n \rightarrow +\infty} (u_n \times v_n)=\lim_{n \rightarrow +\infty} u_n$
 
 7. Si $\lim_{n \rightarrow +\infty} u_n=+\infty$ et $\lim_{n \rightarrow +\infty} v_n=+\infty,$ alors $\lim_{n \rightarrow +\infty} (u_n+v_n)=+\infty$ et $\lim_{n \rightarrow +\infty}(u_n\times v_n)=+\infty.$
 
@@ -259,7 +259,7 @@ Soient $(u_n)$ et $(v_n)$ deux suites et soient $\alpha$ et $\beta$ dans $\mathb
 ```
 
 ```{admonition} Exemple
-:class: warning
+:class: seealso
 1. On a $\lim_{n \rightarrow +\infty}(\dfrac{-2}{\sqrt{n}-3}+3n+1)=+\infty,$ puisque $\lim_{n \rightarrow +\infty}(\dfrac{-2}{\sqrt{n}-3}) =0$ et $\lim_{n \rightarrow +\infty}(3n+1)=+\infty.$
 
 2. On a $\lim_{n \rightarrow +\infty}\dfrac{\dfrac{2}{3n}-5}{1+n+e^n}=0,$ puisque $\lim_{n \rightarrow +\infty}\dfrac{2}{3n}-5=-5$ et $\lim_{n \rightarrow +\infty}1+n+e^n=+\infty.$
@@ -284,7 +284,7 @@ Parfois on tombe sur l'une des quatres "**formes indéterminées**" suivantes $+
 -  $\lim_{n \rightarrow +\infty} n^{\alpha}e^{-n}=0.$
 
 ```{admonition} Proposition
-:class: important
+:class: seealso
 1. Soient $(u_n)$ et $(v_n)$ deux suites convergentes telles que $\forall n\in \mathbb{N}:\, u_n \leq v_n$ (ou $u_n < v_n$). Alors 
 
     $$
@@ -306,7 +306,7 @@ Parfois on tombe sur l'une des quatres "**formes indéterminées**" suivantes $+
 ```
 
 ```{admonition} Théorème (Théorème des "gendarmes")
-:class: important
+:class: seealso
 Si $(u_n),$ $(v_n)$ et $(w_n)$ sont trois suites telles que 
 
 $$
@@ -322,7 +322,7 @@ $$
 ```
 
 ```{admonition} Exemple
-:class: warning
+:class: seealso
 Calculer, à l'aide de Théorème des "gendarmes", la limite suivante 
 
 $$
@@ -334,7 +334,7 @@ $$
 Toute suite convergente est bornée. La réciproque est fausse: la suite $((-1)^n)$ est bornée mais elle diverge (elle n'admet pas de limite).En revanche, on a le résultat suivant.
 
 ```{admonition} Théorème
-:class: important
+:class: seealso
 1. Toute suite croissante et majorée est convergente.
 
 2. Toute suite décroissante et minorée est convergente.
@@ -370,17 +370,17 @@ $$
 Pratiquement, pour montrer que deux suites $(u_n)$ et $(v_n)$ sont adjacentes, on commence par chercher celle qui est plus grande que l'autre. On montre alors que la plus grande est décroissante et que l'autre (la plus petite) est croissante puis on montre que la différence des deux suites converge vers 0.
 
 ```{admonition} Exemple
-:class: warning
+:class: seealso
 Les deux suites $(1+\dfrac{1}{n})_{n>0}$ et $(1-\dfrac{1}{n})_{n>0}$ sont adjacentes.
 ```
 
 ```{admonition} Théorème
-:class: important
+:class: seealso
 Deux suites adjacentes sont convergentes et convergent vers la même limite.
 ```
 
 ```{admonition} Exemple
-:class: warning
+:class: seealso
 On pose $u_n=\sum_{k=1}^{n}\dfrac{1}{k^2},\quad n\in \mathbb{N}^{*}.$
 
 L'objectif de cet exemple est de montrer que la suite $(u_n)_{n\geq1}$ est une suite convergente. Soit $(v_n)_{n\geq1}$ la suite définie par $v_n=u_n+\dfrac{2}{n+1},\quad n\geq1.$
@@ -437,7 +437,7 @@ Dans ce cas, le réel $r$ est appelé la raison de la suite $(u_n)_{n\geq n_0}.$
 ```
 
 ```{admonition} Proposition
-:class: important
+:class: seealso
 Si $(u_n)_{n\geq n_0}$ est une suite arithmétique de raison $r,$ alors $u_n=u_{n_0}+(n-n_0)r,\, \forall n\geq n_0.$ En particulier, on a 
 
 - si $r>0$:
@@ -461,7 +461,7 @@ Si $(u_n)_{n\geq n_0}$ est une suite arithmétique de raison $r,$ alors $u_n=u_{
 ```
 
 ```{admonition} Proposition
-:class: important
+:class: seealso
 Soit $(u_n)_{n\geq n_0}$ une suite arithmétique de raison $r$,($r\neq0$) et de premier terme $u_{n_0},$ la somme des termes successifs de la suite $(u_n)$ s'exprime par la formule suivante:
 
 $$
@@ -482,7 +482,7 @@ Dans ce cas, le réel $q$ est appelé la raison de la suite $(u_n)_{n\geq n_0}.$
 ```
 
 ```{admonition} Proposition
-:class: important
+:class: seealso
 Si $(u_n)_{n\geq n_0}$ est une suite géométrique non nulle de raison $q(q\neq0),$ alors $u_n=u_{n_0}q^{n-n_0},\;\forall n\geq n_0.$ Et en particulier, on a
 
 1. Si $q>1,$ alors $\lim_{n \rightarrow +\infty}u_n=\pm\infty,$
@@ -493,7 +493,7 @@ Si $(u_n)_{n\geq n_0}$ est une suite géométrique non nulle de raison $q(q\neq0
 ```
 
 ```{admonition} Proposition(Série géométrique)  
-:class: important
+:class: seealso
 
 Si $(u_n)_{n\geq n_0}$ est une suite géométrique de raison $q(q\neq1),$ alors
 
@@ -504,7 +504,7 @@ $$
 ```
 
 ```{admonition} Exemple
-:class: warning
+:class: seealso
 Soit $(u_n)$ la suite définie par $u_0=1$ et $u_{n+1}=\dfrac{1}{2}u_n, \; n\in \mathbb{N}.$ Donc $(u_n)$ est une suite géométrique de raison $q=\dfrac{1}{2}.$ Le terme général de cette suite est $u_n=\dfrac{1}{2}^n,\,n\in \mathbb{N}.$ Ainsi puisque $-1<\dfrac{1}{2}<1,$ alors $\lim_{n \rightarrow +\infty}u_n=0.$
 
 Pour $n\in \mathbb{N},$ on pose $S_n=\sum_{k=0}^{n}u_k.$ On a alors
@@ -529,14 +529,14 @@ On écrit alors $\sum_{k=0}^{+\infty}u_k=2$
 Dans toute la suite, soit $(u_n)_{n\geq n_0}$ une suite récurrente définie par son premier terme et par la relation $u_{n+1}=f(u_n),\,n\geq n_0,$ où $f$ est une fonction numérique donnée.
 
 ```{admonition} Théorème
-:class: important
+:class: seealso
 Soit $f$ une fonction continue sur un intervalle $I$ avec $f(I)\subset I.$ Si $u_{n_0}\in I$ et si la suite récurrente $(u_n)$ est convergente, alors la limite $\ell$ de cette suite est une solution de l'équation $f(x)=x.$
 ```
 
 Le théorème précédent impose sur la suite $(u_n)_{n\geq n_0}$ d'être convergente. Et si les autres conditions du théorème sont satisfaites, alors la limite de $(u_n)_{n\geq n_0}$ est parmi les solutions de l'équation $f(x)=x.$ En ajoutant une condition supplémentaire sur la fonction $f,$ la convergence de $(u_n)_{n\geq n_0}$ sera alors assurée:
 
 ```{admonition} Théorème
-:class: important
+:class: seealso
 Supposons que $f:[a,b]\rightarrow [a,b]$ une fonction continue et croissante et supposons que $u_{n_0}\in [a,b].$ Alors la suite récurrente $(u_n)$ est monotone et converge vers $\ell\in [a,b]$ vérifiant $f(\ell)=\ell.$
 ```
 
@@ -550,7 +550,7 @@ La monotonie de $(u_n)_{n\geq n_0}$ dans le théorème précédent s'obtienne en
 ```
 
 ```{admonition} Exemple
-:class: warning
+:class: seealso
 Soit $(u_n)_{n\in \mathbb{N}}$ la suite définie par: $u_0=\dfrac{1}{3}$ et $u_{n+1}=u_n-u_{n}^{2}.$
 
 On a $u_{n+1}=f(u_n),$ avec $f(x)=x-x^2.$ La fonction $f$ est continue sur $[0,\dfrac{1}{2}]$ et on peut vérifier que $f$ est croissante sur cet intervalle et que $f([0,\dfrac{1}{2}])\subset [0,\dfrac{1}{2}].$

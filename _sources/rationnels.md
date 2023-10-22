@@ -18,12 +18,13 @@ $$
 0,00345 = 345\times 10^{-5}=\frac{345}{100000}
 $$
 
+
 ```{admonition} Définition
 Un nombre est rationnel si et seulement s'il admet une écriture décimale périodique ou finie.
 ```
 
 ```{admonition} Exemple
-:class: warning
+:class: seealso
 le nombre $\frac{3}{5}$ est rationnel car:
 
 $$
@@ -63,7 +64,7 @@ Il existe des nombres qui ne sont pas rationnels, les irrationnels. Les nombres 
 Nous allons prouver que $\sqrt{2}$ n'est pas un nombre rationnel.
 
 ```{admonition} Proposition
-:class: important
+:class: seealso
 $\sqrt{2}$ est un nombre irrationnel.
 ```
 
