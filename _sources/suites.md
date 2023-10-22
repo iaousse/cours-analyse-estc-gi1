@@ -369,7 +369,7 @@ $$
 
 ```{admonition} Preuve
 :class: seealso, dropdown
----
+
 On pose :
 $$ w_n = v_n - u_n $$
 Etudions le sens de variation de $ (w_n) $:
@@ -393,9 +393,6 @@ $$ w_{n+1} - w_n \leq 0 $$
 On en conclut que la suite $ (w_n) $ est décroissante.
 
 De plus, comme $ (w_n) $ converge vers 0 (par définition des suites adjacentes), la suite $ (w_n) $ est positive pour tout $ n \in \mathbb{N} $.
-
----
-
 
 ```
 Pratiquement, pour montrer que deux suites $(u_n)$ et $(v_n)$ sont adjacentes, on commence par chercher celle qui est plus grande que l'autre. On montre alors que la plus grande est décroissante et que l'autre (la plus petite) est croissante puis on montre que la différence des deux suites converge vers 0.

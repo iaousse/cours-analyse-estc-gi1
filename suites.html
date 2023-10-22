@@ -743,6 +743,22 @@ u_n&lt;A
 </div>
 <div class="seealso dropdown admonition">
 <p class="admonition-title">Preuve</p>
+<p>On pose :
+$<span class="math notranslate nohighlight">\( w_n = v_n - u_n \)</span><span class="math notranslate nohighlight">\(
+Etudions le sens de variation de \)</span> (w_n) $:</p>
+<p>Pour cela, calculons la différence <span class="math notranslate nohighlight">\( w_{n+1} - w_n \)</span>:
+$<span class="math notranslate nohighlight">\( w_{n+1} - w_n = (v_{n+1} - u_{n+1}) - (v_n - u_n) \)</span><span class="math notranslate nohighlight">\(
+\)</span><span class="math notranslate nohighlight">\( = v_{n+1} - u_{n+1} - v_n + u_n \)</span><span class="math notranslate nohighlight">\(
+\)</span><span class="math notranslate nohighlight">\( = (v_{n+1} - v_n) + (u_n - u_{n+1}) \)</span>$</p>
+<p>Comme <span class="math notranslate nohighlight">\( (v_n) \)</span> est décroissante, alors :
+$<span class="math notranslate nohighlight">\( v_{n+1} - v_n \leq 0 \)</span>$</p>
+<p>Et comme <span class="math notranslate nohighlight">\( (u_n) \)</span> est croissante, alors :
+$<span class="math notranslate nohighlight">\( u_{n+1} - u_n \geq 0 \)</span>$</p>
+<p>Donc, <span class="math notranslate nohighlight">\( u_n - u_{n+1} \leq 0 \)</span>.</p>
+<p>En combinant ces deux inégalités, on a :
+$<span class="math notranslate nohighlight">\( w_{n+1} - w_n \leq 0 \)</span>$</p>
+<p>On en conclut que la suite <span class="math notranslate nohighlight">\( (w_n) \)</span> est décroissante.</p>
+<p>De plus, comme <span class="math notranslate nohighlight">\( (w_n) \)</span> converge vers 0 (par définition des suites adjacentes), la suite <span class="math notranslate nohighlight">\( (w_n) \)</span> est positive pour tout <span class="math notranslate nohighlight">\( n \in \mathbb{N} \)</span>.</p>
 </div>
 <p>Pratiquement, pour montrer que deux suites <span class="math notranslate nohighlight">\((u_n)\)</span> et <span class="math notranslate nohighlight">\((v_n)\)</span> sont adjacentes, on commence par chercher celle qui est plus grande que l’autre. On montre alors que la plus grande est décroissante et que l’autre (la plus petite) est croissante puis on montre que la différence des deux suites converge vers 0.</p>
 <div class="seealso admonition">
