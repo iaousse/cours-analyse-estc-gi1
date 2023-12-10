@@ -243,7 +243,7 @@ Rapel:
 - les fonctions $\sin$ et $\cos$ sont definies sur $\mathbb{R}$ et a valeurs dans $[-1, 1]$, $2\pi$-periodiques. 
 - La fonction $\tan$ est definie sur $\mathbb{R}\setminus \{\frac{\pi}{2} +k\pi, k\in \mathbb{Z}$ a valeurs dans $\mathbb{R}$, $\pi$-periodiques.
 - $\cos^2(x) + \sin^2(x) = 1$
-- $\tan(x) = frac{\sin(x)}{\cos(x)}$
+- $\tan(x) = \frac{\sin(x)}{\cos(x)}$
 - $\sin(-x) = -\sin(x)$
 - $\cos(-x) =\cos(x)$
 - $\tan(-x) = - \tan(x)$
