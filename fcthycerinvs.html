@@ -415,7 +415,14 @@ document.write(`
 </li>
 <li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#tangente-hyperbolique-et-son-inverse">Tangente hyperbolique et son inverse</a><ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#trigonometrie-hyperbolique">Trigonométrie hyperbolique</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#formules-trigonometriques">formules trigonometriques</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#formules-trigonometriques">formules trigonometriques</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#rapel">Rapel:</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#conditions-pour-lesquelles-cos-x-est-egal-a-une-valeur-donnee-y">Conditions pour lesquelles cos(x) est égal à une valeur donnée <span class="math notranslate nohighlight">\(y\)</span> :</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#conditions-pour-lesquelles-sin-x-est-egal-a-une-valeur-donnee-y">Conditions pour lesquelles sin(x) est égal à une valeur donnée <span class="math notranslate nohighlight">\(y\)</span> :</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#conditions-pour-lesquelles-tan-x-est-egal-a-une-valeur-donnee-y">Conditions pour lesquelles tan(x) est égal à une valeur donnée <span class="math notranslate nohighlight">\(y\)</span> :</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#table-des-valeurs">table des valeurs</a></li>
+</ul>
+</li>
 </ul>
 </li>
 </ul>
@@ -634,7 +641,8 @@ argthx=\frac{1}{2}\ln(\frac{1+x}{1-x}),\,(-1&lt;x&lt;1)
 </div>
 <div class="section" id="formules-trigonometriques">
 <h2>formules trigonometriques<a class="headerlink" href="#formules-trigonometriques" title="Lien permanent vers cette rubrique">#</a></h2>
-<p>Rapel:</p>
+<div class="section" id="rapel">
+<h3>Rapel:<a class="headerlink" href="#rapel" title="Lien permanent vers cette rubrique">#</a></h3>
 <ul class="simple">
 <li><p>les fonctions <span class="math notranslate nohighlight">\(\sin\)</span> et <span class="math notranslate nohighlight">\(\cos\)</span> sont definies sur <span class="math notranslate nohighlight">\(\mathbb{R}\)</span> et a valeurs dans <span class="math notranslate nohighlight">\([-1, 1]\)</span>, <span class="math notranslate nohighlight">\(2\pi\)</span>-periodiques.</p></li>
 <li><p>La fonction <span class="math notranslate nohighlight">\(\tan\)</span> est definie sur <span class="math notranslate nohighlight">\(\mathbb{R}\setminus \{\frac{\pi}{2} +k\pi, k\in \mathbb{Z}\)</span> a valeurs dans <span class="math notranslate nohighlight">\(\mathbb{R}\)</span>, <span class="math notranslate nohighlight">\(\pi\)</span>-periodiques.</p></li>
@@ -657,6 +665,30 @@ argthx=\frac{1}{2}\ln(\frac{1+x}{1-x}),\,(-1&lt;x&lt;1)
 <li><p><span class="math notranslate nohighlight">\(\cos(x) = \frac{1-t^2}{1+t^2} , \mbox{ avec } t=\tan(\frac{x}{2})\)</span></p></li>
 <li><p><span class="math notranslate nohighlight">\(\tan(x) = \frac{2t}{1-t^2} , \mbox{ avec } t=\tan(\frac{x}{2})\)</span></p></li>
 </ul>
+</div>
+<div class="section" id="conditions-pour-lesquelles-cos-x-est-egal-a-une-valeur-donnee-y">
+<h3>Conditions pour lesquelles cos(x) est égal à une valeur donnée <span class="math notranslate nohighlight">\(y\)</span> :<a class="headerlink" href="#conditions-pour-lesquelles-cos-x-est-egal-a-une-valeur-donnee-y" title="Lien permanent vers cette rubrique">#</a></h3>
+<ul class="simple">
+<li><p>En général, pour une valeur donnée <span class="math notranslate nohighlight">\(y\)</span>, <span class="math notranslate nohighlight">\(cos(x) = y\)</span> si <span class="math notranslate nohighlight">\(x = arccos(y) + 2\pi k\)</span> ou <span class="math notranslate nohighlight">\(x = -arccos(y) + 2\pi k\)</span>, pour tout entier <span class="math notranslate nohighlight">\(k\)</span>.</p></li>
+<li><p>Remarque spéciale : <span class="math notranslate nohighlight">\(cos(x) = 0\)</span> lorsque <span class="math notranslate nohighlight">\(x = \frac{\pi}{2} + \pi k\)</span>, pour tout entier <span class="math notranslate nohighlight">\(k\)</span>.</p></li>
+</ul>
+</div>
+<div class="section" id="conditions-pour-lesquelles-sin-x-est-egal-a-une-valeur-donnee-y">
+<h3>Conditions pour lesquelles sin(x) est égal à une valeur donnée <span class="math notranslate nohighlight">\(y\)</span> :<a class="headerlink" href="#conditions-pour-lesquelles-sin-x-est-egal-a-une-valeur-donnee-y" title="Lien permanent vers cette rubrique">#</a></h3>
+<ul class="simple">
+<li><p>En général, pour une valeur donnée <span class="math notranslate nohighlight">\(y\)</span>, <span class="math notranslate nohighlight">\(sin(x) = y\)</span> si <span class="math notranslate nohighlight">\(x = arcsin(y) + 2\pi k\)</span> ou <span class="math notranslate nohighlight">\(x = \pi - arcsin(y) + 2\pi k\)</span>, pour tout entier <span class="math notranslate nohighlight">\(k\)</span>.</p></li>
+<li><p>Remarque spéciale : <span class="math notranslate nohighlight">\(sin(x) = 0\)</span> lorsque <span class="math notranslate nohighlight">\(x = \pi k\)</span>, pour tout entier <span class="math notranslate nohighlight">\(k\)</span>.</p></li>
+</ul>
+</div>
+<div class="section" id="conditions-pour-lesquelles-tan-x-est-egal-a-une-valeur-donnee-y">
+<h3>Conditions pour lesquelles tan(x) est égal à une valeur donnée <span class="math notranslate nohighlight">\(y\)</span> :<a class="headerlink" href="#conditions-pour-lesquelles-tan-x-est-egal-a-une-valeur-donnee-y" title="Lien permanent vers cette rubrique">#</a></h3>
+<ul class="simple">
+<li><p>En général, pour une valeur donnée <span class="math notranslate nohighlight">\(y\)</span>, <span class="math notranslate nohighlight">\(tan(x) = y\)</span> si <span class="math notranslate nohighlight">\(x = arctan(y) + \pi k\)</span>, pour tout entier <span class="math notranslate nohighlight">\(k\)</span>.</p></li>
+<li><p>Remarque spéciale : <span class="math notranslate nohighlight">\(tan(x) = 0\)</span> lorsque <span class="math notranslate nohighlight">\(x = \pi k\)</span>, pour tout entier <span class="math notranslate nohighlight">\(k\)</span>.</p></li>
+</ul>
+</div>
+<div class="section" id="table-des-valeurs">
+<h3>table des valeurs<a class="headerlink" href="#table-des-valeurs" title="Lien permanent vers cette rubrique">#</a></h3>
 <p>Voici une table des valeurs remarquables pour les fonctions sinus (<span class="math notranslate nohighlight">\(\sin\)</span>), cosinus (<span class="math notranslate nohighlight">\(\cos\)</span>) et tangente (<span class="math notranslate nohighlight">\(\tan\)</span>) en degrés et en radians</p>
 <table class="colwidths-auto table">
 <thead>
@@ -774,6 +806,7 @@ argthx=\frac{1}{2}\ln(\frac{1+x}{1-x}),\,(-1&lt;x&lt;1)
 </table>
 </div>
 </div>
+</div>
 
     <script type="text/x-thebe-config">
     {
@@ -855,7 +888,14 @@ argthx=\frac{1}{2}\ln(\frac{1+x}{1-x}),\,(-1&lt;x&lt;1)
 </li>
 <li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#tangente-hyperbolique-et-son-inverse">Tangente hyperbolique et son inverse</a><ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#trigonometrie-hyperbolique">Trigonométrie hyperbolique</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#formules-trigonometriques">formules trigonometriques</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#formules-trigonometriques">formules trigonometriques</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#rapel">Rapel:</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#conditions-pour-lesquelles-cos-x-est-egal-a-une-valeur-donnee-y">Conditions pour lesquelles cos(x) est égal à une valeur donnée <span class="math notranslate nohighlight">\(y\)</span> :</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#conditions-pour-lesquelles-sin-x-est-egal-a-une-valeur-donnee-y">Conditions pour lesquelles sin(x) est égal à une valeur donnée <span class="math notranslate nohighlight">\(y\)</span> :</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#conditions-pour-lesquelles-tan-x-est-egal-a-une-valeur-donnee-y">Conditions pour lesquelles tan(x) est égal à une valeur donnée <span class="math notranslate nohighlight">\(y\)</span> :</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#table-des-valeurs">table des valeurs</a></li>
+</ul>
+</li>
 </ul>
 </li>
 </ul>

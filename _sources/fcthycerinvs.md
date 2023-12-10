@@ -239,7 +239,7 @@ $$
 
 ## formules trigonometriques
 
-Rapel: 
+### Rapel: 
 - les fonctions $\sin$ et $\cos$ sont definies sur $\mathbb{R}$ et a valeurs dans $[-1, 1]$, $2\pi$-periodiques. 
 - La fonction $\tan$ est definie sur $\mathbb{R}\setminus \{\frac{\pi}{2} +k\pi, k\in \mathbb{Z}$ a valeurs dans $\mathbb{R}$, $\pi$-periodiques.
 - $\cos^2(x) + \sin^2(x) = 1$
@@ -263,6 +263,23 @@ Rapel:
 
 
 
+### Conditions pour lesquelles cos(x) est égal à une valeur donnée $y$ :
+- En général, pour une valeur donnée $y$, $cos(x) = y$ si $x = arccos(y) + 2\pi k$ ou $x = -arccos(y) + 2\pi k$, pour tout entier $k$.
+- Remarque spéciale : $cos(x) = 0$ lorsque $x = \frac{\pi}{2} + \pi k$, pour tout entier $k$.
+
+### Conditions pour lesquelles sin(x) est égal à une valeur donnée $y$ :
+- En général, pour une valeur donnée $y$, $sin(x) = y$ si $x = arcsin(y) + 2\pi k$ ou $x = \pi - arcsin(y) + 2\pi k$, pour tout entier $k$.
+- Remarque spéciale : $sin(x) = 0$ lorsque $x = \pi k$, pour tout entier $k$.
+
+### Conditions pour lesquelles tan(x) est égal à une valeur donnée $y$ :
+- En général, pour une valeur donnée $y$, $tan(x) = y$ si $x = arctan(y) + \pi k$, pour tout entier $k$.
+- Remarque spéciale : $tan(x) = 0$ lorsque $x = \pi k$, pour tout entier $k$.
+
+
+
+
+
+### table des valeurs
 Voici une table des valeurs remarquables pour les fonctions sinus ($\sin$), cosinus ($\cos$) et tangente ($\tan$) en degrés et en radians
 
 
