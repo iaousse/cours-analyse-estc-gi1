@@ -269,20 +269,20 @@ Voici une table des valeurs remarquables pour les fonctions sinus ($\sin$), cosi
 | Angle (degrés) | Angle (radians) | sin        | cos         | tan            |
 | -------------- | --------------- | ---------- | ----------- | -------------- |
 | 0°             | 0               | 0          | 1           | 0              |
-| 30°            | \(\frac{\pi}{6}\) | \(\frac{1}{2}\) | \(\frac{\sqrt{3}}{2}\) | \(\frac{1}{\sqrt{3}}\) |
-| 45°            | \(\frac{\pi}{4}\) | \(\frac{\sqrt{2}}{2}\) | \(\frac{\sqrt{2}}{2}\) | 1              |
-| 60°            | \(\frac{\pi}{3}\) | \(\frac{\sqrt{3}}{2}\) | \(\frac{1}{2}\)       | \(\sqrt{3}\)   |
-| 90°            | \(\frac{\pi}{2}\) | 1          | 0           | Non définie    |
-| 120°           | \(\frac{2\pi}{3}\) | \(\frac{\sqrt{3}}{2}\) | -\(\frac{1}{2}\)      | -\(\sqrt{3}\)  |
-| 135°           | \(\frac{3\pi}{4}\) | \(\frac{\sqrt{2}}{2}\) | -\(\frac{\sqrt{2}}{2}\) | -1             |
-| 150°           | \(\frac{5\pi}{6}\) | \(\frac{1}{2}\)       | -\(\frac{\sqrt{3}}{2}\) | -\(\frac{1}{\sqrt{3}}\) |
-| 180°           | \(\pi\)           | 0          | -1          | 0              |
-| 210°           | \(\frac{7\pi}{6}\) | -\(\frac{1}{2}\)      | -\(\frac{\sqrt{3}}{2}\) | \(\frac{1}{\sqrt{3}}\)  |
-| 225°           | \(\frac{5\pi}{4}\) | -\(\frac{\sqrt{2}}{2}\) | -\(\frac{\sqrt{2}}{2}\) | 1              |
-| 240°           | \(\frac{4\pi}{3}\) | -\(\frac{\sqrt{3}}{2}\) | -\(\frac{1}{2}\)      | \(\sqrt{3}\)   |
-| 270°           | \(\frac{3\pi}{2}\) | -1         | 0           | Non définie    |
-| 300°           | \(\frac{5\pi}{3}\) | -\(\frac{\sqrt{3}}{2}\) | \(\frac{1}{2}\)       | -\(\sqrt{3}\)  |
-| 315°           | \(\frac{7\pi}{4}\) | -\(\frac{\sqrt{2}}{2}\) | \(\frac{\sqrt{2}}{2}\) | -1             |
-| 330°           | \(\frac{11\pi}{6}\) | -\(\frac{1}{2}\)      | \(\frac{\sqrt{3}}{2}\) | -\(\frac{1}{\sqrt{3}}\) |
-| 360°           | \(2\pi\)          | 0          | 1           | 0              |
+| 30°            | $\frac{\pi}{6}$ | $\frac{1}{2}$ | $\frac{\sqrt{3}}{2}$ | $\frac{1}{\sqrt{3}}$ |
+| 45°            | $\frac{\pi}{4}$ | $\frac{\sqrt{2}}{2}$ | $\frac{\sqrt{2}}{2}$ | 1              |
+| 60°            | $\frac{\pi}{3}$ | $\frac{\sqrt{3}}{2}$ | $\frac{1}{2}$       | $\sqrt{3}$   |
+| 90°            | $\frac{\pi}{2}$ | 1          | 0           | Non définie    |
+| 120°           | $\frac{2\pi}{3}$ | $\frac{\sqrt{3}}{2}$ | -$\frac{1}{2}$      | -$\sqrt{3}$  |
+| 135°           | $\frac{3\pi}{4}$ | $\frac{\sqrt{2}}{2}$ | -$\frac{\sqrt{2}}{2}$ | -1             |
+| 150°           | $\frac{5\pi}{6}$ | $\frac{1}{2}$       | -$\frac{\sqrt{3}}{2}$ | -$\frac{1}{\sqrt{3}}$ |
+| 180°           | $\pi$           | 0          | -1          | 0              |
+| 210°           | $\frac{7\pi}{6}$ | -$\frac{1}{2}$      | -$\frac{\sqrt{3}}{2}$ | $\frac{1}{\sqrt{3}}$  |
+| 225°           | $\frac{5\pi}{4}$ | -$\frac{\sqrt{2}}{2}$ | -$\frac{\sqrt{2}}{2}$ | 1              |
+| 240°           | $\frac{4\pi}{3}$ | -$\frac{\sqrt{3}}{2}$ | -$\frac{1}{2}$      | $\sqrt{3}$   |
+| 270°           | $\frac{3\pi}{2}$ | -1         | 0           | Non définie    |
+| 300°           | $\frac{5\pi}{3}$ | -$\frac{\sqrt{3}}{2}$ | $\frac{1}{2}$       | -$\sqrt{3}$  |
+| 315°           | $\frac{7\pi}{4}$ | -$\frac{\sqrt{2}}{2}$ | $\frac{\sqrt{2}}{2}$ | -1             |
+| 330°           | $\frac{11\pi}{6}$ | -$\frac{1}{2}$      | $\frac{\sqrt{3}}{2}$ | -$\frac{1}{\sqrt{3}}$ |
+| 360°           | $2\pi$          | 0          | 1           | 0              |
 
